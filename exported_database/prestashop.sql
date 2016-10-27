@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Czas generowania: 27 Paź 2016, 15:11
+-- Czas generowania: 27 Paź 2016, 15:47
 -- Wersja serwera: 10.1.16-MariaDB
 -- Wersja PHP: 5.6.24
 
@@ -1572,23 +1572,24 @@ CREATE TABLE IF NOT EXISTS `ps_category` (
   KEY `nright` (`nright`),
   KEY `activenleft` (`active`,`nleft`),
   KEY `activenright` (`active`,`nright`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 --
 -- Zrzut danych tabeli `ps_category`
 --
 
 INSERT INTO `ps_category` (`id_category`, `id_parent`, `id_shop_default`, `level_depth`, `nleft`, `nright`, `active`, `date_add`, `date_upd`, `position`, `is_root_category`) VALUES
-(1, 0, 1, 0, 1, 20, 1, '2016-10-27 01:35:59', '2016-10-27 01:35:59', 0, 0),
-(2, 1, 1, 1, 2, 19, 1, '2016-10-27 01:36:00', '2016-10-27 01:36:00', 0, 1),
-(12, 2, 1, 2, 15, 16, 1, '2016-10-27 11:38:49', '2016-10-27 12:58:32', 1, 0),
-(14, 2, 1, 2, 3, 14, 1, '2016-10-27 12:54:44', '2016-10-27 13:00:29', 0, 0),
-(15, 2, 1, 2, 17, 18, 1, '2016-10-27 12:57:40', '2016-10-27 13:02:02', 2, 0),
-(16, 14, 1, 3, 4, 7, 1, '2016-10-27 13:03:40', '2016-10-27 13:03:40', 0, 0),
-(17, 14, 1, 3, 8, 9, 1, '2016-10-27 13:04:09', '2016-10-27 13:04:09', 0, 0),
-(18, 14, 1, 3, 10, 11, 1, '2016-10-27 13:04:50', '2016-10-27 13:04:50', 0, 0),
-(19, 14, 1, 3, 12, 13, 1, '2016-10-27 13:05:30', '2016-10-27 13:05:30', 0, 0),
-(20, 16, 1, 4, 5, 6, 1, '2016-10-27 13:16:48', '2016-10-27 15:01:41', 0, 0);
+(1, 0, 1, 0, 1, 22, 1, '2016-10-27 01:35:59', '2016-10-27 01:35:59', 0, 0),
+(2, 1, 1, 1, 2, 21, 1, '2016-10-27 01:36:00', '2016-10-27 01:36:00', 0, 1),
+(12, 2, 1, 2, 17, 18, 1, '2016-10-27 11:38:49', '2016-10-27 12:58:32', 1, 0),
+(14, 2, 1, 2, 3, 16, 1, '2016-10-27 12:54:44', '2016-10-27 13:00:29', 0, 0),
+(15, 2, 1, 2, 19, 20, 1, '2016-10-27 12:57:40', '2016-10-27 13:02:02', 2, 0),
+(16, 14, 1, 3, 4, 9, 1, '2016-10-27 13:03:40', '2016-10-27 15:36:51', 0, 0),
+(17, 14, 1, 3, 10, 11, 1, '2016-10-27 13:04:09', '2016-10-27 15:36:17', 1, 0),
+(18, 14, 1, 3, 12, 13, 1, '2016-10-27 13:04:50', '2016-10-27 15:36:31', 2, 0),
+(19, 14, 1, 3, 14, 15, 1, '2016-10-27 13:05:30', '2016-10-27 15:37:04', 3, 0),
+(20, 16, 1, 4, 5, 6, 1, '2016-10-27 13:16:48', '2016-10-27 15:26:29', 0, 0),
+(21, 16, 1, 4, 7, 8, 1, '2016-10-27 15:30:13', '2016-10-27 15:30:13', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1636,7 +1637,10 @@ INSERT INTO `ps_category_group` (`id_category`, `id_group`) VALUES
 (19, 3),
 (20, 1),
 (20, 2),
-(20, 3);
+(20, 3),
+(21, 1),
+(21, 2),
+(21, 3);
 
 -- --------------------------------------------------------
 
@@ -1682,7 +1686,9 @@ INSERT INTO `ps_category_lang` (`id_category`, `id_shop`, `id_lang`, `name`, `de
 (19, 1, 1, 'BODY', '<p>Body parts</p>', 'body', '', '', ''),
 (19, 1, 2, 'BODY', '', 'body', '', '', ''),
 (20, 1, 1, 'Spark plug', '<p>Spark plugs</p>', 'spark-plug', '', '', ''),
-(20, 1, 2, 'Spark plug', '', 'spark-plug', '', '', '');
+(20, 1, 2, 'Spark plug', '', 'spark-plug', '', '', ''),
+(21, 1, 1, 'Cooler', '', 'cooler', '', '', ''),
+(21, 1, 2, 'Cooler', '', 'cooler', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -1704,7 +1710,8 @@ CREATE TABLE IF NOT EXISTS `ps_category_product` (
 --
 
 INSERT INTO `ps_category_product` (`id_category`, `id_product`, `position`) VALUES
-(2, 4, 0);
+(2, 4, 0),
+(21, 9, 0);
 
 -- --------------------------------------------------------
 
@@ -1733,7 +1740,8 @@ INSERT INTO `ps_category_shop` (`id_category`, `id_shop`, `position`) VALUES
 (17, 1, 1),
 (18, 1, 2),
 (19, 1, 3),
-(20, 1, 0);
+(20, 1, 0),
+(21, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -2071,7 +2079,7 @@ INSERT INTO `ps_condition` (`id_condition`, `id_ps_condition`, `type`, `request`
 (9, 155, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%trustly%"', '==', '0', '0', 'time', '1', 1, '2016-10-27 01:41:06', '2016-10-27 01:44:38'),
 (10, 252, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%gadwords%" ', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:06', '2016-10-27 14:36:40'),
 (11, 55, 'sql', 'SELECT COUNT(*) FROM ps_orders WHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL")', '>=', '100', '', 'hook', 'actionObjectOrderAddAfter', 0, '2016-10-27 01:41:06', '2016-10-27 01:41:06'),
-(12, 12, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '99', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-10-27 01:41:06', '2016-10-27 11:44:09'),
+(12, 12, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '99', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-10-27 01:41:06', '2016-10-27 15:43:43'),
 (13, 39, 'install', '', '>=', '365', '', 'time', '2', 0, '2016-10-27 01:41:06', '2016-10-27 01:44:38'),
 (14, 175, 'sql', 'SELECT count(*) FROM	 PREFIX_configuration WHERE name = ''PS_HOSTED_MODE''', '==', '0', '0', 'time', '1', 1, '2016-10-27 01:41:06', '2016-10-27 01:44:38'),
 (15, 1, 'configuration', 'PS_REWRITING_SETTINGS', '==', '1', '', 'hook', 'actionAdminMetaControllerUpdate_optionsAfter', 0, '2016-10-27 01:41:06', '2016-10-27 01:41:06'),
@@ -2083,13 +2091,13 @@ INSERT INTO `ps_condition` (`id_condition`, `id_ps_condition`, `type`, `request`
 (21, 8, 'sql', 'SELECT COUNT(*) FROM PREFIX_carrier WHERE name NOT IN ("0", "My carrier")', '>', '0', '', 'hook', 'actionObjectCarrierAddAfter', 0, '2016-10-27 01:41:07', '2016-10-27 01:41:07'),
 (22, 9, 'sql', 'SELECT COUNT(*) FROM PREFIX_carrier WHERE name NOT IN ("0", "My carrier")', '>', '1', '', 'hook', 'actionObjectCarrierAddAfter', 0, '2016-10-27 01:41:07', '2016-10-27 01:41:07'),
 (23, 10, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '0', '1', 'hook', 'actionObjectProductAddAfter', 1, '2016-10-27 01:41:07', '2016-10-27 11:44:09'),
-(24, 11, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '9', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-10-27 01:41:07', '2016-10-27 11:44:09'),
+(24, 11, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '9', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-10-27 01:41:07', '2016-10-27 15:43:43'),
 (25, 16, 'configuration', 'PS_SHOP_PHONE', '!=', '0', '', 'hook', 'actionAdminStoresControllerUpdate_optionsAfter', 0, '2016-10-27 01:41:07', '2016-10-27 01:41:07'),
 (26, 17, 'sql', 'SELECT COUNT(*) FROM PREFIX_contact', '>', '2', '', 'hook', 'actionObjectContactAddAfter', 0, '2016-10-27 01:41:07', '2016-10-27 01:41:07'),
 (27, 18, 'sql', 'SELECT COUNT(*) FROM PREFIX_contact', '>', '4', '', 'hook', 'actionObjectContactAddAfter', 0, '2016-10-27 01:41:08', '2016-10-27 01:41:08'),
-(28, 13, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '999', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-10-27 01:41:08', '2016-10-27 11:44:09'),
-(29, 14, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '9999', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-10-27 01:41:08', '2016-10-27 11:44:09'),
-(30, 15, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '99999', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-10-27 01:41:08', '2016-10-27 11:44:09'),
+(28, 13, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '999', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-10-27 01:41:08', '2016-10-27 15:43:43'),
+(29, 14, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '9999', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-10-27 01:41:08', '2016-10-27 15:43:43'),
+(30, 15, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '99999', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-10-27 01:41:08', '2016-10-27 15:43:43'),
 (31, 20, 'install', '', '>=', '7', '', 'time', '1', 0, '2016-10-27 01:41:08', '2016-10-27 01:44:38'),
 (32, 21, 'configuration', 'PS_LOGO', '!=', 'logo.jpg', '', 'hook', 'actionAdminThemesControllerUpdate_optionsAfter', 0, '2016-10-27 01:41:08', '2016-10-27 01:41:08'),
 (33, 22, 'sql', 'SELECT COUNT(*) FROM PREFIX_theme WHERE directory != "default" AND directory != "prestashop" AND directory ! "default-bootstrap"', '>', '0', '0', 'hook', 'actionObjectShopUpdateAfter', 0, '2016-10-27 01:41:08', '2016-10-27 12:51:42'),
@@ -2155,9 +2163,9 @@ INSERT INTO `ps_condition` (`id_condition`, `id_ps_condition`, `type`, `request`
 (93, 93, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '10', '3', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-10-27 01:41:11', '2016-10-27 02:47:01'),
 (94, 94, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '20', '3', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-10-27 01:41:11', '2016-10-27 02:47:01'),
 (95, 95, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '40', '3', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-10-27 01:41:11', '2016-10-27 02:47:02'),
-(96, 96, 'sql', 'SELECT id_image FROM PREFIX_image WHERE id_image > 26', '>', '0', '', 'hook', 'actionObjectImageAddAfter', 0, '2016-10-27 01:41:12', '2016-10-27 01:41:12'),
-(97, 97, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '50', '', 'hook', 'actionObjectImageAddAfter', 0, '2016-10-27 01:41:12', '2016-10-27 01:41:12'),
-(98, 98, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '100', '', 'hook', 'actionObjectImageAddAfter', 0, '2016-10-27 01:41:12', '2016-10-27 01:41:12'),
+(96, 96, 'sql', 'SELECT id_image FROM PREFIX_image WHERE id_image > 26', '>', '0', '0', 'hook', 'actionObjectImageAddAfter', 0, '2016-10-27 01:41:12', '2016-10-27 15:46:02'),
+(97, 97, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '50', '3', 'hook', 'actionObjectImageAddAfter', 0, '2016-10-27 01:41:12', '2016-10-27 15:46:02'),
+(98, 98, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '100', '3', 'hook', 'actionObjectImageAddAfter', 0, '2016-10-27 01:41:12', '2016-10-27 15:46:02'),
 (99, 99, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '1000', '23', 'time', '2', 0, '2016-10-27 01:41:12', '2016-10-27 01:44:40'),
 (100, 100, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '10000', '23', 'time', '4', 0, '2016-10-27 01:41:12', '2016-10-27 01:44:40'),
 (101, 101, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '50000', '23', 'time', '8', 0, '2016-10-27 01:41:12', '2016-10-27 01:44:40'),
@@ -2621,7 +2629,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (151, NULL, NULL, 'PS_VIRTUAL_PROD_FEATURE_ACTIVE', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (152, NULL, NULL, 'PS_CUSTOMIZATION_FEATURE_ACTIVE', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (153, NULL, NULL, 'PS_CART_RULE_FEATURE_ACTIVE', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(154, NULL, NULL, 'PS_PACK_FEATURE_ACTIVE', NULL, '0000-00-00 00:00:00', '2016-10-27 11:44:42'),
+(154, NULL, NULL, 'PS_PACK_FEATURE_ACTIVE', NULL, '0000-00-00 00:00:00', '2016-10-27 15:46:09'),
 (155, NULL, NULL, 'PS_ALIAS_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (156, NULL, NULL, 'PS_TAX_ADDRESS_TYPE', 'id_address_delivery', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (157, NULL, NULL, 'PS_SHOP_DEFAULT', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -2827,15 +2835,15 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (360, NULL, NULL, 'PS_ONBOARDING_STEP_2_COMPLETED', '0', '2016-10-27 01:39:20', '2016-10-27 01:39:20'),
 (361, NULL, NULL, 'PS_ONBOARDING_STEP_3_COMPLETED', '0', '2016-10-27 01:39:20', '2016-10-27 01:39:20'),
 (362, NULL, NULL, 'PS_ONBOARDING_STEP_4_COMPLETED', '0', '2016-10-27 01:39:20', '2016-10-27 01:39:20'),
-(363, NULL, NULL, 'GF_NOT_VIEWED_BADGE', NULL, '2016-10-27 01:44:44', '2016-10-27 15:10:22'),
+(363, NULL, NULL, 'GF_NOT_VIEWED_BADGE', NULL, '2016-10-27 01:44:44', '2016-10-27 15:47:29'),
 (364, NULL, NULL, 'PS_GRID_PRODUCT', '1', '2016-10-27 11:29:29', '2016-10-27 13:57:38'),
 (365, NULL, NULL, 'PS_SHOW_TYPE_MODULES_1', 'allModules', '2016-10-27 13:49:23', '2016-10-27 13:49:23'),
-(366, NULL, NULL, 'PS_SHOW_INSTALLED_MODULES_1', 'installedUninstalled', '2016-10-27 13:49:23', '2016-10-27 14:40:56'),
+(366, NULL, NULL, 'PS_SHOW_INSTALLED_MODULES_1', 'installed', '2016-10-27 13:49:23', '2016-10-27 15:21:53'),
 (367, NULL, NULL, 'PS_SHOW_ENABLED_MODULES_1', 'enabledDisabled', '2016-10-27 13:49:23', '2016-10-27 14:41:01'),
 (368, NULL, NULL, 'PS_SHOW_CAT_MODULES_1', NULL, '2016-10-27 13:51:30', '2016-10-27 13:55:00'),
 (369, NULL, NULL, 'BLOCK_CATEG_SORT_WAY', '0', '2016-10-27 13:59:55', '2016-10-27 13:59:55'),
 (370, NULL, NULL, 'BLOCK_CATEG_SORT', '0', '2016-10-27 13:59:55', '2016-10-27 13:59:55'),
-(371, NULL, NULL, 'BLOCK_CATEG_MAX_DEPTH', '0', '2016-10-27 14:36:43', '2016-10-27 14:42:02'),
+(371, NULL, NULL, 'BLOCK_CATEG_MAX_DEPTH', '2', '2016-10-27 14:36:43', '2016-10-27 15:22:53'),
 (372, NULL, NULL, 'BLOCK_CATEG_DHTML', '0', '2016-10-27 14:36:43', '2016-10-27 14:41:30'),
 (373, NULL, NULL, 'BLOCK_CATEG_ROOT_CATEGORY', '0', '2016-10-27 14:36:43', '2016-10-27 14:37:30');
 
@@ -2905,9 +2913,9 @@ INSERT INTO `ps_configuration_kpi` (`id_configuration_kpi`, `id_shop_group`, `id
 (39, NULL, NULL, 'PERCENT_PRODUCT_OUT_OF_STOCK', '12.5%', '2016-10-27 01:47:35', '2016-10-27 11:41:45'),
 (40, NULL, NULL, 'DISABLED_PRODUCTS', '0%', '2016-10-27 01:47:35', '2016-10-27 01:47:35'),
 (41, NULL, NULL, 'PERCENT_PRODUCT_OUT_OF_STOCK_EXPIRE', '1477575705', '2016-10-27 01:47:35', '2016-10-27 11:41:45'),
-(42, NULL, NULL, '8020_SALES_CATALOG_EXPIRE', '1477568855', '2016-10-27 01:47:35', '2016-10-27 01:47:35'),
+(42, NULL, NULL, '8020_SALES_CATALOG_EXPIRE', '1477618895', '2016-10-27 01:47:35', '2016-10-27 15:41:35'),
 (43, NULL, NULL, 'PRODUCT_AVG_GROSS_MARGIN_EXPIRE', '1477582905', '2016-10-27 01:47:35', '2016-10-27 11:41:45'),
-(44, NULL, NULL, 'DISABLED_PRODUCTS_EXPIRE', '1477568505', '2016-10-27 01:47:35', '2016-10-27 11:41:45'),
+(44, NULL, NULL, 'DISABLED_PRODUCTS_EXPIRE', '1477582895', '2016-10-27 01:47:35', '2016-10-27 15:41:35'),
 (45, NULL, NULL, 'PRODUCTS_PER_CATEGORY', '0', '2016-10-27 01:48:45', '2016-10-27 01:48:45'),
 (46, NULL, NULL, 'DISABLED_CATEGORIES', '0', '2016-10-27 01:48:46', '2016-10-27 13:39:59'),
 (47, NULL, NULL, 'EMPTY_CATEGORIES', '6', '2016-10-27 01:48:46', '2016-10-27 13:39:59'),
@@ -2919,9 +2927,9 @@ INSERT INTO `ps_configuration_kpi` (`id_configuration_kpi`, `id_shop_group`, `id
 (53, NULL, NULL, 'UPDATE_MODULES', '0', '2016-10-27 12:44:55', '2016-10-27 12:44:55'),
 (54, NULL, NULL, 'DISABLED_MODULES', '2', '2016-10-27 12:44:57', '2016-10-27 13:59:05'),
 (55, NULL, NULL, 'INSTALLED_MODULES', '64', '2016-10-27 12:44:57', '2016-10-27 13:59:05'),
-(56, NULL, NULL, 'DISABLED_MODULES_EXPIRE', '1477573720', '2016-10-27 12:44:57', '2016-10-27 15:06:40'),
-(57, NULL, NULL, 'INSTALLED_MODULES_EXPIRE', '1477573720', '2016-10-27 12:44:57', '2016-10-27 15:06:40'),
-(58, NULL, NULL, 'UPDATE_MODULES_EXPIRE', '1477573722', '2016-10-27 12:44:59', '2016-10-27 15:06:42');
+(56, NULL, NULL, 'DISABLED_MODULES_EXPIRE', '1477574627', '2016-10-27 12:44:57', '2016-10-27 15:21:47'),
+(57, NULL, NULL, 'INSTALLED_MODULES_EXPIRE', '1477574627', '2016-10-27 12:44:57', '2016-10-27 15:21:47'),
+(58, NULL, NULL, 'UPDATE_MODULES_EXPIRE', '1477574629', '2016-10-27 12:44:59', '2016-10-27 15:21:49');
 
 -- --------------------------------------------------------
 
@@ -3051,7 +3059,7 @@ CREATE TABLE IF NOT EXISTS `ps_connections_source` (
   KEY `orderby` (`date_add`),
   KEY `http_referer` (`http_referer`),
   KEY `request_uri` (`request_uri`)
-) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8;
 
 --
 -- Zrzut danych tabeli `ps_connections_source`
@@ -3119,7 +3127,28 @@ INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, 
 (59, 8, 'http://127.0.0.1:83/myshop/en/', '127.0.0.1:83/myshop/en/', '', '2016-10-27 15:08:22'),
 (60, 8, 'http://127.0.0.1:83/myshop/en/', '127.0.0.1:83/myshop/en/', '', '2016-10-27 15:09:51'),
 (61, 8, 'http://127.0.0.1:83/myshop/en/', '127.0.0.1:83/myshop/en/', '', '2016-10-27 15:09:56'),
-(62, 8, 'http://127.0.0.1:83/myshop/en/', '127.0.0.1:83/myshop/en/', '', '2016-10-27 15:10:39');
+(62, 8, 'http://127.0.0.1:83/myshop/en/', '127.0.0.1:83/myshop/en/', '', '2016-10-27 15:10:39'),
+(63, 8, 'http://127.0.0.1:83/myshop/en/', '127.0.0.1:83/myshop/en/', '', '2016-10-27 15:15:55'),
+(64, 8, 'http://127.0.0.1:83/myshop/en/', '127.0.0.1:83/myshop/en/', '', '2016-10-27 15:22:20'),
+(65, 8, 'http://127.0.0.1:83/myshop/en/', '127.0.0.1:83/myshop/en/', '', '2016-10-27 15:22:33'),
+(66, 8, 'http://127.0.0.1:83/myshop/en/', '127.0.0.1:83/myshop/en/', '', '2016-10-27 15:22:46'),
+(67, 8, 'http://127.0.0.1:83/myshop/en/', '127.0.0.1:83/myshop/en/', '', '2016-10-27 15:23:44'),
+(68, 8, 'http://127.0.0.1:83/myshop/en/', '127.0.0.1:83/myshop/en/16-engine', '', '2016-10-27 15:26:34'),
+(69, 8, 'http://127.0.0.1:83/myshop/en/16-engine', '127.0.0.1:83/myshop/en/20-spark-plug', '', '2016-10-27 15:26:37'),
+(70, 8, 'http://127.0.0.1:83/myshop/en/', '127.0.0.1:83/myshop/en/16-engine', '', '2016-10-27 15:30:20'),
+(71, 8, 'http://127.0.0.1:83/myshop/en/16-engine', '127.0.0.1:83/myshop/en/14-audi', '', '2016-10-27 15:30:43'),
+(72, 8, 'http://127.0.0.1:83/myshop/en/16-engine', '127.0.0.1:83/myshop/en/14-audi', '', '2016-10-27 15:37:09'),
+(73, 8, 'http://127.0.0.1:83/myshop/en/14-audi', '127.0.0.1:83/myshop/en/16-engine', '', '2016-10-27 15:41:25'),
+(74, 8, 'http://127.0.0.1:83/myshop/en/16-engine', '127.0.0.1:83/myshop/en/21-cooler', '', '2016-10-27 15:41:29'),
+(75, 8, 'http://127.0.0.1:83/myshop/en/16-engine', '127.0.0.1:83/myshop/en/21-cooler', '', '2016-10-27 15:44:32'),
+(76, 8, 'http://127.0.0.1:83/myshop/en/21-cooler', '127.0.0.1:83/myshop/en/16-engine', '', '2016-10-27 15:44:38'),
+(77, 8, 'http://127.0.0.1:83/myshop/en/16-engine', '127.0.0.1:83/myshop/en/21-cooler', '', '2016-10-27 15:44:40'),
+(78, 8, 'http://127.0.0.1:83/myshop/myadmin/index.php?controller=AdminProducts&token=05b6051473278ad36031aea50c50d762&updateproduct&id_product=9', '127.0.0.1:83/myshop/en/home/9-cooler-audi-a4.html', '', '2016-10-27 15:45:14'),
+(79, 8, 'http://127.0.0.1:83/myshop/en/21-cooler', '127.0.0.1:83/myshop/en/cooler/9-cooler-audi-a4.html', '', '2016-10-27 15:46:43'),
+(80, 8, 'http://127.0.0.1:83/myshop/en/cooler/9-cooler-audi-a4.html', '127.0.0.1:83/myshop/en/14-audi', '', '2016-10-27 15:47:00'),
+(81, 8, 'http://127.0.0.1:83/myshop/en/14-audi', '127.0.0.1:83/myshop/en/16-engine', '', '2016-10-27 15:47:03'),
+(82, 8, 'http://127.0.0.1:83/myshop/en/16-engine', '127.0.0.1:83/myshop/en/21-cooler', '', '2016-10-27 15:47:06'),
+(83, 8, 'http://127.0.0.1:83/myshop/en/16-engine', '127.0.0.1:83/myshop/en/21-cooler', '', '2016-10-27 15:47:32');
 
 -- --------------------------------------------------------
 
@@ -5545,7 +5574,7 @@ CREATE TABLE IF NOT EXISTS `ps_image` (
   UNIQUE KEY `id_product_cover` (`id_product`,`cover`),
   UNIQUE KEY `idx_product_image` (`id_image`,`id_product`,`cover`),
   KEY `image_product` (`id_product`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 --
 -- Zrzut danych tabeli `ps_image`
@@ -5553,7 +5582,8 @@ CREATE TABLE IF NOT EXISTS `ps_image` (
 
 INSERT INTO `ps_image` (`id_image`, `id_product`, `position`, `cover`) VALUES
 (10, 4, 1, 1),
-(11, 4, 2, NULL);
+(11, 4, 2, NULL),
+(24, 9, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -5577,7 +5607,9 @@ INSERT INTO `ps_image_lang` (`id_image`, `id_lang`, `legend`) VALUES
 (10, 1, ''),
 (10, 2, ''),
 (11, 1, ''),
-(11, 2, '');
+(11, 2, ''),
+(24, 1, 'Cooler Audi A4'),
+(24, 2, 'Cooler Audi A4');
 
 -- --------------------------------------------------------
 
@@ -5601,7 +5633,8 @@ CREATE TABLE IF NOT EXISTS `ps_image_shop` (
 
 INSERT INTO `ps_image_shop` (`id_product`, `id_image`, `id_shop`, `cover`) VALUES
 (4, 11, 1, NULL),
-(4, 10, 1, 1);
+(4, 10, 1, 1),
+(9, 24, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -6100,7 +6133,8 @@ INSERT INTO `ps_layered_price_index` (`id_product`, `id_currency`, `id_shop`, `p
 (5, 1, 1, 28, 36),
 (6, 1, 1, 30, 38),
 (7, 1, 1, 16, 20),
-(8, 1, 1, 60, 74);
+(8, 1, 1, 60, 74),
+(9, 1, 1, 300, 369);
 
 -- --------------------------------------------------------
 
@@ -6205,7 +6239,7 @@ CREATE TABLE IF NOT EXISTS `ps_log` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id_log`)
-) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
 
 --
 -- Zrzut danych tabeli `ps_log`
@@ -6262,7 +6296,17 @@ INSERT INTO `ps_log` (`id_log`, `severity`, `error_code`, `message`, `object_typ
 (48, 1, 0, 'Category addition', 'Category', 20, 1, '2016-10-27 13:16:50', '2016-10-27 13:16:50'),
 (49, 1, 0, 'Back Office connection from 127.0.0.1', '', 0, 1, '2016-10-27 15:00:33', '2016-10-27 15:00:33'),
 (50, 1, 0, 'Category modification', 'Category', 20, 1, '2016-10-27 15:01:01', '2016-10-27 15:01:01'),
-(51, 1, 0, 'Category modification', 'Category', 20, 1, '2016-10-27 15:01:42', '2016-10-27 15:01:42');
+(51, 1, 0, 'Category modification', 'Category', 20, 1, '2016-10-27 15:01:42', '2016-10-27 15:01:42'),
+(52, 1, 0, 'Category modification', 'Category', 20, 1, '2016-10-27 15:26:29', '2016-10-27 15:26:29'),
+(53, 1, 0, 'Category addition', 'Category', 21, 1, '2016-10-27 15:30:14', '2016-10-27 15:30:14'),
+(54, 1, 0, 'Category modification', 'Category', 16, 1, '2016-10-27 15:36:05', '2016-10-27 15:36:05'),
+(55, 1, 0, 'Category modification', 'Category', 17, 1, '2016-10-27 15:36:17', '2016-10-27 15:36:17'),
+(56, 1, 0, 'Category modification', 'Category', 18, 1, '2016-10-27 15:36:32', '2016-10-27 15:36:32'),
+(57, 1, 0, 'Category modification', 'Category', 16, 1, '2016-10-27 15:36:52', '2016-10-27 15:36:52'),
+(58, 1, 0, 'Category modification', 'Category', 19, 1, '2016-10-27 15:37:04', '2016-10-27 15:37:04'),
+(59, 1, 0, 'Category modification', 'Category', 19, 1, '2016-10-27 15:37:04', '2016-10-27 15:37:04'),
+(60, 1, 0, 'Product addition', 'Product', 9, 1, '2016-10-27 15:43:44', '2016-10-27 15:43:44'),
+(61, 1, 0, 'Product modification', 'Product', 9, 1, '2016-10-27 15:46:09', '2016-10-27 15:46:09');
 
 -- --------------------------------------------------------
 
@@ -8024,7 +8068,14 @@ CREATE TABLE IF NOT EXISTS `ps_product` (
   KEY `id_category_default` (`id_category_default`),
   KEY `indexed` (`indexed`),
   KEY `date_add` (`date_add`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+--
+-- Zrzut danych tabeli `ps_product`
+--
+
+INSERT INTO `ps_product` (`id_product`, `id_supplier`, `id_manufacturer`, `id_category_default`, `id_shop_default`, `id_tax_rules_group`, `on_sale`, `online_only`, `ean13`, `upc`, `ecotax`, `quantity`, `minimal_quantity`, `price`, `wholesale_price`, `unity`, `unit_price_ratio`, `additional_shipping_cost`, `reference`, `supplier_reference`, `location`, `width`, `height`, `depth`, `weight`, `out_of_stock`, `quantity_discount`, `customizable`, `uploadable_files`, `text_fields`, `active`, `redirect_type`, `id_product_redirected`, `available_for_order`, `available_date`, `condition`, `show_price`, `indexed`, `visibility`, `cache_is_pack`, `cache_has_attachments`, `is_virtual`, `cache_default_attribute`, `date_add`, `date_upd`, `advanced_stock_management`, `pack_stock_type`) VALUES
+(9, 0, 0, 21, 1, 1, 0, 0, '', '', '0.000000', 0, 1, '300.000000', '0.000000', '', '0.000000', '0.00', '', '', '', '0.000000', '0.000000', '0.000000', '0.000000', 2, 0, 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 'new', 1, 1, 'both', 0, 0, 0, 0, '2016-10-27 15:43:42', '2016-10-27 15:46:07', 0, 3);
 
 -- --------------------------------------------------------
 
@@ -8209,6 +8260,14 @@ CREATE TABLE IF NOT EXISTS `ps_product_lang` (
   KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Zrzut danych tabeli `ps_product_lang`
+--
+
+INSERT INTO `ps_product_lang` (`id_product`, `id_shop`, `id_lang`, `description`, `description_short`, `link_rewrite`, `meta_description`, `meta_keywords`, `meta_title`, `name`, `available_now`, `available_later`) VALUES
+(9, 1, 1, '', '<p>Audi A4 cooler</p>', 'cooler-audi-a4', '', '', '', 'Cooler Audi A4', '', ''),
+(9, 1, 2, '', '', 'cooler-audi-a4', '', '', '', 'Cooler Audi A4', '', '');
+
 -- --------------------------------------------------------
 
 --
@@ -8273,6 +8332,13 @@ CREATE TABLE IF NOT EXISTS `ps_product_shop` (
   KEY `date_add` (`date_add`,`active`,`visibility`),
   KEY `indexed` (`indexed`,`active`,`id_product`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Zrzut danych tabeli `ps_product_shop`
+--
+
+INSERT INTO `ps_product_shop` (`id_product`, `id_shop`, `id_category_default`, `id_tax_rules_group`, `on_sale`, `online_only`, `ecotax`, `minimal_quantity`, `price`, `wholesale_price`, `unity`, `unit_price_ratio`, `additional_shipping_cost`, `customizable`, `uploadable_files`, `text_fields`, `active`, `redirect_type`, `id_product_redirected`, `available_for_order`, `available_date`, `condition`, `show_price`, `indexed`, `visibility`, `cache_default_attribute`, `advanced_stock_management`, `date_add`, `date_upd`, `pack_stock_type`) VALUES
+(9, 1, 21, 1, 0, 0, '0.000000', 1, '300.000000', '0.000000', '', '0.000000', '0.00', 0, 0, 0, 1, '404', 0, 1, '0000-00-00', 'new', 1, 1, 'both', 0, 0, '2016-10-27 15:43:42', '2016-10-27 15:46:07', 3);
 
 -- --------------------------------------------------------
 
@@ -9548,7 +9614,11 @@ INSERT INTO `ps_search_index` (`id_product`, `id_word`, `weight`) VALUES
 (6, 836, 1),
 (6, 837, 1),
 (6, 838, 1),
-(6, 839, 2);
+(6, 839, 2),
+(9, 1078, 10),
+(9, 1079, 7),
+(9, 1081, 9),
+(9, 1082, 6);
 
 -- --------------------------------------------------------
 
@@ -9563,18 +9633,21 @@ CREATE TABLE IF NOT EXISTS `ps_search_word` (
   `word` varchar(15) NOT NULL,
   PRIMARY KEY (`id_word`),
   UNIQUE KEY `id_lang` (`id_lang`,`id_shop`,`word`)
-) ENGINE=InnoDB AUTO_INCREMENT=1078 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1088 DEFAULT CHARSET=utf8;
 
 --
 -- Zrzut danych tabeli `ps_search_word`
 --
 
 INSERT INTO `ps_search_word` (`id_word`, `id_shop`, `id_lang`, `word`) VALUES
+(1079, 1, 1, 'audi'),
 (463, 1, 1, 'beige'),
 (460, 1, 1, 'belt'),
+(1078, 1, 1, 'cooler'),
 (466, 1, 1, 'dressy'),
 (767, 1, 1, 'elastic'),
 (456, 1, 1, 'evening'),
+(1080, 1, 1, 'home'),
 (768, 1, 1, 'lining'),
 (462, 1, 1, 'linings'),
 (464, 1, 1, 'pink'),
@@ -9582,11 +9655,14 @@ INSERT INTO `ps_search_word` (`id_word`, `id_shop`, `id_lang`, `word`) VALUES
 (763, 1, 1, 'sleeveless'),
 (457, 1, 1, 'straight'),
 (459, 1, 1, 'waist'),
+(1082, 1, 2, 'audi'),
 (534, 1, 2, 'beige'),
 (531, 1, 2, 'belt'),
+(1081, 1, 2, 'cooler'),
 (537, 1, 2, 'dressy'),
 (837, 1, 2, 'elastic'),
 (526, 1, 2, 'evening'),
+(1083, 1, 2, 'glowna'),
 (838, 1, 2, 'lining'),
 (533, 1, 2, 'linings'),
 (535, 1, 2, 'pink'),
@@ -9748,31 +9824,35 @@ CREATE TABLE IF NOT EXISTS `ps_smarty_lazy_cache` (
 --
 
 INSERT INTO `ps_smarty_lazy_cache` (`template_hash`, `cache_id`, `compile_id`, `filepath`, `last_update`) VALUES
+('0f5b338be72f2f0e91ac1568f6e5cf64', 'blocksearch-top|1|1|1|14', '', 'blocksearch_top\\1\\1\\1\\14\\1c\\bf\\e2\\1cbfe2c27bacef34af2eb0494382dd01b1afff54.blocksearch-top.tpl.php', '2016-10-27 15:15:54'),
 ('10b64d2db2ea1c13cf640de714453614', 'blockcontactinfos|1|1|1|14', '', 'blockcontactinfos\\1\\1\\1\\14\\53\\0a\\64\\530a64a491644e027bd6452f151fb870fa57a963.blockcontactinfos.tpl.php', '2016-10-27 15:10:39'),
 ('10ca1899ac1ada49225c5c0f00198851', 'blockcmsinfo|1|1|1|14', '', 'blockcmsinfo\\1\\1\\1\\14\\db\\5f\\c1\\db5fc1b4d35bb6d6514c7c16960871ab7014f203.blockcmsinfo.tpl.php', '2016-10-27 15:10:38'),
 ('1c8a78d5322f348f108b16f7e6ba930d', 'blockstore|1|1|1|14', '', 'blockstore\\1\\1\\1\\14\\e6\\46\\89\\e6468910ffdf92bd83971b68e80881669733077a.blockstore.tpl.php', '2016-10-27 15:10:38'),
 ('2497f49f374f0b9ee5519c4690059c12', 'blockmyaccountfooter|1|1|1|14', '', 'blockmyaccountfooter\\1\\1\\1\\14\\10\\fd\\02\\10fd02e840757b7aca7a4831f3d313b1ea50c372.blockmyaccountfooter.tpl.php', '2016-10-27 15:10:39'),
-('2a23d2043a591bb232f7e2320c3202b2', 'blockbestsellers-tab|1|1|1|14', '', '', '2016-10-27 15:10:39'),
 ('2c5d102f942939c0ce23e745100715d9', 'homeslider|1|1|1|14', '', 'homeslider\\1\\1\\1\\14\\6c\\9f\\1a\\6c9f1a7bd9b709650ddab975242361494de5ebf6.homeslider.tpl.php', '2016-10-27 15:10:40'),
-('2e21eb94192f5b233768aab45a808b7f', 'homefeatured|1|1|1|14', '', 'homefeatured\\1\\1\\1\\14\\23\\6f\\16\\236f1647c1c40090b7a50962178d20decf9eda46.homefeatured.tpl.php', '2016-10-27 15:10:39'),
 ('2fee13aff31f56192916db8dd8db7be4', 'blockcms|0|1|1|1|14', '', 'blockcms\\0\\1\\1\\1\\14\\d4\\5d\\fe\\d45dfe72b76a5abb352da86ca3ffb30b889c7c69.blockcms.tpl.php', '2016-10-27 15:10:37'),
 ('2fee13aff31f56192916db8dd8db7be4', 'blockcms|2|1|1|1|14', '', 'blockcms\\2\\1\\1\\1\\14\\d4\\5d\\fe\\d45dfe72b76a5abb352da86ca3ffb30b889c7c69.blockcms.tpl.php', '2016-10-27 15:10:39'),
 ('4ec82c481e6cc79efda097d2d5c93118', 'blocksocial|1|1|1|14', '', 'blocksocial\\1\\1\\1\\14\\9c\\f2\\2d\\9cf22dd85128153e58ee6c9ef2147d9854737bbd.blocksocial.tpl.php', '2016-10-27 15:10:39'),
-('5148d6798f805982157f82a50e65faaf', 'blocktopmenu|1|1|1|14|index', '', 'blocktopmenu\\1\\1\\1\\14\\index\\74\\c6\\5e\\74c65e2e0e9c5aa5a5665523c4dbf363672ef83e.blocktopmenu.tpl.php', '2016-10-27 15:10:36'),
+('5148d6798f805982157f82a50e65faaf', 'blocktopmenu|1|1|1|14|category|14', '', 'blocktopmenu\\1\\1\\1\\14\\category\\14\\74\\c6\\5e\\74c65e2e0e9c5aa5a5665523c4dbf363672ef83e.blocktopmenu.tpl.php', '2016-10-27 15:47:00'),
+('5148d6798f805982157f82a50e65faaf', 'blocktopmenu|1|1|1|14|category|16', '', 'blocktopmenu\\1\\1\\1\\14\\category\\16\\74\\c6\\5e\\74c65e2e0e9c5aa5a5665523c4dbf363672ef83e.blocktopmenu.tpl.php', '2016-10-27 15:47:03'),
+('5148d6798f805982157f82a50e65faaf', 'blocktopmenu|1|1|1|14|category|21', '', 'blocktopmenu\\1\\1\\1\\14\\category\\21\\74\\c6\\5e\\74c65e2e0e9c5aa5a5665523c4dbf363672ef83e.blocktopmenu.tpl.php', '2016-10-27 15:47:05'),
+('5148d6798f805982157f82a50e65faaf', 'blocktopmenu|1|1|1|14|product|9', '', 'blocktopmenu\\1\\1\\1\\14\\product\\9\\74\\c6\\5e\\74c65e2e0e9c5aa5a5665523c4dbf363672ef83e.blocktopmenu.tpl.php', '2016-10-27 15:46:42'),
 ('53aadee84a20a5a2142d2fd45fb5b5d0', 'blockcontact|1|1|1|14', '', 'blockcontact\\1\\1\\1\\14\\84\\26\\35\\842635fcc0f5a9cf461255a17a00d4d155ec35fd.nav.tpl.php', '2016-10-27 15:10:40'),
 ('62ec0bee9f9bc9ca9c924d72dbdc8830', 'blocksupplier|1|1|1|14', '', 'blocksupplier\\1\\1\\1\\14\\70\\76\\1a\\70761aae3818044c3f9afa87db9ed81e2f71bd82.blocksupplier.tpl.php', '2016-10-27 15:10:38'),
-('632d2f62a92bea5f04ebc92d0c31da1e', 'blockspecials|20161027|12|20161027|1|1|1|14', '', '', '2016-10-27 15:10:38'),
-('6ef3e4cdf7b9cfb65f75faca1c6dd3b4', 'blocknewproducts|20161027|1|1|1|14', '', '', '2016-10-27 15:10:37'),
-('782f83685680a5c386fdbf111bbd35f1', 'blocktags|1|1|1|14', '', '', '2016-10-27 15:10:38'),
-('8140d3643504a6051814fb2e74d5be55', 'blockbestsellers-home|1|1|1|14', '', '', '2016-10-27 15:10:39'),
-('b284fa6e0aa90a8313328ee6dc84e5ea', 'blockbestsellers-col|1|1|1|14', '', '', '2016-10-27 15:10:37'),
-('b78e42ea939ca350c245b4573d37caac', 'blockcategories|1|1|1|14|2|1', '', 'blockcategories\\1\\1\\1\\14\\2\\1\\da\\ff\\95\\daff95aaa946c76ba7e99a5d809e7fad0eaa7bcc.blockcategories.tpl.php', '2016-10-27 15:10:36'),
-('db9503000e6f76a05a75776a2e46a175', 'blocknewproducts-home|20161027|1|1|1|14', '', '', '2016-10-27 15:10:39'),
-('e8a6e8255ee2e0f3724a065612e29074', 'homefeatured-tab|1|1|1|14', '', 'homefeatured_tab\\1\\1\\1\\14\\ab\\33\\1f\\ab331f3de2c7c55f4f70b2b18985087f7f72dc40.tab.tpl.php', '2016-10-27 15:10:38'),
-('eb9a3c4f9099a4c47b4ee54ddef884dc', 'blockpaymentlogo|1|1|1|14', '', '', '2016-10-27 15:10:38'),
-('f02b78c69196e8a1decb782783283fdc', 'blocknewproducts-tab|20161027|1|1|1|14', '', '', '2016-10-27 15:10:38'),
+('632d2f62a92bea5f04ebc92d0c31da1e', 'blockspecials|20161027|20|20161027|1|1|1|14', '', '', '2016-10-27 15:47:32'),
+('6ef3e4cdf7b9cfb65f75faca1c6dd3b4', 'blocknewproducts|20161027|1|1|1|14', '', 'blocknewproducts\\20161027\\1\\1\\1\\14\\12\\a2\\4f\\12a24fd49f5c2f645e312ef603ba4258255b2aad.blocknewproducts.tpl.php', '2016-10-27 15:47:32'),
+('782f83685680a5c386fdbf111bbd35f1', 'blocktags|1|1|1|14', '', '', '2016-10-27 15:47:00'),
+('b78e42ea939ca350c245b4573d37caac', 'blockcategories|1|1|1|14|2|21|1', '', 'blockcategories\\1\\1\\1\\14\\2\\21\\1\\da\\ff\\95\\daff95aaa946c76ba7e99a5d809e7fad0eaa7bcc.blockcategories.tpl.php', '2016-10-27 15:46:42'),
+('b78e42ea939ca350c245b4573d37caac', 'blockcategories|1|1|1|14|2|2|1', '', 'blockcategories\\1\\1\\1\\14\\2\\2\\1\\da\\ff\\95\\daff95aaa946c76ba7e99a5d809e7fad0eaa7bcc.blockcategories.tpl.php', '2016-10-27 15:45:13'),
+('ec1c44817ae81af07a42812406947d4b', 'productpaymentlogos|1|1|1|14', '', 'productpaymentlogos\\1\\1\\1\\14\\6b\\17\\3a\\6b173af1e8d0e0c0f6647feb80165a3f5aa35ecd.productpaymentlogos.tpl.php', '2016-10-27 15:45:14'),
+('eff2d1f207fcf878ca47782179a84990', 'socialsharing|9|1|1|1|14', '', 'socialsharing\\9\\1\\1\\1\\14\\01\\b4\\40\\01b440d078ce075dd49c0df8b194da37392aa4ea.socialsharing.tpl.php', '2016-10-27 15:45:14'),
 ('f06ac8ec0a56dcf600144679757ac3de', 'blockmanufacturer|1|1|1|14', '', 'blockmanufacturer\\1\\1\\1\\14\\3e\\f3\\52\\3ef352e45c9b712c00c0d39617c81919651fed22.blockmanufacturer.tpl.php', '2016-10-27 15:10:37'),
-('f8ffab5fa34448791ee9de73fd2fdc34', 'blockcategories|1|1|1|14|1', '', 'blockcategories\\1\\1\\1\\14\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php', '2016-10-27 15:10:39');
+('f1187bbfa29fcf87fa63e4f0be96f1a9', 'productlist_colors|9|1|1', '', '', '2016-10-27 15:47:00'),
+('f1c3a294ff3b271b20fedf2062801aa6', 'socialsharing_header|9|1|1|1|14', '', 'socialsharing_header\\9\\1\\1\\1\\14\\47\\2d\\25\\472d2516a25740b6a97ed4ed3fd83bd8d9595c02.socialsharing_header.tpl.php', '2016-10-27 15:46:41'),
+('f8ffab5fa34448791ee9de73fd2fdc34', 'blockcategories|1|1|1|14|14|1', '', 'blockcategories\\1\\1\\1\\14\\14\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php', '2016-10-27 15:37:09'),
+('f8ffab5fa34448791ee9de73fd2fdc34', 'blockcategories|1|1|1|14|16|1', '', 'blockcategories\\1\\1\\1\\14\\16\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php', '2016-10-27 15:41:25'),
+('f8ffab5fa34448791ee9de73fd2fdc34', 'blockcategories|1|1|1|14|21|1', '', 'blockcategories\\1\\1\\1\\14\\21\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php', '2016-10-27 15:41:29'),
+('f8ffab5fa34448791ee9de73fd2fdc34', 'blockcategories|1|1|1|14|2|1', '', 'blockcategories\\1\\1\\1\\14\\2\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php', '2016-10-27 15:45:14');
 
 -- --------------------------------------------------------
 
@@ -9824,14 +9904,15 @@ CREATE TABLE IF NOT EXISTS `ps_specific_price_priority` (
   `priority` varchar(80) NOT NULL,
   PRIMARY KEY (`id_specific_price_priority`,`id_product`),
   UNIQUE KEY `id_product` (`id_product`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Zrzut danych tabeli `ps_specific_price_priority`
 --
 
 INSERT INTO `ps_specific_price_priority` (`id_specific_price_priority`, `id_product`, `priority`) VALUES
-(1, 8, 'id_shop;id_currency;id_country;id_group');
+(1, 8, 'id_shop;id_currency;id_country;id_group'),
+(2, 9, 'id_shop;id_currency;id_country;id_group');
 
 -- --------------------------------------------------------
 
@@ -10282,7 +10363,7 @@ CREATE TABLE IF NOT EXISTS `ps_stock_available` (
   KEY `id_shop_group` (`id_shop_group`),
   KEY `id_product` (`id_product`),
   KEY `id_product_attribute` (`id_product_attribute`)
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
 
 --
 -- Zrzut danych tabeli `ps_stock_available`
@@ -10295,7 +10376,8 @@ INSERT INTO `ps_stock_available` (`id_stock_available`, `id_product`, `id_produc
 (56, 4, 0, 1, 0, 0, 0, 0),
 (57, 5, 0, 1, 0, 0, 0, 0),
 (58, 6, 0, 1, 0, 0, 0, 0),
-(59, 7, 0, 1, 0, 0, 0, 0);
+(59, 7, 0, 1, 0, 0, 0, 0),
+(61, 9, 0, 1, 0, 20, 0, 2);
 
 -- --------------------------------------------------------
 

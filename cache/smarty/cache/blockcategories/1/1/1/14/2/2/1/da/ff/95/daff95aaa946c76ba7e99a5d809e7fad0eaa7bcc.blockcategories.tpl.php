@@ -17,14 +17,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '285555811cb508b2345-11599983',
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5811ffe02719a9_71312799',
+  'unifunc' => 'content_581204e9923847_61110674',
   'has_nocache_code' => false,
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5811ffe02719a9_71312799')) {function content_5811ffe02719a9_71312799($_smarty_tpl) {?><!-- Block categories module -->
+<?php if ($_valid && !is_callable('content_581204e9923847_61110674')) {function content_581204e9923847_61110674($_smarty_tpl) {?><!-- Block categories module -->
 <div id="categories_block_left" class="block">
 	<h2 class="title_block">
-					Categories
+					Home
 			</h2>
 	<div class="block_content">
 		<ul class="tree ">
