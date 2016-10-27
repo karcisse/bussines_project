@@ -1,5 +1,5 @@
 {*
-* 2007-2014 PrestaShop
+* 2007-2016 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -18,36 +18,38 @@
 * needs please refer to http://www.prestashop.com for more information.
 *
 *  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2014 PrestaShop SA
+*  @copyright  2007-2016 PrestaShop SA
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
+<div class="blockcategories_footer">
 <!-- Block categories module -->
-<section class="blockcategories_footer footer-block col-xs-12 col-sm-2">
-	<h4>{l s='Categories' mod='blockcategories'}</h4>
-	<div class="category_footer toggle-footer">
-		<div class="list">
-			<ul class="tree {if $isDhtml}dhtml{/if}">
-			{foreach from=$blockCategTree.children item=child name=blockCategTree}
-				{if $smarty.foreach.blockCategTree.last}
-					{include file="$branche_tpl_path" node=$child last='true'}
-				{else}
-					{include file="$branche_tpl_path" node=$child}
-				{/if}
-			
-				{if ($smarty.foreach.blockCategTree.iteration mod $numberColumn) == 0 AND !$smarty.foreach.blockCategTree.last}
-			</ul>
-		</div>
-	</div> <!-- .category_footer -->
+	<h4 class="title_block">{l s='Categories' mod='blockcategories'}</h4>
+<div class="category_footer" style="float:left;clear:none;width:{$widthColumn}%">
+	<div style="float:left" class="list">
+		<ul class="tree {if $isDhtml}dhtml{/if}">
+	
+		{foreach from=$blockCategTree.children item=child name=blockCategTree}
+			{if $smarty.foreach.blockCategTree.last}
+				{include file="$branche_tpl_path" node=$child last='true'}
+			{else}
+				{include file="$branche_tpl_path" node=$child}
+			{/if}
+		
+			{if ($smarty.foreach.blockCategTree.iteration mod $numberColumn) == 0 AND !$smarty.foreach.blockCategTree.last}
+		</ul>
+	</div>
+</div>
 
-	<div class="category_footer">
-		<div class="list">
-			<ul class="tree {if $isDhtml}dhtml{/if}">
-				{/if}
+<div class="category_footer" style="float:left;clear:none;width:{$widthColumn}%">
+		<div style="float:left" class="list">
+		<ul class="tree {if $isDhtml}dhtml{/if}">
+			{/if}
 			{/foreach}
-			</ul>
-		</div>
-	</div> <!-- .category_footer -->
-</section>
+		</ul>
+	</div>
+</div>
+<br class="clear"/>
 <!-- /Block categories module -->
+</div>

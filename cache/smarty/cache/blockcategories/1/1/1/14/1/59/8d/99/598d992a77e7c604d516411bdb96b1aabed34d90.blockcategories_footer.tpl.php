@@ -17,33 +17,99 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '2348258113ed4d67139-42546063',
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5811dc6c4602d0_99466263',
+  'unifunc' => 'content_5811fcd0102877_27201671',
   'has_nocache_code' => false,
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5811dc6c4602d0_99466263')) {function content_5811dc6c4602d0_99466263($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5811fcd0102877_27201671')) {function content_5811fcd0102877_27201671($_smarty_tpl) {?>
 <!-- Block categories module -->
 <section class="blockcategories_footer footer-block col-xs-12 col-sm-2">
 	<h4>Categories</h4>
 	<div class="category_footer toggle-footer">
 		<div class="list">
-			<ul class="tree dhtml">
+			<ul class="tree ">
 												
-<li class="last">
+<li >
 	<a 
-	href="http://127.0.0.1:83/myshop/en/12-bmw" title="You will find here any BMW parts.">
-		BMW
+	href="http://127.0.0.1:83/myshop/en/14-audi" title="You will find here Audi parts">
+		Audi
+	</a>
+			<ul>
+												
+<li >
+	<a 
+	href="http://127.0.0.1:83/myshop/en/16-engine" title="Engine parts">
+		ENGINE
 	</a>
 			<ul>
 												
 <li class="last">
 	<a 
-	href="http://127.0.0.1:83/myshop/en/13-engine" title="Engine parts for BMW">
-		ENGINE
+	href="http://127.0.0.1:83/myshop/en/20-spark-plug" title="Spark plugs">
+		Spark plug
 	</a>
 	</li>
 
 									</ul>
+	</li>
+
+																
+<li >
+	<a 
+	href="http://127.0.0.1:83/myshop/en/17-breaks" title="Breaks parts">
+		BREAKS
+	</a>
+	</li>
+
+																
+<li >
+	<a 
+	href="http://127.0.0.1:83/myshop/en/18-suspension" title="Suspension parts.">
+		SUSPENSION
+	</a>
+	</li>
+
+																
+<li class="last">
+	<a 
+	href="http://127.0.0.1:83/myshop/en/19-body" title="Body parts">
+		BODY
+	</a>
+	</li>
+
+									</ul>
+	</li>
+
+							
+							</ul>
+		</div>
+	</div> <!-- .category_footer -->
+
+	<div class="category_footer">
+		<div class="list">
+			<ul class="tree ">
+																
+<li >
+	<a 
+	href="http://127.0.0.1:83/myshop/en/12-bmw" title="You will find here any BMW parts.">
+		BMW
+	</a>
+	</li>
+
+							
+							</ul>
+		</div>
+	</div> <!-- .category_footer -->
+
+	<div class="category_footer">
+		<div class="list">
+			<ul class="tree ">
+																
+<li class="last">
+	<a 
+	href="http://127.0.0.1:83/myshop/en/15-mercedes" title="You will find here parts for Merceses cars.">
+		Mercedes
+	</a>
 	</li>
 
 							

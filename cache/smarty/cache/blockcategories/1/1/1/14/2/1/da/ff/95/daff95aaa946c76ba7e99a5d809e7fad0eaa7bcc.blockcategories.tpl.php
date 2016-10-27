@@ -17,33 +17,83 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '285555811cb508b2345-11599983',
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5811dc69cad0f1_34780557',
+  'unifunc' => 'content_5811fccd11c207_44982338',
   'has_nocache_code' => false,
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5811dc69cad0f1_34780557')) {function content_5811dc69cad0f1_34780557($_smarty_tpl) {?><!-- Block categories module -->
+<?php if ($_valid && !is_callable('content_5811fccd11c207_44982338')) {function content_5811fccd11c207_44982338($_smarty_tpl) {?><!-- Block categories module -->
 <div id="categories_block_left" class="block">
 	<h2 class="title_block">
 					Categories
 			</h2>
 	<div class="block_content">
-		<ul class="tree dhtml">
+		<ul class="tree ">
 												
-<li class="last">
+<li >
 	<a 
-	href="http://127.0.0.1:83/myshop/en/12-bmw" title="You will find here any BMW parts.">
-		BMW
+	href="http://127.0.0.1:83/myshop/en/14-audi" title="You will find here Audi parts">
+		Audi
+	</a>
+			<ul>
+												
+<li >
+	<a 
+	href="http://127.0.0.1:83/myshop/en/16-engine" title="Engine parts">
+		ENGINE
 	</a>
 			<ul>
 												
 <li class="last">
 	<a 
-	href="http://127.0.0.1:83/myshop/en/13-engine" title="Engine parts for BMW">
-		ENGINE
+	href="http://127.0.0.1:83/myshop/en/20-spark-plug" title="Spark plugs">
+		Spark plug
 	</a>
 	</li>
 
 									</ul>
+	</li>
+
+																
+<li >
+	<a 
+	href="http://127.0.0.1:83/myshop/en/17-breaks" title="Breaks parts">
+		BREAKS
+	</a>
+	</li>
+
+																
+<li >
+	<a 
+	href="http://127.0.0.1:83/myshop/en/18-suspension" title="Suspension parts.">
+		SUSPENSION
+	</a>
+	</li>
+
+																
+<li class="last">
+	<a 
+	href="http://127.0.0.1:83/myshop/en/19-body" title="Body parts">
+		BODY
+	</a>
+	</li>
+
+									</ul>
+	</li>
+
+																
+<li >
+	<a 
+	href="http://127.0.0.1:83/myshop/en/12-bmw" title="You will find here any BMW parts.">
+		BMW
+	</a>
+	</li>
+
+																
+<li class="last">
+	<a 
+	href="http://127.0.0.1:83/myshop/en/15-mercedes" title="You will find here parts for Merceses cars.">
+		Mercedes
+	</a>
 	</li>
 
 									</ul>

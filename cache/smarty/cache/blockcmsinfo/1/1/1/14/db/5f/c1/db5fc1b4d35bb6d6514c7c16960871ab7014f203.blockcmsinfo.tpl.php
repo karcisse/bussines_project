@@ -11,11 +11,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '2300858113ef0025cd1-17274837',
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_5811dc6b13ffc4_30637253',
+  'unifunc' => 'content_5811fcce9aeeb4_81974632',
   'has_nocache_code' => false,
   'cache_lifetime' => 31536000,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5811dc6b13ffc4_30637253')) {function content_5811dc6b13ffc4_30637253($_smarty_tpl) {?><!-- MODULE Block cmsinfo -->
+<?php if ($_valid && !is_callable('content_5811fcce9aeeb4_81974632')) {function content_5811fcce9aeeb4_81974632($_smarty_tpl) {?><!-- MODULE Block cmsinfo -->
 <div id="cmsinfo_block">
 					<div class="col-xs-6"><ul>
 <li><em class="icon-truck" id="icon-truck"></em>
