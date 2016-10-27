@@ -1,12 +1,11 @@
-@charset "UTF-8";
 // Make sure the charset is set appropriately
+@charset "UTF-8";
 
 @import "compass";
 @import "compass/reset";
 @import "theme_variables";
 @import "bootstrap";
-@import "font-awesome/font-awesome";
-@import "icons";
+@import "font-awesome";
 
 a:hover {
 	text-decoration: none;
@@ -27,7 +26,6 @@ body {
 	color: $base-body-color;
 	&.content_only {
 		background: none;
-		min-width: 0px;
 	}
 }
 
@@ -76,6 +74,9 @@ header {
 		}
 		nav {
 			width: 100%;
+			#currencies-block-top {
+				float: right;
+			}
 		}
 	}
 	.row {
@@ -138,9 +139,6 @@ p.info-account {
 
 .alert {
 	font-weight: bold;
-	&:before {
-		cursor:  pointer;
-	}
 	ul, ol {
 		padding-left: 15px;
 		margin-left: 27px;
@@ -365,7 +363,13 @@ span.exclusive {
 	padding: 0;
 	font-weight: bold;
 	background: rgb(67, 183, 84);
-	@include gradient-vertical(rgba(67, 183, 84, 1), rgba(66, 172, 82, 1));
+	background: -moz-linear-gradient(top, rgba(67, 183, 84, 1) 0%, rgba(65, 183, 87, 1) 2%, rgba(65, 184, 84, 1) 4%, rgba(67, 183, 86, 1) 6%, rgba(65, 179, 84, 1) 38%, rgba(68, 179, 85, 1) 40%, rgba(69, 175, 85, 1) 66%, rgba(65, 174, 83, 1) 74%, rgba(66, 172, 82, 1) 91%, rgba(65, 174, 85, 1) 94%, rgba(67, 171, 84, 1) 96%, rgba(66, 172, 82, 1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(67, 183, 84, 1)), color-stop(2%, rgba(65, 183, 87, 1)), color-stop(4%, rgba(65, 184, 84, 1)), color-stop(6%, rgba(67, 183, 86, 1)), color-stop(38%, rgba(65, 179, 84, 1)), color-stop(40%, rgba(68, 179, 85, 1)), color-stop(66%, rgba(69, 175, 85, 1)), color-stop(74%, rgba(65, 174, 83, 1)), color-stop(91%, rgba(66, 172, 82, 1)), color-stop(94%, rgba(65, 174, 85, 1)), color-stop(96%, rgba(67, 171, 84, 1)), color-stop(100%, rgba(66, 172, 82, 1)));
+	background: -webkit-linear-gradient(top, rgba(67, 183, 84, 1) 0%, rgba(65, 183, 87, 1) 2%, rgba(65, 184, 84, 1) 4%, rgba(67, 183, 86, 1) 6%, rgba(65, 179, 84, 1) 38%, rgba(68, 179, 85, 1) 40%, rgba(69, 175, 85, 1) 66%, rgba(65, 174, 83, 1) 74%, rgba(66, 172, 82, 1) 91%, rgba(65, 174, 85, 1) 94%, rgba(67, 171, 84, 1) 96%, rgba(66, 172, 82, 1) 100%);
+	background: -o-linear-gradient(top, rgba(67, 183, 84, 1) 0%, rgba(65, 183, 87, 1) 2%, rgba(65, 184, 84, 1) 4%, rgba(67, 183, 86, 1) 6%, rgba(65, 179, 84, 1) 38%, rgba(68, 179, 85, 1) 40%, rgba(69, 175, 85, 1) 66%, rgba(65, 174, 83, 1) 74%, rgba(66, 172, 82, 1) 91%, rgba(65, 174, 85, 1) 94%, rgba(67, 171, 84, 1) 96%, rgba(66, 172, 82, 1) 100%);
+	background: -ms-linear-gradient(top, rgba(67, 183, 84, 1) 0%, rgba(65, 183, 87, 1) 2%, rgba(65, 184, 84, 1) 4%, rgba(67, 183, 86, 1) 6%, rgba(65, 179, 84, 1) 38%, rgba(68, 179, 85, 1) 40%, rgba(69, 175, 85, 1) 66%, rgba(65, 174, 83, 1) 74%, rgba(66, 172, 82, 1) 91%, rgba(65, 174, 85, 1) 94%, rgba(67, 171, 84, 1) 96%, rgba(66, 172, 82, 1) 100%);
+	background: linear-gradient(to bottom, rgba(67, 183, 84, 1) 0%, rgba(65, 183, 87, 1) 2%, rgba(65, 184, 84, 1) 4%, rgba(67, 183, 86, 1) 6%, rgba(65, 179, 84, 1) 38%, rgba(68, 179, 85, 1) 40%, rgba(69, 175, 85, 1) 66%, rgba(65, 174, 83, 1) 74%, rgba(66, 172, 82, 1) 91%, rgba(65, 174, 85, 1) 94%, rgba(67, 171, 84, 1) 96%, rgba(66, 172, 82, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#43b754', endColorstr='#42ac52',GradientType=0 );
 	border: 1px solid;
 	border-color: #399a49 #247f32 #1a6d27 #399a49;
 	@include border-radius(0);
@@ -403,22 +407,36 @@ span.exclusive {
 	}
 	&:hover {
 		background: rgb(58, 160, 76);
-		@include gradient-vertical(rgba(58, 160, 76, 1), rgba(58, 160, 74, 1));
+		background: -moz-linear-gradient(top, rgba(58, 160, 76, 1) 0%, rgba(58, 160, 74, 1) 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(58, 160, 76, 1)), color-stop(100%, rgba(58, 160, 74, 1)));
+		background: -webkit-linear-gradient(top, rgba(58, 160, 76, 1) 0%, rgba(58, 160, 74, 1) 100%);
+		background: -o-linear-gradient(top, rgba(58, 160, 76, 1) 0%, rgba(58, 160, 74, 1) 100%);
+		background: -ms-linear-gradient(top, rgba(58, 160, 76, 1) 0%, rgba(58, 160, 74, 1) 100%);
+		background: linear-gradient(to bottom, rgba(58, 160, 76, 1) 0%, rgba(58, 160, 74, 1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3aa04c', endColorstr='#3aa04a',GradientType=0 );
 		border-color: #196f28 #399a49 #399a49 #258033;
 	}
 }
 
 .button.button-medium.exclusive {
 	border-color: #db8600 #d98305 #c86d26 #d98305;
-	@include background-image(linear-gradient(top, rgba(253, 170, 2, 1), rgba(254, 151, 2, 1)));
+	background: rgb(253, 170, 2);
+	background: -moz-linear-gradient(top, rgba(253, 170, 2, 1) 0%, rgba(254, 151, 2, 1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(253, 170, 2, 1)), color-stop(100%, rgba(254, 151, 2, 1)));
+	background: -webkit-linear-gradient(top, rgba(253, 170, 2, 1) 0%, rgba(254, 151, 2, 1) 100%);
+	background: -o-linear-gradient(top, rgba(253, 170, 2, 1) 0%, rgba(254, 151, 2, 1) 100%);
+	background: -ms-linear-gradient(top, rgba(253, 170, 2, 1) 0%, rgba(254, 151, 2, 1) 100%);
+	background: linear-gradient(to bottom, rgba(253, 170, 2, 1) 0%, rgba(254, 151, 2, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdaa02', endColorstr='#fe9702',GradientType=0 );
 	span {
 		border-color: #fec133 #febc33 #feb233 #febc33;
-	}
-	&:hover {
-		background: #f89609;
-		border-color: #a6550c #ba6708 #db8600 #ba6708;
-		span {
-			border-color: #fec133;
+		&:hover {
+			filter: none;
+			background: #f89609;
+			border-color: #a6550c #ba6708 #db8600 #ba6708;
+			span {
+				border-color: #fec133;
+			}
 		}
 	}
 }
@@ -455,8 +473,15 @@ span.exclusive {
 		text-align: center;
 		vertical-align: middle;
 		padding: 4px 0 0 0;
+		background: rgb(30, 87, 153);
 		background: rgb(255, 255, 255);
-		@include gradient-vertical(rgba(255, 255, 255, 1), rgba(251, 251, 251, 1));
+		background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(251, 251, 251, 1) 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(251, 251, 251, 1)));
+		background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(251, 251, 251, 1) 100%);
+		background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(251, 251, 251, 1) 100%);
+		background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(251, 251, 251, 1) 100%);
+		background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(251, 251, 251, 1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#fbfbfb',GradientType=0);
 	}
 	&:hover {
 		color: $base-text-color;
@@ -482,7 +507,13 @@ span.exclusive {
 		display: block;
 		padding: 9px 10px 11px 10px;
 		background: rgb(247, 247, 247);
-		@include gradient-vertical(rgba(247, 247, 247, 1), rgba(237, 237, 237, 1));
+		background: -moz-linear-gradient(top, rgba(247, 247, 247, 1) 0%, rgba(237, 237, 237, 1) 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(247, 247, 247, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
+		background: -webkit-linear-gradient(top, rgba(247, 247, 247, 1) 0%, rgba(237, 237, 237, 1) 100%);
+		background: -o-linear-gradient(top, rgba(247, 247, 247, 1) 0%, rgba(237, 237, 237, 1) 100%);
+		background: -ms-linear-gradient(top, rgba(247, 247, 247, 1) 0%, rgba(237, 237, 237, 1) 100%);
+		background: linear-gradient(to bottom, rgba(247, 247, 247, 1) 0%, rgba(237, 237, 237, 1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#ededed',GradientType=0);
 		// max 480px
 		@media (max-width: $screen-xs) {
 			font-size: 15px;
@@ -491,6 +522,16 @@ span.exclusive {
 		}
 		&:hover {
 			border-color: #9e9e9e #c2c2c2 #c8c8c8 #c2c2c2;
+			span {
+				background: rgb(231, 231, 231);
+				background: -moz-linear-gradient(top, rgba(231, 231, 231, 1) 0%, rgba(231, 231, 231, 1) 0%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(231, 231, 231, 1)), color-stop(0%, rgba(231, 231, 231, 1)));
+				background: -webkit-linear-gradient(top, rgba(231, 231, 231, 1) 0%, rgba(231, 231, 231, 1) 0%);
+				background: -o-linear-gradient(top, rgba(231, 231, 231, 1) 0%, rgba(231, 231, 231, 1) 0%);
+				background: -ms-linear-gradient(top, rgba(231, 231, 231, 1) 0%, rgba(231, 231, 231, 1) 0%);
+				background: linear-gradient(to bottom, rgba(231, 231, 231, 1) 0%, rgba(231, 231, 231, 1) 0%);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e7e7e7', endColorstr='#e7e7e7',GradientType=0);
+			}
 		}
 	}
 }
@@ -508,7 +549,13 @@ span.exclusive {
 		padding: 10px 14px;
 		display: block;
 		background: rgb(0, 154, 208);
-		@include gradient-vertical(rgba(0, 154, 208, 1), rgba(0, 122, 183, 1));
+		background: -moz-linear-gradient(top, rgba(0, 154, 208, 1) 0%, rgba(0, 122, 183, 1) 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 154, 208, 1)), color-stop(100%, rgba(0, 122, 183, 1)));
+		background: -webkit-linear-gradient(top, rgba(0, 154, 208, 1) 0%, rgba(0, 122, 183, 1) 100%);
+		background: -o-linear-gradient(top, rgba(0, 154, 208, 1) 0%, rgba(0, 122, 183, 1) 100%);
+		background: -ms-linear-gradient(top, rgba(0, 154, 208, 1) 0%, rgba(0, 122, 183, 1) 100%);
+		background: linear-gradient(to bottom, rgba(0, 154, 208, 1) 0%, rgba(0, 122, 183, 1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#009ad0', endColorstr='#007ab7',GradientType=0);
 	}
 	&:hover {
 		border-color: #01314e #004b74 #0079b6 #004b74;
@@ -532,7 +579,13 @@ span.exclusive {
 		padding: 10px 14px;
 		display: block;
 		background: rgb(247, 247, 247);
-		@include gradient-vertical(rgba(247, 247, 247, 1), rgba(237, 237, 237, 1));
+		background: -moz-linear-gradient(top, rgba(247, 247, 247, 1) 0%, rgba(237, 237, 237, 1) 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(247, 247, 247, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
+		background: -webkit-linear-gradient(top, rgba(247, 247, 247, 1) 0%, rgba(237, 237, 237, 1) 100%);
+		background: -o-linear-gradient(top, rgba(247, 247, 247, 1) 0%, rgba(237, 237, 237, 1) 100%);
+		background: -ms-linear-gradient(top, rgba(247, 247, 247, 1) 0%, rgba(237, 237, 237, 1) 100%);
+		background: linear-gradient(to bottom, rgba(247, 247, 247, 1) 0%, rgba(237, 237, 237, 1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#ededed',GradientType=0);
 	}
 	&:hover {
 		border-color: #9e9e9e #9e9e9e #c8c8c8 #9e9e9e;
@@ -606,9 +659,6 @@ table.table_block td {
 		}
 	}
 	td {
-		ul, ol {
-			margin-bottom: 0 !important;
-		}
 		a.color-myaccount {
 			color: $link-color;
 			text-decoration: underline;
@@ -876,7 +926,7 @@ table.table_block td {
 	> li {
 		margin-bottom: 0;
 		// min 768px
-		@media (min-width: $screen-sm-max) {
+		@media (min-width: $screen-sm) {
 			border-left: 1px solid $base-border-color;
 			margin: 0 0px 0 9px;
 			padding: 0 0px 0 9px;
@@ -897,9 +947,6 @@ table.table_block td {
 			@media (min-width: $screen-sm) {
 				padding: 1px 10px;
 			}
-			@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
-				padding: 10px 10px;
-			}
 		}
 		&:first-child {
 			border: none;
@@ -913,9 +960,6 @@ table.table_block td {
 		// min 768px
 		@media (min-width: $screen-sm) {
 			margin: -9px 0;
-		}
-		@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
-			margin: 0px 0;
 		}
 	}
 }
@@ -1038,8 +1082,7 @@ table.table_block td {
 			.product-content {
 				overflow: hidden;
 				h5 {
-					position: relative;
-					top: -11px;
+					margin: -3px 0 0 0;
 				}
 			}
 		}
@@ -1352,7 +1395,7 @@ ul.step {
 	margin-bottom: 30px;
 	overflow: hidden;
 	//min 480px
-	@media (min-width: $screen-sm) {
+	@media (min-width: $screen-xs) {
 		@include border-radius(4px);
 	}
 	li {
@@ -1365,7 +1408,7 @@ ul.step {
 		border-right-color: #b7b7b7;
 		border-left-width: 0px;
 		// max 480px
-		@media (max-width: $screen-sm - 1) {
+		@media (max-width: $screen-xs - 1) {
 			width: 100%;
 			border-left-width: 1px;
 		}
@@ -1409,7 +1452,7 @@ ul.step {
 			border-left-width: 1px;
 			border-left-color: #b7b7b7;
 			//min 480px
-			@media (min-width: $screen-sm) {
+			@media (min-width: $screen-xs) {
 				@include border-top-left-radius(4px);
 				@include border-bottom-left-radius(4px);
 			}
@@ -1418,7 +1461,7 @@ ul.step {
 				z-index: 5;
 				padding-left: 13px !important;
 				//min 480px
-				@media (min-width: $screen-sm) {
+				@media (min-width: $screen-xs) {
 					@include border-top-left-radius(4px);
 					@include border-bottom-left-radius(4px);
 				}
@@ -1444,7 +1487,7 @@ ul.step {
 				z-index: 1;
 			}
 			//min 480px
-			@media (min-width: $screen-sm) {
+			@media (min-width: $screen-xs) {
 				@include border-top-right-radius(4px);
 				@include border-bottom-right-radius(4px);
 				span {
@@ -1456,7 +1499,13 @@ ul.step {
 		&.step_current {
 			font-weight: bold;
 			background: rgb(66, 184, 86);
-			@include gradient-vertical(rgba(66, 184, 86, 1), rgba(67, 171, 84, 1));
+			background: -moz-linear-gradient(top, rgba(66, 184, 86, 1) 0%, rgba(67, 171, 84, 1) 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(66, 184, 86, 1)), color-stop(100%, rgba(67, 171, 84, 1)));
+			background: -webkit-linear-gradient(top, rgba(66, 184, 86, 1) 0%, rgba(67, 171, 84, 1) 100%);
+			background: -o-linear-gradient(top, rgba(66, 184, 86, 1) 0%, rgba(67, 171, 84, 1) 100%);
+			background: -ms-linear-gradient(top, rgba(66, 184, 86, 1) 0%, rgba(67, 171, 84, 1) 100%);
+			background: linear-gradient(to bottom, rgba(66, 184, 86, 1) 0%, rgba(67, 171, 84, 1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#42b856', endColorstr='#43ab54',GradientType=0);
 			border-color: #399b49 #51ae5c #208931 #369946;
 			span {
 				color: $light-text-color;
@@ -1478,7 +1527,13 @@ ul.step {
 		}
 		&.step_todo {
 			background: rgb(247, 247, 247);
-			@include gradient-vertical(rgba(247, 247, 247, 1), rgba(237, 237, 237, 1));
+			background: -moz-linear-gradient(top, rgba(247, 247, 247, 1) 0%, rgba(237, 237, 237, 1) 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(247, 247, 247, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
+			background: -webkit-linear-gradient(top, rgba(247, 247, 247, 1) 0%, rgba(237, 237, 237, 1) 100%);
+			background: -o-linear-gradient(top, rgba(247, 247, 247, 1) 0%, rgba(237, 237, 237, 1) 100%);
+			background: -ms-linear-gradient(top, rgba(247, 247, 247, 1) 0%, rgba(237, 237, 237, 1) 100%);
+			background: linear-gradient(to bottom, rgba(247, 247, 247, 1) 0%, rgba(237, 237, 237, 1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#ededed',GradientType=0);
 			span {
 				display: block;
 				border: 1px solid;
@@ -1497,7 +1552,13 @@ ul.step {
 		&.step_done {
 			border-color: #666666 #5f5f5f #292929 #5f5f5f;
 			background: rgb(114, 113, 113);
-			@include gradient-vertical(rgba(114, 113, 113, 1), rgba(102, 102, 102, 1));
+			background: -moz-linear-gradient(top, rgba(114, 113, 113, 1) 0%, rgba(102, 102, 102, 1) 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(114, 113, 113, 1)), color-stop(100%, rgba(102, 102, 102, 1)));
+			background: -webkit-linear-gradient(top, rgba(114, 113, 113, 1) 0%, rgba(102, 102, 102, 1) 100%);
+			background: -o-linear-gradient(top, rgba(114, 113, 113, 1) 0%, rgba(102, 102, 102, 1) 100%);
+			background: -ms-linear-gradient(top, rgba(114, 113, 113, 1) 0%, rgba(102, 102, 102, 1) 100%);
+			background: linear-gradient(to bottom, rgba(114, 113, 113, 1) 0%, rgba(102, 102, 102, 1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#727171', endColorstr='#666666',GradientType=0);
 			a {
 				color: $light-text-color;
 				text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
@@ -1531,7 +1592,7 @@ ul.step {
 		em {
 			font-style: normal;
 			// min 480px max 767px
-			@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+			@media (min-width: $screen-xs) and (max-width: $screen-xs-max) {
 				display: none;
 			}
 		}
@@ -1598,10 +1659,6 @@ div.star a:hover {
 
 #page .rte {
 	background: transparent none repeat scroll 0 0;
-
-	em {
-		font-style: italic !important;
-	}
 }
 
 .listcomment {
@@ -1744,9 +1801,6 @@ div.star a:hover {
 		.row {
 			position: relative;
 		}
-		ul.row{
-			position: static;
-		}
 		.footer-block {
 			margin-top: 45px;
 			// max 767px
@@ -1764,7 +1818,6 @@ div.star a:hover {
 			font: 600 18px / 22px $font-custom;
 			color: $light-text-color;
 			margin: 0 0 13px 0;
-			cursor: pointer;
 			// max 767px
 			@media (max-width: $screen-xs-max) {
 				position: relative;
@@ -1870,9 +1923,6 @@ div.star a:hover {
 							display: inline-block;
 							font-family: $font-icon;
 							vertical-align: -5px;
-							font-weight: normal;
-							-webkit-font-smoothing: antialiased;
-							-moz-osx-font-smoothing: grayscale;
 						}
 						&:hover {
 							color: $light-text-color;
@@ -1917,20 +1967,6 @@ div.star a:hover {
 						a {
 							&:before {
 								content: "\f0d2";
-							}
-						}
-					}
-					&.vimeo {
-						a {
-							&:before {
-								content: "\f194";
-							}
-						}
-					}
-					&.instagram {
-						a {
-							&:before {
-								content: "\f16d";
 							}
 						}
 					}
@@ -1979,12 +2015,10 @@ div.star a:hover {
 
 .rte ul {
 	list-style-type: disc;
-	padding-left: 15px;
 }
 
 .rte ol {
 	list-style-type: decimal;
-	padding-left: 15px;
 }
 
 .block_hidden_only_for_screen {
@@ -2068,7 +2102,7 @@ div.star a:hover {
 		vertical-align: middle;
 		&.cart_quantity {
 			padding: 41px 14px 25px;
-			width: 70px;
+			width: 88px;
 			.cart_quantity_button {
 				margin-top: 3px;
 				a {
@@ -2100,30 +2134,19 @@ a.price_discount_delete {
 }
 
 #cart_summary {
-	thead {
-		th {
-			padding: 7px 8px 9px 8px;
-			&.cart_product {
-				@extend .text-center;
-			}
-		}
-	}
 	tbody {
 		td {
-			padding: 7px 8px 9px 8px;
 			&.cart_product {
-				@extend .text-center;
-				padding: 7px;
+				padding: 19px;
 				width: 137px;
 				img {
 					border: 1px solid $table-border-color;
 				}
 			}
 			&.cart_unit {
-				@extend .text-right;
 				.price {
 					span {
-						display: inline-block;
+						display: block;
 						&.price-percent-reduction {
 							margin: 5px auto;
 							display: inline-block;
@@ -2135,25 +2158,13 @@ a.price_discount_delete {
 				}
 			}
 			&.cart_description {
+				width: 480px;
 				small {
 					display: block;
 					padding: 5px 0 0 0;
 				}
 			}
-			&.cart_avail{
-				@extend .text-center;
-				width: 1%;
-				span {
-					white-space: nowrap;
-				}
-			}
-			&.cart_delete{
-				@extend .text-center;
-				width: 1%;
-			}
-			&.cart_total {
-				@extend .text-right;
-			}
+			&.cart_avail {}
 		}
 	}
 	tfoot {
@@ -2181,24 +2192,6 @@ a.price_discount_delete {
 	}
 }
 
-#cart_summary .stock-management-on {
-	tbody {
-		td {
-			&.cart_description {
-				width: 480px;
-			}
-		}
-	}
-}
-
-.cart_discount_price{
-  text-align: right;
-}
-
-.cart_discount_delete{
-  text-align: center;
-}
-
 @media (max-width: $screen-xs-max) {
 	#order-detail-content {
 		#cart_summary {
@@ -2212,59 +2205,34 @@ a.price_discount_delete {
 			}
 			tr {
 				border-bottom: 1px solid #cccccc;
-				padding-bottom: 7px;
 				overflow: hidden;
-				position: relative;
 			}
 			td {
 				border: none;
 				position: relative;
+				width: 50%;
 				float: left;
 				white-space: normal;
-				padding: 7px 20px 7px 20px;
-				&.cart_product {
-					text-align: left;
-				}
+				&.cart_product {}
 				&.cart_description {}
 				&.cart_avail {
-					display: none;
-				}
-				&.cart_unit {
-					width: 33%;
-					text-align: right;
-					min-height: 70px;
 					clear: both;
-					.price {
-						text-align: right;
-					}
 				}
+				&.cart_unit {}
 				&.cart_quantity {
-					div {
-						display: block;
-					}
-					&>.form-control {
-						display: inline;
-					}
-					&>.cart_quantity_button a {
-						margin-right: 0px;
-						float: none;
-					}
-					width: 33%;
-					min-height: 70px;
-					border-left: 1px solid #cccccc;
-					border-right: 1px solid #cccccc;
+					clear: both;
+					padding: 9px 8px 11px 18px;
 				}
-				&.cart_total {
-					width: 33%;
-					min-height: 70px;
-					text-align: right;
-				}
+				&.cart_total {}
 				&.cart_delete {
-					position: absolute;
-					right: 20px;
-					top: 7px;
+					width: 100%;
+					clear: both;
+					text-align: right;
 					&:before {
-						content: '' !important;
+						display: inline-block;
+						padding-right: 0.5em;
+						position: relative;
+						top: -3px;
 					}
 				}
 				div {
@@ -2273,7 +2241,6 @@ a.price_discount_delete {
 			}
 			td:before {
 				content: attr(data-title);
-				font-weight: bold;
 				display: block;
 			}
 			tfoot {
@@ -2370,11 +2337,6 @@ a.price_discount_delete {
 	background: $light-background;
 }
 
-.order_carrier_logo {
-  max-width: 65px;
-  max-height: 65px;
-}
-
 #order_carrier .title_block {
 	padding: 0 15px;
 	height: 29px;
@@ -2399,7 +2361,6 @@ a.price_discount_delete {
 table#cart_summary .gift-icon {
 	color: white;
 	background: #0088cc;
-	display: inline;
 	line-height: 20px;
 	padding: 2px 5px;
 	border-radius: 5px;
@@ -2492,7 +2453,9 @@ table#cart_summary .gift-icon {
 				&.delivery_option_carrier {
 					margin-top: 10px;
 					width: 100%;
-					border: 1px solid $table-border-color;
+					background: $state-info-bg;
+					color: $state-info-text;
+					border: 1px solid $state-info-border;
 					font-weight: bold;
 					td {
 						padding: 8px 11px 7px 11px;
@@ -2689,7 +2652,7 @@ p.cheque-indent {
 	display: table;
 }
 
-.not-displayable {
+.delivery_option_carrier.not-displayable {
 	display: none;
 }
 
@@ -2700,10 +2663,9 @@ p.cheque-indent {
 #new_account_form,
 #opc_account_form,
 #authentication {
-	.box {
-		padding-bottom: 20px;
-		line-height: 20px;
-	}
+	.box {}
+	padding-bottom: 20px;
+	line-height: 20px;
 	p.required {
 		color: #f13340;
 		margin: 9px 0 16px 0;
@@ -2789,9 +2751,8 @@ p.cheque-indent {
 }
 
 #authentication {
-	fieldset.account_creation {
-		margin-bottom: 20px;
-	}
+	fieldset.account_creation {}
+	margin-bottom: 20px;
 }
 
 // PASSWORD
@@ -3010,7 +2971,7 @@ table.discount {
 #pagenotfound {
 	.pagenotfound {
 		max-width: 824px;
-		margin: 100px auto 100px auto;
+		margin: 0 auto;
 		text-align: center;
 		.img-404 {
 			padding: 8px 0 27px 0;
@@ -3281,13 +3242,11 @@ div.star.star_hover {
 	overflow: hidden;
 	background: $homepage-footer-bg;
 	min-height: 344px;
-	height: 344px;
 	padding-right: 29px;
 	padding-left: 29px;
 	// max 991px
 	@media (max-width: $screen-sm-max) {
-		min-height: 354px;
-		height: 354px;
+		min-height: 348px;
 		padding-left: 13px;
 		padding-right: 13px;
 	}
@@ -3510,43 +3469,4 @@ div.star.star_hover {
 			color: white;
 		}
 	}
-}
-
-.payment_option_form {
-  display: none;
-}
-
-.payment_option_logo {
-  height:50px;
-  max-height: 50px;
-}
-
-.payment_module_adv {
-  height:120px;
-  max-height: 120px;
-}
-
-.payment_option_selected {
-    i {
-      color: green;
-    }
-    display: none;
-    margin-top: 15px;
-}
-
-.payment_option_cta {
-  margin-left: 10px;
-  color: #333 !important;
-}
-
-.tnc_box {
-  background: #fbfbfb;
-  border: 1px solid #d6d4d4;
-  padding: 14px 18px 13px;
-  margin: 0 0 30px 0;
-  line-height: 23px;
-}
-
-.pointer-box {
-  cursor: pointer;
 }

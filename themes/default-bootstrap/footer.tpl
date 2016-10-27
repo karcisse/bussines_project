@@ -1,5 +1,5 @@
 {*
-* 2007-2016 PrestaShop
+* 2007-2014 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -18,11 +18,11 @@
 * needs please refer to http://www.prestashop.com for more information.
 *
 *  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
+*  @copyright  2007-2014 PrestaShop SA
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-{if !isset($content_only) || !$content_only}
+{if !$content_only}
 					</div><!-- #center_column -->
 					{if isset($right_column_size) && !empty($right_column_size)}
 						<div id="right_column" class="col-xs-12 col-sm-{$right_column_size|intval} column">{$HOOK_RIGHT_COLUMN}</div>
@@ -30,15 +30,20 @@
 					</div><!-- .row -->
 				</div><!-- #columns -->
 			</div><!-- .columns-container -->
-			{if isset($HOOK_FOOTER)}
-				<!-- Footer -->
-				<div class="footer-container">
-					<footer id="footer"  class="container">
-						<div class="row">{$HOOK_FOOTER}</div>
-					</footer>
-				</div><!-- #footer -->
-			{/if}
+			<!-- Footer -->
+			<div class="footer-container">
+				<footer id="footer"  class="container">
+					<div class="row">{$HOOK_FOOTER}</div>
+				</footer>
+			</div><!-- #footer -->
 		</div><!-- #page -->
+<br class="clear" style="clear:both;" />
+
+<div style="text-align:center;" id="footer-seotext">
+<a href="http://move-marketing.dk/vi-tilbyder/seo-dk/" target="_blank">SEO from Move Marketing</a>
+</div>
+
+
 {/if}
 {include file="$tpl_dir./global.tpl"}
 	</body>

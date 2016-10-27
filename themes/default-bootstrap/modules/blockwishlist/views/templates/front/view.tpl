@@ -1,5 +1,5 @@
 {*
-* 2007-2016 PrestaShop
+* 2007-2014 PrestaShop
 *
 * NOTICE OF LICENSE
 *
@@ -18,7 +18,7 @@
 * needs please refer to http://www.prestashop.com for more information.
 *
 *  @author PrestaShop SA <contact@prestashop.com>
-*  @copyright  2007-2016 PrestaShop SA
+*  @copyright  2007-2014 PrestaShop SA
 *  @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
@@ -28,7 +28,7 @@
         <span class="navigation-pipe">{$navigationPipe}</span>
         <a href="{$link->getModuleLink('blockwishlist', 'mywishlist')|escape:'html'}">{l s='My wishlists' mod='blockwishlist'}</a>
         <span class="navigation-pipe">{$navigationPipe}</span>
-        {$current_wishlist.name|escape:'htmlall':'UTF-8'}
+        {$current_wishlist.name}
     {/capture}
 
     <h1 class="page-heading bottom-indent">
@@ -41,8 +41,8 @@
             </strong>
             {foreach from=$wishlists item=wishlist name=i}
                 {if $wishlist.id_wishlist != $current_wishlist.id_wishlist}
-                    <a href="{$link->getModuleLink('blockwishlist', 'view', ['token' => $wishlist.token])|escape:'html':'UTF-8'}" rel="nofollow" title="{$wishlist.name|escape:'html':'UTF-8'}">
-                        {$wishlist.name|escape:'htmlall':'UTF-8'}
+                    <a href="{$link->getModuleLink('blockwishlist', 'view', ['token' => $wishlist.token])|escape:'html':'UTF-8'}" rel="nofollow" title="{$wishlist.name}">
+                        {$wishlist.name}
                     </a>
                     {if !$smarty.foreach.i.last}
                         /
@@ -106,7 +106,7 @@
                                         <span><strong>{l s='Priority' mod='blockwishlist'}:</strong> {$product.priority_name}</span>
                                     </p>
                                     <div class="btn_action">
-                                        {if (isset($product.attribute_quantity) && $product.attribute_quantity >= 1) || (!isset($product.attribute_quantity) && $product.product_quantity >= 1) || (isset($product.allow_oosp) && $product.allow_oosp)}
+                                        {if isset($product.attribute_quantity) AND $product.attribute_quantity >= 1 OR !isset($product.attribute_quantity) AND $product.product_quantity >= 1}
                                             {if !$ajax}
                                                 <form id="addtocart_{$product.id_product|intval}_{$product.id_product_attribute|intval}"
                                                       action="{$link->getPageLink('cart')|escape:'html':'UTF-8'}"
