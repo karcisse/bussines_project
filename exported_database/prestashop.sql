@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Czas generowania: 27 Paź 2016, 01:53
+-- Czas generowania: 27 Paź 2016, 03:00
 -- Wersja serwera: 10.1.16-MariaDB
 -- Wersja PHP: 5.6.24
 
@@ -2330,12 +2330,12 @@ INSERT INTO `ps_condition` (`id_condition`, `id_ps_condition`, `type`, `request`
 (87, 86, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"BZ",\r\n"CR",\r\n"GT",\r\n"HN",\r\n"MX",\r\n"NI",\r\n"PA",\r\n"SV",\r\n"AG",\r\n"AI",\r\n"AN",\r\n"AW",\r\n"BB",\r\n"BM",\r\n"BS",\r\n"CU",\r\n"DM",\r\n"DO",\r\n"GD",\r\n"GP",\r\n"HT",\r\n"JM",\r\n"KN",\r\n"KY",\r\n"LC",\r\n"MQ",\r\n"MS",\r\n"PR",\r\n"TC",\r\n"TT",\r\n"VC",\r\n"VG",\r\n"VI",\r\n"AR",\r\n"BO",\r\n"BR",\r\n"CL",\r\n"CO",\r\n"EC",\r\n"FK",\r\n"GF",\r\n"GY",\r\n"PE",\r\n"PY",\r\n"SR",\r\n"UY",\r\n"VE"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
 (88, 88, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"BI",\r\n"CF",\r\n"CG",\r\n"RW",\r\n"TD",\r\n"ZR",\r\n"DJ",\r\n"ER",\r\n"ET",\r\n"KE",\r\n"SO",\r\n"TZ",\r\n"UG",\r\n"KM",\r\n"MG",\r\n"MU",\r\n"RE",\r\n"SC",\r\n"YT",\r\n"AO",\r\n"BW",\r\n"LS",\r\n"MW",\r\n"MZ",\r\n"NA",\r\n"SZ",\r\n"ZA",\r\n"ZM",\r\n"ZW",\r\n"BF",\r\n"BJ",\r\n"CI",\r\n"CM",\r\n"CV",\r\n"GA",\r\n"GH",\r\n"GM",\r\n"GN",\r\n"GQ",\r\n"GW",\r\n"LR",\r\n"ML",\r\n"MR",\r\n"NE",\r\n"NG",\r\n"SL",\r\n"SN",\r\n"ST",\r\n"TG"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
 (89, 89, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"DZ",\r\n"EG",\r\n"EH",\r\n"LY",\r\n"MA",\r\n"SD",\r\n"TN"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
-(90, 90, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '2', '', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
-(91, 91, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '3', '', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
-(92, 92, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '5', '', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
-(93, 93, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '10', '', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
-(94, 94, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '20', '', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
-(95, 95, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '40', '', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
+(90, 90, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '2', '2', 'hook', 'actionObjectEmployeeAddAfter', 1, '2016-10-27 01:41:11', '2016-10-27 02:46:02'),
+(91, 91, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '3', '3', 'hook', 'actionObjectEmployeeAddAfter', 1, '2016-10-27 01:41:11', '2016-10-27 02:47:01'),
+(92, 92, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '5', '3', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-10-27 01:41:11', '2016-10-27 02:47:01'),
+(93, 93, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '10', '3', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-10-27 01:41:11', '2016-10-27 02:47:01'),
+(94, 94, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '20', '3', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-10-27 01:41:11', '2016-10-27 02:47:01'),
+(95, 95, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '40', '3', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-10-27 01:41:11', '2016-10-27 02:47:02'),
 (96, 96, 'sql', 'SELECT id_image FROM PREFIX_image WHERE id_image > 26', '>', '0', '', 'hook', 'actionObjectImageAddAfter', 0, '2016-10-27 01:41:12', '2016-10-27 01:41:12'),
 (97, 97, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '50', '', 'hook', 'actionObjectImageAddAfter', 0, '2016-10-27 01:41:12', '2016-10-27 01:41:12'),
 (98, 98, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '100', '', 'hook', 'actionObjectImageAddAfter', 0, '2016-10-27 01:41:12', '2016-10-27 01:41:12'),
@@ -3011,7 +3011,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (360, NULL, NULL, 'PS_ONBOARDING_STEP_2_COMPLETED', '0', '2016-10-27 01:39:20', '2016-10-27 01:39:20'),
 (361, NULL, NULL, 'PS_ONBOARDING_STEP_3_COMPLETED', '0', '2016-10-27 01:39:20', '2016-10-27 01:39:20'),
 (362, NULL, NULL, 'PS_ONBOARDING_STEP_4_COMPLETED', '0', '2016-10-27 01:39:20', '2016-10-27 01:39:20'),
-(363, NULL, NULL, 'GF_NOT_VIEWED_BADGE', NULL, '2016-10-27 01:44:44', '2016-10-27 01:49:51');
+(363, NULL, NULL, 'GF_NOT_VIEWED_BADGE', NULL, '2016-10-27 01:44:44', '2016-10-27 02:47:02');
 
 -- --------------------------------------------------------
 
@@ -3170,7 +3170,7 @@ CREATE TABLE IF NOT EXISTS `ps_connections` (
   KEY `id_guest` (`id_guest`),
   KEY `date_add` (`date_add`),
   KEY `id_page` (`id_page`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Zrzut danych tabeli `ps_connections`
@@ -3178,7 +3178,8 @@ CREATE TABLE IF NOT EXISTS `ps_connections` (
 
 INSERT INTO `ps_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_guest`, `id_page`, `ip_address`, `date_add`, `http_referer`) VALUES
 (1, 1, 1, 1, 1, 2130706433, '2016-10-27 01:37:20', 'http://www.prestashop.com'),
-(2, 1, 1, 2, 1, 2130706433, '2016-10-27 01:40:06', 'http://127.0.0.1:83/myshop/install/index.php');
+(2, 1, 1, 2, 1, 2130706433, '2016-10-27 01:40:06', 'http://127.0.0.1:83/myshop/install/index.php'),
+(3, 1, 1, 2, 2, 2130706433, '2016-10-27 02:44:17', '');
 
 -- --------------------------------------------------------
 
@@ -4688,14 +4689,16 @@ CREATE TABLE IF NOT EXISTS `ps_employee` (
   KEY `employee_login` (`email`,`passwd`),
   KEY `id_employee_passwd` (`id_employee`,`passwd`),
   KEY `id_profile` (`id_profile`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Zrzut danych tabeli `ps_employee`
 --
 
 INSERT INTO `ps_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`) VALUES
-(1, 1, 1, 'Karol', 'Karol', 'pankarol@mycarparts.com', 'c4a9a2f554809c0fe306f712a18b64f7', '2016-10-26 17:36:37', '2016-10-01', '2016-10-27', '0000-00-00', '0000-00-00', 1, '', '', 'default', 'admin-theme.css', 1, 0, 1, 1, 1, 0, 0, 0, '2016-10-27');
+(1, 1, 1, 'Karol', 'Karol', 'pankarol@mycarparts.com', 'c4a9a2f554809c0fe306f712a18b64f7', '2016-10-26 17:36:37', '2016-10-01', '2016-10-27', '0000-00-00', '0000-00-00', 1, '', '', 'default', 'admin-theme.css', 1, 0, 1, 1, 1, 0, 0, 0, '2016-10-27'),
+(2, 1, 1, 'Maciej', 'Maciej', 'maciej@mycarparts.com', 'bb48b359922d8e6310f4a61693f40b48', '2016-10-26 18:46:02', '2016-09-27', '2016-10-27', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'admin-theme.css', 1, 0, 1, 1, 0, 5, 0, 1, '0000-00-00'),
+(3, 1, 1, 'Michał', 'Michał', 'michał@mycarparts.com', 'bb48b359922d8e6310f4a61693f40b48', '2016-10-26 18:47:00', '2016-09-27', '2016-10-27', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'admin-theme.css', 1, 0, 1, 1, 1, 5, 0, 1, '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -4715,7 +4718,9 @@ CREATE TABLE IF NOT EXISTS `ps_employee_shop` (
 --
 
 INSERT INTO `ps_employee_shop` (`id_employee`, `id_shop`) VALUES
-(1, 1);
+(1, 1),
+(2, 1),
+(3, 1);
 
 -- --------------------------------------------------------
 
@@ -6599,7 +6604,7 @@ CREATE TABLE IF NOT EXISTS `ps_log` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id_log`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Zrzut danych tabeli `ps_log`
@@ -6611,7 +6616,10 @@ INSERT INTO `ps_log` (`id_log`, `severity`, `error_code`, `message`, `object_typ
 (3, 1, 0, 'Back Office connection from 127.0.0.1', '', 0, 1, '2016-10-27 01:45:57', '2016-10-27 01:45:57'),
 (4, 1, 0, 'Product deletion', 'Product', 1, 1, '2016-10-27 01:48:23', '2016-10-27 01:48:23'),
 (5, 1, 0, 'Product deletion', 'Product', 2, 1, '2016-10-27 01:48:33', '2016-10-27 01:48:33'),
-(6, 1, 0, 'Product deletion', 'Product', 3, 1, '2016-10-27 01:48:43', '2016-10-27 01:48:43');
+(6, 1, 0, 'Product deletion', 'Product', 3, 1, '2016-10-27 01:48:43', '2016-10-27 01:48:43'),
+(7, 1, 0, 'Back Office connection from 127.0.0.1', '', 0, 1, '2016-10-27 02:44:31', '2016-10-27 02:44:31'),
+(8, 1, 0, 'Employee addition', 'Employee', 2, 1, '2016-10-27 02:46:02', '2016-10-27 02:46:02'),
+(9, 1, 0, 'Employee addition', 'Employee', 3, 1, '2016-10-27 02:47:02', '2016-10-27 02:47:02');
 
 -- --------------------------------------------------------
 
@@ -8267,14 +8275,15 @@ CREATE TABLE IF NOT EXISTS `ps_page` (
   PRIMARY KEY (`id_page`),
   KEY `id_page_type` (`id_page_type`),
   KEY `id_object` (`id_object`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Zrzut danych tabeli `ps_page`
 --
 
 INSERT INTO `ps_page` (`id_page`, `id_page_type`, `id_object`) VALUES
-(1, 1, NULL);
+(1, 1, NULL),
+(2, 2, NULL);
 
 -- --------------------------------------------------------
 
@@ -8311,13 +8320,14 @@ CREATE TABLE IF NOT EXISTS `ps_page_type` (
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id_page_type`),
   KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Zrzut danych tabeli `ps_page_type`
 --
 
 INSERT INTO `ps_page_type` (`id_page_type`, `name`) VALUES
+(2, 'index'),
 (1, 'pagenotfound');
 
 -- --------------------------------------------------------
@@ -10408,13 +10418,22 @@ INSERT INTO `ps_smarty_lazy_cache` (`template_hash`, `cache_id`, `compile_id`, `
 ('0f5b338be72f2f0e91ac1568f6e5cf64', 'blocksearch-top|1|1|2|14', '', 'blocksearch_top\\1\\1\\2\\14\\1c\\bf\\e2\\1cbfe2c27bacef34af2eb0494382dd01b1afff54.blocksearch-top.tpl.php', '2016-10-27 01:40:03'),
 ('10b64d2db2ea1c13cf640de714453614', 'blockcontactinfos|1|1|2|14', '', 'blockcontactinfos\\1\\1\\2\\14\\53\\0a\\64\\530a64a491644e027bd6452f151fb870fa57a963.blockcontactinfos.tpl.php', '2016-10-27 01:40:05'),
 ('10ca1899ac1ada49225c5c0f00198851', 'blockcmsinfo|1|1|2|14', '', 'blockcmsinfo\\1\\1\\2\\14\\db\\5f\\c1\\db5fc1b4d35bb6d6514c7c16960871ab7014f203.blockcmsinfo.tpl.php', '2016-10-27 01:40:31'),
+('2357effeef75c27b536dd87692d35c90', 'blockbestsellers-home|1|1|2|14', '', 'blockbestsellers_home\\1\\1\\2\\14\\a8\\2d\\84\\a82d84c2a83ce4f560d9a107399a85800fb03b67.blockbestsellers-home.tpl.php', '2016-10-27 02:44:17'),
 ('2497f49f374f0b9ee5519c4690059c12', 'blockmyaccountfooter|1|1|2|14', '', 'blockmyaccountfooter\\1\\1\\2\\14\\10\\fd\\02\\10fd02e840757b7aca7a4831f3d313b1ea50c372.blockmyaccountfooter.tpl.php', '2016-10-27 01:40:05'),
 ('2c5d102f942939c0ce23e745100715d9', 'homeslider|1|1|2|14', '', 'homeslider\\1\\1\\2\\14\\6c\\9f\\1a\\6c9f1a7bd9b709650ddab975242361494de5ebf6.homeslider.tpl.php', '2016-10-27 01:40:35'),
+('2e21eb94192f5b233768aab45a808b7f', 'homefeatured|1|1|2|14', '', 'homefeatured\\1\\1\\2\\14\\23\\6f\\16\\236f1647c1c40090b7a50962178d20decf9eda46.homefeatured.tpl.php', '2016-10-27 02:44:17'),
 ('2fee13aff31f56192916db8dd8db7be4', 'blockcms|2|1|1|2|14', '', 'blockcms\\2\\1\\1\\2\\14\\d4\\5d\\fe\\d45dfe72b76a5abb352da86ca3ffb30b889c7c69.blockcms.tpl.php', '2016-10-27 01:40:05'),
 ('4ec82c481e6cc79efda097d2d5c93118', 'blocksocial|1|1|2|14', '', 'blocksocial\\1\\1\\2\\14\\9c\\f2\\2d\\9cf22dd85128153e58ee6c9ef2147d9854737bbd.blocksocial.tpl.php', '2016-10-27 01:40:04'),
+('5148d6798f805982157f82a50e65faaf', 'blocktopmenu|1|1|2|14|index', '', 'blocktopmenu\\1\\1\\2\\14\\index\\74\\c6\\5e\\74c65e2e0e9c5aa5a5665523c4dbf363672ef83e.blocktopmenu.tpl.php', '2016-10-27 02:44:14'),
 ('53aadee84a20a5a2142d2fd45fb5b5d0', 'blockcontact|1|1|2|14', '', 'blockcontact\\1\\1\\2\\14\\84\\26\\35\\842635fcc0f5a9cf461255a17a00d4d155ec35fd.nav.tpl.php', '2016-10-27 01:40:07'),
 ('551c82b532a77fe904c7ea9c6896c2cc', 'blockfacebook|1|1|2|14', '', 'blockfacebook\\1\\1\\2\\14\\43\\93\\e6\\4393e6427928b404cc04c891289087162f14169f.blockfacebook.tpl.php', '2016-10-27 01:40:31'),
+('6f74d34290af3d3b284260bf74cc6ac2', 'blockspecials-tab|20161027|1|1|2|14', '', 'blockspecials_tab\\20161027\\1\\1\\2\\14\\f5\\4b\\a6\\f54ba689fff13a1149683de12d9b24a4353d01d6.tab.tpl.php', '2016-10-27 02:44:16'),
+('a1f16edb275c1c15862886f9f9fe3874', 'blocknewproducts-home|20161027|1|1|2|14', '', 'blocknewproducts_home\\20161027\\1\\1\\2\\14\\ed\\07\\21\\ed07219273fe59d155d2e54d4d99d377bd9be67c.blocknewproducts_home.tpl.php', '2016-10-27 02:44:16'),
 ('c4f8c83142902315830316bc8f96cf5c', 'blockbanner|1|1|2|14', '', 'blockbanner\\1\\1\\2\\14\\3f\\b4\\ce\\3fb4ce553057d36fe5c641eaa00f7f62866ee444.blockbanner.tpl.php', '2016-10-27 01:40:07'),
+('cad2161cd26baf37bbfce64a62043bfe', 'blocknewproducts-tab|20161027|1|1|2|14', '', 'blocknewproducts_tab\\20161027\\1\\1\\2\\14\\62\\9c\\47\\629c472993f15b1d6d9847808e03a92418cb6630.tab.tpl.php', '2016-10-27 02:44:15'),
+('d3a6e9506cd08544dacdc1cc2f53bbe6', 'homefeatured-tab|1|1|2|14', '', 'homefeatured_tab\\1\\1\\2\\14\\3c\\08\\f6\\3c08f684187768c55b022210d12ca7a4d0bf2543.tab.tpl.php', '2016-10-27 02:44:16'),
+('e3dde3741e980855eb885ddfa4ca50ef', 'blockspecials-home|20161027|1|1|2|14', '', 'blockspecials_home\\20161027\\1\\1\\2\\14\\11\\63\\14\\1163141e31734004cef9457a64b8d808aaf6aab7.blockspecials-home.tpl.php', '2016-10-27 02:44:17'),
+('f31a720f302cb0768fd04d43b55a3bdf', 'blockbestsellers-tab|1|1|2|14', '', 'blockbestsellers_tab\\1\\1\\2\\14\\e3\\f4\\7c\\e3f47c4de5113244d86673be15576301d3217240.tab.tpl.php', '2016-10-27 02:44:16'),
 ('f8ffab5fa34448791ee9de73fd2fdc34', 'blockcategories|1|1|2|14|1', '', 'blockcategories\\1\\1\\2\\14\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php', '2016-10-27 01:40:04');
 
 -- --------------------------------------------------------
