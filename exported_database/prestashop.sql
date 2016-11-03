@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Czas generowania: 27 Paź 2016, 15:47
--- Wersja serwera: 10.1.16-MariaDB
--- Wersja PHP: 5.6.24
+-- Generation Time: Nov 03, 2016 at 05:29 PM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: `prestashop`
+-- Database: `prestashop`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_access`
+-- Table structure for table `ps_access`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_access` (
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `ps_access` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_access`
+-- Dumping data for table `ps_access`
 --
 
 INSERT INTO `ps_access` (`id_profile`, `id_tab`, `view`, `add`, `edit`, `delete`) VALUES
@@ -444,7 +444,7 @@ INSERT INTO `ps_access` (`id_profile`, `id_tab`, `view`, `add`, `edit`, `delete`
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_accessory`
+-- Table structure for table `ps_accessory`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_accessory` (
@@ -456,7 +456,7 @@ CREATE TABLE IF NOT EXISTS `ps_accessory` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_address`
+-- Table structure for table `ps_address`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_address` (
@@ -494,7 +494,7 @@ CREATE TABLE IF NOT EXISTS `ps_address` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_address`
+-- Dumping data for table `ps_address`
 --
 
 INSERT INTO `ps_address` (`id_address`, `id_country`, `id_state`, `id_customer`, `id_manufacturer`, `id_supplier`, `id_warehouse`, `alias`, `company`, `lastname`, `firstname`, `address1`, `address2`, `postcode`, `city`, `other`, `phone`, `phone_mobile`, `vat_number`, `dni`, `date_add`, `date_upd`, `active`, `deleted`) VALUES
@@ -506,7 +506,7 @@ INSERT INTO `ps_address` (`id_address`, `id_country`, `id_state`, `id_customer`,
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_address_format`
+-- Table structure for table `ps_address_format`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_address_format` (
@@ -516,7 +516,7 @@ CREATE TABLE IF NOT EXISTS `ps_address_format` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_address_format`
+-- Dumping data for table `ps_address_format`
 --
 
 INSERT INTO `ps_address_format` (`id_country`, `format`) VALUES
@@ -768,7 +768,7 @@ INSERT INTO `ps_address_format` (`id_country`, `format`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_advice`
+-- Table structure for table `ps_advice`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_advice` (
@@ -789,7 +789,7 @@ CREATE TABLE IF NOT EXISTS `ps_advice` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_advice_lang`
+-- Table structure for table `ps_advice_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_advice_lang` (
@@ -802,7 +802,7 @@ CREATE TABLE IF NOT EXISTS `ps_advice_lang` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_alias`
+-- Table structure for table `ps_alias`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_alias` (
@@ -815,7 +815,7 @@ CREATE TABLE IF NOT EXISTS `ps_alias` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_alias`
+-- Dumping data for table `ps_alias`
 --
 
 INSERT INTO `ps_alias` (`id_alias`, `alias`, `search`, `active`) VALUES
@@ -825,7 +825,7 @@ INSERT INTO `ps_alias` (`id_alias`, `alias`, `search`, `active`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_attachment`
+-- Table structure for table `ps_attachment`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attachment` (
@@ -840,7 +840,7 @@ CREATE TABLE IF NOT EXISTS `ps_attachment` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_attachment_lang`
+-- Table structure for table `ps_attachment_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attachment_lang` (
@@ -854,7 +854,7 @@ CREATE TABLE IF NOT EXISTS `ps_attachment_lang` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_attribute`
+-- Table structure for table `ps_attribute`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attribute` (
@@ -864,12 +864,12 @@ CREATE TABLE IF NOT EXISTS `ps_attribute` (
   `position` int(10) UNSIGNED NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_attribute`),
   KEY `attribute_group` (`id_attribute_group`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_attribute_group`
+-- Table structure for table `ps_attribute_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attribute_group` (
@@ -878,12 +878,12 @@ CREATE TABLE IF NOT EXISTS `ps_attribute_group` (
   `group_type` enum('select','radio','color') NOT NULL DEFAULT 'select',
   `position` int(10) UNSIGNED NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_attribute_group`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_attribute_group_lang`
+-- Table structure for table `ps_attribute_group_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attribute_group_lang` (
@@ -897,7 +897,7 @@ CREATE TABLE IF NOT EXISTS `ps_attribute_group_lang` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_attribute_group_shop`
+-- Table structure for table `ps_attribute_group_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attribute_group_shop` (
@@ -910,7 +910,7 @@ CREATE TABLE IF NOT EXISTS `ps_attribute_group_shop` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_attribute_impact`
+-- Table structure for table `ps_attribute_impact`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attribute_impact` (
@@ -926,7 +926,7 @@ CREATE TABLE IF NOT EXISTS `ps_attribute_impact` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_attribute_lang`
+-- Table structure for table `ps_attribute_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attribute_lang` (
@@ -940,7 +940,7 @@ CREATE TABLE IF NOT EXISTS `ps_attribute_lang` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_attribute_shop`
+-- Table structure for table `ps_attribute_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attribute_shop` (
@@ -953,7 +953,7 @@ CREATE TABLE IF NOT EXISTS `ps_attribute_shop` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_badge`
+-- Table structure for table `ps_badge`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_badge` (
@@ -966,10 +966,10 @@ CREATE TABLE IF NOT EXISTS `ps_badge` (
   `awb` int(11) DEFAULT '0',
   `validated` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_badge`)
-) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=195 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_badge`
+-- Dumping data for table `ps_badge`
 --
 
 INSERT INTO `ps_badge` (`id_badge`, `id_ps_badge`, `type`, `id_group`, `group_position`, `scoring`, `awb`, `validated`) VALUES
@@ -1051,12 +1051,127 @@ INSERT INTO `ps_badge` (`id_badge`, `id_ps_badge`, `type`, `id_group`, `group_po
 (76, 287, 'feature', 41, 3, 15, 1, 0),
 (77, 288, 'feature', 41, 4, 20, 1, 0),
 (78, 289, 'feature', 41, 1, 5, 1, 0),
-(79, 290, 'feature', 41, 2, 10, 1, 0);
+(79, 290, 'feature', 41, 2, 10, 1, 0),
+(80, 291, 'feature', 41, 3, 15, 1, 0),
+(81, 292, 'feature', 41, 4, 20, 1, 0),
+(82, 293, 'feature', 41, 1, 5, 1, 0),
+(83, 294, 'feature', 41, 2, 10, 1, 0),
+(84, 295, 'feature', 41, 3, 15, 1, 0),
+(85, 296, 'feature', 41, 4, 20, 1, 0),
+(86, 297, 'feature', 41, 1, 5, 1, 0),
+(87, 298, 'feature', 41, 2, 10, 1, 0),
+(88, 299, 'feature', 41, 3, 15, 1, 0),
+(89, 300, 'feature', 41, 4, 20, 1, 0),
+(90, 301, 'feature', 41, 1, 5, 1, 0),
+(91, 302, 'feature', 41, 2, 10, 1, 0),
+(92, 303, 'feature', 41, 3, 15, 1, 0),
+(93, 304, 'feature', 41, 4, 20, 1, 0),
+(94, 305, 'feature', 41, 1, 5, 1, 0),
+(95, 306, 'feature', 41, 2, 10, 1, 0),
+(96, 307, 'feature', 41, 3, 15, 1, 0),
+(97, 308, 'feature', 41, 4, 20, 1, 0),
+(98, 309, 'feature', 41, 1, 5, 1, 0),
+(99, 310, 'feature', 41, 2, 10, 1, 0),
+(100, 311, 'feature', 41, 3, 15, 1, 0),
+(101, 312, 'feature', 41, 4, 20, 1, 0),
+(102, 313, 'feature', 41, 1, 5, 1, 0),
+(103, 314, 'feature', 41, 2, 10, 1, 0),
+(104, 315, 'feature', 41, 3, 15, 1, 0),
+(105, 316, 'feature', 41, 4, 20, 1, 0),
+(106, 317, 'feature', 41, 1, 5, 1, 0),
+(107, 318, 'feature', 41, 2, 10, 1, 0),
+(108, 319, 'feature', 41, 3, 15, 1, 0),
+(109, 320, 'feature', 41, 4, 20, 1, 0),
+(110, 321, 'feature', 41, 1, 5, 1, 0),
+(111, 322, 'feature', 41, 2, 10, 1, 0),
+(112, 323, 'feature', 41, 3, 15, 1, 0),
+(113, 324, 'feature', 41, 4, 20, 1, 0),
+(114, 325, 'feature', 41, 1, 5, 1, 0),
+(115, 326, 'feature', 41, 2, 10, 1, 0),
+(116, 327, 'feature', 41, 3, 15, 1, 0),
+(117, 328, 'feature', 41, 4, 20, 1, 0),
+(118, 329, 'feature', 41, 1, 5, 1, 0),
+(119, 330, 'feature', 41, 2, 10, 1, 0),
+(120, 331, 'feature', 41, 3, 15, 1, 0),
+(121, 332, 'feature', 41, 4, 20, 1, 0),
+(122, 333, 'feature', 41, 1, 5, 1, 0),
+(123, 334, 'feature', 41, 2, 10, 1, 0),
+(124, 335, 'feature', 41, 3, 15, 1, 0),
+(125, 336, 'feature', 41, 4, 20, 1, 0),
+(126, 337, 'feature', 41, 1, 5, 1, 0),
+(127, 338, 'feature', 41, 2, 10, 1, 0),
+(128, 339, 'feature', 41, 3, 15, 1, 0),
+(129, 340, 'feature', 41, 4, 20, 1, 0),
+(130, 341, 'feature', 41, 1, 5, 1, 0),
+(131, 342, 'feature', 41, 2, 10, 1, 0),
+(132, 343, 'feature', 41, 3, 15, 1, 0),
+(133, 344, 'feature', 41, 4, 20, 1, 0),
+(134, 345, 'feature', 41, 1, 5, 1, 0),
+(135, 346, 'feature', 41, 2, 10, 1, 0),
+(136, 347, 'feature', 41, 3, 15, 1, 0),
+(137, 348, 'feature', 41, 4, 20, 1, 0),
+(138, 349, 'feature', 41, 1, 5, 1, 0),
+(139, 350, 'feature', 41, 2, 10, 1, 0),
+(140, 351, 'feature', 41, 3, 15, 1, 0),
+(141, 352, 'feature', 41, 4, 20, 1, 0),
+(142, 353, 'feature', 41, 1, 5, 1, 0),
+(143, 354, 'feature', 41, 2, 10, 1, 0),
+(144, 355, 'feature', 41, 3, 15, 1, 0),
+(145, 356, 'feature', 41, 4, 20, 1, 0),
+(146, 357, 'feature', 41, 1, 5, 1, 0),
+(147, 358, 'feature', 41, 2, 10, 1, 0),
+(148, 359, 'feature', 41, 3, 15, 1, 0),
+(149, 360, 'feature', 41, 4, 20, 1, 0),
+(150, 1, 'feature', 1, 1, 10, 0, 0),
+(151, 2, 'feature', 2, 1, 10, 0, 0),
+(152, 3, 'feature', 2, 2, 15, 0, 0),
+(153, 4, 'feature', 3, 1, 15, 0, 0),
+(154, 5, 'feature', 3, 2, 15, 0, 0),
+(155, 6, 'feature', 4, 1, 15, 0, 0),
+(156, 7, 'feature', 4, 2, 15, 0, 0),
+(157, 8, 'feature', 5, 1, 5, 0, 1),
+(158, 9, 'feature', 5, 2, 10, 0, 0),
+(159, 10, 'feature', 6, 1, 15, 0, 0),
+(160, 11, 'feature', 6, 2, 10, 0, 0),
+(161, 12, 'feature', 6, 3, 10, 0, 0),
+(162, 13, 'feature', 5, 3, 10, 0, 0),
+(163, 14, 'feature', 5, 4, 15, 0, 0),
+(164, 15, 'feature', 5, 5, 20, 0, 0),
+(165, 16, 'feature', 5, 6, 20, 0, 0),
+(166, 17, 'achievement', 7, 1, 5, 0, 1),
+(167, 18, 'achievement', 7, 2, 10, 0, 1),
+(168, 19, 'feature', 8, 1, 15, 0, 0),
+(169, 20, 'feature', 8, 2, 15, 0, 0),
+(170, 21, 'feature', 9, 1, 15, 0, 0),
+(171, 22, 'feature', 10, 1, 10, 0, 0),
+(172, 23, 'feature', 10, 2, 10, 0, 0),
+(173, 24, 'feature', 10, 3, 10, 0, 0),
+(174, 25, 'feature', 10, 4, 10, 0, 0),
+(175, 26, 'feature', 10, 5, 10, 0, 0),
+(176, 27, 'feature', 4, 3, 10, 0, 0),
+(177, 28, 'feature', 3, 3, 10, 0, 0),
+(178, 29, 'achievement', 11, 1, 5, 0, 0),
+(179, 30, 'achievement', 11, 2, 10, 0, 0),
+(180, 31, 'achievement', 11, 3, 15, 0, 0),
+(181, 32, 'achievement', 11, 4, 20, 0, 0),
+(182, 33, 'achievement', 11, 5, 25, 0, 0),
+(183, 34, 'achievement', 11, 6, 30, 0, 0),
+(184, 35, 'achievement', 7, 3, 15, 0, 0),
+(185, 36, 'achievement', 7, 4, 20, 0, 0),
+(186, 37, 'achievement', 7, 5, 25, 0, 0),
+(187, 38, 'achievement', 7, 6, 30, 0, 0),
+(188, 39, 'achievement', 12, 1, 5, 0, 0),
+(189, 40, 'achievement', 12, 2, 10, 0, 0),
+(190, 41, 'achievement', 12, 3, 15, 0, 0),
+(191, 42, 'achievement', 12, 4, 20, 0, 0),
+(192, 43, 'achievement', 12, 5, 25, 0, 0),
+(193, 44, 'achievement', 12, 6, 30, 0, 0),
+(194, 45, 'achievement', 13, 1, 5, 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_badge_lang`
+-- Table structure for table `ps_badge_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_badge_lang` (
@@ -1069,94 +1184,291 @@ CREATE TABLE IF NOT EXISTS `ps_badge_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_badge_lang`
+-- Dumping data for table `ps_badge_lang`
 --
 
 INSERT INTO `ps_badge_lang` (`id_badge`, `id_lang`, `name`, `description`, `group_name`) VALUES
 (1, 1, 'Ferbuy installed', 'You have installed the Ferbuy module', 'Partners'),
+(1, 2, 'Ferbuy installed', '', ''),
 (2, 1, 'Ferbuy configured', 'Module Ferbuy configured', 'Partners'),
+(2, 2, 'Ferbuy configured', '', ''),
 (3, 1, 'Ferbuy active', 'Module Ferbuy active', 'Partners'),
+(3, 2, 'Ferbuy active', '', ''),
 (4, 1, 'Ferbuy very active', 'Your Ferbuy module is very active', 'Partners'),
+(4, 2, 'Ferbuy very active', '', ''),
 (5, 1, 'Globkurier installed', 'Module Globkurier installed', 'Partners'),
+(5, 2, 'Globkurier installed', '', ''),
 (6, 1, 'Globkurier zosta? skonfigurowany', 'Modu? Globkurier zosta? skonfigurowany', 'Partners'),
+(6, 2, 'Globkurier zosta? skonfigurowany', '', ''),
 (7, 1, 'Globkurier jest aktywny', 'Modu? Globkurier jest aktywny', 'Partners'),
+(7, 2, 'Globkurier jest aktywny', '', ''),
 (8, 1, 'Globkurier jest bardzo aktywny', 'Modu? Globkurier jest bardzo aktywny', 'Partners'),
+(8, 2, 'Globkurier jest bardzo aktywny', '', ''),
 (9, 1, 'HiPay installed', 'You have installed the HiPay module', 'Partners'),
+(9, 2, 'HiPay installed', '', ''),
 (10, 1, 'HiPay configured', 'You have configured the HiPay module', 'Partners'),
+(10, 2, 'HiPay configured', '', ''),
 (11, 1, 'HiPay active', 'Your Hipay module is active', 'Partners'),
+(11, 2, 'HiPay active', '', ''),
 (12, 1, 'HiPay very active', 'Your HiPay module is very active', 'Partners'),
+(12, 2, 'HiPay very active', '', ''),
 (13, 1, 'Ogone installed', 'You have installed the Ogone module', 'Partners'),
+(13, 2, 'Ogone installed', '', ''),
 (14, 1, 'Ogone configuré', 'You have configured the Ogone module', 'Partners'),
+(14, 2, 'Ogone configuré', '', ''),
 (15, 1, 'Ogone active', 'Your Ogone module is active', 'Partners'),
+(15, 2, 'Ogone active', '', ''),
 (16, 1, 'Ogone very active', 'Your Ogone module is very active', 'Partners'),
+(16, 2, 'Ogone very active', '', ''),
 (17, 1, 'PayPal installed', 'You have installed the PayPal module', 'Partners'),
+(17, 2, 'PayPal installed', '', ''),
 (18, 1, 'PayPal configured', 'You have configured the PayPal module', 'Partners'),
+(18, 2, 'PayPal configured', '', ''),
 (19, 1, 'PayPal active', 'Your PayPal module is active', 'Partners'),
+(19, 2, 'PayPal active', '', ''),
 (20, 1, 'PayPal very active', 'Your PayPal module is very active', 'Partners'),
+(20, 2, 'PayPal very active', '', ''),
 (21, 1, 'Shopgate installed', 'You have installed the Shopgate module', 'Partners'),
+(21, 2, 'Shopgate installed', '', ''),
 (22, 1, 'Shopgate configured', 'You have configured the Shopgate module', 'Partners'),
+(22, 2, 'Shopgate configured', '', ''),
 (23, 1, 'Shopgate active', 'Your Shopgate module is active', 'Partners'),
+(23, 2, 'Shopgate active', '', ''),
 (24, 1, 'Shopgate very active', 'Your Shopgate module is very active', 'Partners'),
+(24, 2, 'Shopgate very active', '', ''),
 (25, 1, 'Skrill installed', 'You have installed the Skrill module', 'Partners'),
+(25, 2, 'Skrill installed', '', ''),
 (26, 1, 'Skrill configured', 'You have configured the Skrill module', 'Partners'),
+(26, 2, 'Skrill configured', '', ''),
 (27, 1, 'Skrill active', 'Your Skrill module is active', 'Partners'),
+(27, 2, 'Skrill active', '', ''),
 (28, 1, 'Skrill very active', 'Your Skrill module is very active', 'Partners'),
+(28, 2, 'Skrill very active', '', ''),
 (29, 1, 'Sofort installed', 'You have installed the Sofort module', 'Partners'),
+(29, 2, 'Sofort installed', '', ''),
 (30, 1, 'Sofort configured', 'You have configured the Sofort module', 'Partners'),
+(30, 2, 'Sofort configured', '', ''),
 (31, 1, 'Sofort active', 'Your Sofort module is active', 'Partners'),
+(31, 2, 'Sofort active', '', ''),
 (32, 1, 'Sofort very active', 'Your Sofort module is very active', 'Partners'),
+(32, 2, 'Sofort very active', '', ''),
 (33, 1, 'TextMaster installed', 'You have installed the TextMaster module', 'Partners'),
+(33, 2, 'TextMaster installed', '', ''),
 (34, 1, 'TextMaster configured', 'You have configured the TextMaster module', 'Partners'),
+(34, 2, 'TextMaster configured', '', ''),
 (35, 1, 'TextMaster active', 'Your TextMaster module is active', 'Partners'),
+(35, 2, 'TextMaster active', '', ''),
 (36, 1, 'TextMaster very active', 'Your TextMaster module is very active', 'Partners'),
+(36, 2, 'TextMaster very active', '', ''),
 (37, 1, 'Paymill installed', 'You have installed the Paymill module', 'Partners'),
+(37, 2, 'Paymill installed', '', ''),
 (38, 1, 'Paymill active', 'Your Paymill module is active', 'Partners'),
+(38, 2, 'Paymill active', '', ''),
 (39, 1, 'Paymill very active', 'Your Paymill module is very active', 'Partners'),
+(39, 2, 'Paymill very active', '', ''),
 (40, 1, 'Syspay installed', 'You have installed the Syspay module', 'Partners'),
+(40, 2, 'Syspay installed', '', ''),
 (41, 1, 'Syspay configured', 'You have configured the Syspay module', 'Partners'),
+(41, 2, 'Syspay configured', '', ''),
 (42, 1, 'Syspay active', 'Your Syspay module is active', 'Partners'),
+(42, 2, 'Syspay active', '', ''),
 (43, 1, 'Syspay very active', 'Your Syspay module is very active', 'Partners'),
+(43, 2, 'Syspay very active', '', ''),
 (44, 1, 'Authorize Aim installed', 'You have installed the Authorize Aim module', 'Partners'),
+(44, 2, 'Authorize Aim installed', '', ''),
 (45, 1, 'Authorize Aim configured', 'You have configured the Authorize Aim module', 'Partners'),
+(45, 2, 'Authorize Aim configured', '', ''),
 (46, 1, 'Authorize Aim active', 'Your Authorize Aim module is active', 'Partners'),
+(46, 2, 'Authorize Aim active', '', ''),
 (47, 1, 'Authorize Aim very active', 'Your Authorize Aim module is very active', 'Partners'),
+(47, 2, 'Authorize Aim very active', '', ''),
 (48, 1, 'Ebay installed', 'You have installed the Ebay module', 'Partners'),
+(48, 2, 'Ebay installed', '', ''),
 (49, 1, 'Ebay configured', 'You have configured the Ebay module', 'Partners'),
+(49, 2, 'Ebay configured', '', ''),
 (50, 1, 'Ebay active', 'Your Ebay module is active', 'Partners'),
+(50, 2, 'Ebay active', '', ''),
 (51, 1, 'Ebay very active', 'Your Ebay module is very active', 'Partners'),
+(51, 2, 'Ebay very active', '', ''),
 (52, 1, 'PayPlug installed', 'You have installed the PayPlug module', 'Partners'),
+(52, 2, 'PayPlug installed', '', ''),
 (53, 1, 'PayPlug configured', 'You have configured the PayPlug module', 'Partners'),
+(53, 2, 'PayPlug configured', '', ''),
 (54, 1, 'PayPlug active', 'Your PayPlug module is active', 'Partners'),
+(54, 2, 'PayPlug active', '', ''),
 (55, 1, 'PayPlug very active', 'Your PayPlug module is very active', 'Partners'),
+(55, 2, 'PayPlug very active', '', ''),
 (56, 1, 'Affinity Items installed', 'You have installed the Affinity Items module', 'Partners'),
+(56, 2, 'Affinity Items installed', '', ''),
 (57, 1, 'Affinity Items configured', 'You have configured the Affinity Items module', 'Partners'),
+(57, 2, 'Affinity Items configured', '', ''),
 (58, 1, 'DPD Poland installed', 'You have installed the DPD Poland module', 'Partners'),
+(58, 2, 'DPD Poland installed', '', ''),
 (59, 1, 'DPD Poland configured', 'You have configured the DPD Poland module', 'Partners'),
+(59, 2, 'DPD Poland configured', '', ''),
 (60, 1, 'DPD Poland active', 'Your DPD Poland module is active', 'Partners'),
+(60, 2, 'DPD Poland active', '', ''),
 (61, 1, 'DPD Poland very active', 'Your DPD Poland module is very active', 'Partners'),
+(61, 2, 'DPD Poland very active', '', ''),
 (62, 1, 'Envoimoinscher installed', 'You have installed the Envoimoinscher module', 'Partners'),
+(62, 2, 'Envoimoinscher installed', '', ''),
 (63, 1, 'Envoimoinscher configured', 'You have configured the Envoimoinscher module', 'Partners'),
+(63, 2, 'Envoimoinscher configured', '', ''),
 (64, 1, 'Envoimoinscher active', 'Your Envoimoinscher module is active', 'Partners'),
+(64, 2, 'Envoimoinscher active', '', ''),
 (65, 1, 'Envoimoinscher very active', 'Your Envoimoinscher module is very active', 'Partners'),
+(65, 2, 'Envoimoinscher very active', '', ''),
 (66, 1, 'Klik&Pay installed', 'You have installed the Klik&Pay module', 'Partners'),
+(66, 2, 'Klik&Pay installed', '', ''),
 (67, 1, 'Klik&Pay configured', 'You have configured the Klik&Pay module', 'Partners'),
+(67, 2, 'Klik&Pay configured', '', ''),
 (68, 1, 'Klik&Pay active', 'Your Klik&Pay module is active', 'Partners'),
+(68, 2, 'Klik&Pay active', '', ''),
 (69, 1, 'Klik&Pay very active', 'Your Klik&Pay module is very active', 'Partners'),
+(69, 2, 'Klik&Pay very active', '', ''),
 (70, 1, 'Clickline installed', 'You have installed the Clickline module', 'Partners'),
+(70, 2, 'Clickline installed', '', ''),
 (71, 1, 'Clickline configured', 'You have configured the Clickline module', 'Partners'),
+(71, 2, 'Clickline configured', '', ''),
 (72, 1, 'Clickline active', 'Your Clickline module is active', 'Partners'),
+(72, 2, 'Clickline active', '', ''),
 (73, 1, 'Clickline very active', 'Your Clickline module is very active', 'Partners'),
+(73, 2, 'Clickline very active', '', ''),
 (74, 1, 'CDiscount installed', 'You have installed the CDiscount module', 'Partners'),
+(74, 2, 'CDiscount installed', '', ''),
 (75, 1, 'CDiscount configured', 'You have configured the CDiscount module', 'Partners'),
+(75, 2, 'CDiscount configured', '', ''),
 (76, 1, 'CDiscount active', 'Your CDiscount module is active', 'Partners'),
+(76, 2, 'CDiscount active', '', ''),
 (77, 1, 'CDiscount very active', 'Your CDiscount module is very active', 'Partners'),
+(77, 2, 'CDiscount very active', '', ''),
 (78, 1, 'illicoPresta installed', 'You have installed the illicoPresta module', 'Partners'),
-(79, 1, 'illicoPresta configured', 'You have configured the illicoPresta module', 'Partners');
+(78, 2, 'illicoPresta installed', '', ''),
+(79, 1, 'illicoPresta configured', 'You have configured the illicoPresta module', 'Partners'),
+(79, 2, 'illicoPresta configured', '', ''),
+(80, 1, 'illicoPresta active', 'Your illicoPresta module is active', 'Partners'),
+(81, 1, 'illicoPresta very active', 'Your illicoPresta module is very active', 'Partners'),
+(82, 1, 'NetReviews installed', 'You have installed the NetReviews module', 'Partners'),
+(83, 1, 'NetReviews configured', 'You have configured the NetReviews module', 'Partners'),
+(84, 1, 'NetReviews active', 'Your NetReviews module is active', 'Partners'),
+(85, 1, 'NetReviews very active', 'Your NetReviews module is very active', 'Partners'),
+(86, 1, 'Bluesnap installed', 'You have installed the Bluesnap module', 'Partners'),
+(87, 1, 'Bluesnap configured', 'You have configured the Bluesnap module', 'Partners'),
+(88, 1, 'Bluesnap active', 'Your Bluesnap module is active', 'Partners'),
+(89, 1, 'Bluesnap very active', 'Your Bluesnap module is very active', 'Partners'),
+(90, 1, 'Desjardins installed', 'You have installed the Desjardins module', 'Partners'),
+(91, 1, 'Desjardins configured', 'You have configured the Desjardins module', 'Partners'),
+(92, 1, 'Desjardins active', 'Your Desjardins module is active', 'Partners'),
+(93, 1, 'Desjardins very active', 'Your Desjardins module is very active', 'Partners'),
+(94, 1, 'First Data installed', 'You have installed the First Data module', 'Partners'),
+(95, 1, 'First Data configured', 'You have configured the First Data module', 'Partners'),
+(96, 1, 'First Data active', 'Your First Data module is active', 'Partners'),
+(97, 1, 'First Data very active', 'Your First Data module is very active', 'Partners'),
+(98, 1, 'Give.it installed', 'You have installed the Give.it module', 'Partners'),
+(99, 1, 'Give.it configured', 'You have configured the Give.it module', 'Partners'),
+(100, 1, 'Give.it active', 'Your Give.it module is active', 'Partners'),
+(101, 1, 'Give.it very active', 'Your Give.it module is very active', 'Partners'),
+(102, 1, 'Google Analytics installed', 'You have installed the Google Analytics module', 'Partners'),
+(103, 1, 'Google Analytics configured', 'You have configured the Google Analytics module', 'Partners'),
+(104, 1, 'Google Analytics active', 'Your Google Analytics module is active', 'Partners'),
+(105, 1, 'Google Analytics very active', 'Your Google Analytics module is very active', 'Partners'),
+(106, 1, 'PagSeguro installed', 'You have installed the PagSeguro module', 'Partners'),
+(107, 1, 'PagSeguro configured', 'You have configured the PagSeguro module', 'Partners'),
+(108, 1, 'PagSeguro active', 'Your PagSeguro module is active', 'Partners'),
+(109, 1, 'PagSeguro very active', 'Your PagSeguro module is very active', 'Partners'),
+(110, 1, 'Paypal MX installed', 'You have installed the Paypal MX module', 'Partners'),
+(111, 1, 'Paypal MX configured', 'You have configured the Paypal MX module', 'Partners'),
+(112, 1, 'Paypal MX active', 'Your Paypal MX module is active', 'Partners'),
+(113, 1, 'Paypal MX very active', 'Your Paypal MX module is very active', 'Partners'),
+(114, 1, 'Paypal USA installed', 'You have installed the Paypal USA module', 'Partners'),
+(115, 1, 'Paypal USA configured', 'You have configured the Paypal USA module', 'Partners'),
+(116, 1, 'Paypal USA active', 'Your Paypal USA module is active', 'Partners'),
+(117, 1, 'Paypal USA very active', 'Your Paypal USA module is very active', 'Partners'),
+(118, 1, 'PayULatam installed', 'You have installed the PayULatam module', 'Partners'),
+(119, 1, 'PayULatam configured', 'You have configured the PayULatam module', 'Partners'),
+(120, 1, 'PayULatam active', 'Your PayULatam module is active', 'Partners'),
+(121, 1, 'PayULatam very active', 'Your PayULatam module is very active', 'Partners'),
+(122, 1, 'PrestaStats installed', 'You have installed the PrestaStats module', 'Partners'),
+(123, 1, 'PrestaStats configured', 'You have configured the PrestaStats module', 'Partners'),
+(124, 1, 'PrestaStats active', 'Your PrestaStats module is active', 'Partners'),
+(125, 1, 'PrestaStats very active', 'Your PrestaStats module is very active', 'Partners'),
+(126, 1, 'Riskified installed', 'You have installed the Riskified module', 'Partners'),
+(127, 1, 'Riskified configured', 'You have configured the Riskified module', 'Partners'),
+(128, 1, 'Riskified active', 'Your Riskified module is active', 'Partners'),
+(129, 1, 'Riskified very active', 'Your Riskified module is very active', 'Partners'),
+(130, 1, 'Simplify installed', 'You have installed the Simplify module', 'Partners'),
+(131, 1, 'Simplify configured', 'You have configured the Simplify module', 'Partners'),
+(132, 1, 'Simplify active', 'Your Simplify module is active', 'Partners'),
+(133, 1, 'Simplify very active', 'Your Simplify module is very active', 'Partners'),
+(134, 1, 'VTPayment installed', 'You have installed the VTPayment module', 'Partners'),
+(135, 1, 'VTPayment configured', 'You have configured the VTPayment module', 'Partners'),
+(136, 1, 'VTPayment active', 'Your VTPayment module is active', 'Partners'),
+(137, 1, 'VTPayment very active', 'Your VTPayment module is very active', 'Partners'),
+(138, 1, 'Yotpo installed', 'You have installed the Yotpo module', 'Partners'),
+(139, 1, 'Yotpo configured', 'You have configured the Yotpo module', 'Partners'),
+(140, 1, 'Yotpo active', 'Your Yotpo module is active', 'Partners'),
+(141, 1, 'Yotpo very active', 'Your Yotpo module is very active', 'Partners'),
+(142, 1, 'Youstice installed', 'You have installed the Youstice module', 'Partners'),
+(143, 1, 'Youstice configured', 'You have configured the Youstice module', 'Partners'),
+(144, 1, 'Youstice active', 'Your Youstice module is active', 'Partners'),
+(145, 1, 'Youstice very active', 'Your Youstice module is very active', 'Partners'),
+(146, 1, 'Loyalty Lion installed', 'You have installed the Loyalty Lion module', 'Partners'),
+(147, 1, 'Loyalty Lion configured', 'You have configured the Loyalty Lion module', 'Partners'),
+(148, 1, 'Loyalty Lion active', 'Your Loyalty Lion module is active', 'Partners'),
+(149, 1, 'Loyalty Lion very active', 'Your Loyalty Lion module is very active', 'Partners'),
+(150, 1, 'SEO', 'You enabled the URL rewriting through the tab "Preferences > SEO and URLs".', 'SEO'),
+(151, 1, 'Site Performance', 'You enabled CCC (Combine, Compress and Cache), Rijndael and Smarty through the tab \r\nAdvanced Parameters > Performance.', 'Site Performance'),
+(152, 1, 'Site Performance', 'You enabled media servers through the tab "Advanced parameters > Performance".', 'Site Performance'),
+(153, 1, 'Payment', 'You configured a payment solution on your shop.', 'Payment'),
+(154, 1, 'Payment', 'You offer two different payment methods to your customers.', 'Payment'),
+(155, 1, 'Shipping', 'You configured a carrier on your shop.', 'Shipping'),
+(156, 1, 'Shipping', 'You offer two shipping solutions (carriers) to your customers.', 'Shipping'),
+(157, 1, 'Catalog Size', 'You added your first product to your catalog!', 'Catalog Size'),
+(157, 2, 'Catalog Size', '', ''),
+(158, 1, 'Catalog Size', 'You have 10 products within your catalog.', 'Catalog Size'),
+(159, 1, 'Contact information', 'You configured your phone number so your customers can reach you!', 'Contact information'),
+(160, 1, 'Contact information', 'You added a third email address to your contact form.', 'Contact information'),
+(161, 1, 'Contact information', 'You suggest a total of 5 departments to be reached by your customers via your contact form.', 'Contact information'),
+(162, 1, 'Catalog Size', 'You have 100 products within your catalog.', 'Catalog Size'),
+(163, 1, 'Catalog Size', 'You have 1,000 products within your catalog.', 'Catalog Size'),
+(164, 1, 'Catalog Size', 'You have 10,000 products within your catalog.', 'Catalog Size'),
+(165, 1, 'Catalog Size', 'You have 100,000 products within your catalog.', 'Catalog Size'),
+(166, 1, 'Days of Experience', 'You just installed PrestaShop!', 'Days of Experience'),
+(166, 2, 'Days of Experience', '', ''),
+(167, 1, 'Days of Experience', 'You installed PrestaShop a week ago!', 'Days of Experience'),
+(167, 2, 'Days of Experience', '', ''),
+(168, 1, 'Customization', 'You uploaded your own logo.', 'Customization'),
+(169, 1, 'Customization', 'You installed a new template.', 'Customization'),
+(170, 1, 'Addons', 'You connected your back-office to the Addons platform using your PrestaShop Addons account.', 'Addons'),
+(171, 1, 'Multistores', 'You enabled the Multistores feature.', 'Multistores'),
+(172, 1, 'Multistores', 'You manage two shops with the Multistores feature.', 'Multistores'),
+(173, 1, 'Multistores', 'You manage two different groups of shops using the Multistores feature.', 'Multistores'),
+(174, 1, 'Multistores', 'You manage five shops with the Multistores feature.', 'Multistores'),
+(175, 1, 'Multistores', 'You manage five different groups of shops using the Multistores feature.', 'Multistores'),
+(176, 1, 'Shipping', 'You offer three different shipping solutions (carriers) to your customers.', 'Shipping'),
+(177, 1, 'Payment', 'You offer three different payment methods to your customers.', 'Payment'),
+(178, 1, 'Revenue', 'You get this badge when you reach 500 PLN in sales.', 'Revenue'),
+(179, 1, 'Revenue', 'You get this badge when you reach 1000 PLN in sales.', 'Revenue'),
+(180, 1, 'Revenue', 'You get this badge when you reach 1000 PLN in sales.', 'Revenue'),
+(181, 1, 'Revenue', 'You get this badge when you reach 500 PLN in sales.', 'Revenue'),
+(182, 1, 'Revenue', 'You get this badge when you reach 1000 PLN in sales.', 'Revenue'),
+(183, 1, 'Revenue', 'You get this badge when you reach 1000 PLN in sales.', 'Revenue'),
+(184, 1, 'Days of Experience', 'You installed PrestaShop a month ago!', 'Days of Experience'),
+(185, 1, 'Days of Experience', 'You installed PrestaShop six months ago!', 'Days of Experience'),
+(186, 1, 'Days of Experience', 'You installed PrestaShop a year ago!', 'Days of Experience'),
+(187, 1, 'Days of Experience', 'You installed PrestaShop two years ago!', 'Days of Experience'),
+(188, 1, 'Visitors', 'You reached 10 visitors!', 'Visitors'),
+(189, 1, 'Visitors', 'You reached 100 visitors!', 'Visitors'),
+(190, 1, 'Visitors', 'You reached 1,000 visitors!', 'Visitors'),
+(191, 1, 'Visitors', 'You reached 10,000 visitors!', 'Visitors'),
+(192, 1, 'Visitors', 'You reached 100,000 visitors!', 'Visitors'),
+(193, 1, 'Visitors', 'You reached 1,000,000 visitors!', 'Visitors'),
+(194, 1, 'Customer Carts', 'Two carts have been created by visitors', 'Customer Carts');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_carrier`
+-- Table structure for table `ps_carrier`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_carrier` (
@@ -1188,7 +1500,7 @@ CREATE TABLE IF NOT EXISTS `ps_carrier` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_carrier`
+-- Dumping data for table `ps_carrier`
 --
 
 INSERT INTO `ps_carrier` (`id_carrier`, `id_reference`, `id_tax_rules_group`, `name`, `url`, `active`, `deleted`, `shipping_handling`, `range_behavior`, `is_module`, `is_free`, `shipping_external`, `need_range`, `external_module_name`, `shipping_method`, `position`, `max_width`, `max_height`, `max_depth`, `max_weight`, `grade`) VALUES
@@ -1198,7 +1510,7 @@ INSERT INTO `ps_carrier` (`id_carrier`, `id_reference`, `id_tax_rules_group`, `n
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_carrier_group`
+-- Table structure for table `ps_carrier_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_carrier_group` (
@@ -1208,7 +1520,7 @@ CREATE TABLE IF NOT EXISTS `ps_carrier_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_carrier_group`
+-- Dumping data for table `ps_carrier_group`
 --
 
 INSERT INTO `ps_carrier_group` (`id_carrier`, `id_group`) VALUES
@@ -1222,7 +1534,7 @@ INSERT INTO `ps_carrier_group` (`id_carrier`, `id_group`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_carrier_lang`
+-- Table structure for table `ps_carrier_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_carrier_lang` (
@@ -1234,7 +1546,7 @@ CREATE TABLE IF NOT EXISTS `ps_carrier_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_carrier_lang`
+-- Dumping data for table `ps_carrier_lang`
 --
 
 INSERT INTO `ps_carrier_lang` (`id_carrier`, `id_shop`, `id_lang`, `delay`) VALUES
@@ -1246,7 +1558,7 @@ INSERT INTO `ps_carrier_lang` (`id_carrier`, `id_shop`, `id_lang`, `delay`) VALU
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_carrier_shop`
+-- Table structure for table `ps_carrier_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_carrier_shop` (
@@ -1257,7 +1569,7 @@ CREATE TABLE IF NOT EXISTS `ps_carrier_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_carrier_shop`
+-- Dumping data for table `ps_carrier_shop`
 --
 
 INSERT INTO `ps_carrier_shop` (`id_carrier`, `id_shop`) VALUES
@@ -1267,7 +1579,7 @@ INSERT INTO `ps_carrier_shop` (`id_carrier`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_carrier_tax_rules_group_shop`
+-- Table structure for table `ps_carrier_tax_rules_group_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_carrier_tax_rules_group_shop` (
@@ -1278,7 +1590,7 @@ CREATE TABLE IF NOT EXISTS `ps_carrier_tax_rules_group_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_carrier_tax_rules_group_shop`
+-- Dumping data for table `ps_carrier_tax_rules_group_shop`
 --
 
 INSERT INTO `ps_carrier_tax_rules_group_shop` (`id_carrier`, `id_tax_rules_group`, `id_shop`) VALUES
@@ -1288,7 +1600,7 @@ INSERT INTO `ps_carrier_tax_rules_group_shop` (`id_carrier`, `id_tax_rules_group
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_carrier_zone`
+-- Table structure for table `ps_carrier_zone`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_carrier_zone` (
@@ -1298,7 +1610,7 @@ CREATE TABLE IF NOT EXISTS `ps_carrier_zone` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_carrier_zone`
+-- Dumping data for table `ps_carrier_zone`
 --
 
 INSERT INTO `ps_carrier_zone` (`id_carrier`, `id_zone`) VALUES
@@ -1309,7 +1621,7 @@ INSERT INTO `ps_carrier_zone` (`id_carrier`, `id_zone`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cart`
+-- Table structure for table `ps_cart`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart` (
@@ -1346,7 +1658,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_cart`
+-- Dumping data for table `ps_cart`
 --
 
 INSERT INTO `ps_cart` (`id_cart`, `id_shop_group`, `id_shop`, `id_carrier`, `delivery_option`, `id_lang`, `id_address_delivery`, `id_address_invoice`, `id_currency`, `id_customer`, `id_guest`, `secure_key`, `recyclable`, `gift`, `gift_message`, `mobile_theme`, `allow_seperated_package`, `date_add`, `date_upd`) VALUES
@@ -1359,7 +1671,7 @@ INSERT INTO `ps_cart` (`id_cart`, `id_shop_group`, `id_shop`, `id_carrier`, `del
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cart_cart_rule`
+-- Table structure for table `ps_cart_cart_rule`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_cart_rule` (
@@ -1372,7 +1684,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_cart_rule` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cart_product`
+-- Table structure for table `ps_cart_product`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_product` (
@@ -1391,7 +1703,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_product` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cart_rule`
+-- Table structure for table `ps_cart_rule`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule` (
@@ -1437,7 +1749,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cart_rule_carrier`
+-- Table structure for table `ps_cart_rule_carrier`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_carrier` (
@@ -1449,7 +1761,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_carrier` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cart_rule_combination`
+-- Table structure for table `ps_cart_rule_combination`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_combination` (
@@ -1463,7 +1775,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_combination` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cart_rule_country`
+-- Table structure for table `ps_cart_rule_country`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_country` (
@@ -1475,7 +1787,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_country` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cart_rule_group`
+-- Table structure for table `ps_cart_rule_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_group` (
@@ -1487,7 +1799,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_group` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cart_rule_lang`
+-- Table structure for table `ps_cart_rule_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_lang` (
@@ -1500,7 +1812,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_lang` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cart_rule_product_rule`
+-- Table structure for table `ps_cart_rule_product_rule`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_product_rule` (
@@ -1513,7 +1825,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_product_rule` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cart_rule_product_rule_group`
+-- Table structure for table `ps_cart_rule_product_rule_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_product_rule_group` (
@@ -1526,7 +1838,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_product_rule_group` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cart_rule_product_rule_value`
+-- Table structure for table `ps_cart_rule_product_rule_value`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_product_rule_value` (
@@ -1538,7 +1850,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_product_rule_value` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cart_rule_shop`
+-- Table structure for table `ps_cart_rule_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_shop` (
@@ -1550,7 +1862,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_shop` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_category`
+-- Table structure for table `ps_category`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_category` (
@@ -1572,29 +1884,41 @@ CREATE TABLE IF NOT EXISTS `ps_category` (
   KEY `nright` (`nright`),
   KEY `activenleft` (`active`,`nleft`),
   KEY `activenright` (`active`,`nright`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_category`
+-- Dumping data for table `ps_category`
 --
 
 INSERT INTO `ps_category` (`id_category`, `id_parent`, `id_shop_default`, `level_depth`, `nleft`, `nright`, `active`, `date_add`, `date_upd`, `position`, `is_root_category`) VALUES
-(1, 0, 1, 0, 1, 22, 1, '2016-10-27 01:35:59', '2016-10-27 01:35:59', 0, 0),
-(2, 1, 1, 1, 2, 21, 1, '2016-10-27 01:36:00', '2016-10-27 01:36:00', 0, 1),
+(1, 0, 1, 0, 1, 46, 1, '2016-10-27 01:35:59', '2016-10-27 01:35:59', 0, 0),
+(2, 1, 1, 1, 2, 45, 1, '2016-10-27 01:36:00', '2016-10-27 01:36:00', 0, 1),
 (12, 2, 1, 2, 17, 18, 1, '2016-10-27 11:38:49', '2016-10-27 12:58:32', 1, 0),
 (14, 2, 1, 2, 3, 16, 1, '2016-10-27 12:54:44', '2016-10-27 13:00:29', 0, 0),
-(15, 2, 1, 2, 19, 20, 1, '2016-10-27 12:57:40', '2016-10-27 13:02:02', 2, 0),
+(15, 2, 1, 2, 19, 44, 1, '2016-10-27 12:57:40', '2016-10-27 13:02:02', 2, 0),
 (16, 14, 1, 3, 4, 9, 1, '2016-10-27 13:03:40', '2016-10-27 15:36:51', 0, 0),
 (17, 14, 1, 3, 10, 11, 1, '2016-10-27 13:04:09', '2016-10-27 15:36:17', 1, 0),
 (18, 14, 1, 3, 12, 13, 1, '2016-10-27 13:04:50', '2016-10-27 15:36:31', 2, 0),
 (19, 14, 1, 3, 14, 15, 1, '2016-10-27 13:05:30', '2016-10-27 15:37:04', 3, 0),
 (20, 16, 1, 4, 5, 6, 1, '2016-10-27 13:16:48', '2016-10-27 15:26:29', 0, 0),
-(21, 16, 1, 4, 7, 8, 1, '2016-10-27 15:30:13', '2016-10-27 15:30:13', 0, 0);
+(21, 16, 1, 4, 7, 8, 1, '2016-10-27 15:30:13', '2016-10-27 15:30:13', 0, 0),
+(22, 15, 1, 3, 20, 25, 1, '2016-11-03 16:40:07', '2016-11-03 16:40:07', 0, 0),
+(23, 22, 1, 4, 21, 22, 1, '2016-11-03 16:40:57', '2016-11-03 16:40:57', 0, 0),
+(24, 22, 1, 4, 23, 24, 1, '2016-11-03 16:41:33', '2016-11-03 16:41:33', 0, 0),
+(25, 15, 1, 3, 26, 31, 1, '2016-11-03 16:46:25', '2016-11-03 16:46:25', 0, 0),
+(26, 15, 1, 3, 32, 37, 1, '2016-11-03 16:47:07', '2016-11-03 16:47:07', 0, 0),
+(27, 15, 1, 3, 38, 43, 1, '2016-11-03 16:47:48', '2016-11-03 16:47:48', 0, 0),
+(28, 25, 1, 4, 27, 28, 1, '2016-11-03 16:55:22', '2016-11-03 16:55:22', 0, 0),
+(29, 25, 1, 4, 29, 30, 1, '2016-11-03 16:56:15', '2016-11-03 16:56:15', 0, 0),
+(30, 26, 1, 4, 33, 34, 1, '2016-11-03 16:58:23', '2016-11-03 16:58:23', 0, 0),
+(31, 26, 1, 4, 35, 36, 1, '2016-11-03 16:58:59', '2016-11-03 16:58:59', 0, 0),
+(32, 27, 1, 4, 39, 40, 1, '2016-11-03 17:00:36', '2016-11-03 17:00:36', 0, 0),
+(33, 27, 1, 4, 41, 42, 1, '2016-11-03 17:01:05', '2016-11-03 17:01:05', 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_category_group`
+-- Table structure for table `ps_category_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_category_group` (
@@ -1606,7 +1930,7 @@ CREATE TABLE IF NOT EXISTS `ps_category_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_category_group`
+-- Dumping data for table `ps_category_group`
 --
 
 INSERT INTO `ps_category_group` (`id_category`, `id_group`) VALUES
@@ -1640,12 +1964,48 @@ INSERT INTO `ps_category_group` (`id_category`, `id_group`) VALUES
 (20, 3),
 (21, 1),
 (21, 2),
-(21, 3);
+(21, 3),
+(22, 1),
+(22, 2),
+(22, 3),
+(23, 1),
+(23, 2),
+(23, 3),
+(24, 1),
+(24, 2),
+(24, 3),
+(25, 1),
+(25, 2),
+(25, 3),
+(26, 1),
+(26, 2),
+(26, 3),
+(27, 1),
+(27, 2),
+(27, 3),
+(28, 1),
+(28, 2),
+(28, 3),
+(29, 1),
+(29, 2),
+(29, 3),
+(30, 1),
+(30, 2),
+(30, 3),
+(31, 1),
+(31, 2),
+(31, 3),
+(32, 1),
+(32, 2),
+(32, 3),
+(33, 1),
+(33, 2),
+(33, 3);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_category_lang`
+-- Table structure for table `ps_category_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_category_lang` (
@@ -1663,7 +2023,7 @@ CREATE TABLE IF NOT EXISTS `ps_category_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_category_lang`
+-- Dumping data for table `ps_category_lang`
 --
 
 INSERT INTO `ps_category_lang` (`id_category`, `id_shop`, `id_lang`, `name`, `description`, `link_rewrite`, `meta_title`, `meta_keywords`, `meta_description`) VALUES
@@ -1688,12 +2048,36 @@ INSERT INTO `ps_category_lang` (`id_category`, `id_shop`, `id_lang`, `name`, `de
 (20, 1, 1, 'Spark plug', '<p>Spark plugs</p>', 'spark-plug', '', '', ''),
 (20, 1, 2, 'Spark plug', '', 'spark-plug', '', '', ''),
 (21, 1, 1, 'Cooler', '', 'cooler', '', '', ''),
-(21, 1, 2, 'Cooler', '', 'cooler', '', '', '');
+(21, 1, 2, 'Cooler', '', 'cooler', '', '', ''),
+(22, 1, 1, 'ENGINE', '<p>Engine parts</p>', 'engine', '', '', ''),
+(22, 1, 2, 'ENGINE', '', 'engine', '', '', ''),
+(23, 1, 1, 'Spark plug', '<p>Spark plugs</p>', 'spark-plug', '', '', ''),
+(23, 1, 2, 'Spark plug', '', 'spark-plug', '', '', ''),
+(24, 1, 1, 'Radiator', '<p>Radiators</p>', 'radiator', '', '', ''),
+(24, 1, 2, 'Radiator', '', 'radiator', '', '', ''),
+(25, 1, 1, 'BREAKS', '<p>Breaks parts</p>', 'breaks', '', '', ''),
+(25, 1, 2, 'BREAKS', '', 'breaks', '', '', ''),
+(26, 1, 1, 'SUSPENSION', '<p>Suspiension parts.</p>', 'suspension', '', '', ''),
+(26, 1, 2, 'SUSPENSION', '', 'suspension', '', '', ''),
+(27, 1, 1, 'BODY', '<p>Body parts</p>', 'body', '', '', ''),
+(27, 1, 2, 'BODY', '', 'body', '', '', ''),
+(28, 1, 1, 'Brake Disc', '<p>Brake discs</p>', 'brake-disc', '', '', ''),
+(28, 1, 2, 'Brake Disc', '', 'brake-disc', '', '', ''),
+(29, 1, 1, 'Brake Pad Set', '<p>Brake pad sets</p>', 'brake-pad-set', '', '', ''),
+(29, 1, 2, 'Brake Pad Set', '', 'brake-pad-set', '', '', ''),
+(30, 1, 1, 'Coil Springs', '<p>Coil springs</p>', 'coil-springs', '', '', ''),
+(30, 1, 2, 'Coil Springs', '', 'coil-springs', '', '', ''),
+(31, 1, 1, 'Shock Absorber', '<p>Shock absorbers</p>', 'shock-absorber', '', '', ''),
+(31, 1, 2, 'Shock Absorber', '', 'shock-absorber', '', '', ''),
+(32, 1, 1, 'Windows', '<p>Windows</p>', 'windows', '', '', ''),
+(32, 1, 2, 'Windows', '', 'windows', '', '', ''),
+(33, 1, 1, 'Bumpers', '<p>Bumpers</p>', 'bumpers', '', '', ''),
+(33, 1, 2, 'Bumpers', '', 'bumpers', '', '', '');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_category_product`
+-- Table structure for table `ps_category_product`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_category_product` (
@@ -1706,7 +2090,7 @@ CREATE TABLE IF NOT EXISTS `ps_category_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_category_product`
+-- Dumping data for table `ps_category_product`
 --
 
 INSERT INTO `ps_category_product` (`id_category`, `id_product`, `position`) VALUES
@@ -1716,7 +2100,7 @@ INSERT INTO `ps_category_product` (`id_category`, `id_product`, `position`) VALU
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_category_shop`
+-- Table structure for table `ps_category_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_category_shop` (
@@ -1727,7 +2111,7 @@ CREATE TABLE IF NOT EXISTS `ps_category_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_category_shop`
+-- Dumping data for table `ps_category_shop`
 --
 
 INSERT INTO `ps_category_shop` (`id_category`, `id_shop`, `position`) VALUES
@@ -1741,12 +2125,24 @@ INSERT INTO `ps_category_shop` (`id_category`, `id_shop`, `position`) VALUES
 (18, 1, 2),
 (19, 1, 3),
 (20, 1, 0),
-(21, 1, 1);
+(21, 1, 1),
+(22, 1, 0),
+(23, 1, 0),
+(24, 1, 1),
+(25, 1, 1),
+(26, 1, 2),
+(27, 1, 3),
+(28, 1, 0),
+(29, 1, 1),
+(30, 1, 0),
+(31, 1, 1),
+(32, 1, 0),
+(33, 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cms`
+-- Table structure for table `ps_cms`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms` (
@@ -1759,7 +2155,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_cms`
+-- Dumping data for table `ps_cms`
 --
 
 INSERT INTO `ps_cms` (`id_cms`, `id_cms_category`, `position`, `active`, `indexation`) VALUES
@@ -1772,7 +2168,7 @@ INSERT INTO `ps_cms` (`id_cms`, `id_cms_category`, `position`, `active`, `indexa
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cms_block`
+-- Table structure for table `ps_cms_block`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_block` (
@@ -1785,7 +2181,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_block` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_cms_block`
+-- Dumping data for table `ps_cms_block`
 --
 
 INSERT INTO `ps_cms_block` (`id_cms_block`, `id_cms_category`, `location`, `position`, `display_store`) VALUES
@@ -1794,7 +2190,7 @@ INSERT INTO `ps_cms_block` (`id_cms_block`, `id_cms_category`, `location`, `posi
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cms_block_lang`
+-- Table structure for table `ps_cms_block_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_block_lang` (
@@ -1805,7 +2201,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_block_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_cms_block_lang`
+-- Dumping data for table `ps_cms_block_lang`
 --
 
 INSERT INTO `ps_cms_block_lang` (`id_cms_block`, `id_lang`, `name`) VALUES
@@ -1815,7 +2211,7 @@ INSERT INTO `ps_cms_block_lang` (`id_cms_block`, `id_lang`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cms_block_page`
+-- Table structure for table `ps_cms_block_page`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_block_page` (
@@ -1827,7 +2223,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_block_page` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_cms_block_page`
+-- Dumping data for table `ps_cms_block_page`
 --
 
 INSERT INTO `ps_cms_block_page` (`id_cms_block_page`, `id_cms_block`, `id_cms`, `is_category`) VALUES
@@ -1840,7 +2236,7 @@ INSERT INTO `ps_cms_block_page` (`id_cms_block_page`, `id_cms_block`, `id_cms`, 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cms_block_shop`
+-- Table structure for table `ps_cms_block_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_block_shop` (
@@ -1850,7 +2246,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_block_shop` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_cms_block_shop`
+-- Dumping data for table `ps_cms_block_shop`
 --
 
 INSERT INTO `ps_cms_block_shop` (`id_cms_block`, `id_shop`) VALUES
@@ -1859,7 +2255,7 @@ INSERT INTO `ps_cms_block_shop` (`id_cms_block`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cms_category`
+-- Table structure for table `ps_cms_category`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_category` (
@@ -1875,7 +2271,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_category` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_cms_category`
+-- Dumping data for table `ps_cms_category`
 --
 
 INSERT INTO `ps_cms_category` (`id_cms_category`, `id_parent`, `level_depth`, `active`, `date_add`, `date_upd`, `position`) VALUES
@@ -1884,7 +2280,7 @@ INSERT INTO `ps_cms_category` (`id_cms_category`, `id_parent`, `level_depth`, `a
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cms_category_lang`
+-- Table structure for table `ps_cms_category_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_category_lang` (
@@ -1902,7 +2298,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_category_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_cms_category_lang`
+-- Dumping data for table `ps_cms_category_lang`
 --
 
 INSERT INTO `ps_cms_category_lang` (`id_cms_category`, `id_lang`, `id_shop`, `name`, `description`, `link_rewrite`, `meta_title`, `meta_keywords`, `meta_description`) VALUES
@@ -1912,7 +2308,7 @@ INSERT INTO `ps_cms_category_lang` (`id_cms_category`, `id_lang`, `id_shop`, `na
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cms_category_shop`
+-- Table structure for table `ps_cms_category_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_category_shop` (
@@ -1923,7 +2319,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_category_shop` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_cms_category_shop`
+-- Dumping data for table `ps_cms_category_shop`
 --
 
 INSERT INTO `ps_cms_category_shop` (`id_cms_category`, `id_shop`) VALUES
@@ -1932,7 +2328,7 @@ INSERT INTO `ps_cms_category_shop` (`id_cms_category`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cms_lang`
+-- Table structure for table `ps_cms_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_lang` (
@@ -1948,7 +2344,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_cms_lang`
+-- Dumping data for table `ps_cms_lang`
 --
 
 INSERT INTO `ps_cms_lang` (`id_cms`, `id_lang`, `id_shop`, `meta_title`, `meta_description`, `meta_keywords`, `content`, `link_rewrite`) VALUES
@@ -1966,7 +2362,7 @@ INSERT INTO `ps_cms_lang` (`id_cms`, `id_lang`, `id_shop`, `meta_title`, `meta_d
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cms_role`
+-- Table structure for table `ps_cms_role`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_role` (
@@ -1980,7 +2376,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_role` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cms_role_lang`
+-- Table structure for table `ps_cms_role_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_role_lang` (
@@ -1994,7 +2390,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_role_lang` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cms_shop`
+-- Table structure for table `ps_cms_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_shop` (
@@ -2005,7 +2401,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_cms_shop`
+-- Dumping data for table `ps_cms_shop`
 --
 
 INSERT INTO `ps_cms_shop` (`id_cms`, `id_shop`) VALUES
@@ -2018,7 +2414,7 @@ INSERT INTO `ps_cms_shop` (`id_cms`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_compare`
+-- Table structure for table `ps_compare`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_compare` (
@@ -2030,7 +2426,7 @@ CREATE TABLE IF NOT EXISTS `ps_compare` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_compare_product`
+-- Table structure for table `ps_compare_product`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_compare_product` (
@@ -2044,7 +2440,7 @@ CREATE TABLE IF NOT EXISTS `ps_compare_product` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_condition`
+-- Table structure for table `ps_condition`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_condition` (
@@ -2064,287 +2460,287 @@ CREATE TABLE IF NOT EXISTS `ps_condition` (
 ) ENGINE=InnoDB AUTO_INCREMENT=272 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_condition`
+-- Dumping data for table `ps_condition`
 --
 
 INSERT INTO `ps_condition` (`id_condition`, `id_ps_condition`, `type`, `request`, `operator`, `value`, `result`, `calculation_type`, `calculation_detail`, `validated`, `date_add`, `date_upd`) VALUES
-(1, 19, 'install', '', '>', '0', '1', 'time', '1', 1, '2016-10-27 01:41:05', '2016-10-27 01:44:38'),
-(2, 142, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%paypal%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:05', '2016-10-27 14:36:38'),
-(3, 40, 'install', '', '>=', '730', '', 'time', '2', 0, '2016-10-27 01:41:05', '2016-10-27 01:44:38'),
-(4, 6, 'sql', 'SELECT COUNT(distinct m.id_module) FROM PREFIX_hook h LEFT JOIN PREFIX_hook_module hm ON h.id_hook = hm.id_hook LEFT JOIN PREFIX_module m ON hm.id_module = m.id_module\r\nWHERE (h.name = "displayPayment" OR h.name = "payment") AND m.name NOT IN ("bankwire", "cheque", "cashondelivery")', '>', '0', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:06', '2016-10-27 14:36:40'),
-(5, 109, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o INNER JOIN PREFIX_address a ON a.id_address = o.id_address_delivery\r\nWHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL") AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}"', '>=', '1', '', 'hook', 'newOrder', 0, '2016-10-27 01:41:06', '2016-10-27 01:41:06'),
-(6, 152, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%paypal%"', '==', '0', '0', 'time', '1', 1, '2016-10-27 01:41:06', '2016-10-27 01:44:38'),
-(7, 121, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%moneybookers%"', '==', '0', '0', 'time', '1', 1, '2016-10-27 01:41:06', '2016-10-27 01:44:38'),
-(8, 147, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%hipay%"', '==', '0', '0', 'time', '1', 1, '2016-10-27 01:41:06', '2016-10-27 01:44:38'),
-(9, 155, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%trustly%"', '==', '0', '0', 'time', '1', 1, '2016-10-27 01:41:06', '2016-10-27 01:44:38'),
-(10, 252, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%gadwords%" ', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:06', '2016-10-27 14:36:40'),
-(11, 55, 'sql', 'SELECT COUNT(*) FROM ps_orders WHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL")', '>=', '100', '', 'hook', 'actionObjectOrderAddAfter', 0, '2016-10-27 01:41:06', '2016-10-27 01:41:06'),
-(12, 12, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '99', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-10-27 01:41:06', '2016-10-27 15:43:43'),
-(13, 39, 'install', '', '>=', '365', '', 'time', '2', 0, '2016-10-27 01:41:06', '2016-10-27 01:44:38'),
-(14, 175, 'sql', 'SELECT count(*) FROM	 PREFIX_configuration WHERE name = ''PS_HOSTED_MODE''', '==', '0', '0', 'time', '1', 1, '2016-10-27 01:41:06', '2016-10-27 01:44:38'),
-(15, 1, 'configuration', 'PS_REWRITING_SETTINGS', '==', '1', '', 'hook', 'actionAdminMetaControllerUpdate_optionsAfter', 0, '2016-10-27 01:41:06', '2016-10-27 01:41:06'),
-(16, 2, 'configuration', 'PS_SMARTY_FORCE_COMPILE', '!=', '2', '', 'hook', 'actionAdminPerformanceControllerSaveAfter', 0, '2016-10-27 01:41:07', '2016-10-27 01:41:07'),
-(17, 3, 'configuration', 'PS_CSS_THEME_CACHE', '==', '1', '', 'hook', 'actionAdminPerformanceControllerSaveAfter', 0, '2016-10-27 01:41:07', '2016-10-27 01:41:07'),
-(18, 4, 'configuration', 'PS_CIPHER_ALGORITHM', '==', '1', '', 'hook', 'actionAdminPerformanceControllerSaveAfter', 0, '2016-10-27 01:41:07', '2016-10-27 01:41:07'),
-(19, 5, 'configuration', 'PS_MEDIA_SERVERS', '==', '1', '', 'hook', 'actionAdminPerformanceControllerSaveAfter', 0, '2016-10-27 01:41:07', '2016-10-27 01:41:07'),
-(20, 7, 'sql', 'SELECT COUNT(distinct m.id_module) FROM PREFIX_hook h LEFT JOIN PREFIX_hook_module hm ON h.id_hook = hm.id_hook LEFT JOIN PREFIX_module m ON hm.id_module = m.id_module\r\nWHERE (h.name = "displayPayment" OR h.name = "payment") AND m.name NOT IN ("bankwire", "cheque", "cashondelivery")', '>', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:07', '2016-10-27 14:36:40'),
-(21, 8, 'sql', 'SELECT COUNT(*) FROM PREFIX_carrier WHERE name NOT IN ("0", "My carrier")', '>', '0', '', 'hook', 'actionObjectCarrierAddAfter', 0, '2016-10-27 01:41:07', '2016-10-27 01:41:07'),
-(22, 9, 'sql', 'SELECT COUNT(*) FROM PREFIX_carrier WHERE name NOT IN ("0", "My carrier")', '>', '1', '', 'hook', 'actionObjectCarrierAddAfter', 0, '2016-10-27 01:41:07', '2016-10-27 01:41:07'),
-(23, 10, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '0', '1', 'hook', 'actionObjectProductAddAfter', 1, '2016-10-27 01:41:07', '2016-10-27 11:44:09'),
-(24, 11, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '9', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-10-27 01:41:07', '2016-10-27 15:43:43'),
-(25, 16, 'configuration', 'PS_SHOP_PHONE', '!=', '0', '', 'hook', 'actionAdminStoresControllerUpdate_optionsAfter', 0, '2016-10-27 01:41:07', '2016-10-27 01:41:07'),
-(26, 17, 'sql', 'SELECT COUNT(*) FROM PREFIX_contact', '>', '2', '', 'hook', 'actionObjectContactAddAfter', 0, '2016-10-27 01:41:07', '2016-10-27 01:41:07'),
-(27, 18, 'sql', 'SELECT COUNT(*) FROM PREFIX_contact', '>', '4', '', 'hook', 'actionObjectContactAddAfter', 0, '2016-10-27 01:41:08', '2016-10-27 01:41:08'),
-(28, 13, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '999', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-10-27 01:41:08', '2016-10-27 15:43:43'),
-(29, 14, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '9999', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-10-27 01:41:08', '2016-10-27 15:43:43'),
-(30, 15, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '99999', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-10-27 01:41:08', '2016-10-27 15:43:43'),
-(31, 20, 'install', '', '>=', '7', '', 'time', '1', 0, '2016-10-27 01:41:08', '2016-10-27 01:44:38'),
-(32, 21, 'configuration', 'PS_LOGO', '!=', 'logo.jpg', '', 'hook', 'actionAdminThemesControllerUpdate_optionsAfter', 0, '2016-10-27 01:41:08', '2016-10-27 01:41:08'),
-(33, 22, 'sql', 'SELECT COUNT(*) FROM PREFIX_theme WHERE directory != "default" AND directory != "prestashop" AND directory ! "default-bootstrap"', '>', '0', '0', 'hook', 'actionObjectShopUpdateAfter', 0, '2016-10-27 01:41:08', '2016-10-27 12:51:42'),
-(34, 23, 'configuration', 'PS_LOGGED_ON_ADDONS', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:08', '2016-10-27 01:44:38'),
-(35, 24, 'configuration', 'PS_MULTISHOP_FEATURE_ACTIVE', '==', '1', '', 'hook', 'actionAdminPreferencesControllerUpdate_optionsAfter', 0, '2016-10-27 01:41:08', '2016-10-27 01:41:08'),
-(36, 25, 'sql', 'SELECT COUNT(*) FROM PREFIX_shop', '>', '1', '', 'hook', 'actionObjectShopAddAfter', 0, '2016-10-27 01:41:08', '2016-10-27 01:41:08'),
-(37, 28, 'sql', 'SELECT COUNT(*) FROM PREFIX_shop_group', '>', '1', '', 'hook', 'actionObjectShopGroupAddAfter', 0, '2016-10-27 01:41:08', '2016-10-27 01:41:08'),
-(38, 26, 'sql', 'SELECT COUNT(*) FROM PREFIX_shop', '>', '4', '', 'hook', 'actionObjectShopAddAfter', 0, '2016-10-27 01:41:08', '2016-10-27 01:41:08'),
-(39, 27, 'sql', 'SELECT COUNT(*) FROM PREFIX_shop_group', '>', '5', '', 'hook', 'actionObjectShopGroupAddAfter 	', 0, '2016-10-27 01:41:08', '2016-10-27 01:41:08'),
-(40, 30, 'sql', 'SELECT COUNT(*) FROM PREFIX_carrier WHERE name NOT IN ("0", "My carrier")', '>', '2', '', 'hook', 'actionObjectCarrierAddAfter', 0, '2016-10-27 01:41:09', '2016-10-27 01:41:09'),
-(41, 29, 'sql', 'SELECT COUNT(distinct m.id_module) FROM PREFIX_hook h LEFT JOIN PREFIX_hook_module hm ON h.id_hook = hm.id_hook LEFT JOIN PREFIX_module m ON hm.id_module = m.id_module\r\nWHERE (h.name = "displayPayment" OR h.name = "payment") AND m.name NOT IN ("bankwire", "cheque", "cashondelivery")', '>', '2', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:09', '2016-10-27 14:36:40'),
-(42, 31, 'sql', 'SELECT SUM(total_paid_tax_excl / c.conversion_rate)\r\nFROM PREFIX_orders o INNER JOIN PREFIX_currency c ON c.id_currency = o.id_currency WHERE valid = 1 AND reference != "XKBKNABJK"', '>=', '500', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:09', '2016-10-27 01:41:09'),
-(43, 32, 'sql', ' 	SELECT SUM(total_paid_tax_excl / c.conversion_rate) FROM PREFIX_orders o INNER JOIN PREFIX_currency c ON c.id_currency = o.id_currency WHERE valid = 1 AND reference != "XKBKNABJK"', '>=', '5000', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:09', '2016-10-27 01:41:09'),
-(44, 33, 'sql', ' 	SELECT SUM(total_paid_tax_excl / c.conversion_rate) FROM PREFIX_orders o INNER JOIN PREFIX_currency c ON c.id_currency = o.id_currency WHERE valid = 1 AND reference != "XKBKNABJK"', '>=', '50000', '0', 'time', '1', 0, '2016-10-27 01:41:09', '2016-10-27 01:44:39'),
-(45, 34, 'sql', ' 	SELECT SUM(total_paid_tax_excl / c.conversion_rate) FROM PREFIX_orders o INNER JOIN PREFIX_currency c ON c.id_currency = o.id_currency WHERE valid = 1', '>=', '500000', '0', 'time', '7', 0, '2016-10-27 01:41:09', '2016-10-27 01:44:39'),
-(46, 35, 'sql', ' 	SELECT SUM(total_paid_tax_excl / c.conversion_rate) FROM PREFIX_orders o INNER JOIN PREFIX_currency c ON c.id_currency = o.id_currency WHERE valid = 1', '>=', '5000000', '0', 'time', '7', 0, '2016-10-27 01:41:09', '2016-10-27 01:44:39'),
-(47, 36, 'sql', ' 	SELECT SUM(total_paid_tax_excl / c.conversion_rate) FROM PREFIX_orders o INNER JOIN PREFIX_currency c ON c.id_currency = o.id_currency WHERE valid = 1', '>=', '50000000', '0', 'time', '7', 0, '2016-10-27 01:41:09', '2016-10-27 01:44:39'),
-(48, 37, 'install', '', '>=', '30', '', 'time', '1', 0, '2016-10-27 01:41:09', '2016-10-27 01:44:39'),
-(49, 38, 'install', '', '>=', '182', '', 'time', '2', 0, '2016-10-27 01:41:09', '2016-10-27 01:44:39'),
-(50, 41, 'sql', 'SELECT COUNT(*) FROM PREFIX_guest', '>=', '10', '2', 'time', '1', 0, '2016-10-27 01:41:09', '2016-10-27 01:44:39'),
-(51, 42, 'sql', 'SELECT COUNT(*) FROM PREFIX_guest', '>=', '100', '2', 'time', '1', 0, '2016-10-27 01:41:09', '2016-10-27 01:44:39'),
-(52, 43, 'sql', 'SELECT COUNT(*) FROM PREFIX_guest', '>=', '1000', '2', 'time', '1', 0, '2016-10-27 01:41:09', '2016-10-27 01:44:39'),
-(53, 44, 'sql', 'SELECT COUNT(*) FROM PREFIX_guest', '>=', '10000', '2', 'time', '2', 0, '2016-10-27 01:41:09', '2016-10-27 01:44:39'),
-(54, 45, 'sql', 'SELECT COUNT(*) FROM PREFIX_guest', '>=', '100000', '2', 'time', '3', 0, '2016-10-27 01:41:09', '2016-10-27 01:44:39'),
-(55, 46, 'sql', 'SELECT COUNT(*) FROM PREFIX_guest', '>=', '1000000', '2', 'time', '4', 0, '2016-10-27 01:41:09', '2016-10-27 01:44:39'),
-(56, 47, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart WHERE secure_key != "b44a6d9efd7a0076a0fbce6b15eaf3b1"', '>=', '2', '', 'hook', 'actionObjectCartAddAfter', 0, '2016-10-27 01:41:09', '2016-10-27 01:41:09'),
-(57, 48, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart WHERE secure_key != "b44a6d9efd7a0076a0fbce6b15eaf3b1"', '>=', '10', '', 'hook', 'actionObjectCartAddAfter', 0, '2016-10-27 01:41:09', '2016-10-27 01:41:09'),
-(58, 49, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart WHERE secure_key != "b44a6d9efd7a0076a0fbce6b15eaf3b1"', '>=', '100', '', 'hook', 'actionObjectCartAddAfter', 0, '2016-10-27 01:41:09', '2016-10-27 01:41:09'),
-(59, 50, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart WHERE secure_key != "b44a6d9efd7a0076a0fbce6b15eaf3b1"', '>=', '1000', '0', 'time', '1', 0, '2016-10-27 01:41:10', '2016-10-27 01:44:39'),
-(60, 51, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart WHERE secure_key != "b44a6d9efd7a0076a0fbce6b15eaf3b1"', '>=', '10000', '0', 'time', '4', 0, '2016-10-27 01:41:10', '2016-10-27 01:44:40'),
-(61, 52, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart WHERE secure_key != "b44a6d9efd7a0076a0fbce6b15eaf3b1"', '>=', '100000', '0', 'time', '8', 0, '2016-10-27 01:41:10', '2016-10-27 01:44:40'),
-(62, 53, 'sql', 'SELECT COUNT(*) FROM ps_orders WHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL")', '>=', '1', '', 'hook', 'actionObjectOrderAddAfter', 0, '2016-10-27 01:41:10', '2016-10-27 01:41:10'),
-(63, 54, 'sql', 'SELECT COUNT(*) FROM ps_orders WHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL")', '>=', '10', '', 'hook', 'actionObjectOrderAddAfter', 0, '2016-10-27 01:41:10', '2016-10-27 01:41:10'),
-(64, 56, 'sql', 'SELECT COUNT(*) FROM ps_orders WHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL")', '>=', '1000', '0', 'time', '2', 0, '2016-10-27 01:41:10', '2016-10-27 01:44:40'),
-(65, 57, 'sql', 'SELECT COUNT(*) FROM ps_orders WHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL")', '>=', '10000', '0', 'time', '4', 0, '2016-10-27 01:41:10', '2016-10-27 01:44:40'),
-(66, 58, 'sql', 'SELECT COUNT(*) FROM ps_orders WHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL")', '>=', '100000', '0', 'time', '8', 0, '2016-10-27 01:41:10', '2016-10-27 01:44:40'),
-(67, 65, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer_thread', '>=', '1', '', 'hook', 'actionObjectCustomerThreadAddAfter', 0, '2016-10-27 01:41:10', '2016-10-27 01:41:10'),
-(68, 66, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer_thread', '>=', '10', '', 'hook', 'actionObjectCustomerThreadAddAfter', 0, '2016-10-27 01:41:10', '2016-10-27 01:41:10'),
-(69, 67, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer_thread', '>=', '100', '', 'hook', 'actionObjectCustomerThreadAddAfter', 0, '2016-10-27 01:41:10', '2016-10-27 01:41:10'),
-(70, 68, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer_thread', '>=', '1000', '0', 'time', '2', 0, '2016-10-27 01:41:10', '2016-10-27 01:44:40'),
-(71, 69, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer_thread', '>=', '10000', '0', 'time', '4', 0, '2016-10-27 01:41:10', '2016-10-27 01:44:40'),
-(72, 70, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer_thread', '>=', '100000', '0', 'time', '8', 0, '2016-10-27 01:41:10', '2016-10-27 01:44:40'),
-(73, 59, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer WHERE email != "pub@prestashop.com"', '>=', '1', '', 'hook', 'actionObjectCustomerAddAfter', 0, '2016-10-27 01:41:10', '2016-10-27 01:41:10'),
-(74, 60, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer WHERE email != "pub@prestashop.com"', '>=', '10', '', 'hook', 'actionObjectCustomerAddAfter', 0, '2016-10-27 01:41:10', '2016-10-27 01:41:10'),
-(75, 61, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer WHERE email != "pub@prestashop.com"', '>=', '100', '', 'hook', 'actionObjectCustomerAddAfter', 0, '2016-10-27 01:41:10', '2016-10-27 01:41:10'),
-(76, 62, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer WHERE email != "pub@prestashop.com"', '>=', '1000', '0', 'time', '1', 0, '2016-10-27 01:41:11', '2016-10-27 01:44:40'),
-(77, 63, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer WHERE email != "pub@prestashop.com"', '>=', '10000', '0', 'time', '2', 0, '2016-10-27 01:41:11', '2016-10-27 01:44:40'),
-(78, 64, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer WHERE email != "pub@prestashop.com"', '>=', '100000', '0', 'time', '4', 0, '2016-10-27 01:41:11', '2016-10-27 01:44:40'),
-(79, 71, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN ("BE","DE","FR","FX","GB","IE","LU","MC","NL")', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
-(80, 72, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN ("IT",\r\n"MT",\r\n"SM",\r\n"VA",\r\n"AD",\r\n"ES",\r\n"GI",\r\n"PT")', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
-(81, 73, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"BY",\r\n"EE",\r\n"LT",\r\n"LV",\r\n"MD",\r\n"PL",\r\n"UA",\r\n"AL",\r\n"BA",\r\n"BG",\r\n"GR",\r\n"HR",\r\n"MK",\r\n"RO",\r\n"SI",\r\n"YU",\r\n"RU"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
-(82, 74, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"AT",\r\n"CH",\r\n"CZ",\r\n"HU",\r\n"LI",\r\n"SK"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
-(83, 75, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"DK",\r\n"FI",\r\n"FO",\r\n"IS",\r\n"NO",\r\n"SE",\r\n"SJ"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
-(84, 76, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"CA",\r\n"GL",\r\n"PM",\r\n"US"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
-(85, 79, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"UM",\r\n"AS",\r\n"AU",\r\n"CK",\r\n"FJ",\r\n"FM",\r\n"GU",\r\n"KI",\r\n"MH,"\r\n"MP",\r\n"NC",\r\n"NF",\r\n"NR",\r\n"NU",\r\n"NZ",\r\n"PF",\r\n"PG",\r\n"PN",\r\n"PW",\r\n"SB",\r\n"TK",\r\n"TO",\r\n"TV",\r\n"VU",\r\n"WF",\r\n"WS"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
-(86, 85, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"KG",\r\n"KZ",\r\n"TJ",\r\n"TM",\r\n"UZ",\r\n"AE",\r\n"AM",\r\n"AZ",\r\n"BH",\r\n"CY",\r\n"GE",\r\n"IL",\r\n"IQ",\r\n"IR",\r\n"JO",\r\n"KW",\r\n"LB",\r\n"OM",\r\n"QA",\r\n"SA",\r\n"SY",\r\n"TR",\r\n"YE",\r\n"AF",\r\n"BD",\r\n"BT",\r\n"IN",\r\n"IO",\r\n"LK",\r\n"MV",\r\n"NP",\r\n"PK",\r\n"CN",\r\n"HK",\r\n"JP",\r\n"KP",\r\n"KR",\r\n"MO",\r\n"TW",\r\n"MN",\r\n"BN",\r\n"CC",\r\n"CX",\r\n"ID",\r\n"KH",\r\n"LA",\r\n"MM",\r\n"MY",\r\n"PH",\r\n"SG",\r\n"TH",\r\n"TP",\r\n"VN"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
-(87, 86, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"BZ",\r\n"CR",\r\n"GT",\r\n"HN",\r\n"MX",\r\n"NI",\r\n"PA",\r\n"SV",\r\n"AG",\r\n"AI",\r\n"AN",\r\n"AW",\r\n"BB",\r\n"BM",\r\n"BS",\r\n"CU",\r\n"DM",\r\n"DO",\r\n"GD",\r\n"GP",\r\n"HT",\r\n"JM",\r\n"KN",\r\n"KY",\r\n"LC",\r\n"MQ",\r\n"MS",\r\n"PR",\r\n"TC",\r\n"TT",\r\n"VC",\r\n"VG",\r\n"VI",\r\n"AR",\r\n"BO",\r\n"BR",\r\n"CL",\r\n"CO",\r\n"EC",\r\n"FK",\r\n"GF",\r\n"GY",\r\n"PE",\r\n"PY",\r\n"SR",\r\n"UY",\r\n"VE"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
-(88, 88, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"BI",\r\n"CF",\r\n"CG",\r\n"RW",\r\n"TD",\r\n"ZR",\r\n"DJ",\r\n"ER",\r\n"ET",\r\n"KE",\r\n"SO",\r\n"TZ",\r\n"UG",\r\n"KM",\r\n"MG",\r\n"MU",\r\n"RE",\r\n"SC",\r\n"YT",\r\n"AO",\r\n"BW",\r\n"LS",\r\n"MW",\r\n"MZ",\r\n"NA",\r\n"SZ",\r\n"ZA",\r\n"ZM",\r\n"ZW",\r\n"BF",\r\n"BJ",\r\n"CI",\r\n"CM",\r\n"CV",\r\n"GA",\r\n"GH",\r\n"GM",\r\n"GN",\r\n"GQ",\r\n"GW",\r\n"LR",\r\n"ML",\r\n"MR",\r\n"NE",\r\n"NG",\r\n"SL",\r\n"SN",\r\n"ST",\r\n"TG"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
-(89, 89, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"DZ",\r\n"EG",\r\n"EH",\r\n"LY",\r\n"MA",\r\n"SD",\r\n"TN"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:11', '2016-10-27 01:41:11'),
-(90, 90, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '2', '2', 'hook', 'actionObjectEmployeeAddAfter', 1, '2016-10-27 01:41:11', '2016-10-27 02:46:02'),
-(91, 91, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '3', '3', 'hook', 'actionObjectEmployeeAddAfter', 1, '2016-10-27 01:41:11', '2016-10-27 02:47:01'),
-(92, 92, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '5', '3', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-10-27 01:41:11', '2016-10-27 02:47:01'),
-(93, 93, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '10', '3', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-10-27 01:41:11', '2016-10-27 02:47:01'),
-(94, 94, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '20', '3', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-10-27 01:41:11', '2016-10-27 02:47:01'),
-(95, 95, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '40', '3', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-10-27 01:41:11', '2016-10-27 02:47:02'),
-(96, 96, 'sql', 'SELECT id_image FROM PREFIX_image WHERE id_image > 26', '>', '0', '0', 'hook', 'actionObjectImageAddAfter', 0, '2016-10-27 01:41:12', '2016-10-27 15:46:02'),
-(97, 97, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '50', '3', 'hook', 'actionObjectImageAddAfter', 0, '2016-10-27 01:41:12', '2016-10-27 15:46:02'),
-(98, 98, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '100', '3', 'hook', 'actionObjectImageAddAfter', 0, '2016-10-27 01:41:12', '2016-10-27 15:46:02'),
-(99, 99, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '1000', '23', 'time', '2', 0, '2016-10-27 01:41:12', '2016-10-27 01:44:40'),
-(100, 100, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '10000', '23', 'time', '4', 0, '2016-10-27 01:41:12', '2016-10-27 01:44:40'),
-(101, 101, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '50000', '23', 'time', '8', 0, '2016-10-27 01:41:12', '2016-10-27 01:44:40'),
-(102, 102, 'sql', 'SELECT id_cms FROM PREFIX_cms WHERE id_cms > 5', '>', '0', '', 'hook', 'actionObjectCMSAddAfter', 0, '2016-10-27 01:41:12', '2016-10-27 01:41:12'),
-(103, 103, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart_rule', '>=', '1', '', 'hook', 'actionObjectCartRuleAddAfter 	', 0, '2016-10-27 01:41:12', '2016-10-27 01:41:12'),
-(104, 104, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart_rule', '>=', '10', '', 'hook', 'actionObjectCartRuleAddAfter 	', 0, '2016-10-27 01:41:12', '2016-10-27 01:41:12'),
-(105, 105, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart_rule', '>=', '100', '', 'hook', 'actionObjectCartRuleAddAfter 	', 0, '2016-10-27 01:41:12', '2016-10-27 01:41:12'),
-(106, 107, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart_rule', '>=', '500', '', 'hook', 'actionObjectCartRuleAddAfter 	', 0, '2016-10-27 01:41:12', '2016-10-27 01:41:12'),
-(107, 106, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart_rule', '>=', '1000', '', 'hook', 'actionObjectCartRuleAddAfter 	', 0, '2016-10-27 01:41:12', '2016-10-27 01:41:12'),
-(108, 108, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart_rule', '>=', '5000', '', 'hook', 'actionObjectCartRuleAddAfter 	', 0, '2016-10-27 01:41:12', '2016-10-27 01:41:12'),
-(109, 110, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o INNER JOIN PREFIX_address a ON a.id_address = o.id_address_delivery\r\nWHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL") AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}"', '>=', '10', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:12', '2016-10-27 01:41:12'),
-(110, 111, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o INNER JOIN PREFIX_address a ON a.id_address = o.id_address_delivery\r\nWHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL") AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}"', '>=', '100', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:12', '2016-10-27 01:41:12'),
-(111, 113, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o INNER JOIN PREFIX_address a ON a.id_address = o.id_address_delivery\r\nWHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL") AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}"', '>=', '1000', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:12', '2016-10-27 01:41:12'),
-(112, 114, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o INNER JOIN PREFIX_address a ON a.id_address = o.id_address_delivery\r\nWHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL") AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}"', '>=', '5000', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:13', '2016-10-27 01:41:13'),
-(113, 112, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o INNER JOIN PREFIX_address a ON a.id_address = o.id_address_delivery\r\nWHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL") AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}"', '>=', '10000', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-10-27 01:41:13', '2016-10-27 01:41:13'),
-(114, 165, 'sql', 'SELECT COUNT(s.`id_store`) FROM PREFIX_store s WHERE `latitude` NOT IN (''25.76500500'', ''26.13793600'', ''26.00998700'', ''25.73629600'', ''25.88674000'') AND `longitude` NOT IN (''-80.24379700'', ''-80.13943500'', ''-80.29447200'', ''-80.24479700'', ''-80.16329200'')', '>', '0', '', 'hook', 'actionAdminStoresControllerSaveAfter', 0, '2016-10-27 01:41:13', '2016-10-27 01:41:13'),
-(115, 166, 'sql', 'SELECT COUNT(s.`id_store`) FROM PREFIX_store s WHERE `latitude` NOT IN (''25.76500500'', ''26.13793600'', ''26.00998700'', ''25.73629600'', ''25.88674000'') AND `longitude` NOT IN (''-80.24379700'', ''-80.13943500'', ''-80.29447200'', ''-80.24479700'', ''-80.16329200'')', '>', '1', '', 'hook', 'actionAdminStoresControllerSaveAfter', 0, '2016-10-27 01:41:13', '2016-10-27 01:41:13'),
-(116, 167, 'sql', 'SELECT COUNT(s.`id_store`) FROM PREFIX_store s WHERE `latitude` NOT IN (''25.76500500'', ''26.13793600'', ''26.00998700'', ''25.73629600'', ''25.88674000'') AND `longitude` NOT IN (''-80.24379700'', ''-80.13943500'', ''-80.29447200'', ''-80.24479700'', ''-80.16329200'')', '>', '4', '', 'hook', 'actionAdminStoresControllerSaveAfter', 0, '2016-10-27 01:41:13', '2016-10-27 01:41:13'),
-(117, 168, 'sql', 'SELECT COUNT(s.`id_store`) FROM PREFIX_store s WHERE `latitude` NOT IN (''25.76500500'', ''26.13793600'', ''26.00998700'', ''25.73629600'', ''25.88674000'') AND `longitude` NOT IN (''-80.24379700'', ''-80.13943500'', ''-80.29447200'', ''-80.24479700'', ''-80.16329200'')', '>', '9', '', 'hook', 'actionAdminStoresControllerSaveAfter', 0, '2016-10-27 01:41:13', '2016-10-27 01:41:13'),
-(118, 169, 'sql', 'SELECT COUNT(s.`id_store`) FROM PREFIX_store s WHERE `latitude` NOT IN (''25.76500500'', ''26.13793600'', ''26.00998700'', ''25.73629600'', ''25.88674000'') AND `longitude` NOT IN (''-80.24379700'', ''-80.13943500'', ''-80.29447200'', ''-80.24479700'', ''-80.16329200'')', '>', '19', '', 'hook', 'actionAdminStoresControllerSaveAfter', 0, '2016-10-27 01:41:13', '2016-10-27 01:41:13'),
-(119, 170, 'sql', 'SELECT COUNT(s.`id_store`) FROM PREFIX_store s WHERE `latitude` NOT IN (''25.76500500'', ''26.13793600'', ''26.00998700'', ''25.73629600'', ''25.88674000'') AND `longitude` NOT IN (''-80.24379700'', ''-80.13943500'', ''-80.29447200'', ''-80.24479700'', ''-80.16329200'')', '>', '49', '', 'hook', 'actionAdminStoresControllerSaveAfter', 0, '2016-10-27 01:41:13', '2016-10-27 01:41:13'),
-(120, 171, 'sql', 'SELECT COUNT(*) FROM PREFIX_webservice_account', '>=', '1', '', 'hook', 'actionAdminWebserviceControllerSaveAfter', 0, '2016-10-27 01:41:13', '2016-10-27 01:41:13'),
-(121, 172, 'sql', 'SELECT COUNT(*) FROM PREFIX_webservice_account', '>=', '2', '', 'hook', 'actionAdminWebserviceControllerSaveAfter', 0, '2016-10-27 01:41:13', '2016-10-27 01:41:13'),
-(122, 173, 'sql', 'SELECT COUNT(*) FROM PREFIX_webservice_account', '>=', '3', '', 'hook', 'actionAdminWebserviceControllerSaveAfter', 0, '2016-10-27 01:41:13', '2016-10-27 01:41:13'),
-(123, 174, 'sql', 'SELECT COUNT(*) FROM PREFIX_webservice_account', '>=', '4', '', 'hook', 'actionAdminWebserviceControllerSaveAfter', 0, '2016-10-27 01:41:13', '2016-10-27 01:41:13'),
-(124, 225, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%ferbuy%" ', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:13', '2016-10-27 14:36:38'),
-(125, 227, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''FERBUY_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''FERBUY_MODE'') AND ( value = ''live''))', '==', '2', '0', 'time', '1', 0, '2016-10-27 01:41:13', '2016-10-27 01:44:34'),
-(126, 360, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%ferbuy%" AND os.logable = 1', '>=', '1', '0', 'time', '1', 0, '2016-10-27 01:41:13', '2016-10-27 01:44:35'),
-(127, 388, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%ferbuy%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '1', 0, '2016-10-27 01:41:13', '2016-10-27 01:44:37'),
-(128, 246, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%globkurier%" ', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:14', '2016-10-27 14:36:38'),
-(129, 248, 'configuration', 'GLOBKURIER_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:34'),
-(130, 361, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state LEFT JOIN PREFIX_carrier c ON c.id_carrier = o.id_carrier WHERE c.name like "%globkurier%" AND os.logable = 1', '>=', '1', '0', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:35'),
-(131, 389, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state LEFT JOIN PREFIX_carrier c ON c.id_carrier = o.id_carrier WHERE c.name like "%globkurier%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '100', '0', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:37'),
-(132, 137, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "hipay%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:14', '2016-10-27 14:36:38'),
-(133, 255, 'configuration', 'HIPAY_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:34'),
-(134, 362, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%hipay%" AND os.logable = 1', '>=', '1', '0', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:35'),
-(135, 363, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%hipay%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:37'),
-(136, 141, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%ogone%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:14', '2016-10-27 14:36:38'),
-(137, 291, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''OGONE_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''OGONE_MODE'') AND ( value = ''live''))', '==', '2', '0', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:34'),
-(138, 369, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%ogone%" AND os.logable = 1', '>=', '1', '0', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:35'),
-(139, 391, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%ogone%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:37'),
-(140, 301, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''PAYPAL_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''PAYPAL_SANDBOX'') AND ( value = ''0''))', '==', '2', '0', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:34'),
-(141, 371, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%paypal%" AND os.logable = 1', '>=', '1', '0', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:35'),
-(142, 372, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%paypal%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:37'),
-(143, 320, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%shopgate%" ', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:14', '2016-10-27 14:36:38'),
-(144, 322, 'configuration', 'SHOPGATE_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:34'),
-(145, 375, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%shopgate%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '1', '0', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:36'),
-(146, 376, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%shopgate%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:37'),
-(147, 140, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%moneybookers%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:14', '2016-10-27 14:36:38'),
-(148, 326, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''MONEYBOOKERS_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''MB_PAY_TO_EMAIL '') AND ( value != ''testaccount2@moneybookers.com ''))', '==', '2', '0', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:34'),
-(149, 377, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%moneybookers%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '1', '0', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:36'),
-(150, 394, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%sofortbanking%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '1', 0, '2016-10-27 01:41:14', '2016-10-27 01:44:37'),
-(151, 328, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%sofortbanking%" ', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:14', '2016-10-27 14:36:39'),
-(152, 330, 'configuration', 'SOFORTBANKING_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:15', '2016-10-27 01:44:34'),
-(153, 379, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%sofortbanking%" AND os.logable = 1', '>=', '1', '0', 'time', '1', 0, '2016-10-27 01:41:15', '2016-10-27 01:44:36'),
-(154, 380, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%sofortbanking%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '1', 0, '2016-10-27 01:41:15', '2016-10-27 01:44:37'),
-(155, 332, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%textmaster%" ', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:15', '2016-10-27 14:36:39'),
-(156, 334, 'configuration', 'TEXTMASTER_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:15', '2016-10-27 01:44:34'),
-(157, 381, 'sql', 'SELECT COUNT(*) FROM PREFIX_textmaster_project WHERE status = "completed"', '>=', '1', '0', 'time', '1', 0, '2016-10-27 01:41:15', '2016-10-27 01:44:36'),
-(158, 396, 'sql', 'SELECT COUNT(*) FROM PREFIX_textmaster_project WHERE status = "completed"', '>=', '10', '0', 'time', '1', 0, '2016-10-27 01:41:15', '2016-10-27 01:44:37'),
-(159, 416, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%pigmbhpaymill%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:15', '2016-10-27 14:36:39'),
-(160, 418, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%pigmbhpaymill%" AND os.logable = 1', '>=', '1', '0', 'time', '7', 0, '2016-10-27 01:41:15', '2016-10-27 01:44:36'),
-(161, 419, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%pigmbhpaymill%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-10-27 01:41:15', '2016-10-27 01:44:37'),
-(162, 420, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%syspay%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:15', '2016-10-27 14:36:39'),
-(163, 421, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''SYSPAY_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''SYSPAY_MODE'') AND ( value = ''1''))', '==', '2', '0', 'time', '2', 0, '2016-10-27 01:41:15', '2016-10-27 01:44:34'),
-(164, 422, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%syspay%" AND os.logable = 1', '>=', '1', '0', 'time', '7', 0, '2016-10-27 01:41:15', '2016-10-27 01:44:36'),
-(165, 423, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%syspay%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-10-27 01:41:15', '2016-10-27 01:44:37'),
-(166, 428, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%authorizeaim%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:15', '2016-10-27 14:36:39'),
-(167, 429, 'configuration', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''AUTHORIZEAIM_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''AUTHORIZE_AIM_SANDBOX'') AND ( value = ''0''))', '==', '2', '', 'time', '2', 0, '2016-10-27 01:41:15', '2016-10-27 01:44:34'),
-(168, 430, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%authorizeaim%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-10-27 01:41:15', '2016-10-27 01:44:36'),
-(169, 431, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%authorizeaim%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-10-27 01:41:15', '2016-10-27 01:44:37'),
-(170, 136, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%ebay%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:15', '2016-10-27 14:36:39'),
-(171, 209, 'configuration', 'EBAY_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:15', '2016-10-27 01:44:34'),
-(172, 358, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%ebay%" AND os.logable = 1', '>=', '1', '0', 'time', '1', 0, '2016-10-27 01:41:15', '2016-10-27 01:44:36'),
-(173, 359, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%ebay%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '1', 0, '2016-10-27 01:41:15', '2016-10-27 01:44:37'),
-(174, 438, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%payplug%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:16', '2016-10-27 14:36:39'),
-(175, 439, 'configuration', 'PAYPLUG_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:16', '2016-10-27 01:44:34'),
-(176, 440, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%payplug%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-10-27 01:41:16', '2016-10-27 01:44:36'),
-(177, 441, 'sql', 'SELECT SUM(o.total_paid) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%payplug%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '10000', '0', 'time', '7', 0, '2016-10-27 01:41:16', '2016-10-27 01:44:37'),
-(178, 442, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%affinityitems%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:16', '2016-10-27 14:36:39'),
-(179, 443, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE name LIKE ''AFFINITYITEMS_CONFIGURATION_OK'' AND value = ''1''', '==', '1', '0', 'time', '1', 0, '2016-10-27 01:41:16', '2016-10-27 01:44:35'),
-(180, 446, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%dpdpoland%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:16', '2016-10-27 14:36:39'),
-(181, 447, 'configuration', 'DPDPOLAND_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:16', '2016-10-27 01:44:35'),
-(182, 448, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state LEFT JOIN PREFIX_carrier c ON c.id_carrier = o.id_carrier WHERE c.name like "%dpdpoland%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-10-27 01:41:16', '2016-10-27 01:44:36'),
-(183, 449, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state LEFT JOIN PREFIX_carrier c ON c.id_carrier = o.id_carrier WHERE c.name like "%dpdpoland%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '100', '0', 'time', '7', 0, '2016-10-27 01:41:16', '2016-10-27 01:44:37'),
-(184, 450, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%envoimoinscher%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:16', '2016-10-27 14:36:39'),
-(185, 451, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''ENVOIMOINSCHER_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''EMC_ENV '') AND ( value != ''TEST''))', '==', '2', '0', 'time', '1', 0, '2016-10-27 01:41:16', '2016-10-27 01:44:35'),
-(186, 452, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state LEFT JOIN PREFIX_carrier c ON c.id_carrier = o.id_carrier WHERE c.name like "%envoimoinscher%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-10-27 01:41:16', '2016-10-27 01:44:37'),
-(187, 453, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state LEFT JOIN PREFIX_carrier c ON c.id_carrier = o.id_carrier WHERE c.name like "%envoimoinscher%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '100', '0', 'time', '7', 0, '2016-10-27 01:41:16', '2016-10-27 01:44:38'),
-(188, 454, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%klikandpay%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:16', '2016-10-27 14:36:39'),
-(189, 455, 'configuration', 'KLIKANDPAY_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:16', '2016-10-27 01:44:35'),
-(190, 456, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%klikandpay%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-10-27 01:41:16', '2016-10-27 01:44:37'),
-(191, 457, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%klikandpay%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-10-27 01:41:16', '2016-10-27 01:44:38'),
-(192, 458, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%clickline%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:16', '2016-10-27 14:36:39'),
-(193, 459, 'configuration', 'CLICKLINE_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:16', '2016-10-27 01:44:35'),
-(194, 460, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state LEFT JOIN PREFIX_carrier c ON c.id_carrier = o.id_carrier WHERE c.name like "%clickline%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-10-27 01:41:17', '2016-10-27 01:44:37'),
-(195, 461, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state LEFT JOIN PREFIX_carrier c ON c.id_carrier = o.id_carrier WHERE c.name like "%clickline%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '100', '0', 'time', '7', 0, '2016-10-27 01:41:17', '2016-10-27 01:44:38'),
-(196, 462, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%cdiscount%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:17', '2016-10-27 14:36:39'),
-(197, 463, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '100', 0, '2016-10-27 01:41:17', '2016-10-27 01:44:35'),
-(198, 464, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%cdiscount%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-10-27 01:41:17', '2016-10-27 01:44:37'),
-(199, 465, 'sql', 'SELECT SUM(o.total_paid) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%cdiscount%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 365 DAY)', '>=', '500', '0', 'time', '7', 0, '2016-10-27 01:41:17', '2016-10-27 01:44:38'),
-(200, 467, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%erpillicopresta%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:17', '2016-10-27 14:36:40'),
-(201, 468, 'configuration', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''ERPILLICOPRESTA_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''ERP_LICENCE_VALIDITY '') AND ( value == ''1'')) OR (( name LIKE ''ERP_MONTH_FREE_ACTIVE '') AND ( value == ''0''))', '==', '3', '', 'time', '1', 0, '2016-10-27 01:41:17', '2016-10-27 01:44:35'),
-(202, 469, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '100', 0, '2016-10-27 01:41:17', '2016-10-27 01:44:40'),
-(203, 470, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '100', 0, '2016-10-27 01:41:17', '2016-10-27 01:44:40'),
-(204, 471, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%netreviews%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:17', '2016-10-27 14:36:40'),
-(205, 472, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''NETREVIEWS_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''AVISVERIFIES_URLCERTIFICAT '') AND ( value IS NOT LIKE ''%preprod%''))', '==', '2', '0', 'time', '1', 0, '2016-10-27 01:41:17', '2016-10-27 01:44:41'),
-(206, 473, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '100', 0, '2016-10-27 01:41:17', '2016-10-27 01:44:41'),
-(207, 474, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '100', 0, '2016-10-27 01:41:17', '2016-10-27 01:44:41'),
-(208, 475, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%bluesnap%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:17', '2016-10-27 14:36:40'),
-(209, 476, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''BLUESNAP_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''BLUESNAP_SANDBOX '') AND ( value NOT LIKE ''%sandbox%''))', '==', '2', '0', 'time', '1', 0, '2016-10-27 01:41:17', '2016-10-27 01:44:41');
+(1, 19, 'install', '', '>', '0', '1', 'time', '1', 1, '2016-11-02 22:06:55', '2016-11-02 22:06:55'),
+(2, 142, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%paypal%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:06:55', '2016-11-02 22:06:55'),
+(3, 40, 'install', '', '>=', '730', '', 'time', '2', 0, '2016-11-02 22:06:55', '2016-11-03 15:55:09'),
+(4, 6, 'sql', 'SELECT COUNT(distinct m.id_module) FROM PREFIX_hook h LEFT JOIN PREFIX_hook_module hm ON h.id_hook = hm.id_hook LEFT JOIN PREFIX_module m ON hm.id_module = m.id_module\r\nWHERE (h.name = "displayPayment" OR h.name = "payment") AND m.name NOT IN ("bankwire", "cheque", "cashondelivery")', '>', '0', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:06:55', '2016-11-02 22:06:55'),
+(5, 109, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o INNER JOIN PREFIX_address a ON a.id_address = o.id_address_delivery\r\nWHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL") AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}"', '>=', '1', '', 'hook', 'newOrder', 0, '2016-11-02 22:06:55', '2016-11-02 22:06:55'),
+(6, 152, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%paypal%"', '==', '0', '0', 'time', '1', 1, '2016-11-02 22:06:55', '2016-11-02 22:06:55'),
+(7, 121, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%moneybookers%"', '==', '0', '0', 'time', '1', 1, '2016-11-02 22:06:55', '2016-11-02 22:06:55'),
+(8, 147, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%hipay%"', '==', '0', '0', 'time', '1', 1, '2016-11-02 22:06:55', '2016-11-02 22:06:55'),
+(9, 155, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%trustly%"', '==', '0', '0', 'time', '1', 1, '2016-11-02 22:06:55', '2016-11-02 22:06:55'),
+(10, 252, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%gadwords%" ', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:06:55', '2016-11-02 22:06:55'),
+(11, 55, 'sql', 'SELECT COUNT(*) FROM ps_orders WHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL")', '>=', '100', '', 'hook', 'actionObjectOrderAddAfter', 0, '2016-11-02 22:06:55', '2016-11-02 22:06:55'),
+(12, 12, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '99', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-11-02 22:06:55', '2016-11-02 22:08:03'),
+(13, 39, 'install', '', '>=', '365', '', 'time', '2', 0, '2016-11-02 22:06:56', '2016-11-03 15:55:09'),
+(14, 175, 'sql', 'SELECT count(*) FROM	 PREFIX_configuration WHERE name = ''PS_HOSTED_MODE''', '==', '0', '0', 'time', '1', 1, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(15, 1, 'configuration', 'PS_REWRITING_SETTINGS', '==', '1', '', 'hook', 'actionAdminMetaControllerUpdate_optionsAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(16, 2, 'configuration', 'PS_SMARTY_FORCE_COMPILE', '!=', '2', '', 'hook', 'actionAdminPerformanceControllerSaveAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(17, 3, 'configuration', 'PS_CSS_THEME_CACHE', '==', '1', '', 'hook', 'actionAdminPerformanceControllerSaveAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(18, 4, 'configuration', 'PS_CIPHER_ALGORITHM', '==', '1', '', 'hook', 'actionAdminPerformanceControllerSaveAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(19, 5, 'configuration', 'PS_MEDIA_SERVERS', '==', '1', '', 'hook', 'actionAdminPerformanceControllerSaveAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(20, 7, 'sql', 'SELECT COUNT(distinct m.id_module) FROM PREFIX_hook h LEFT JOIN PREFIX_hook_module hm ON h.id_hook = hm.id_hook LEFT JOIN PREFIX_module m ON hm.id_module = m.id_module\r\nWHERE (h.name = "displayPayment" OR h.name = "payment") AND m.name NOT IN ("bankwire", "cheque", "cashondelivery")', '>', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(21, 8, 'sql', 'SELECT COUNT(*) FROM PREFIX_carrier WHERE name NOT IN ("0", "My carrier")', '>', '0', '', 'hook', 'actionObjectCarrierAddAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(22, 9, 'sql', 'SELECT COUNT(*) FROM PREFIX_carrier WHERE name NOT IN ("0", "My carrier")', '>', '1', '', 'hook', 'actionObjectCarrierAddAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(23, 10, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '0', '1', 'hook', 'actionObjectProductAddAfter', 1, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(24, 11, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '9', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:08:03'),
+(25, 16, 'configuration', 'PS_SHOP_PHONE', '!=', '0', '', 'hook', 'actionAdminStoresControllerUpdate_optionsAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(26, 17, 'sql', 'SELECT COUNT(*) FROM PREFIX_contact', '>', '2', '', 'hook', 'actionObjectContactAddAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(27, 18, 'sql', 'SELECT COUNT(*) FROM PREFIX_contact', '>', '4', '', 'hook', 'actionObjectContactAddAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(28, 13, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '999', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:08:03'),
+(29, 14, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '9999', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:08:03'),
+(30, 15, 'sql', 'SELECT COUNT(*) FROM PREFIX_product WHERE reference NOT LIKE "demo_%"', '>', '99999', '1', 'hook', 'actionObjectProductAddAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:08:03'),
+(31, 20, 'install', '', '>=', '7', '1', 'time', '1', 1, '2016-11-02 22:06:56', '2016-11-03 15:55:06'),
+(32, 21, 'configuration', 'PS_LOGO', '!=', 'logo.jpg', '', 'hook', 'actionAdminThemesControllerUpdate_optionsAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(33, 22, 'sql', 'SELECT COUNT(*) FROM PREFIX_theme WHERE directory != "default" AND directory != "prestashop" AND directory ! "default-bootstrap"', '>', '0', '0', 'hook', 'actionObjectShopUpdateAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(34, 23, 'configuration', 'PS_LOGGED_ON_ADDONS', '==', '1', '', 'time', '1', 0, '2016-11-02 22:06:56', '2016-11-03 15:55:06'),
+(35, 24, 'configuration', 'PS_MULTISHOP_FEATURE_ACTIVE', '==', '1', '', 'hook', 'actionAdminPreferencesControllerUpdate_optionsAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(36, 25, 'sql', 'SELECT COUNT(*) FROM PREFIX_shop', '>', '1', '', 'hook', 'actionObjectShopAddAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(37, 28, 'sql', 'SELECT COUNT(*) FROM PREFIX_shop_group', '>', '1', '', 'hook', 'actionObjectShopGroupAddAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(38, 26, 'sql', 'SELECT COUNT(*) FROM PREFIX_shop', '>', '4', '', 'hook', 'actionObjectShopAddAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(39, 27, 'sql', 'SELECT COUNT(*) FROM PREFIX_shop_group', '>', '5', '', 'hook', 'actionObjectShopGroupAddAfter 	', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(40, 30, 'sql', 'SELECT COUNT(*) FROM PREFIX_carrier WHERE name NOT IN ("0", "My carrier")', '>', '2', '', 'hook', 'actionObjectCarrierAddAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(41, 29, 'sql', 'SELECT COUNT(distinct m.id_module) FROM PREFIX_hook h LEFT JOIN PREFIX_hook_module hm ON h.id_hook = hm.id_hook LEFT JOIN PREFIX_module m ON hm.id_module = m.id_module\r\nWHERE (h.name = "displayPayment" OR h.name = "payment") AND m.name NOT IN ("bankwire", "cheque", "cashondelivery")', '>', '2', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(42, 31, 'sql', 'SELECT SUM(total_paid_tax_excl / c.conversion_rate)\r\nFROM PREFIX_orders o INNER JOIN PREFIX_currency c ON c.id_currency = o.id_currency WHERE valid = 1 AND reference != "XKBKNABJK"', '>=', '500', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(43, 32, 'sql', ' 	SELECT SUM(total_paid_tax_excl / c.conversion_rate) FROM PREFIX_orders o INNER JOIN PREFIX_currency c ON c.id_currency = o.id_currency WHERE valid = 1 AND reference != "XKBKNABJK"', '>=', '5000', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:56', '2016-11-02 22:06:56'),
+(44, 33, 'sql', ' 	SELECT SUM(total_paid_tax_excl / c.conversion_rate) FROM PREFIX_orders o INNER JOIN PREFIX_currency c ON c.id_currency = o.id_currency WHERE valid = 1 AND reference != "XKBKNABJK"', '>=', '50000', '0', 'time', '1', 0, '2016-11-02 22:06:57', '2016-11-03 15:55:06'),
+(45, 34, 'sql', ' 	SELECT SUM(total_paid_tax_excl / c.conversion_rate) FROM PREFIX_orders o INNER JOIN PREFIX_currency c ON c.id_currency = o.id_currency WHERE valid = 1', '>=', '500000', '0', 'time', '7', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(46, 35, 'sql', ' 	SELECT SUM(total_paid_tax_excl / c.conversion_rate) FROM PREFIX_orders o INNER JOIN PREFIX_currency c ON c.id_currency = o.id_currency WHERE valid = 1', '>=', '5000000', '0', 'time', '7', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(47, 36, 'sql', ' 	SELECT SUM(total_paid_tax_excl / c.conversion_rate) FROM PREFIX_orders o INNER JOIN PREFIX_currency c ON c.id_currency = o.id_currency WHERE valid = 1', '>=', '50000000', '0', 'time', '7', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(48, 37, 'install', '', '>=', '30', '', 'time', '1', 0, '2016-11-02 22:06:57', '2016-11-03 15:55:09'),
+(49, 38, 'install', '', '>=', '182', '', 'time', '2', 0, '2016-11-02 22:06:57', '2016-11-03 15:55:09'),
+(50, 41, 'sql', 'SELECT COUNT(*) FROM PREFIX_guest', '>=', '10', '5', 'time', '1', 0, '2016-11-02 22:06:57', '2016-11-03 15:55:06'),
+(51, 42, 'sql', 'SELECT COUNT(*) FROM PREFIX_guest', '>=', '100', '5', 'time', '1', 0, '2016-11-02 22:06:57', '2016-11-03 15:55:07'),
+(52, 43, 'sql', 'SELECT COUNT(*) FROM PREFIX_guest', '>=', '1000', '5', 'time', '1', 0, '2016-11-02 22:06:57', '2016-11-03 15:55:07'),
+(53, 44, 'sql', 'SELECT COUNT(*) FROM PREFIX_guest', '>=', '10000', '2', 'time', '2', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(54, 45, 'sql', 'SELECT COUNT(*) FROM PREFIX_guest', '>=', '100000', '2', 'time', '3', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(55, 46, 'sql', 'SELECT COUNT(*) FROM PREFIX_guest', '>=', '1000000', '2', 'time', '4', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(56, 47, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart WHERE secure_key != "b44a6d9efd7a0076a0fbce6b15eaf3b1"', '>=', '2', '', 'hook', 'actionObjectCartAddAfter', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(57, 48, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart WHERE secure_key != "b44a6d9efd7a0076a0fbce6b15eaf3b1"', '>=', '10', '', 'hook', 'actionObjectCartAddAfter', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(58, 49, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart WHERE secure_key != "b44a6d9efd7a0076a0fbce6b15eaf3b1"', '>=', '100', '', 'hook', 'actionObjectCartAddAfter', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(59, 50, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart WHERE secure_key != "b44a6d9efd7a0076a0fbce6b15eaf3b1"', '>=', '1000', '0', 'time', '1', 0, '2016-11-02 22:06:57', '2016-11-03 15:55:08'),
+(60, 51, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart WHERE secure_key != "b44a6d9efd7a0076a0fbce6b15eaf3b1"', '>=', '10000', '0', 'time', '4', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(61, 52, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart WHERE secure_key != "b44a6d9efd7a0076a0fbce6b15eaf3b1"', '>=', '100000', '0', 'time', '8', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(62, 53, 'sql', 'SELECT COUNT(*) FROM ps_orders WHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL")', '>=', '1', '', 'hook', 'actionObjectOrderAddAfter', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(63, 54, 'sql', 'SELECT COUNT(*) FROM ps_orders WHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL")', '>=', '10', '', 'hook', 'actionObjectOrderAddAfter', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(64, 56, 'sql', 'SELECT COUNT(*) FROM ps_orders WHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL")', '>=', '1000', '0', 'time', '2', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(65, 57, 'sql', 'SELECT COUNT(*) FROM ps_orders WHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL")', '>=', '10000', '0', 'time', '4', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(66, 58, 'sql', 'SELECT COUNT(*) FROM ps_orders WHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL")', '>=', '100000', '0', 'time', '8', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(67, 65, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer_thread', '>=', '1', '', 'hook', 'actionObjectCustomerThreadAddAfter', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(68, 66, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer_thread', '>=', '10', '', 'hook', 'actionObjectCustomerThreadAddAfter', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(69, 67, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer_thread', '>=', '100', '', 'hook', 'actionObjectCustomerThreadAddAfter', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(70, 68, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer_thread', '>=', '1000', '0', 'time', '2', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(71, 69, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer_thread', '>=', '10000', '0', 'time', '4', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(72, 70, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer_thread', '>=', '100000', '0', 'time', '8', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(73, 59, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer WHERE email != "pub@prestashop.com"', '>=', '1', '', 'hook', 'actionObjectCustomerAddAfter', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(74, 60, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer WHERE email != "pub@prestashop.com"', '>=', '10', '', 'hook', 'actionObjectCustomerAddAfter', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(75, 61, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer WHERE email != "pub@prestashop.com"', '>=', '100', '', 'hook', 'actionObjectCustomerAddAfter', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(76, 62, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer WHERE email != "pub@prestashop.com"', '>=', '1000', '0', 'time', '1', 0, '2016-11-02 22:06:57', '2016-11-03 15:55:08'),
+(77, 63, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer WHERE email != "pub@prestashop.com"', '>=', '10000', '0', 'time', '2', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(78, 64, 'sql', 'SELECT COUNT(*) FROM PREFIX_customer WHERE email != "pub@prestashop.com"', '>=', '100000', '0', 'time', '4', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(79, 71, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN ("BE","DE","FR","FX","GB","IE","LU","MC","NL")', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:57', '2016-11-02 22:06:57'),
+(80, 72, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN ("IT",\r\n"MT",\r\n"SM",\r\n"VA",\r\n"AD",\r\n"ES",\r\n"GI",\r\n"PT")', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(81, 73, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"BY",\r\n"EE",\r\n"LT",\r\n"LV",\r\n"MD",\r\n"PL",\r\n"UA",\r\n"AL",\r\n"BA",\r\n"BG",\r\n"GR",\r\n"HR",\r\n"MK",\r\n"RO",\r\n"SI",\r\n"YU",\r\n"RU"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(82, 74, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"AT",\r\n"CH",\r\n"CZ",\r\n"HU",\r\n"LI",\r\n"SK"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(83, 75, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"DK",\r\n"FI",\r\n"FO",\r\n"IS",\r\n"NO",\r\n"SE",\r\n"SJ"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(84, 76, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"CA",\r\n"GL",\r\n"PM",\r\n"US"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(85, 79, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"UM",\r\n"AS",\r\n"AU",\r\n"CK",\r\n"FJ",\r\n"FM",\r\n"GU",\r\n"KI",\r\n"MH,"\r\n"MP",\r\n"NC",\r\n"NF",\r\n"NR",\r\n"NU",\r\n"NZ",\r\n"PF",\r\n"PG",\r\n"PN",\r\n"PW",\r\n"SB",\r\n"TK",\r\n"TO",\r\n"TV",\r\n"VU",\r\n"WF",\r\n"WS"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(86, 85, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"KG",\r\n"KZ",\r\n"TJ",\r\n"TM",\r\n"UZ",\r\n"AE",\r\n"AM",\r\n"AZ",\r\n"BH",\r\n"CY",\r\n"GE",\r\n"IL",\r\n"IQ",\r\n"IR",\r\n"JO",\r\n"KW",\r\n"LB",\r\n"OM",\r\n"QA",\r\n"SA",\r\n"SY",\r\n"TR",\r\n"YE",\r\n"AF",\r\n"BD",\r\n"BT",\r\n"IN",\r\n"IO",\r\n"LK",\r\n"MV",\r\n"NP",\r\n"PK",\r\n"CN",\r\n"HK",\r\n"JP",\r\n"KP",\r\n"KR",\r\n"MO",\r\n"TW",\r\n"MN",\r\n"BN",\r\n"CC",\r\n"CX",\r\n"ID",\r\n"KH",\r\n"LA",\r\n"MM",\r\n"MY",\r\n"PH",\r\n"SG",\r\n"TH",\r\n"TP",\r\n"VN"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(87, 86, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"BZ",\r\n"CR",\r\n"GT",\r\n"HN",\r\n"MX",\r\n"NI",\r\n"PA",\r\n"SV",\r\n"AG",\r\n"AI",\r\n"AN",\r\n"AW",\r\n"BB",\r\n"BM",\r\n"BS",\r\n"CU",\r\n"DM",\r\n"DO",\r\n"GD",\r\n"GP",\r\n"HT",\r\n"JM",\r\n"KN",\r\n"KY",\r\n"LC",\r\n"MQ",\r\n"MS",\r\n"PR",\r\n"TC",\r\n"TT",\r\n"VC",\r\n"VG",\r\n"VI",\r\n"AR",\r\n"BO",\r\n"BR",\r\n"CL",\r\n"CO",\r\n"EC",\r\n"FK",\r\n"GF",\r\n"GY",\r\n"PE",\r\n"PY",\r\n"SR",\r\n"UY",\r\n"VE"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(88, 88, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"BI",\r\n"CF",\r\n"CG",\r\n"RW",\r\n"TD",\r\n"ZR",\r\n"DJ",\r\n"ER",\r\n"ET",\r\n"KE",\r\n"SO",\r\n"TZ",\r\n"UG",\r\n"KM",\r\n"MG",\r\n"MU",\r\n"RE",\r\n"SC",\r\n"YT",\r\n"AO",\r\n"BW",\r\n"LS",\r\n"MW",\r\n"MZ",\r\n"NA",\r\n"SZ",\r\n"ZA",\r\n"ZM",\r\n"ZW",\r\n"BF",\r\n"BJ",\r\n"CI",\r\n"CM",\r\n"CV",\r\n"GA",\r\n"GH",\r\n"GM",\r\n"GN",\r\n"GQ",\r\n"GW",\r\n"LR",\r\n"ML",\r\n"MR",\r\n"NE",\r\n"NG",\r\n"SL",\r\n"SN",\r\n"ST",\r\n"TG"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(89, 89, 'sql', 'SELECT IFNULL(id_order, 0) FROM PREFIX_orders o LEFT JOIN PREFIX_address a ON o.id_address_delivery = a.id_address LEFT JOIN PREFIX_country c ON c.id_country = a.id_country WHERE o.valid = 1 AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}" AND c.iso_code IN (\r\n"DZ",\r\n"EG",\r\n"EH",\r\n"LY",\r\n"MA",\r\n"SD",\r\n"TN"\r\n)', '!=', '0', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(90, 90, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '2', '2', 'hook', 'actionObjectEmployeeAddAfter', 1, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(91, 91, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '3', '3', 'hook', 'actionObjectEmployeeAddAfter', 1, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(92, 92, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '5', '3', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(93, 93, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '10', '3', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(94, 94, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '20', '3', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(95, 95, 'sql', 'SELECT COUNT(*) FROM PREFIX_employee', '>=', '40', '3', 'hook', 'actionObjectEmployeeAddAfter', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(96, 96, 'sql', 'SELECT id_image FROM PREFIX_image WHERE id_image > 26', '>', '0', '0', 'hook', 'actionObjectImageAddAfter', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(97, 97, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '50', '3', 'hook', 'actionObjectImageAddAfter', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(98, 98, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '100', '3', 'hook', 'actionObjectImageAddAfter', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(99, 99, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '1000', '23', 'time', '2', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(100, 100, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '10000', '23', 'time', '4', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(101, 101, 'sql', 'SELECT COUNT(*) FROM PREFIX_image', '>=', '50000', '23', 'time', '8', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(102, 102, 'sql', 'SELECT id_cms FROM PREFIX_cms WHERE id_cms > 5', '>', '0', '', 'hook', 'actionObjectCMSAddAfter', 0, '2016-11-02 22:06:58', '2016-11-02 22:06:58'),
+(103, 103, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart_rule', '>=', '1', '', 'hook', 'actionObjectCartRuleAddAfter 	', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(104, 104, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart_rule', '>=', '10', '', 'hook', 'actionObjectCartRuleAddAfter 	', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(105, 105, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart_rule', '>=', '100', '', 'hook', 'actionObjectCartRuleAddAfter 	', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(106, 107, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart_rule', '>=', '500', '', 'hook', 'actionObjectCartRuleAddAfter 	', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(107, 106, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart_rule', '>=', '1000', '', 'hook', 'actionObjectCartRuleAddAfter 	', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(108, 108, 'sql', 'SELECT COUNT(*) FROM PREFIX_cart_rule', '>=', '5000', '', 'hook', 'actionObjectCartRuleAddAfter 	', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(109, 110, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o INNER JOIN PREFIX_address a ON a.id_address = o.id_address_delivery\r\nWHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL") AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}"', '>=', '10', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(110, 111, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o INNER JOIN PREFIX_address a ON a.id_address = o.id_address_delivery\r\nWHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL") AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}"', '>=', '100', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(111, 113, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o INNER JOIN PREFIX_address a ON a.id_address = o.id_address_delivery\r\nWHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL") AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}"', '>=', '1000', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(112, 114, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o INNER JOIN PREFIX_address a ON a.id_address = o.id_address_delivery\r\nWHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL") AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}"', '>=', '5000', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(113, 112, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o INNER JOIN PREFIX_address a ON a.id_address = o.id_address_delivery\r\nWHERE reference NOT IN ("XKBKNABJK", "OHSATSERP", "FFATNOMMJ", "UOYEVOLI", "KHWLILZLL") AND a.id_country != "{config}PS_COUNTRY_DEFAULT{/config}"', '>=', '10000', '', 'hook', 'actionOrderStatusUpdate', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(114, 165, 'sql', 'SELECT COUNT(s.`id_store`) FROM PREFIX_store s WHERE `latitude` NOT IN (''25.76500500'', ''26.13793600'', ''26.00998700'', ''25.73629600'', ''25.88674000'') AND `longitude` NOT IN (''-80.24379700'', ''-80.13943500'', ''-80.29447200'', ''-80.24479700'', ''-80.16329200'')', '>', '0', '', 'hook', 'actionAdminStoresControllerSaveAfter', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(115, 166, 'sql', 'SELECT COUNT(s.`id_store`) FROM PREFIX_store s WHERE `latitude` NOT IN (''25.76500500'', ''26.13793600'', ''26.00998700'', ''25.73629600'', ''25.88674000'') AND `longitude` NOT IN (''-80.24379700'', ''-80.13943500'', ''-80.29447200'', ''-80.24479700'', ''-80.16329200'')', '>', '1', '', 'hook', 'actionAdminStoresControllerSaveAfter', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(116, 167, 'sql', 'SELECT COUNT(s.`id_store`) FROM PREFIX_store s WHERE `latitude` NOT IN (''25.76500500'', ''26.13793600'', ''26.00998700'', ''25.73629600'', ''25.88674000'') AND `longitude` NOT IN (''-80.24379700'', ''-80.13943500'', ''-80.29447200'', ''-80.24479700'', ''-80.16329200'')', '>', '4', '', 'hook', 'actionAdminStoresControllerSaveAfter', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(117, 168, 'sql', 'SELECT COUNT(s.`id_store`) FROM PREFIX_store s WHERE `latitude` NOT IN (''25.76500500'', ''26.13793600'', ''26.00998700'', ''25.73629600'', ''25.88674000'') AND `longitude` NOT IN (''-80.24379700'', ''-80.13943500'', ''-80.29447200'', ''-80.24479700'', ''-80.16329200'')', '>', '9', '', 'hook', 'actionAdminStoresControllerSaveAfter', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(118, 169, 'sql', 'SELECT COUNT(s.`id_store`) FROM PREFIX_store s WHERE `latitude` NOT IN (''25.76500500'', ''26.13793600'', ''26.00998700'', ''25.73629600'', ''25.88674000'') AND `longitude` NOT IN (''-80.24379700'', ''-80.13943500'', ''-80.29447200'', ''-80.24479700'', ''-80.16329200'')', '>', '19', '', 'hook', 'actionAdminStoresControllerSaveAfter', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(119, 170, 'sql', 'SELECT COUNT(s.`id_store`) FROM PREFIX_store s WHERE `latitude` NOT IN (''25.76500500'', ''26.13793600'', ''26.00998700'', ''25.73629600'', ''25.88674000'') AND `longitude` NOT IN (''-80.24379700'', ''-80.13943500'', ''-80.29447200'', ''-80.24479700'', ''-80.16329200'')', '>', '49', '', 'hook', 'actionAdminStoresControllerSaveAfter', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(120, 171, 'sql', 'SELECT COUNT(*) FROM PREFIX_webservice_account', '>=', '1', '', 'hook', 'actionAdminWebserviceControllerSaveAfter', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(121, 172, 'sql', 'SELECT COUNT(*) FROM PREFIX_webservice_account', '>=', '2', '', 'hook', 'actionAdminWebserviceControllerSaveAfter', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(122, 173, 'sql', 'SELECT COUNT(*) FROM PREFIX_webservice_account', '>=', '3', '', 'hook', 'actionAdminWebserviceControllerSaveAfter', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(123, 174, 'sql', 'SELECT COUNT(*) FROM PREFIX_webservice_account', '>=', '4', '', 'hook', 'actionAdminWebserviceControllerSaveAfter', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(124, 225, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%ferbuy%" ', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:06:59', '2016-11-02 22:06:59'),
+(125, 227, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''FERBUY_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''FERBUY_MODE'') AND ( value = ''live''))', '==', '2', '0', 'time', '1', 0, '2016-11-02 22:06:59', '2016-11-03 15:55:07'),
+(126, 360, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%ferbuy%" AND os.logable = 1', '>=', '1', '0', 'time', '1', 0, '2016-11-02 22:06:59', '2016-11-03 15:55:07'),
+(127, 388, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%ferbuy%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '1', 0, '2016-11-02 22:06:59', '2016-11-03 15:55:07'),
+(128, 246, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%globkurier%" ', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(129, 248, 'configuration', 'GLOBKURIER_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(130, 361, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state LEFT JOIN PREFIX_carrier c ON c.id_carrier = o.id_carrier WHERE c.name like "%globkurier%" AND os.logable = 1', '>=', '1', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(131, 389, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state LEFT JOIN PREFIX_carrier c ON c.id_carrier = o.id_carrier WHERE c.name like "%globkurier%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '100', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(132, 137, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "hipay%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(133, 255, 'configuration', 'HIPAY_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(134, 362, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%hipay%" AND os.logable = 1', '>=', '1', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(135, 363, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%hipay%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(136, 141, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%ogone%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(137, 291, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''OGONE_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''OGONE_MODE'') AND ( value = ''live''))', '==', '2', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(138, 369, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%ogone%" AND os.logable = 1', '>=', '1', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(139, 391, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%ogone%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(140, 301, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''PAYPAL_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''PAYPAL_SANDBOX'') AND ( value = ''0''))', '==', '2', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(141, 371, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%paypal%" AND os.logable = 1', '>=', '1', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(142, 372, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%paypal%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(143, 320, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%shopgate%" ', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(144, 322, 'configuration', 'SHOPGATE_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(145, 375, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%shopgate%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '1', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(146, 376, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%shopgate%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(147, 140, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%moneybookers%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(148, 326, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''MONEYBOOKERS_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''MB_PAY_TO_EMAIL '') AND ( value != ''testaccount2@moneybookers.com ''))', '==', '2', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(149, 377, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%moneybookers%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '1', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(150, 394, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%sofortbanking%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(151, 328, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%sofortbanking%" ', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(152, 330, 'configuration', 'SOFORTBANKING_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(153, 379, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%sofortbanking%" AND os.logable = 1', '>=', '1', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(154, 380, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%sofortbanking%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(155, 332, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%textmaster%" ', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(156, 334, 'configuration', 'TEXTMASTER_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(157, 381, 'sql', 'SELECT COUNT(*) FROM PREFIX_textmaster_project WHERE status = "completed"', '>=', '1', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(158, 396, 'sql', 'SELECT COUNT(*) FROM PREFIX_textmaster_project WHERE status = "completed"', '>=', '10', '0', 'time', '1', 0, '2016-11-02 22:07:00', '2016-11-03 15:55:07'),
+(159, 416, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%pigmbhpaymill%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(160, 418, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%pigmbhpaymill%" AND os.logable = 1', '>=', '1', '0', 'time', '7', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(161, 419, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%pigmbhpaymill%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(162, 420, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%syspay%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(163, 421, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''SYSPAY_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''SYSPAY_MODE'') AND ( value = ''1''))', '==', '2', '0', 'time', '2', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(164, 422, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%syspay%" AND os.logable = 1', '>=', '1', '0', 'time', '7', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(165, 423, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%syspay%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(166, 428, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%authorizeaim%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(167, 429, 'configuration', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''AUTHORIZEAIM_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''AUTHORIZE_AIM_SANDBOX'') AND ( value = ''0''))', '==', '2', '', 'time', '2', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(168, 430, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%authorizeaim%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(169, 431, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%authorizeaim%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(170, 136, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%ebay%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:00', '2016-11-02 22:07:00'),
+(171, 209, 'configuration', 'EBAY_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-11-02 22:07:01', '2016-11-03 15:55:07'),
+(172, 358, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%ebay%" AND os.logable = 1', '>=', '1', '0', 'time', '1', 0, '2016-11-02 22:07:01', '2016-11-03 15:55:08'),
+(173, 359, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%ebay%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '1', 0, '2016-11-02 22:07:01', '2016-11-03 15:55:08'),
+(174, 438, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%payplug%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(175, 439, 'configuration', 'PAYPLUG_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-11-02 22:07:01', '2016-11-03 15:55:08'),
+(176, 440, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%payplug%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(177, 441, 'sql', 'SELECT SUM(o.total_paid) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%payplug%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '10000', '0', 'time', '7', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(178, 442, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%affinityitems%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(179, 443, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE name LIKE ''AFFINITYITEMS_CONFIGURATION_OK'' AND value = ''1''', '==', '1', '0', 'time', '1', 0, '2016-11-02 22:07:01', '2016-11-03 15:55:08'),
+(180, 446, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%dpdpoland%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(181, 447, 'configuration', 'DPDPOLAND_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-11-02 22:07:01', '2016-11-03 15:55:08'),
+(182, 448, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state LEFT JOIN PREFIX_carrier c ON c.id_carrier = o.id_carrier WHERE c.name like "%dpdpoland%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(183, 449, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state LEFT JOIN PREFIX_carrier c ON c.id_carrier = o.id_carrier WHERE c.name like "%dpdpoland%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '100', '0', 'time', '7', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(184, 450, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%envoimoinscher%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(185, 451, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''ENVOIMOINSCHER_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''EMC_ENV '') AND ( value != ''TEST''))', '==', '2', '0', 'time', '1', 0, '2016-11-02 22:07:01', '2016-11-03 15:55:08'),
+(186, 452, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state LEFT JOIN PREFIX_carrier c ON c.id_carrier = o.id_carrier WHERE c.name like "%envoimoinscher%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(187, 453, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state LEFT JOIN PREFIX_carrier c ON c.id_carrier = o.id_carrier WHERE c.name like "%envoimoinscher%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '100', '0', 'time', '7', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(188, 454, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%klikandpay%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(189, 455, 'configuration', 'KLIKANDPAY_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-11-02 22:07:01', '2016-11-03 15:55:08'),
+(190, 456, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%klikandpay%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(191, 457, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%klikandpay%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(192, 458, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%clickline%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(193, 459, 'configuration', 'CLICKLINE_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-11-02 22:07:01', '2016-11-03 15:55:08'),
+(194, 460, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state LEFT JOIN PREFIX_carrier c ON c.id_carrier = o.id_carrier WHERE c.name like "%clickline%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(195, 461, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state LEFT JOIN PREFIX_carrier c ON c.id_carrier = o.id_carrier WHERE c.name like "%clickline%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '100', '0', 'time', '7', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(196, 462, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%cdiscount%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(197, 463, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '100', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(198, 464, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%cdiscount%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(199, 465, 'sql', 'SELECT SUM(o.total_paid) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%cdiscount%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 365 DAY)', '>=', '500', '0', 'time', '7', 0, '2016-11-02 22:07:01', '2016-11-02 22:07:01'),
+(200, 467, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%erpillicopresta%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(201, 468, 'configuration', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''ERPILLICOPRESTA_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''ERP_LICENCE_VALIDITY '') AND ( value == ''1'')) OR (( name LIKE ''ERP_MONTH_FREE_ACTIVE '') AND ( value == ''0''))', '==', '3', '', 'time', '1', 0, '2016-11-02 22:07:02', '2016-11-03 15:55:08'),
+(202, 469, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '100', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(203, 470, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '100', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(204, 471, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%netreviews%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(205, 472, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''NETREVIEWS_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''AVISVERIFIES_URLCERTIFICAT '') AND ( value IS NOT LIKE ''%preprod%''))', '==', '2', '0', 'time', '1', 0, '2016-11-02 22:07:02', '2016-11-03 15:55:08'),
+(206, 473, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '100', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(207, 474, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '100', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(208, 475, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%bluesnap%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(209, 476, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''BLUESNAP_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''BLUESNAP_SANDBOX '') AND ( value NOT LIKE ''%sandbox%''))', '==', '2', '0', 'time', '1', 0, '2016-11-02 22:07:02', '2016-11-03 15:55:08');
 INSERT INTO `ps_condition` (`id_condition`, `id_ps_condition`, `type`, `request`, `operator`, `value`, `result`, `calculation_type`, `calculation_detail`, `validated`, `date_add`, `date_upd`) VALUES
-(210, 477, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%bluesnap%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-10-27 01:41:17', '2016-10-27 01:44:41'),
-(211, 478, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%bluesnap%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-10-27 01:41:17', '2016-10-27 01:44:41'),
-(212, 479, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%desjardins%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:17', '2016-10-27 14:36:40'),
-(213, 480, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''DESJARDINS_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''DESJARDINS_MODE '') AND ( value NOT LIKE ''%test%''))', '==', '2', '0', 'time', '1', 0, '2016-10-27 01:41:17', '2016-10-27 01:44:41'),
-(214, 481, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%desjardins%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-10-27 01:41:17', '2016-10-27 01:44:41'),
-(215, 482, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%desjardins%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-10-27 01:41:18', '2016-10-27 01:44:41'),
-(216, 483, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%firstdata%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:18', '2016-10-27 14:36:40'),
-(217, 484, 'configuration', 'FIRSTDATA_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:18', '2016-10-27 01:44:41'),
-(218, 485, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%firstdata%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-10-27 01:41:18', '2016-10-27 01:44:41'),
-(219, 486, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%firstdata%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-10-27 01:41:18', '2016-10-27 01:44:41'),
-(220, 487, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%giveit%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:18', '2016-10-27 14:36:40'),
-(221, 488, 'sql', 'GIVEIT_CONFIGURATION_OK', '>=', '1', '0', 'time', '1', 0, '2016-10-27 01:41:18', '2016-10-27 01:44:42'),
-(222, 489, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-10-27 01:41:18', '2016-10-27 01:44:42'),
-(223, 490, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-10-27 01:41:18', '2016-10-27 01:44:42'),
-(224, 491, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%ganalytics%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:18', '2016-10-27 14:36:40'),
-(225, 492, 'configuration', 'GANALYTICS_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:18', '2016-10-27 01:44:42'),
-(226, 493, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '1', 0, '2016-10-27 01:41:18', '2016-10-27 01:44:42'),
-(227, 494, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-10-27 01:41:18', '2016-10-27 01:44:42'),
-(228, 496, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%pagseguro%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:18', '2016-10-27 14:36:40'),
-(229, 497, 'configuration', 'PAGSEGURO_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:18', '2016-10-27 01:44:42'),
-(230, 498, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%pagseguro%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-10-27 01:41:18', '2016-10-27 01:44:42'),
-(231, 499, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%pagseguro%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-10-27 01:41:18', '2016-10-27 01:44:42'),
-(232, 500, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%paypalmx%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:18', '2016-10-27 14:36:41'),
-(233, 501, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''PAYPALMX_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''PAYPAL_MX_SANDBOX'') AND ( value = ''0''))', '==', '2', '0', 'time', '1', 0, '2016-10-27 01:41:18', '2016-10-27 01:44:42'),
-(234, 502, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%paypalmx%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-10-27 01:41:18', '2016-10-27 01:44:42'),
-(235, 503, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%paypalmx%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-10-27 01:41:18', '2016-10-27 01:44:42'),
-(236, 505, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%paypalusa%"', '==', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:18', '2016-10-27 14:36:41'),
-(237, 506, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''PAYPALUSA_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''PAYPAL_USA_SANDBOX'') AND ( value = ''0''))', '==', '2', '0', 'time', '1', 0, '2016-10-27 01:41:18', '2016-10-27 01:44:42'),
-(238, 507, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%paypalusa%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-10-27 01:41:19', '2016-10-27 01:44:42'),
-(239, 508, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%paypalmx%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-10-27 01:41:19', '2016-10-27 01:44:42'),
-(240, 509, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%payulatam%"', '==', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:19', '2016-10-27 14:36:41'),
-(241, 510, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''PAYULATAM_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''PAYU_LATAM_TEST'') AND ( value = ''1''))', '==', '2', '0', 'time', '1', 0, '2016-10-27 01:41:19', '2016-10-27 01:44:42'),
-(242, 511, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%payulatam%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-10-27 01:41:19', '2016-10-27 01:44:42'),
-(243, 512, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%payulatam%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-10-27 01:41:19', '2016-10-27 01:44:42'),
-(244, 513, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%prestastats%"', '==', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:19', '2016-10-27 14:36:41'),
-(245, 514, 'configuration', 'PRESTASTATS_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:19', '2016-10-27 01:44:43'),
-(246, 515, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-10-27 01:41:19', '2016-10-27 01:44:43'),
-(247, 516, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-10-27 01:41:19', '2016-10-27 01:44:43'),
-(248, 517, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%riskified%"', '==', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:19', '2016-10-27 14:36:41'),
-(249, 518, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''RISKIFIED_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''RISKIFIED_MODE'') AND ( value = ''1''))', '==', '2', '0', 'time', '1', 0, '2016-10-27 01:41:19', '2016-10-27 01:44:43'),
-(250, 519, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%riskified%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-10-27 01:41:19', '2016-10-27 01:44:43'),
-(251, 520, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%riskified%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-10-27 01:41:19', '2016-10-27 01:44:43'),
-(252, 521, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%simplifycommerce%"', '==', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:19', '2016-10-27 14:36:41'),
-(253, 522, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''SIMPLIFY_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''SIMPLIFY_MODE'') AND ( value = ''1''))', '==', '2', '0', 'time', '1', 0, '2016-10-27 01:41:19', '2016-10-27 01:44:43'),
-(254, 523, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%simplifycommerce%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-10-27 01:41:19', '2016-10-27 01:44:43'),
-(255, 524, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%simplifycommerce%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-10-27 01:41:19', '2016-10-27 01:44:43'),
-(256, 525, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%vtpayment%"', '==', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:19', '2016-10-27 14:36:41'),
-(257, 526, 'configuration', 'VTPAYMENT_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:19', '2016-10-27 01:44:43'),
-(258, 527, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%vtpayment%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-10-27 01:41:19', '2016-10-27 01:44:43'),
-(259, 528, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%vtpayment%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-10-27 01:41:19', '2016-10-27 01:44:43'),
-(260, 529, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%yotpo%"', '==', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:19', '2016-10-27 14:36:41'),
-(261, 530, 'configuration', 'YOTPO_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:20', '2016-10-27 01:44:43'),
-(262, 531, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-10-27 01:41:20', '2016-10-27 01:44:43'),
-(263, 532, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-10-27 01:41:20', '2016-10-27 01:44:43'),
-(264, 533, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%yotpo%"', '==', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:20', '2016-10-27 14:36:41'),
-(265, 534, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''YOUSTICERESOLUTIONSYSTEM_CONF_OK'') AND ( value = ''1'')) OR (( name LIKE ''YRS_SANDBOX'') AND ( value = ''0''))', '==', '2', '0', 'time', '1', 0, '2016-10-27 01:41:20', '2016-10-27 01:44:43'),
-(266, 535, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-10-27 01:41:20', '2016-10-27 01:44:43'),
-(267, 536, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-10-27 01:41:20', '2016-10-27 01:44:43'),
-(268, 537, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%loyaltylion%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-10-27 01:41:20', '2016-10-27 14:36:41'),
-(269, 538, 'configuration', 'LOYALTYLION_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-10-27 01:41:20', '2016-10-27 01:44:43'),
-(270, 539, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-10-27 01:41:20', '2016-10-27 01:44:43'),
-(271, 540, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-10-27 01:41:20', '2016-10-27 01:44:43');
+(210, 477, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%bluesnap%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(211, 478, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%bluesnap%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(212, 479, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%desjardins%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(213, 480, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''DESJARDINS_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''DESJARDINS_MODE '') AND ( value NOT LIKE ''%test%''))', '==', '2', '0', 'time', '1', 0, '2016-11-02 22:07:02', '2016-11-03 15:55:08'),
+(214, 481, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%desjardins%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(215, 482, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%desjardins%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(216, 483, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%firstdata%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(217, 484, 'configuration', 'FIRSTDATA_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-11-02 22:07:02', '2016-11-03 15:55:08'),
+(218, 485, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%firstdata%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(219, 486, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%firstdata%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(220, 487, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%giveit%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(221, 488, 'sql', 'GIVEIT_CONFIGURATION_OK', '>=', '1', '0', 'time', '1', 0, '2016-11-02 22:07:02', '2016-11-03 15:55:08'),
+(222, 489, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(223, 490, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(224, 491, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%ganalytics%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(225, 492, 'configuration', 'GANALYTICS_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-11-02 22:07:02', '2016-11-03 15:55:08'),
+(226, 493, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '1', 0, '2016-11-02 22:07:02', '2016-11-03 15:55:08'),
+(227, 494, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(228, 496, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%pagseguro%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(229, 497, 'configuration', 'PAGSEGURO_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-11-02 22:07:02', '2016-11-03 15:55:08'),
+(230, 498, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%pagseguro%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(231, 499, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%pagseguro%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(232, 500, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%paypalmx%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(233, 501, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''PAYPALMX_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''PAYPAL_MX_SANDBOX'') AND ( value = ''0''))', '==', '2', '0', 'time', '1', 0, '2016-11-02 22:07:02', '2016-11-03 15:55:08'),
+(234, 502, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%paypalmx%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(235, 503, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%paypalmx%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(236, 505, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%paypalusa%"', '==', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(237, 506, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''PAYPALUSA_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''PAYPAL_USA_SANDBOX'') AND ( value = ''0''))', '==', '2', '0', 'time', '1', 0, '2016-11-02 22:07:02', '2016-11-03 15:55:08'),
+(238, 507, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%paypalusa%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(239, 508, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%paypalmx%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-11-02 22:07:02', '2016-11-02 22:07:02'),
+(240, 509, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%payulatam%"', '==', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:03', '2016-11-02 22:07:03'),
+(241, 510, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''PAYULATAM_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''PAYU_LATAM_TEST'') AND ( value = ''1''))', '==', '2', '0', 'time', '1', 0, '2016-11-02 22:07:03', '2016-11-03 15:55:08'),
+(242, 511, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%payulatam%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-11-02 22:07:03', '2016-11-02 22:07:03'),
+(243, 512, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%payulatam%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-11-02 22:07:03', '2016-11-02 22:07:03'),
+(244, 513, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%prestastats%"', '==', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:03', '2016-11-02 22:07:03'),
+(245, 514, 'configuration', 'PRESTASTATS_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-11-02 22:07:03', '2016-11-03 15:55:08'),
+(246, 515, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-11-02 22:07:03', '2016-11-02 22:07:03'),
+(247, 516, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-11-02 22:07:03', '2016-11-02 22:07:03'),
+(248, 517, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%riskified%"', '==', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:03', '2016-11-02 22:07:03'),
+(249, 518, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''RISKIFIED_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''RISKIFIED_MODE'') AND ( value = ''1''))', '==', '2', '0', 'time', '1', 0, '2016-11-02 22:07:03', '2016-11-03 15:55:08'),
+(250, 519, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%riskified%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-11-02 22:07:03', '2016-11-02 22:07:03'),
+(251, 520, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%riskified%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-11-02 22:07:03', '2016-11-02 22:07:03'),
+(252, 521, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%simplifycommerce%"', '==', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:03', '2016-11-02 22:07:03'),
+(253, 522, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''SIMPLIFY_CONFIGURATION_OK'') AND ( value = ''1'')) OR (( name LIKE ''SIMPLIFY_MODE'') AND ( value = ''1''))', '==', '2', '0', 'time', '1', 0, '2016-11-02 22:07:03', '2016-11-03 15:55:08'),
+(254, 523, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%simplifycommerce%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-11-02 22:07:03', '2016-11-02 22:07:03'),
+(255, 524, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%simplifycommerce%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-11-02 22:07:03', '2016-11-02 22:07:03'),
+(256, 525, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%vtpayment%"', '==', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:03', '2016-11-02 22:07:03'),
+(257, 526, 'configuration', 'VTPAYMENT_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-11-02 22:07:03', '2016-11-03 15:55:08'),
+(258, 527, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%vtpayment%" AND os.logable = 1', '>=', '1', '0', 'time', '2', 0, '2016-11-02 22:07:03', '2016-11-02 22:07:03'),
+(259, 528, 'sql', 'SELECT COUNT(*) FROM PREFIX_orders o LEFT JOIN PREFIX_order_state os ON os.id_order_state = o.current_state WHERE o.module like "%vtpayment%" AND os.logable = 1 AND o.date_add > DATE_SUB(NOW(), INTERVAL 90 DAY)', '>=', '30', '0', 'time', '7', 0, '2016-11-02 22:07:04', '2016-11-02 22:07:04'),
+(260, 529, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%yotpo%"', '==', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:04', '2016-11-02 22:07:04'),
+(261, 530, 'configuration', 'YOTPO_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-11-02 22:07:04', '2016-11-03 15:55:08'),
+(262, 531, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-11-02 22:07:04', '2016-11-02 22:07:04'),
+(263, 532, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-11-02 22:07:04', '2016-11-02 22:07:04'),
+(264, 533, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%yotpo%"', '==', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:04', '2016-11-02 22:07:04'),
+(265, 534, 'sql', 'SELECT COUNT(*) FROM PREFIX_configuration WHERE (( name LIKE ''YOUSTICERESOLUTIONSYSTEM_CONF_OK'') AND ( value = ''1'')) OR (( name LIKE ''YRS_SANDBOX'') AND ( value = ''0''))', '==', '2', '0', 'time', '1', 0, '2016-11-02 22:07:04', '2016-11-03 15:55:08'),
+(266, 535, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-11-02 22:07:04', '2016-11-02 22:07:04'),
+(267, 536, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-11-02 22:07:04', '2016-11-02 22:07:04'),
+(268, 537, 'sql', 'SELECT COUNT( id_module ) FROM PREFIX_module WHERE `name` like "%loyaltylion%"', '>=', '1', '0', 'hook', 'actionModuleInstallAfter', 0, '2016-11-02 22:07:04', '2016-11-02 22:07:04'),
+(269, 538, 'configuration', 'LOYALTYLION_CONFIGURATION_OK', '==', '1', '', 'time', '1', 0, '2016-11-02 22:07:04', '2016-11-03 15:55:08'),
+(270, 539, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-11-02 22:07:04', '2016-11-02 22:07:04'),
+(271, 540, 'sql', 'SELECT 1', '!=', '1', '1', 'time', '365', 0, '2016-11-02 22:07:04', '2016-11-02 22:07:04');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_condition_advice`
+-- Table structure for table `ps_condition_advice`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_condition_advice` (
@@ -2357,7 +2753,7 @@ CREATE TABLE IF NOT EXISTS `ps_condition_advice` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_condition_badge`
+-- Table structure for table `ps_condition_badge`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_condition_badge` (
@@ -2367,11 +2763,58 @@ CREATE TABLE IF NOT EXISTS `ps_condition_badge` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_condition_badge`
+-- Dumping data for table `ps_condition_badge`
 --
 
 INSERT INTO `ps_condition_badge` (`id_condition`, `id_badge`) VALUES
+(1, 166),
 (2, 17),
+(3, 187),
+(4, 153),
+(12, 162),
+(13, 186),
+(15, 150),
+(16, 151),
+(17, 151),
+(18, 151),
+(19, 152),
+(20, 154),
+(21, 155),
+(22, 156),
+(23, 157),
+(24, 158),
+(25, 159),
+(26, 160),
+(27, 161),
+(28, 163),
+(29, 164),
+(30, 165),
+(31, 167),
+(32, 168),
+(33, 169),
+(34, 170),
+(35, 171),
+(36, 172),
+(37, 173),
+(38, 174),
+(39, 175),
+(40, 176),
+(41, 177),
+(42, 178),
+(43, 179),
+(44, 180),
+(45, 181),
+(46, 182),
+(47, 183),
+(48, 184),
+(49, 185),
+(50, 188),
+(51, 189),
+(52, 190),
+(53, 191),
+(54, 192),
+(55, 193),
+(56, 194),
 (124, 1),
 (125, 2),
 (126, 3),
@@ -2449,12 +2892,82 @@ INSERT INTO `ps_condition_badge` (`id_condition`, `id_badge`) VALUES
 (198, 76),
 (199, 77),
 (200, 78),
-(201, 79);
+(201, 79),
+(202, 80),
+(203, 81),
+(204, 82),
+(205, 83),
+(206, 84),
+(207, 85),
+(208, 86),
+(209, 87),
+(210, 88),
+(211, 89),
+(212, 90),
+(213, 91),
+(214, 92),
+(215, 93),
+(216, 94),
+(217, 95),
+(218, 96),
+(219, 97),
+(220, 98),
+(221, 99),
+(222, 100),
+(223, 101),
+(224, 102),
+(225, 103),
+(226, 104),
+(227, 105),
+(228, 106),
+(229, 107),
+(230, 108),
+(231, 109),
+(232, 110),
+(233, 111),
+(234, 112),
+(235, 113),
+(236, 114),
+(237, 115),
+(238, 116),
+(239, 117),
+(240, 118),
+(241, 119),
+(242, 120),
+(243, 121),
+(244, 122),
+(245, 123),
+(246, 124),
+(247, 125),
+(248, 126),
+(249, 127),
+(250, 128),
+(251, 129),
+(252, 130),
+(253, 131),
+(254, 132),
+(255, 133),
+(256, 134),
+(257, 135),
+(258, 136),
+(259, 137),
+(260, 138),
+(261, 139),
+(262, 140),
+(263, 141),
+(264, 142),
+(265, 143),
+(266, 144),
+(267, 145),
+(268, 146),
+(269, 147),
+(270, 148),
+(271, 149);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_configuration`
+-- Table structure for table `ps_configuration`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_configuration` (
@@ -2472,7 +2985,7 @@ CREATE TABLE IF NOT EXISTS `ps_configuration` (
 ) ENGINE=InnoDB AUTO_INCREMENT=374 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_configuration`
+-- Dumping data for table `ps_configuration`
 --
 
 INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, `name`, `value`, `date_add`, `date_upd`) VALUES
@@ -2822,8 +3335,8 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (347, NULL, NULL, 'PS_SET_DISPLAY_SUBCATEGORIES', '1', '2016-10-27 01:39:06', '2016-10-27 01:39:06'),
 (348, NULL, NULL, 'GF_INSTALL_CALC', '1', '2016-10-27 01:39:17', '2016-10-27 01:44:38'),
 (349, NULL, NULL, 'GF_CURRENT_LEVEL', '1', '2016-10-27 01:39:17', '2016-10-27 01:39:17'),
-(350, NULL, NULL, 'GF_CURRENT_LEVEL_PERCENT', '0', '2016-10-27 01:39:17', '2016-10-27 01:39:17'),
-(351, NULL, NULL, 'GF_NOTIFICATION', '0', '2016-10-27 01:39:17', '2016-10-27 01:39:17'),
+(350, NULL, NULL, 'GF_CURRENT_LEVEL_PERCENT', '20', '2016-10-27 01:39:17', '2016-11-03 15:55:09'),
+(351, NULL, NULL, 'GF_NOTIFICATION', '3', '2016-10-27 01:39:17', '2016-11-03 15:55:09'),
 (352, NULL, NULL, 'CRONJOBS_ADMIN_DIR', 'b260f3c091e4929c97a7de5fcf54310b', '2016-10-27 01:39:18', '2016-10-27 01:41:00'),
 (353, NULL, NULL, 'CRONJOBS_MODE', 'webservice', '2016-10-27 01:39:18', '2016-10-27 01:39:18'),
 (354, NULL, NULL, 'CRONJOBS_MODULE_VERSION', '1.3.4', '2016-10-27 01:39:18', '2016-10-27 01:39:18'),
@@ -2835,7 +3348,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (360, NULL, NULL, 'PS_ONBOARDING_STEP_2_COMPLETED', '0', '2016-10-27 01:39:20', '2016-10-27 01:39:20'),
 (361, NULL, NULL, 'PS_ONBOARDING_STEP_3_COMPLETED', '0', '2016-10-27 01:39:20', '2016-10-27 01:39:20'),
 (362, NULL, NULL, 'PS_ONBOARDING_STEP_4_COMPLETED', '0', '2016-10-27 01:39:20', '2016-10-27 01:39:20'),
-(363, NULL, NULL, 'GF_NOT_VIEWED_BADGE', NULL, '2016-10-27 01:44:44', '2016-10-27 15:47:29'),
+(363, NULL, NULL, 'GF_NOT_VIEWED_BADGE', '167', '2016-10-27 01:44:44', '2016-11-03 15:55:09'),
 (364, NULL, NULL, 'PS_GRID_PRODUCT', '1', '2016-10-27 11:29:29', '2016-10-27 13:57:38'),
 (365, NULL, NULL, 'PS_SHOW_TYPE_MODULES_1', 'allModules', '2016-10-27 13:49:23', '2016-10-27 13:49:23'),
 (366, NULL, NULL, 'PS_SHOW_INSTALLED_MODULES_1', 'installed', '2016-10-27 13:49:23', '2016-10-27 15:21:53'),
@@ -2850,7 +3363,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_configuration_kpi`
+-- Table structure for table `ps_configuration_kpi`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_configuration_kpi` (
@@ -2868,7 +3381,7 @@ CREATE TABLE IF NOT EXISTS `ps_configuration_kpi` (
 ) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_configuration_kpi`
+-- Dumping data for table `ps_configuration_kpi`
 --
 
 INSERT INTO `ps_configuration_kpi` (`id_configuration_kpi`, `id_shop_group`, `id_shop`, `name`, `value`, `date_add`, `date_upd`) VALUES
@@ -2908,21 +3421,21 @@ INSERT INTO `ps_configuration_kpi` (`id_configuration_kpi`, `id_shop_group`, `id
 (34, NULL, NULL, 'DASHGOALS_TRAFFIC_12_2016', '600', '2016-10-27 01:38:48', '2016-10-27 01:38:48'),
 (35, NULL, NULL, 'DASHGOALS_CONVERSION_12_2016', '2', '2016-10-27 01:38:49', '2016-10-27 01:38:49'),
 (36, NULL, NULL, 'DASHGOALS_AVG_CART_VALUE_12_2016', '80', '2016-10-27 01:38:49', '2016-10-27 01:38:49'),
-(37, NULL, NULL, 'PRODUCT_AVG_GROSS_MARGIN', '70%', '2016-10-27 01:47:35', '2016-10-27 01:47:35'),
+(37, NULL, NULL, 'PRODUCT_AVG_GROSS_MARGIN', '100%', '2016-10-27 01:47:35', '2016-11-02 22:08:33'),
 (38, NULL, NULL, '8020_SALES_CATALOG', '0% of your Catalog', '2016-10-27 01:47:35', '2016-10-27 01:47:35'),
-(39, NULL, NULL, 'PERCENT_PRODUCT_OUT_OF_STOCK', '12.5%', '2016-10-27 01:47:35', '2016-10-27 11:41:45'),
+(39, NULL, NULL, 'PERCENT_PRODUCT_OUT_OF_STOCK', '0%', '2016-10-27 01:47:35', '2016-11-02 22:08:33'),
 (40, NULL, NULL, 'DISABLED_PRODUCTS', '0%', '2016-10-27 01:47:35', '2016-10-27 01:47:35'),
-(41, NULL, NULL, 'PERCENT_PRODUCT_OUT_OF_STOCK_EXPIRE', '1477575705', '2016-10-27 01:47:35', '2016-10-27 11:41:45'),
-(42, NULL, NULL, '8020_SALES_CATALOG_EXPIRE', '1477618895', '2016-10-27 01:47:35', '2016-10-27 15:41:35'),
-(43, NULL, NULL, 'PRODUCT_AVG_GROSS_MARGIN_EXPIRE', '1477582905', '2016-10-27 01:47:35', '2016-10-27 11:41:45'),
-(44, NULL, NULL, 'DISABLED_PRODUCTS_EXPIRE', '1477582895', '2016-10-27 01:47:35', '2016-10-27 15:41:35'),
+(41, NULL, NULL, 'PERCENT_PRODUCT_OUT_OF_STOCK_EXPIRE', '1478201425', '2016-10-27 01:47:35', '2016-11-03 16:30:25'),
+(42, NULL, NULL, '8020_SALES_CATALOG_EXPIRE', '1478230225', '2016-10-27 01:47:35', '2016-11-03 16:30:25'),
+(43, NULL, NULL, 'PRODUCT_AVG_GROSS_MARGIN_EXPIRE', '1478208625', '2016-10-27 01:47:35', '2016-11-03 16:30:25'),
+(44, NULL, NULL, 'DISABLED_PRODUCTS_EXPIRE', '1478194225', '2016-10-27 01:47:35', '2016-11-03 16:30:25'),
 (45, NULL, NULL, 'PRODUCTS_PER_CATEGORY', '0', '2016-10-27 01:48:45', '2016-10-27 01:48:45'),
 (46, NULL, NULL, 'DISABLED_CATEGORIES', '0', '2016-10-27 01:48:46', '2016-10-27 13:39:59'),
 (47, NULL, NULL, 'EMPTY_CATEGORIES', '6', '2016-10-27 01:48:46', '2016-10-27 13:39:59'),
-(48, NULL, NULL, 'PRODUCTS_PER_CATEGORY_EXPIRE', '1477576862', '2016-10-27 01:48:46', '2016-10-27 15:01:02'),
-(49, NULL, NULL, 'DISABLED_CATEGORIES_EXPIRE', '1477575599', '2016-10-27 01:48:46', '2016-10-27 13:39:59'),
+(48, NULL, NULL, 'PRODUCTS_PER_CATEGORY_EXPIRE', '1478190747', '2016-10-27 01:48:46', '2016-11-03 16:32:27'),
+(49, NULL, NULL, 'DISABLED_CATEGORIES_EXPIRE', '1478194347', '2016-10-27 01:48:46', '2016-11-03 16:32:27'),
 (50, NULL, NULL, 'TOP_CATEGORY', NULL, '2016-10-27 01:48:46', '2016-10-27 01:48:46'),
-(51, NULL, NULL, 'EMPTY_CATEGORIES_EXPIRE', '1477575599', '2016-10-27 01:48:46', '2016-10-27 13:39:59'),
+(51, NULL, NULL, 'EMPTY_CATEGORIES_EXPIRE', '1478194347', '2016-10-27 01:48:46', '2016-11-03 16:32:27'),
 (52, NULL, NULL, 'TOP_CATEGORY_EXPIRE', NULL, '2016-10-27 01:48:46', '2016-10-27 01:48:46'),
 (53, NULL, NULL, 'UPDATE_MODULES', '0', '2016-10-27 12:44:55', '2016-10-27 12:44:55'),
 (54, NULL, NULL, 'DISABLED_MODULES', '2', '2016-10-27 12:44:57', '2016-10-27 13:59:05'),
@@ -2934,7 +3447,7 @@ INSERT INTO `ps_configuration_kpi` (`id_configuration_kpi`, `id_shop_group`, `id
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_configuration_kpi_lang`
+-- Table structure for table `ps_configuration_kpi_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_configuration_kpi_lang` (
@@ -2946,17 +3459,17 @@ CREATE TABLE IF NOT EXISTS `ps_configuration_kpi_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_configuration_kpi_lang`
+-- Dumping data for table `ps_configuration_kpi_lang`
 --
 
 INSERT INTO `ps_configuration_kpi_lang` (`id_configuration_kpi`, `id_lang`, `value`, `date_upd`) VALUES
-(50, 1, 'Blouses', '2016-10-27 01:48:46'),
-(52, 1, '1477612126', '2016-10-27 01:48:46');
+(50, 1, 'SUSPENSION', '2016-11-03 16:32:27'),
+(52, 1, '1478273547', '2016-11-03 16:32:27');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_configuration_lang`
+-- Table structure for table `ps_configuration_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_configuration_lang` (
@@ -2968,7 +3481,7 @@ CREATE TABLE IF NOT EXISTS `ps_configuration_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_configuration_lang`
+-- Dumping data for table `ps_configuration_lang`
 --
 
 INSERT INTO `ps_configuration_lang` (`id_configuration`, `id_lang`, `value`, `date_upd`) VALUES
@@ -2994,7 +3507,7 @@ INSERT INTO `ps_configuration_lang` (`id_configuration`, `id_lang`, `value`, `da
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_connections`
+-- Table structure for table `ps_connections`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_connections` (
@@ -3010,10 +3523,10 @@ CREATE TABLE IF NOT EXISTS `ps_connections` (
   KEY `id_guest` (`id_guest`),
   KEY `date_add` (`date_add`),
   KEY `id_page` (`id_page`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_connections`
+-- Dumping data for table `ps_connections`
 --
 
 INSERT INTO `ps_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_guest`, `id_page`, `ip_address`, `date_add`, `http_referer`) VALUES
@@ -3025,12 +3538,15 @@ INSERT INTO `ps_connections` (`id_connections`, `id_shop_group`, `id_shop`, `id_
 (6, 1, 1, 2, 2, 2130706433, '2016-10-27 12:37:04', ''),
 (7, 1, 1, 2, 2, 2130706433, '2016-10-27 14:22:36', ''),
 (8, 1, 1, 2, 2, 2130706433, '2016-10-27 14:54:05', ''),
-(9, 1, 1, 3, 2, 2130706433, '2016-10-27 14:54:24', '');
+(9, 1, 1, 3, 2, 2130706433, '2016-10-27 14:54:24', ''),
+(10, 1, 1, 4, 2, 2130706433, '2016-11-02 20:30:18', ''),
+(11, 1, 1, 5, 2, 2130706433, '2016-11-02 22:50:42', ''),
+(12, 1, 1, 4, 2, 2130706433, '2016-11-03 16:17:56', '');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_connections_page`
+-- Table structure for table `ps_connections_page`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_connections_page` (
@@ -3044,7 +3560,7 @@ CREATE TABLE IF NOT EXISTS `ps_connections_page` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_connections_source`
+-- Table structure for table `ps_connections_source`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_connections_source` (
@@ -3059,10 +3575,10 @@ CREATE TABLE IF NOT EXISTS `ps_connections_source` (
   KEY `orderby` (`date_add`),
   KEY `http_referer` (`http_referer`),
   KEY `request_uri` (`request_uri`)
-) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_connections_source`
+-- Dumping data for table `ps_connections_source`
 --
 
 INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, `http_referer`, `request_uri`, `keywords`, `date_add`) VALUES
@@ -3148,12 +3664,19 @@ INSERT INTO `ps_connections_source` (`id_connections_source`, `id_connections`, 
 (80, 8, 'http://127.0.0.1:83/myshop/en/cooler/9-cooler-audi-a4.html', '127.0.0.1:83/myshop/en/14-audi', '', '2016-10-27 15:47:00'),
 (81, 8, 'http://127.0.0.1:83/myshop/en/14-audi', '127.0.0.1:83/myshop/en/16-engine', '', '2016-10-27 15:47:03'),
 (82, 8, 'http://127.0.0.1:83/myshop/en/16-engine', '127.0.0.1:83/myshop/en/21-cooler', '', '2016-10-27 15:47:06'),
-(83, 8, 'http://127.0.0.1:83/myshop/en/16-engine', '127.0.0.1:83/myshop/en/21-cooler', '', '2016-10-27 15:47:32');
+(83, 8, 'http://127.0.0.1:83/myshop/en/16-engine', '127.0.0.1:83/myshop/en/21-cooler', '', '2016-10-27 15:47:32'),
+(84, 10, 'http://127.0.0.1:83/myshop/en/', '127.0.0.1:83/myshop/en/16-engine', '', '2016-11-02 20:33:52'),
+(85, 10, 'http://127.0.0.1:83/', '127.0.0.1:83/myshop/en/', '', '2016-11-02 22:02:44'),
+(86, 12, 'http://127.0.0.1:83/myshop/en/', '127.0.0.1:83/myshop/en/15-mercedes', '', '2016-11-03 16:18:29'),
+(87, 12, 'http://127.0.0.1:83/myshop/en/', '127.0.0.1:83/myshop/en/16-engine', '', '2016-11-03 16:19:10'),
+(88, 12, 'http://127.0.0.1:83/myshop/en/', '127.0.0.1:83/myshop/en/12-bmw', '', '2016-11-03 16:19:35'),
+(89, 12, 'http://127.0.0.1:83/myshop/en/12-bmw', '127.0.0.1:83/myshop/en/', '', '2016-11-03 16:20:03'),
+(90, 12, 'http://127.0.0.1:83/myshop/en/', '127.0.0.1:83/myshop/en/15-mercedes', '', '2016-11-03 16:20:11');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_contact`
+-- Table structure for table `ps_contact`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_contact` (
@@ -3165,7 +3688,7 @@ CREATE TABLE IF NOT EXISTS `ps_contact` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_contact`
+-- Dumping data for table `ps_contact`
 --
 
 INSERT INTO `ps_contact` (`id_contact`, `email`, `customer_service`, `position`) VALUES
@@ -3175,7 +3698,7 @@ INSERT INTO `ps_contact` (`id_contact`, `email`, `customer_service`, `position`)
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_contact_lang`
+-- Table structure for table `ps_contact_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_contact_lang` (
@@ -3187,7 +3710,7 @@ CREATE TABLE IF NOT EXISTS `ps_contact_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_contact_lang`
+-- Dumping data for table `ps_contact_lang`
 --
 
 INSERT INTO `ps_contact_lang` (`id_contact`, `id_lang`, `name`, `description`) VALUES
@@ -3199,7 +3722,7 @@ INSERT INTO `ps_contact_lang` (`id_contact`, `id_lang`, `name`, `description`) V
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_contact_shop`
+-- Table structure for table `ps_contact_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_contact_shop` (
@@ -3210,7 +3733,7 @@ CREATE TABLE IF NOT EXISTS `ps_contact_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_contact_shop`
+-- Dumping data for table `ps_contact_shop`
 --
 
 INSERT INTO `ps_contact_shop` (`id_contact`, `id_shop`) VALUES
@@ -3220,7 +3743,7 @@ INSERT INTO `ps_contact_shop` (`id_contact`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_country`
+-- Table structure for table `ps_country`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_country` (
@@ -3241,7 +3764,7 @@ CREATE TABLE IF NOT EXISTS `ps_country` (
 ) ENGINE=InnoDB AUTO_INCREMENT=245 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_country`
+-- Dumping data for table `ps_country`
 --
 
 INSERT INTO `ps_country` (`id_country`, `id_zone`, `id_currency`, `iso_code`, `call_prefix`, `active`, `contains_states`, `need_identification_number`, `need_zip_code`, `zip_code_format`, `display_tax_label`) VALUES
@@ -3493,7 +4016,7 @@ INSERT INTO `ps_country` (`id_country`, `id_zone`, `id_currency`, `iso_code`, `c
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_country_lang`
+-- Table structure for table `ps_country_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_country_lang` (
@@ -3504,7 +4027,7 @@ CREATE TABLE IF NOT EXISTS `ps_country_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_country_lang`
+-- Dumping data for table `ps_country_lang`
 --
 
 INSERT INTO `ps_country_lang` (`id_country`, `id_lang`, `name`) VALUES
@@ -4000,7 +4523,7 @@ INSERT INTO `ps_country_lang` (`id_country`, `id_lang`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_country_shop`
+-- Table structure for table `ps_country_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_country_shop` (
@@ -4011,7 +4534,7 @@ CREATE TABLE IF NOT EXISTS `ps_country_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_country_shop`
+-- Dumping data for table `ps_country_shop`
 --
 
 INSERT INTO `ps_country_shop` (`id_country`, `id_shop`) VALUES
@@ -4263,7 +4786,7 @@ INSERT INTO `ps_country_shop` (`id_country`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_cronjobs`
+-- Table structure for table `ps_cronjobs`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cronjobs` (
@@ -4287,7 +4810,7 @@ CREATE TABLE IF NOT EXISTS `ps_cronjobs` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_currency`
+-- Table structure for table `ps_currency`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_currency` (
@@ -4306,7 +4829,7 @@ CREATE TABLE IF NOT EXISTS `ps_currency` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_currency`
+-- Dumping data for table `ps_currency`
 --
 
 INSERT INTO `ps_currency` (`id_currency`, `name`, `iso_code`, `iso_code_num`, `sign`, `blank`, `format`, `decimals`, `conversion_rate`, `deleted`, `active`) VALUES
@@ -4315,7 +4838,7 @@ INSERT INTO `ps_currency` (`id_currency`, `name`, `iso_code`, `iso_code_num`, `s
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_currency_shop`
+-- Table structure for table `ps_currency_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_currency_shop` (
@@ -4327,7 +4850,7 @@ CREATE TABLE IF NOT EXISTS `ps_currency_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_currency_shop`
+-- Dumping data for table `ps_currency_shop`
 --
 
 INSERT INTO `ps_currency_shop` (`id_currency`, `id_shop`, `conversion_rate`) VALUES
@@ -4336,7 +4859,7 @@ INSERT INTO `ps_currency_shop` (`id_currency`, `id_shop`, `conversion_rate`) VAL
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_customer`
+-- Table structure for table `ps_customer`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customer` (
@@ -4381,7 +4904,7 @@ CREATE TABLE IF NOT EXISTS `ps_customer` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_customer`
+-- Dumping data for table `ps_customer`
 --
 
 INSERT INTO `ps_customer` (`id_customer`, `id_shop_group`, `id_shop`, `id_gender`, `id_default_group`, `id_lang`, `id_risk`, `company`, `siret`, `ape`, `firstname`, `lastname`, `email`, `passwd`, `last_passwd_gen`, `birthday`, `newsletter`, `ip_registration_newsletter`, `newsletter_date_add`, `optin`, `website`, `outstanding_allow_amount`, `show_public_prices`, `max_payment_days`, `secure_key`, `note`, `active`, `is_guest`, `deleted`, `date_add`, `date_upd`) VALUES
@@ -4390,7 +4913,7 @@ INSERT INTO `ps_customer` (`id_customer`, `id_shop_group`, `id_shop`, `id_gender
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_customer_group`
+-- Table structure for table `ps_customer_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customer_group` (
@@ -4402,7 +4925,7 @@ CREATE TABLE IF NOT EXISTS `ps_customer_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_customer_group`
+-- Dumping data for table `ps_customer_group`
 --
 
 INSERT INTO `ps_customer_group` (`id_customer`, `id_group`) VALUES
@@ -4411,7 +4934,7 @@ INSERT INTO `ps_customer_group` (`id_customer`, `id_group`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_customer_message`
+-- Table structure for table `ps_customer_message`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customer_message` (
@@ -4434,7 +4957,7 @@ CREATE TABLE IF NOT EXISTS `ps_customer_message` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_customer_message_sync_imap`
+-- Table structure for table `ps_customer_message_sync_imap`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customer_message_sync_imap` (
@@ -4445,7 +4968,7 @@ CREATE TABLE IF NOT EXISTS `ps_customer_message_sync_imap` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_customer_thread`
+-- Table structure for table `ps_customer_thread`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customer_thread` (
@@ -4473,7 +4996,7 @@ CREATE TABLE IF NOT EXISTS `ps_customer_thread` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_customization`
+-- Table structure for table `ps_customization`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customization` (
@@ -4494,7 +5017,7 @@ CREATE TABLE IF NOT EXISTS `ps_customization` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_customization_field`
+-- Table structure for table `ps_customization_field`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customization_field` (
@@ -4509,7 +5032,7 @@ CREATE TABLE IF NOT EXISTS `ps_customization_field` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_customization_field_lang`
+-- Table structure for table `ps_customization_field_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customization_field_lang` (
@@ -4523,7 +5046,7 @@ CREATE TABLE IF NOT EXISTS `ps_customization_field_lang` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_customized_data`
+-- Table structure for table `ps_customized_data`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customized_data` (
@@ -4537,7 +5060,7 @@ CREATE TABLE IF NOT EXISTS `ps_customized_data` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_date_range`
+-- Table structure for table `ps_date_range`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_date_range` (
@@ -4550,7 +5073,7 @@ CREATE TABLE IF NOT EXISTS `ps_date_range` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_delivery`
+-- Table structure for table `ps_delivery`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_delivery` (
@@ -4570,7 +5093,7 @@ CREATE TABLE IF NOT EXISTS `ps_delivery` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_delivery`
+-- Dumping data for table `ps_delivery`
 --
 
 INSERT INTO `ps_delivery` (`id_delivery`, `id_shop`, `id_shop_group`, `id_carrier`, `id_range_price`, `id_range_weight`, `id_zone`, `price`) VALUES
@@ -4582,7 +5105,7 @@ INSERT INTO `ps_delivery` (`id_delivery`, `id_shop`, `id_shop_group`, `id_carrie
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_employee`
+-- Table structure for table `ps_employee`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_employee` (
@@ -4619,18 +5142,18 @@ CREATE TABLE IF NOT EXISTS `ps_employee` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_employee`
+-- Dumping data for table `ps_employee`
 --
 
 INSERT INTO `ps_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`) VALUES
 (1, 1, 1, 'Karol', 'Karol', 'pankarol@mycarparts.com', 'c4a9a2f554809c0fe306f712a18b64f7', '2016-10-26 17:36:37', '2016-10-27', '2016-10-27', '0000-00-00', '0000-00-00', 1, 'day', '', 'default', 'admin-theme.css', 1, 0, 1, 1, 1, 5, 0, 1, '2016-10-27'),
-(2, 1, 1, 'Maciej', 'Maciej', 'maciej@mycarparts.com', 'bb48b359922d8e6310f4a61693f40b48', '2016-10-26 18:46:02', '2016-09-27', '2016-10-27', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'admin-theme.css', 1, 0, 1, 1, 0, 5, 0, 1, '0000-00-00'),
-(3, 1, 1, 'Michał', 'Michał', 'michał@mycarparts.com', 'bb48b359922d8e6310f4a61693f40b48', '2016-10-26 18:47:00', '2016-09-27', '2016-10-27', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'admin-theme.css', 1, 0, 1, 1, 1, 5, 0, 1, '0000-00-00');
+(2, 1, 1, 'Maciej', 'Maciej', 'maciej@mycarparts.com', 'bb48b359922d8e6310f4a61693f40b48', '2016-10-26 18:46:02', '2016-11-01', '2016-11-02', '0000-00-00', '0000-00-00', 1, '', '', 'default', 'admin-theme.css', 1, 0, 1, 1, 0, 5, 0, 1, '2016-11-02'),
+(3, 1, 1, 'Michał', 'Michał', 'michał@mycarparts.com', 'bb48b359922d8e6310f4a61693f40b48', '2016-10-26 18:47:00', '2016-11-01', '2016-11-03', '0000-00-00', '0000-00-00', 1, '', '', 'default', 'admin-theme.css', 1, 0, 1, 1, 1, 5, 0, 1, '2016-11-03');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_employee_shop`
+-- Table structure for table `ps_employee_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_employee_shop` (
@@ -4641,7 +5164,7 @@ CREATE TABLE IF NOT EXISTS `ps_employee_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_employee_shop`
+-- Dumping data for table `ps_employee_shop`
 --
 
 INSERT INTO `ps_employee_shop` (`id_employee`, `id_shop`) VALUES
@@ -4652,19 +5175,19 @@ INSERT INTO `ps_employee_shop` (`id_employee`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_feature`
+-- Table structure for table `ps_feature`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_feature` (
   `id_feature` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `position` int(10) UNSIGNED NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_feature`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_feature_lang`
+-- Table structure for table `ps_feature_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_feature_lang` (
@@ -4678,7 +5201,7 @@ CREATE TABLE IF NOT EXISTS `ps_feature_lang` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_feature_product`
+-- Table structure for table `ps_feature_product`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_feature_product` (
@@ -4693,7 +5216,7 @@ CREATE TABLE IF NOT EXISTS `ps_feature_product` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_feature_shop`
+-- Table structure for table `ps_feature_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_feature_shop` (
@@ -4706,7 +5229,7 @@ CREATE TABLE IF NOT EXISTS `ps_feature_shop` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_feature_value`
+-- Table structure for table `ps_feature_value`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_feature_value` (
@@ -4715,12 +5238,12 @@ CREATE TABLE IF NOT EXISTS `ps_feature_value` (
   `custom` tinyint(3) UNSIGNED DEFAULT NULL,
   PRIMARY KEY (`id_feature_value`),
   KEY `feature` (`id_feature`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_feature_value_lang`
+-- Table structure for table `ps_feature_value_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_feature_value_lang` (
@@ -4733,7 +5256,7 @@ CREATE TABLE IF NOT EXISTS `ps_feature_value_lang` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_gender`
+-- Table structure for table `ps_gender`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_gender` (
@@ -4743,7 +5266,7 @@ CREATE TABLE IF NOT EXISTS `ps_gender` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_gender`
+-- Dumping data for table `ps_gender`
 --
 
 INSERT INTO `ps_gender` (`id_gender`, `type`) VALUES
@@ -4753,7 +5276,7 @@ INSERT INTO `ps_gender` (`id_gender`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_gender_lang`
+-- Table structure for table `ps_gender_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_gender_lang` (
@@ -4765,7 +5288,7 @@ CREATE TABLE IF NOT EXISTS `ps_gender_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_gender_lang`
+-- Dumping data for table `ps_gender_lang`
 --
 
 INSERT INTO `ps_gender_lang` (`id_gender`, `id_lang`, `name`) VALUES
@@ -4777,7 +5300,7 @@ INSERT INTO `ps_gender_lang` (`id_gender`, `id_lang`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_group`
+-- Table structure for table `ps_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_group` (
@@ -4791,7 +5314,7 @@ CREATE TABLE IF NOT EXISTS `ps_group` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_group`
+-- Dumping data for table `ps_group`
 --
 
 INSERT INTO `ps_group` (`id_group`, `reduction`, `price_display_method`, `show_prices`, `date_add`, `date_upd`) VALUES
@@ -4802,7 +5325,7 @@ INSERT INTO `ps_group` (`id_group`, `reduction`, `price_display_method`, `show_p
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_group_lang`
+-- Table structure for table `ps_group_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_group_lang` (
@@ -4813,7 +5336,7 @@ CREATE TABLE IF NOT EXISTS `ps_group_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_group_lang`
+-- Dumping data for table `ps_group_lang`
 --
 
 INSERT INTO `ps_group_lang` (`id_group`, `id_lang`, `name`) VALUES
@@ -4827,7 +5350,7 @@ INSERT INTO `ps_group_lang` (`id_group`, `id_lang`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_group_reduction`
+-- Table structure for table `ps_group_reduction`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_group_reduction` (
@@ -4842,7 +5365,7 @@ CREATE TABLE IF NOT EXISTS `ps_group_reduction` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_group_shop`
+-- Table structure for table `ps_group_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_group_shop` (
@@ -4853,7 +5376,7 @@ CREATE TABLE IF NOT EXISTS `ps_group_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_group_shop`
+-- Dumping data for table `ps_group_shop`
 --
 
 INSERT INTO `ps_group_shop` (`id_group`, `id_shop`) VALUES
@@ -4864,7 +5387,7 @@ INSERT INTO `ps_group_shop` (`id_group`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_guest`
+-- Table structure for table `ps_guest`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_guest` (
@@ -4888,21 +5411,23 @@ CREATE TABLE IF NOT EXISTS `ps_guest` (
   KEY `id_customer` (`id_customer`),
   KEY `id_operating_system` (`id_operating_system`),
   KEY `id_web_browser` (`id_web_browser`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_guest`
+-- Dumping data for table `ps_guest`
 --
 
 INSERT INTO `ps_guest` (`id_guest`, `id_operating_system`, `id_web_browser`, `id_customer`, `javascript`, `screen_resolution_x`, `screen_resolution_y`, `screen_color`, `sun_java`, `adobe_flash`, `adobe_director`, `apple_quicktime`, `real_player`, `windows_media`, `accept_language`, `mobile_theme`) VALUES
 (1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
 (2, 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'pl', 0),
-(3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0);
+(3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(4, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(5, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_homeslider`
+-- Table structure for table `ps_homeslider`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_homeslider` (
@@ -4912,7 +5437,7 @@ CREATE TABLE IF NOT EXISTS `ps_homeslider` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_homeslider`
+-- Dumping data for table `ps_homeslider`
 --
 
 INSERT INTO `ps_homeslider` (`id_homeslider_slides`, `id_shop`) VALUES
@@ -4923,7 +5448,7 @@ INSERT INTO `ps_homeslider` (`id_homeslider_slides`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_homeslider_slides`
+-- Table structure for table `ps_homeslider_slides`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_homeslider_slides` (
@@ -4934,7 +5459,7 @@ CREATE TABLE IF NOT EXISTS `ps_homeslider_slides` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_homeslider_slides`
+-- Dumping data for table `ps_homeslider_slides`
 --
 
 INSERT INTO `ps_homeslider_slides` (`id_homeslider_slides`, `position`, `active`) VALUES
@@ -4945,7 +5470,7 @@ INSERT INTO `ps_homeslider_slides` (`id_homeslider_slides`, `position`, `active`
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_homeslider_slides_lang`
+-- Table structure for table `ps_homeslider_slides_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_homeslider_slides_lang` (
@@ -4960,7 +5485,7 @@ CREATE TABLE IF NOT EXISTS `ps_homeslider_slides_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_homeslider_slides_lang`
+-- Dumping data for table `ps_homeslider_slides_lang`
 --
 
 INSERT INTO `ps_homeslider_slides_lang` (`id_homeslider_slides`, `id_lang`, `title`, `description`, `legend`, `url`, `image`) VALUES
@@ -4974,7 +5499,7 @@ INSERT INTO `ps_homeslider_slides_lang` (`id_homeslider_slides`, `id_lang`, `tit
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_hook`
+-- Table structure for table `ps_hook`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_hook` (
@@ -4989,7 +5514,7 @@ CREATE TABLE IF NOT EXISTS `ps_hook` (
 ) ENGINE=InnoDB AUTO_INCREMENT=163 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_hook`
+-- Dumping data for table `ps_hook`
 --
 
 INSERT INTO `ps_hook` (`id_hook`, `name`, `title`, `description`, `position`, `live_edit`) VALUES
@@ -5158,7 +5683,7 @@ INSERT INTO `ps_hook` (`id_hook`, `name`, `title`, `description`, `position`, `l
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_hook_alias`
+-- Table structure for table `ps_hook_alias`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_hook_alias` (
@@ -5170,7 +5695,7 @@ CREATE TABLE IF NOT EXISTS `ps_hook_alias` (
 ) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_hook_alias`
+-- Dumping data for table `ps_hook_alias`
 --
 
 INSERT INTO `ps_hook_alias` (`id_hook_alias`, `alias`, `name`) VALUES
@@ -5264,7 +5789,7 @@ INSERT INTO `ps_hook_alias` (`id_hook_alias`, `alias`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_hook_module`
+-- Table structure for table `ps_hook_module`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_hook_module` (
@@ -5279,7 +5804,7 @@ CREATE TABLE IF NOT EXISTS `ps_hook_module` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_hook_module`
+-- Dumping data for table `ps_hook_module`
 --
 
 INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VALUES
@@ -5528,7 +6053,7 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_hook_module_exceptions`
+-- Table structure for table `ps_hook_module_exceptions`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_hook_module_exceptions` (
@@ -5543,7 +6068,7 @@ CREATE TABLE IF NOT EXISTS `ps_hook_module_exceptions` (
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_hook_module_exceptions`
+-- Dumping data for table `ps_hook_module_exceptions`
 --
 
 INSERT INTO `ps_hook_module_exceptions` (`id_hook_module_exceptions`, `id_shop`, `id_module`, `id_hook`, `file_name`) VALUES
@@ -5562,7 +6087,7 @@ INSERT INTO `ps_hook_module_exceptions` (`id_hook_module_exceptions`, `id_shop`,
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_image`
+-- Table structure for table `ps_image`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_image` (
@@ -5577,7 +6102,7 @@ CREATE TABLE IF NOT EXISTS `ps_image` (
 ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_image`
+-- Dumping data for table `ps_image`
 --
 
 INSERT INTO `ps_image` (`id_image`, `id_product`, `position`, `cover`) VALUES
@@ -5588,7 +6113,7 @@ INSERT INTO `ps_image` (`id_image`, `id_product`, `position`, `cover`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_image_lang`
+-- Table structure for table `ps_image_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_image_lang` (
@@ -5600,7 +6125,7 @@ CREATE TABLE IF NOT EXISTS `ps_image_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_image_lang`
+-- Dumping data for table `ps_image_lang`
 --
 
 INSERT INTO `ps_image_lang` (`id_image`, `id_lang`, `legend`) VALUES
@@ -5614,7 +6139,7 @@ INSERT INTO `ps_image_lang` (`id_image`, `id_lang`, `legend`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_image_shop`
+-- Table structure for table `ps_image_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_image_shop` (
@@ -5628,7 +6153,7 @@ CREATE TABLE IF NOT EXISTS `ps_image_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_image_shop`
+-- Dumping data for table `ps_image_shop`
 --
 
 INSERT INTO `ps_image_shop` (`id_product`, `id_image`, `id_shop`, `cover`) VALUES
@@ -5639,7 +6164,7 @@ INSERT INTO `ps_image_shop` (`id_product`, `id_image`, `id_shop`, `cover`) VALUE
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_image_type`
+-- Table structure for table `ps_image_type`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_image_type` (
@@ -5658,7 +6183,7 @@ CREATE TABLE IF NOT EXISTS `ps_image_type` (
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_image_type`
+-- Dumping data for table `ps_image_type`
 --
 
 INSERT INTO `ps_image_type` (`id_image_type`, `name`, `width`, `height`, `products`, `categories`, `manufacturers`, `suppliers`, `scenes`, `stores`) VALUES
@@ -5675,7 +6200,7 @@ INSERT INTO `ps_image_type` (`id_image_type`, `name`, `width`, `height`, `produc
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_import_match`
+-- Table structure for table `ps_import_match`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_import_match` (
@@ -5689,7 +6214,7 @@ CREATE TABLE IF NOT EXISTS `ps_import_match` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_info`
+-- Table structure for table `ps_info`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_info` (
@@ -5699,7 +6224,7 @@ CREATE TABLE IF NOT EXISTS `ps_info` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_info`
+-- Dumping data for table `ps_info`
 --
 
 INSERT INTO `ps_info` (`id_info`, `id_shop`) VALUES
@@ -5709,7 +6234,7 @@ INSERT INTO `ps_info` (`id_info`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_info_lang`
+-- Table structure for table `ps_info_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_info_lang` (
@@ -5720,7 +6245,7 @@ CREATE TABLE IF NOT EXISTS `ps_info_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_info_lang`
+-- Dumping data for table `ps_info_lang`
 --
 
 INSERT INTO `ps_info_lang` (`id_info`, `id_lang`, `text`) VALUES
@@ -5732,7 +6257,7 @@ INSERT INTO `ps_info_lang` (`id_info`, `id_lang`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_lang`
+-- Table structure for table `ps_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_lang` (
@@ -5749,7 +6274,7 @@ CREATE TABLE IF NOT EXISTS `ps_lang` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_lang`
+-- Dumping data for table `ps_lang`
 --
 
 INSERT INTO `ps_lang` (`id_lang`, `name`, `active`, `iso_code`, `language_code`, `date_format_lite`, `date_format_full`, `is_rtl`) VALUES
@@ -5759,7 +6284,7 @@ INSERT INTO `ps_lang` (`id_lang`, `name`, `active`, `iso_code`, `language_code`,
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_lang_shop`
+-- Table structure for table `ps_lang_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_lang_shop` (
@@ -5770,7 +6295,7 @@ CREATE TABLE IF NOT EXISTS `ps_lang_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_lang_shop`
+-- Dumping data for table `ps_lang_shop`
 --
 
 INSERT INTO `ps_lang_shop` (`id_lang`, `id_shop`) VALUES
@@ -5780,7 +6305,7 @@ INSERT INTO `ps_lang_shop` (`id_lang`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_layered_category`
+-- Table structure for table `ps_layered_category`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_category` (
@@ -5797,7 +6322,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_category` (
 ) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=latin1;
 
 --
--- Zrzut danych tabeli `ps_layered_category`
+-- Dumping data for table `ps_layered_category`
 --
 
 INSERT INTO `ps_layered_category` (`id_layered_category`, `id_shop`, `id_category`, `id_value`, `type`, `position`, `filter_type`, `filter_show_limit`) VALUES
@@ -5859,7 +6384,7 @@ INSERT INTO `ps_layered_category` (`id_layered_category`, `id_shop`, `id_categor
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_layered_filter`
+-- Table structure for table `ps_layered_filter`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_filter` (
@@ -5872,7 +6397,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_filter` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_layered_filter`
+-- Dumping data for table `ps_layered_filter`
 --
 
 INSERT INTO `ps_layered_filter` (`id_layered_filter`, `name`, `filters`, `n_categories`, `date_add`) VALUES
@@ -5881,7 +6406,7 @@ INSERT INTO `ps_layered_filter` (`id_layered_filter`, `name`, `filters`, `n_cate
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_layered_filter_shop`
+-- Table structure for table `ps_layered_filter_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_filter_shop` (
@@ -5894,7 +6419,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_filter_shop` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_layered_friendly_url`
+-- Table structure for table `ps_layered_friendly_url`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_friendly_url` (
@@ -5908,7 +6433,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_friendly_url` (
 ) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_layered_friendly_url`
+-- Dumping data for table `ps_layered_friendly_url`
 --
 
 INSERT INTO `ps_layered_friendly_url` (`id_layered_friendly_url`, `url_key`, `data`, `id_lang`) VALUES
@@ -6026,7 +6551,7 @@ INSERT INTO `ps_layered_friendly_url` (`id_layered_friendly_url`, `url_key`, `da
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_layered_indexable_attribute_group`
+-- Table structure for table `ps_layered_indexable_attribute_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_indexable_attribute_group` (
@@ -6038,7 +6563,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_indexable_attribute_group` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_layered_indexable_attribute_group_lang_value`
+-- Table structure for table `ps_layered_indexable_attribute_group_lang_value`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_indexable_attribute_group_lang_value` (
@@ -6052,7 +6577,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_indexable_attribute_group_lang_value` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_layered_indexable_attribute_lang_value`
+-- Table structure for table `ps_layered_indexable_attribute_lang_value`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_indexable_attribute_lang_value` (
@@ -6066,7 +6591,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_indexable_attribute_lang_value` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_layered_indexable_feature`
+-- Table structure for table `ps_layered_indexable_feature`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_indexable_feature` (
@@ -6078,7 +6603,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_indexable_feature` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_layered_indexable_feature_lang_value`
+-- Table structure for table `ps_layered_indexable_feature_lang_value`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_indexable_feature_lang_value` (
@@ -6092,7 +6617,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_indexable_feature_lang_value` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_layered_indexable_feature_value_lang_value`
+-- Table structure for table `ps_layered_indexable_feature_value_lang_value`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_indexable_feature_value_lang_value` (
@@ -6106,7 +6631,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_indexable_feature_value_lang_value` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_layered_price_index`
+-- Table structure for table `ps_layered_price_index`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_price_index` (
@@ -6122,7 +6647,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_price_index` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_layered_price_index`
+-- Dumping data for table `ps_layered_price_index`
 --
 
 INSERT INTO `ps_layered_price_index` (`id_product`, `id_currency`, `id_shop`, `price_min`, `price_max`) VALUES
@@ -6139,7 +6664,7 @@ INSERT INTO `ps_layered_price_index` (`id_product`, `id_currency`, `id_shop`, `p
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_layered_product_attribute`
+-- Table structure for table `ps_layered_product_attribute`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_product_attribute` (
@@ -6152,7 +6677,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_product_attribute` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_layered_product_attribute`
+-- Dumping data for table `ps_layered_product_attribute`
 --
 
 INSERT INTO `ps_layered_product_attribute` (`id_attribute`, `id_product`, `id_attribute_group`, `id_shop`) VALUES
@@ -6196,7 +6721,7 @@ INSERT INTO `ps_layered_product_attribute` (`id_attribute`, `id_product`, `id_at
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_linksmenutop`
+-- Table structure for table `ps_linksmenutop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_linksmenutop` (
@@ -6210,7 +6735,7 @@ CREATE TABLE IF NOT EXISTS `ps_linksmenutop` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_linksmenutop_lang`
+-- Table structure for table `ps_linksmenutop_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_linksmenutop_lang` (
@@ -6225,7 +6750,7 @@ CREATE TABLE IF NOT EXISTS `ps_linksmenutop_lang` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_log`
+-- Table structure for table `ps_log`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_log` (
@@ -6239,10 +6764,10 @@ CREATE TABLE IF NOT EXISTS `ps_log` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id_log`)
-) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_log`
+-- Dumping data for table `ps_log`
 --
 
 INSERT INTO `ps_log` (`id_log`, `severity`, `error_code`, `message`, `object_type`, `object_id`, `id_employee`, `date_add`, `date_upd`) VALUES
@@ -6306,12 +6831,30 @@ INSERT INTO `ps_log` (`id_log`, `severity`, `error_code`, `message`, `object_typ
 (58, 1, 0, 'Category modification', 'Category', 19, 1, '2016-10-27 15:37:04', '2016-10-27 15:37:04'),
 (59, 1, 0, 'Category modification', 'Category', 19, 1, '2016-10-27 15:37:04', '2016-10-27 15:37:04'),
 (60, 1, 0, 'Product addition', 'Product', 9, 1, '2016-10-27 15:43:44', '2016-10-27 15:43:44'),
-(61, 1, 0, 'Product modification', 'Product', 9, 1, '2016-10-27 15:46:09', '2016-10-27 15:46:09');
+(61, 1, 0, 'Product modification', 'Product', 9, 1, '2016-10-27 15:46:09', '2016-10-27 15:46:09'),
+(62, 1, 0, 'Back Office connection from 127.0.0.1', '', 0, 2, '2016-10-27 18:58:36', '2016-10-27 18:58:36'),
+(63, 1, 0, 'Back Office connection from 127.0.0.1', '', 0, 2, '2016-11-02 19:54:40', '2016-11-02 19:54:40'),
+(64, 1, 0, 'Back Office connection from 127.0.0.1', '', 0, 2, '2016-11-02 20:18:14', '2016-11-02 20:18:14'),
+(65, 1, 0, 'Back Office connection from 127.0.0.1', '', 0, 2, '2016-11-02 22:06:47', '2016-11-02 22:06:47'),
+(66, 1, 0, 'Back Office connection from 127.0.0.1', '', 0, 3, '2016-11-02 22:08:00', '2016-11-02 22:08:00'),
+(67, 1, 0, 'Back Office connection from 127.0.0.1', '', 0, 3, '2016-11-03 15:54:59', '2016-11-03 15:54:59'),
+(68, 1, 0, 'Category addition', 'Category', 22, 3, '2016-11-03 16:40:08', '2016-11-03 16:40:08'),
+(69, 1, 0, 'Category addition', 'Category', 23, 3, '2016-11-03 16:40:58', '2016-11-03 16:40:58'),
+(70, 1, 0, 'Category addition', 'Category', 24, 3, '2016-11-03 16:41:34', '2016-11-03 16:41:34'),
+(71, 1, 0, 'Category addition', 'Category', 25, 3, '2016-11-03 16:46:25', '2016-11-03 16:46:25'),
+(72, 1, 0, 'Category addition', 'Category', 26, 3, '2016-11-03 16:47:08', '2016-11-03 16:47:08'),
+(73, 1, 0, 'Category addition', 'Category', 27, 3, '2016-11-03 16:47:49', '2016-11-03 16:47:49'),
+(74, 1, 0, 'Category addition', 'Category', 28, 3, '2016-11-03 16:55:23', '2016-11-03 16:55:23'),
+(75, 1, 0, 'Category addition', 'Category', 29, 3, '2016-11-03 16:56:16', '2016-11-03 16:56:16'),
+(76, 1, 0, 'Category addition', 'Category', 30, 3, '2016-11-03 16:58:24', '2016-11-03 16:58:24'),
+(77, 1, 0, 'Category addition', 'Category', 31, 3, '2016-11-03 16:59:00', '2016-11-03 16:59:00'),
+(78, 1, 0, 'Category addition', 'Category', 32, 3, '2016-11-03 17:00:37', '2016-11-03 17:00:37'),
+(79, 1, 0, 'Category addition', 'Category', 33, 3, '2016-11-03 17:01:07', '2016-11-03 17:01:07');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_mail`
+-- Table structure for table `ps_mail`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_mail` (
@@ -6328,7 +6871,7 @@ CREATE TABLE IF NOT EXISTS `ps_mail` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_manufacturer`
+-- Table structure for table `ps_manufacturer`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_manufacturer` (
@@ -6338,12 +6881,12 @@ CREATE TABLE IF NOT EXISTS `ps_manufacturer` (
   `date_upd` datetime NOT NULL,
   `active` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_manufacturer`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_manufacturer_lang`
+-- Table structure for table `ps_manufacturer_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_manufacturer_lang` (
@@ -6360,7 +6903,7 @@ CREATE TABLE IF NOT EXISTS `ps_manufacturer_lang` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_manufacturer_shop`
+-- Table structure for table `ps_manufacturer_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_manufacturer_shop` (
@@ -6373,7 +6916,7 @@ CREATE TABLE IF NOT EXISTS `ps_manufacturer_shop` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_memcached_servers`
+-- Table structure for table `ps_memcached_servers`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_memcached_servers` (
@@ -6387,7 +6930,7 @@ CREATE TABLE IF NOT EXISTS `ps_memcached_servers` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_message`
+-- Table structure for table `ps_message`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_message` (
@@ -6409,7 +6952,7 @@ CREATE TABLE IF NOT EXISTS `ps_message` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_message_readed`
+-- Table structure for table `ps_message_readed`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_message_readed` (
@@ -6422,7 +6965,7 @@ CREATE TABLE IF NOT EXISTS `ps_message_readed` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_meta`
+-- Table structure for table `ps_meta`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_meta` (
@@ -6434,7 +6977,7 @@ CREATE TABLE IF NOT EXISTS `ps_meta` (
 ) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_meta`
+-- Dumping data for table `ps_meta`
 --
 
 INSERT INTO `ps_meta` (`id_meta`, `page`, `configurable`) VALUES
@@ -6479,7 +7022,7 @@ INSERT INTO `ps_meta` (`id_meta`, `page`, `configurable`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_meta_lang`
+-- Table structure for table `ps_meta_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_meta_lang` (
@@ -6496,7 +7039,7 @@ CREATE TABLE IF NOT EXISTS `ps_meta_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_meta_lang`
+-- Dumping data for table `ps_meta_lang`
 --
 
 INSERT INTO `ps_meta_lang` (`id_meta`, `id_shop`, `id_lang`, `title`, `description`, `keywords`, `url_rewrite`) VALUES
@@ -6562,7 +7105,7 @@ INSERT INTO `ps_meta_lang` (`id_meta`, `id_shop`, `id_lang`, `title`, `descripti
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_module`
+-- Table structure for table `ps_module`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_module` (
@@ -6575,7 +7118,7 @@ CREATE TABLE IF NOT EXISTS `ps_module` (
 ) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_module`
+-- Dumping data for table `ps_module`
 --
 
 INSERT INTO `ps_module` (`id_module`, `name`, `active`, `version`) VALUES
@@ -6649,7 +7192,7 @@ INSERT INTO `ps_module` (`id_module`, `name`, `active`, `version`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_modules_perfs`
+-- Table structure for table `ps_modules_perfs`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_modules_perfs` (
@@ -6668,7 +7211,7 @@ CREATE TABLE IF NOT EXISTS `ps_modules_perfs` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_module_access`
+-- Table structure for table `ps_module_access`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_module_access` (
@@ -6681,7 +7224,7 @@ CREATE TABLE IF NOT EXISTS `ps_module_access` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_module_access`
+-- Dumping data for table `ps_module_access`
 --
 
 INSERT INTO `ps_module_access` (`id_profile`, `id_module`, `view`, `configure`, `uninstall`) VALUES
@@ -6887,7 +7430,7 @@ INSERT INTO `ps_module_access` (`id_profile`, `id_module`, `view`, `configure`, 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_module_country`
+-- Table structure for table `ps_module_country`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_module_country` (
@@ -6898,7 +7441,7 @@ CREATE TABLE IF NOT EXISTS `ps_module_country` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_module_country`
+-- Dumping data for table `ps_module_country`
 --
 
 INSERT INTO `ps_module_country` (`id_module`, `id_shop`, `id_country`) VALUES
@@ -6908,7 +7451,7 @@ INSERT INTO `ps_module_country` (`id_module`, `id_shop`, `id_country`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_module_currency`
+-- Table structure for table `ps_module_currency`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_module_currency` (
@@ -6920,7 +7463,7 @@ CREATE TABLE IF NOT EXISTS `ps_module_currency` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_module_currency`
+-- Dumping data for table `ps_module_currency`
 --
 
 INSERT INTO `ps_module_currency` (`id_module`, `id_shop`, `id_currency`) VALUES
@@ -6930,7 +7473,7 @@ INSERT INTO `ps_module_currency` (`id_module`, `id_shop`, `id_currency`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_module_group`
+-- Table structure for table `ps_module_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_module_group` (
@@ -6941,7 +7484,7 @@ CREATE TABLE IF NOT EXISTS `ps_module_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_module_group`
+-- Dumping data for table `ps_module_group`
 --
 
 INSERT INTO `ps_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
@@ -7147,7 +7690,7 @@ INSERT INTO `ps_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_module_preference`
+-- Table structure for table `ps_module_preference`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_module_preference` (
@@ -7163,7 +7706,7 @@ CREATE TABLE IF NOT EXISTS `ps_module_preference` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_module_shop`
+-- Table structure for table `ps_module_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_module_shop` (
@@ -7175,7 +7718,7 @@ CREATE TABLE IF NOT EXISTS `ps_module_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_module_shop`
+-- Dumping data for table `ps_module_shop`
 --
 
 INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
@@ -7247,7 +7790,7 @@ INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_newsletter`
+-- Table structure for table `ps_newsletter`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_newsletter` (
@@ -7265,7 +7808,7 @@ CREATE TABLE IF NOT EXISTS `ps_newsletter` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_operating_system`
+-- Table structure for table `ps_operating_system`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_operating_system` (
@@ -7275,7 +7818,7 @@ CREATE TABLE IF NOT EXISTS `ps_operating_system` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_operating_system`
+-- Dumping data for table `ps_operating_system`
 --
 
 INSERT INTO `ps_operating_system` (`id_operating_system`, `name`) VALUES
@@ -7290,7 +7833,7 @@ INSERT INTO `ps_operating_system` (`id_operating_system`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_orders`
+-- Table structure for table `ps_orders`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_orders` (
@@ -7357,7 +7900,7 @@ CREATE TABLE IF NOT EXISTS `ps_orders` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_orders`
+-- Dumping data for table `ps_orders`
 --
 
 INSERT INTO `ps_orders` (`id_order`, `reference`, `id_shop_group`, `id_shop`, `id_carrier`, `id_lang`, `id_customer`, `id_cart`, `id_currency`, `id_address_delivery`, `id_address_invoice`, `current_state`, `secure_key`, `payment`, `conversion_rate`, `module`, `recyclable`, `gift`, `gift_message`, `mobile_theme`, `shipping_number`, `total_discounts`, `total_discounts_tax_incl`, `total_discounts_tax_excl`, `total_paid`, `total_paid_tax_incl`, `total_paid_tax_excl`, `total_paid_real`, `total_products`, `total_products_wt`, `total_shipping`, `total_shipping_tax_incl`, `total_shipping_tax_excl`, `carrier_tax_rate`, `total_wrapping`, `total_wrapping_tax_incl`, `total_wrapping_tax_excl`, `round_mode`, `round_type`, `invoice_number`, `delivery_number`, `invoice_date`, `delivery_date`, `valid`, `date_add`, `date_upd`) VALUES
@@ -7370,7 +7913,7 @@ INSERT INTO `ps_orders` (`id_order`, `reference`, `id_shop_group`, `id_shop`, `i
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_carrier`
+-- Table structure for table `ps_order_carrier`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_carrier` (
@@ -7390,7 +7933,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_carrier` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_order_carrier`
+-- Dumping data for table `ps_order_carrier`
 --
 
 INSERT INTO `ps_order_carrier` (`id_order_carrier`, `id_order`, `id_carrier`, `id_order_invoice`, `weight`, `shipping_cost_tax_excl`, `shipping_cost_tax_incl`, `tracking_number`, `date_add`) VALUES
@@ -7403,7 +7946,7 @@ INSERT INTO `ps_order_carrier` (`id_order_carrier`, `id_order`, `id_carrier`, `i
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_cart_rule`
+-- Table structure for table `ps_order_cart_rule`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_cart_rule` (
@@ -7423,7 +7966,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_cart_rule` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_detail`
+-- Table structure for table `ps_order_detail`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_detail` (
@@ -7480,7 +8023,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_detail` (
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_order_detail`
+-- Dumping data for table `ps_order_detail`
 --
 
 INSERT INTO `ps_order_detail` (`id_order_detail`, `id_order`, `id_order_invoice`, `id_warehouse`, `id_shop`, `product_id`, `product_attribute_id`, `product_name`, `product_quantity`, `product_quantity_in_stock`, `product_quantity_refunded`, `product_quantity_return`, `product_quantity_reinjected`, `product_price`, `reduction_percent`, `reduction_amount`, `reduction_amount_tax_incl`, `reduction_amount_tax_excl`, `group_reduction`, `product_quantity_discount`, `product_ean13`, `product_upc`, `product_reference`, `product_supplier_reference`, `product_weight`, `id_tax_rules_group`, `tax_computation_method`, `tax_name`, `tax_rate`, `ecotax`, `ecotax_tax_rate`, `discount_quantity_applied`, `download_hash`, `download_nb`, `download_deadline`, `total_price_tax_incl`, `total_price_tax_excl`, `unit_price_tax_incl`, `unit_price_tax_excl`, `total_shipping_price_tax_incl`, `total_shipping_price_tax_excl`, `purchase_supplier_price`, `original_product_price`, `original_wholesale_price`) VALUES
@@ -7503,7 +8046,7 @@ INSERT INTO `ps_order_detail` (`id_order_detail`, `id_order`, `id_order_invoice`
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_detail_tax`
+-- Table structure for table `ps_order_detail_tax`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_detail_tax` (
@@ -7518,7 +8061,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_detail_tax` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_history`
+-- Table structure for table `ps_order_history`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_history` (
@@ -7534,7 +8077,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_history` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_order_history`
+-- Dumping data for table `ps_order_history`
 --
 
 INSERT INTO `ps_order_history` (`id_order_history`, `id_employee`, `id_order`, `id_order_state`, `date_add`) VALUES
@@ -7549,7 +8092,7 @@ INSERT INTO `ps_order_history` (`id_order_history`, `id_employee`, `id_order`, `
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_invoice`
+-- Table structure for table `ps_order_invoice`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_invoice` (
@@ -7581,7 +8124,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_invoice` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_invoice_payment`
+-- Table structure for table `ps_order_invoice_payment`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_invoice_payment` (
@@ -7596,7 +8139,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_invoice_payment` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_invoice_tax`
+-- Table structure for table `ps_order_invoice_tax`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_invoice_tax` (
@@ -7610,7 +8153,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_invoice_tax` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_message`
+-- Table structure for table `ps_order_message`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_message` (
@@ -7620,7 +8163,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_message` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_order_message`
+-- Dumping data for table `ps_order_message`
 --
 
 INSERT INTO `ps_order_message` (`id_order_message`, `date_add`) VALUES
@@ -7629,7 +8172,7 @@ INSERT INTO `ps_order_message` (`id_order_message`, `date_add`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_message_lang`
+-- Table structure for table `ps_order_message_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_message_lang` (
@@ -7641,7 +8184,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_message_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_order_message_lang`
+-- Dumping data for table `ps_order_message_lang`
 --
 
 INSERT INTO `ps_order_message_lang` (`id_order_message`, `id_lang`, `name`, `message`) VALUES
@@ -7651,7 +8194,7 @@ INSERT INTO `ps_order_message_lang` (`id_order_message`, `id_lang`, `name`, `mes
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_payment`
+-- Table structure for table `ps_order_payment`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_payment` (
@@ -7674,7 +8217,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_payment` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_return`
+-- Table structure for table `ps_order_return`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_return` (
@@ -7693,7 +8236,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_return` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_return_detail`
+-- Table structure for table `ps_order_return_detail`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_return_detail` (
@@ -7707,7 +8250,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_return_detail` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_return_state`
+-- Table structure for table `ps_order_return_state`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_return_state` (
@@ -7717,7 +8260,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_return_state` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_order_return_state`
+-- Dumping data for table `ps_order_return_state`
 --
 
 INSERT INTO `ps_order_return_state` (`id_order_return_state`, `color`) VALUES
@@ -7730,7 +8273,7 @@ INSERT INTO `ps_order_return_state` (`id_order_return_state`, `color`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_return_state_lang`
+-- Table structure for table `ps_order_return_state_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_return_state_lang` (
@@ -7741,7 +8284,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_return_state_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_order_return_state_lang`
+-- Dumping data for table `ps_order_return_state_lang`
 --
 
 INSERT INTO `ps_order_return_state_lang` (`id_order_return_state`, `id_lang`, `name`) VALUES
@@ -7759,7 +8302,7 @@ INSERT INTO `ps_order_return_state_lang` (`id_order_return_state`, `id_lang`, `n
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_slip`
+-- Table structure for table `ps_order_slip`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_slip` (
@@ -7786,7 +8329,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_slip` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_slip_detail`
+-- Table structure for table `ps_order_slip_detail`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_slip_detail` (
@@ -7805,7 +8348,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_slip_detail` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_slip_detail_tax`
+-- Table structure for table `ps_order_slip_detail_tax`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_slip_detail_tax` (
@@ -7820,7 +8363,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_slip_detail_tax` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_state`
+-- Table structure for table `ps_order_state`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_state` (
@@ -7843,7 +8386,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_state` (
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_order_state`
+-- Dumping data for table `ps_order_state`
 --
 
 INSERT INTO `ps_order_state` (`id_order_state`, `invoice`, `send_email`, `module_name`, `color`, `unremovable`, `hidden`, `logable`, `delivery`, `shipped`, `paid`, `pdf_invoice`, `pdf_delivery`, `deleted`) VALUES
@@ -7865,7 +8408,7 @@ INSERT INTO `ps_order_state` (`id_order_state`, `invoice`, `send_email`, `module
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_order_state_lang`
+-- Table structure for table `ps_order_state_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_state_lang` (
@@ -7877,7 +8420,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_state_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_order_state_lang`
+-- Dumping data for table `ps_order_state_lang`
 --
 
 INSERT INTO `ps_order_state_lang` (`id_order_state`, `id_lang`, `name`, `template`) VALUES
@@ -7913,7 +8456,7 @@ INSERT INTO `ps_order_state_lang` (`id_order_state`, `id_lang`, `name`, `templat
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_pack`
+-- Table structure for table `ps_pack`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_pack` (
@@ -7928,7 +8471,7 @@ CREATE TABLE IF NOT EXISTS `ps_pack` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_page`
+-- Table structure for table `ps_page`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_page` (
@@ -7941,7 +8484,7 @@ CREATE TABLE IF NOT EXISTS `ps_page` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_page`
+-- Dumping data for table `ps_page`
 --
 
 INSERT INTO `ps_page` (`id_page`, `id_page_type`, `id_object`) VALUES
@@ -7951,7 +8494,7 @@ INSERT INTO `ps_page` (`id_page`, `id_page_type`, `id_object`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_pagenotfound`
+-- Table structure for table `ps_pagenotfound`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_pagenotfound` (
@@ -7966,7 +8509,7 @@ CREATE TABLE IF NOT EXISTS `ps_pagenotfound` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_pagenotfound`
+-- Dumping data for table `ps_pagenotfound`
 --
 
 INSERT INTO `ps_pagenotfound` (`id_pagenotfound`, `id_shop`, `id_shop_group`, `request_uri`, `http_referer`, `date_add`) VALUES
@@ -7975,7 +8518,7 @@ INSERT INTO `ps_pagenotfound` (`id_pagenotfound`, `id_shop`, `id_shop_group`, `r
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_page_type`
+-- Table structure for table `ps_page_type`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_page_type` (
@@ -7986,7 +8529,7 @@ CREATE TABLE IF NOT EXISTS `ps_page_type` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_page_type`
+-- Dumping data for table `ps_page_type`
 --
 
 INSERT INTO `ps_page_type` (`id_page_type`, `name`) VALUES
@@ -7996,7 +8539,7 @@ INSERT INTO `ps_page_type` (`id_page_type`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_page_viewed`
+-- Table structure for table `ps_page_viewed`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_page_viewed` (
@@ -8011,7 +8554,7 @@ CREATE TABLE IF NOT EXISTS `ps_page_viewed` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_product`
+-- Table structure for table `ps_product`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product` (
@@ -8071,7 +8614,7 @@ CREATE TABLE IF NOT EXISTS `ps_product` (
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_product`
+-- Dumping data for table `ps_product`
 --
 
 INSERT INTO `ps_product` (`id_product`, `id_supplier`, `id_manufacturer`, `id_category_default`, `id_shop_default`, `id_tax_rules_group`, `on_sale`, `online_only`, `ean13`, `upc`, `ecotax`, `quantity`, `minimal_quantity`, `price`, `wholesale_price`, `unity`, `unit_price_ratio`, `additional_shipping_cost`, `reference`, `supplier_reference`, `location`, `width`, `height`, `depth`, `weight`, `out_of_stock`, `quantity_discount`, `customizable`, `uploadable_files`, `text_fields`, `active`, `redirect_type`, `id_product_redirected`, `available_for_order`, `available_date`, `condition`, `show_price`, `indexed`, `visibility`, `cache_is_pack`, `cache_has_attachments`, `is_virtual`, `cache_default_attribute`, `date_add`, `date_upd`, `advanced_stock_management`, `pack_stock_type`) VALUES
@@ -8080,7 +8623,7 @@ INSERT INTO `ps_product` (`id_product`, `id_supplier`, `id_manufacturer`, `id_ca
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_product_attachment`
+-- Table structure for table `ps_product_attachment`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_attachment` (
@@ -8092,7 +8635,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_attachment` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_product_attribute`
+-- Table structure for table `ps_product_attribute`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_attribute` (
@@ -8118,12 +8661,12 @@ CREATE TABLE IF NOT EXISTS `ps_product_attribute` (
   KEY `reference` (`reference`),
   KEY `supplier_reference` (`supplier_reference`),
   KEY `id_product_id_product_attribute` (`id_product_attribute`,`id_product`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_product_attribute_combination`
+-- Table structure for table `ps_product_attribute_combination`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_attribute_combination` (
@@ -8136,7 +8679,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_attribute_combination` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_product_attribute_image`
+-- Table structure for table `ps_product_attribute_image`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_attribute_image` (
@@ -8147,7 +8690,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_attribute_image` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_product_attribute_image`
+-- Dumping data for table `ps_product_attribute_image`
 --
 
 INSERT INTO `ps_product_attribute_image` (`id_product_attribute`, `id_image`) VALUES
@@ -8156,7 +8699,7 @@ INSERT INTO `ps_product_attribute_image` (`id_product_attribute`, `id_image`) VA
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_product_attribute_shop`
+-- Table structure for table `ps_product_attribute_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_attribute_shop` (
@@ -8178,7 +8721,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_attribute_shop` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_product_carrier`
+-- Table structure for table `ps_product_carrier`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_carrier` (
@@ -8191,7 +8734,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_carrier` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_product_country_tax`
+-- Table structure for table `ps_product_country_tax`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_country_tax` (
@@ -8204,7 +8747,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_country_tax` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_product_download`
+-- Table structure for table `ps_product_download`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_download` (
@@ -8226,7 +8769,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_download` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_product_group_reduction_cache`
+-- Table structure for table `ps_product_group_reduction_cache`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_group_reduction_cache` (
@@ -8239,7 +8782,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_group_reduction_cache` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_product_lang`
+-- Table structure for table `ps_product_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_lang` (
@@ -8261,7 +8804,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_product_lang`
+-- Dumping data for table `ps_product_lang`
 --
 
 INSERT INTO `ps_product_lang` (`id_product`, `id_shop`, `id_lang`, `description`, `description_short`, `link_rewrite`, `meta_description`, `meta_keywords`, `meta_title`, `name`, `available_now`, `available_later`) VALUES
@@ -8271,7 +8814,7 @@ INSERT INTO `ps_product_lang` (`id_product`, `id_shop`, `id_lang`, `description`
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_product_sale`
+-- Table structure for table `ps_product_sale`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_sale` (
@@ -8284,7 +8827,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_sale` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_product_sale`
+-- Dumping data for table `ps_product_sale`
 --
 
 INSERT INTO `ps_product_sale` (`id_product`, `quantity`, `sale_nbr`, `date_upd`) VALUES
@@ -8293,7 +8836,7 @@ INSERT INTO `ps_product_sale` (`id_product`, `quantity`, `sale_nbr`, `date_upd`)
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_product_shop`
+-- Table structure for table `ps_product_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_shop` (
@@ -8334,7 +8877,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_product_shop`
+-- Dumping data for table `ps_product_shop`
 --
 
 INSERT INTO `ps_product_shop` (`id_product`, `id_shop`, `id_category_default`, `id_tax_rules_group`, `on_sale`, `online_only`, `ecotax`, `minimal_quantity`, `price`, `wholesale_price`, `unity`, `unit_price_ratio`, `additional_shipping_cost`, `customizable`, `uploadable_files`, `text_fields`, `active`, `redirect_type`, `id_product_redirected`, `available_for_order`, `available_date`, `condition`, `show_price`, `indexed`, `visibility`, `cache_default_attribute`, `advanced_stock_management`, `date_add`, `date_upd`, `pack_stock_type`) VALUES
@@ -8343,7 +8886,7 @@ INSERT INTO `ps_product_shop` (`id_product`, `id_shop`, `id_category_default`, `
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_product_supplier`
+-- Table structure for table `ps_product_supplier`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_supplier` (
@@ -8357,12 +8900,12 @@ CREATE TABLE IF NOT EXISTS `ps_product_supplier` (
   PRIMARY KEY (`id_product_supplier`),
   UNIQUE KEY `id_product` (`id_product`,`id_product_attribute`,`id_supplier`),
   KEY `id_supplier` (`id_supplier`,`id_product`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_product_tag`
+-- Table structure for table `ps_product_tag`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_tag` (
@@ -8377,7 +8920,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_tag` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_profile`
+-- Table structure for table `ps_profile`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_profile` (
@@ -8386,7 +8929,7 @@ CREATE TABLE IF NOT EXISTS `ps_profile` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_profile`
+-- Dumping data for table `ps_profile`
 --
 
 INSERT INTO `ps_profile` (`id_profile`) VALUES
@@ -8398,7 +8941,7 @@ INSERT INTO `ps_profile` (`id_profile`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_profile_lang`
+-- Table structure for table `ps_profile_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_profile_lang` (
@@ -8409,7 +8952,7 @@ CREATE TABLE IF NOT EXISTS `ps_profile_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_profile_lang`
+-- Dumping data for table `ps_profile_lang`
 --
 
 INSERT INTO `ps_profile_lang` (`id_lang`, `id_profile`, `name`) VALUES
@@ -8425,7 +8968,7 @@ INSERT INTO `ps_profile_lang` (`id_lang`, `id_profile`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_quick_access`
+-- Table structure for table `ps_quick_access`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_quick_access` (
@@ -8436,7 +8979,7 @@ CREATE TABLE IF NOT EXISTS `ps_quick_access` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_quick_access`
+-- Dumping data for table `ps_quick_access`
 --
 
 INSERT INTO `ps_quick_access` (`id_quick_access`, `new_window`, `link`) VALUES
@@ -8447,7 +8990,7 @@ INSERT INTO `ps_quick_access` (`id_quick_access`, `new_window`, `link`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_quick_access_lang`
+-- Table structure for table `ps_quick_access_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_quick_access_lang` (
@@ -8458,7 +9001,7 @@ CREATE TABLE IF NOT EXISTS `ps_quick_access_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_quick_access_lang`
+-- Dumping data for table `ps_quick_access_lang`
 --
 
 INSERT INTO `ps_quick_access_lang` (`id_quick_access`, `id_lang`, `name`) VALUES
@@ -8472,7 +9015,7 @@ INSERT INTO `ps_quick_access_lang` (`id_quick_access`, `id_lang`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_range_price`
+-- Table structure for table `ps_range_price`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_range_price` (
@@ -8485,7 +9028,7 @@ CREATE TABLE IF NOT EXISTS `ps_range_price` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_range_price`
+-- Dumping data for table `ps_range_price`
 --
 
 INSERT INTO `ps_range_price` (`id_range_price`, `id_carrier`, `delimiter1`, `delimiter2`) VALUES
@@ -8494,7 +9037,7 @@ INSERT INTO `ps_range_price` (`id_range_price`, `id_carrier`, `delimiter1`, `del
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_range_weight`
+-- Table structure for table `ps_range_weight`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_range_weight` (
@@ -8507,7 +9050,7 @@ CREATE TABLE IF NOT EXISTS `ps_range_weight` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_range_weight`
+-- Dumping data for table `ps_range_weight`
 --
 
 INSERT INTO `ps_range_weight` (`id_range_weight`, `id_carrier`, `delimiter1`, `delimiter2`) VALUES
@@ -8516,7 +9059,7 @@ INSERT INTO `ps_range_weight` (`id_range_weight`, `id_carrier`, `delimiter1`, `d
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_referrer`
+-- Table structure for table `ps_referrer`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_referrer` (
@@ -8541,7 +9084,7 @@ CREATE TABLE IF NOT EXISTS `ps_referrer` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_referrer_cache`
+-- Table structure for table `ps_referrer_cache`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_referrer_cache` (
@@ -8553,7 +9096,7 @@ CREATE TABLE IF NOT EXISTS `ps_referrer_cache` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_referrer_shop`
+-- Table structure for table `ps_referrer_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_referrer_shop` (
@@ -8573,7 +9116,7 @@ CREATE TABLE IF NOT EXISTS `ps_referrer_shop` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_request_sql`
+-- Table structure for table `ps_request_sql`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_request_sql` (
@@ -8586,7 +9129,7 @@ CREATE TABLE IF NOT EXISTS `ps_request_sql` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_required_field`
+-- Table structure for table `ps_required_field`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_required_field` (
@@ -8600,7 +9143,7 @@ CREATE TABLE IF NOT EXISTS `ps_required_field` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_risk`
+-- Table structure for table `ps_risk`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_risk` (
@@ -8611,7 +9154,7 @@ CREATE TABLE IF NOT EXISTS `ps_risk` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_risk`
+-- Dumping data for table `ps_risk`
 --
 
 INSERT INTO `ps_risk` (`id_risk`, `percent`, `color`) VALUES
@@ -8623,7 +9166,7 @@ INSERT INTO `ps_risk` (`id_risk`, `percent`, `color`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_risk_lang`
+-- Table structure for table `ps_risk_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_risk_lang` (
@@ -8635,7 +9178,7 @@ CREATE TABLE IF NOT EXISTS `ps_risk_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_risk_lang`
+-- Dumping data for table `ps_risk_lang`
 --
 
 INSERT INTO `ps_risk_lang` (`id_risk`, `id_lang`, `name`) VALUES
@@ -8651,7 +9194,7 @@ INSERT INTO `ps_risk_lang` (`id_risk`, `id_lang`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_scene`
+-- Table structure for table `ps_scene`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_scene` (
@@ -8663,7 +9206,7 @@ CREATE TABLE IF NOT EXISTS `ps_scene` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_scene_category`
+-- Table structure for table `ps_scene_category`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_scene_category` (
@@ -8675,7 +9218,7 @@ CREATE TABLE IF NOT EXISTS `ps_scene_category` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_scene_lang`
+-- Table structure for table `ps_scene_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_scene_lang` (
@@ -8688,7 +9231,7 @@ CREATE TABLE IF NOT EXISTS `ps_scene_lang` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_scene_products`
+-- Table structure for table `ps_scene_products`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_scene_products` (
@@ -8704,7 +9247,7 @@ CREATE TABLE IF NOT EXISTS `ps_scene_products` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_scene_shop`
+-- Table structure for table `ps_scene_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_scene_shop` (
@@ -8717,7 +9260,7 @@ CREATE TABLE IF NOT EXISTS `ps_scene_shop` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_search_engine`
+-- Table structure for table `ps_search_engine`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_search_engine` (
@@ -8728,7 +9271,7 @@ CREATE TABLE IF NOT EXISTS `ps_search_engine` (
 ) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_search_engine`
+-- Dumping data for table `ps_search_engine`
 --
 
 INSERT INTO `ps_search_engine` (`id_search_engine`, `server`, `getvar`) VALUES
@@ -8774,7 +9317,7 @@ INSERT INTO `ps_search_engine` (`id_search_engine`, `server`, `getvar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_search_index`
+-- Table structure for table `ps_search_index`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_search_index` (
@@ -8786,7 +9329,7 @@ CREATE TABLE IF NOT EXISTS `ps_search_index` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_search_index`
+-- Dumping data for table `ps_search_index`
 --
 
 INSERT INTO `ps_search_index` (`id_product`, `id_word`, `weight`) VALUES
@@ -9623,7 +10166,7 @@ INSERT INTO `ps_search_index` (`id_product`, `id_word`, `weight`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_search_word`
+-- Table structure for table `ps_search_word`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_search_word` (
@@ -9633,10 +10176,10 @@ CREATE TABLE IF NOT EXISTS `ps_search_word` (
   `word` varchar(15) NOT NULL,
   PRIMARY KEY (`id_word`),
   UNIQUE KEY `id_lang` (`id_lang`,`id_shop`,`word`)
-) ENGINE=InnoDB AUTO_INCREMENT=1088 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1084 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_search_word`
+-- Dumping data for table `ps_search_word`
 --
 
 INSERT INTO `ps_search_word` (`id_word`, `id_shop`, `id_lang`, `word`) VALUES
@@ -9675,7 +10218,7 @@ INSERT INTO `ps_search_word` (`id_word`, `id_shop`, `id_lang`, `word`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_sekeyword`
+-- Table structure for table `ps_sekeyword`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_sekeyword` (
@@ -9690,7 +10233,7 @@ CREATE TABLE IF NOT EXISTS `ps_sekeyword` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_shop`
+-- Table structure for table `ps_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_shop` (
@@ -9708,7 +10251,7 @@ CREATE TABLE IF NOT EXISTS `ps_shop` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_shop`
+-- Dumping data for table `ps_shop`
 --
 
 INSERT INTO `ps_shop` (`id_shop`, `id_shop_group`, `name`, `id_category`, `id_theme`, `active`, `deleted`) VALUES
@@ -9717,7 +10260,7 @@ INSERT INTO `ps_shop` (`id_shop`, `id_shop_group`, `name`, `id_category`, `id_th
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_shop_group`
+-- Table structure for table `ps_shop_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_shop_group` (
@@ -9733,7 +10276,7 @@ CREATE TABLE IF NOT EXISTS `ps_shop_group` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_shop_group`
+-- Dumping data for table `ps_shop_group`
 --
 
 INSERT INTO `ps_shop_group` (`id_shop_group`, `name`, `share_customer`, `share_order`, `share_stock`, `active`, `deleted`) VALUES
@@ -9742,7 +10285,7 @@ INSERT INTO `ps_shop_group` (`id_shop_group`, `name`, `share_customer`, `share_o
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_shop_url`
+-- Table structure for table `ps_shop_url`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_shop_url` (
@@ -9761,7 +10304,7 @@ CREATE TABLE IF NOT EXISTS `ps_shop_url` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_shop_url`
+-- Dumping data for table `ps_shop_url`
 --
 
 INSERT INTO `ps_shop_url` (`id_shop_url`, `id_shop`, `domain`, `domain_ssl`, `physical_uri`, `virtual_uri`, `main`, `active`) VALUES
@@ -9770,7 +10313,7 @@ INSERT INTO `ps_shop_url` (`id_shop_url`, `id_shop`, `domain`, `domain_ssl`, `ph
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_smarty_cache`
+-- Table structure for table `ps_smarty_cache`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_smarty_cache` (
@@ -9788,7 +10331,7 @@ CREATE TABLE IF NOT EXISTS `ps_smarty_cache` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_smarty_last_flush`
+-- Table structure for table `ps_smarty_last_flush`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_smarty_last_flush` (
@@ -9798,7 +10341,7 @@ CREATE TABLE IF NOT EXISTS `ps_smarty_last_flush` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_smarty_last_flush`
+-- Dumping data for table `ps_smarty_last_flush`
 --
 
 INSERT INTO `ps_smarty_last_flush` (`type`, `last_flush`) VALUES
@@ -9807,7 +10350,7 @@ INSERT INTO `ps_smarty_last_flush` (`type`, `last_flush`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_smarty_lazy_cache`
+-- Table structure for table `ps_smarty_lazy_cache`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_smarty_lazy_cache` (
@@ -9820,44 +10363,106 @@ CREATE TABLE IF NOT EXISTS `ps_smarty_lazy_cache` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_smarty_lazy_cache`
+-- Dumping data for table `ps_smarty_lazy_cache`
 --
 
 INSERT INTO `ps_smarty_lazy_cache` (`template_hash`, `cache_id`, `compile_id`, `filepath`, `last_update`) VALUES
+('010330b2deb8d98186495e456f2ae820', 'homefeatured-tab|1|1|1|14', '', 'homefeatured_tab\\1\\1\\1\\14\\3f\\00\\19\\3f001941d3976aa0ad52587abfed6cdd00561481.tab.tpl.php', '2016-11-02 22:02:43'),
+('0748f88fe9596604b97bcfcd13d535c6', 'blockcmsinfo|1|1|1|14', '', 'blockcmsinfo\\1\\1\\1\\14\\cc\\00\\b5\\cc00b574bf86892a3f85c7dd068c336ae17d7890.blockcmsinfo.tpl.php', '2016-11-02 22:02:42'),
+('0cfd996a1e36f1bdaf7230bd0c2046e5', 'blockbestsellers-home|1|1|1|14', '', '', '2016-11-02 20:45:22'),
 ('0f5b338be72f2f0e91ac1568f6e5cf64', 'blocksearch-top|1|1|1|14', '', 'blocksearch_top\\1\\1\\1\\14\\1c\\bf\\e2\\1cbfe2c27bacef34af2eb0494382dd01b1afff54.blocksearch-top.tpl.php', '2016-10-27 15:15:54'),
 ('10b64d2db2ea1c13cf640de714453614', 'blockcontactinfos|1|1|1|14', '', 'blockcontactinfos\\1\\1\\1\\14\\53\\0a\\64\\530a64a491644e027bd6452f151fb870fa57a963.blockcontactinfos.tpl.php', '2016-10-27 15:10:39'),
 ('10ca1899ac1ada49225c5c0f00198851', 'blockcmsinfo|1|1|1|14', '', 'blockcmsinfo\\1\\1\\1\\14\\db\\5f\\c1\\db5fc1b4d35bb6d6514c7c16960871ab7014f203.blockcmsinfo.tpl.php', '2016-10-27 15:10:38'),
+('1b729c0486220982b7a77892eb20310e', 'blockmyaccountfooter|1|1|1|14', '', 'blockmyaccountfooter\\1\\1\\1\\14\\ca\\7b\\6f\\ca7b6fcae6308f9768dea4804159cad088129457.blockmyaccountfooter.tpl.php', '2016-11-02 22:02:44'),
 ('1c8a78d5322f348f108b16f7e6ba930d', 'blockstore|1|1|1|14', '', 'blockstore\\1\\1\\1\\14\\e6\\46\\89\\e6468910ffdf92bd83971b68e80881669733077a.blockstore.tpl.php', '2016-10-27 15:10:38'),
 ('2497f49f374f0b9ee5519c4690059c12', 'blockmyaccountfooter|1|1|1|14', '', 'blockmyaccountfooter\\1\\1\\1\\14\\10\\fd\\02\\10fd02e840757b7aca7a4831f3d313b1ea50c372.blockmyaccountfooter.tpl.php', '2016-10-27 15:10:39'),
 ('2c5d102f942939c0ce23e745100715d9', 'homeslider|1|1|1|14', '', 'homeslider\\1\\1\\1\\14\\6c\\9f\\1a\\6c9f1a7bd9b709650ddab975242361494de5ebf6.homeslider.tpl.php', '2016-10-27 15:10:40'),
+('2d2e45a0e922093815d8996c6c8829f6', 'blockcategories|1|1|1|14|2|1', '', 'blockcategories\\1\\1\\1\\14\\2\\1\\f0\\3b\\20\\f03b2083323e6de9699c2d556fa3feaf69110e0b.blockcategories.tpl.php', '2016-11-02 20:30:13'),
 ('2fee13aff31f56192916db8dd8db7be4', 'blockcms|0|1|1|1|14', '', 'blockcms\\0\\1\\1\\1\\14\\d4\\5d\\fe\\d45dfe72b76a5abb352da86ca3ffb30b889c7c69.blockcms.tpl.php', '2016-10-27 15:10:37'),
 ('2fee13aff31f56192916db8dd8db7be4', 'blockcms|2|1|1|1|14', '', 'blockcms\\2\\1\\1\\1\\14\\d4\\5d\\fe\\d45dfe72b76a5abb352da86ca3ffb30b889c7c69.blockcms.tpl.php', '2016-10-27 15:10:39'),
+('331585dbfd7ba51187067a11275c5c49', 'blocksupplier|1|1|1|14', '', 'blocksupplier\\1\\1\\1\\14\\0c\\ae\\66\\0cae66547637f0f379065ce96cc3afef2315dba2.blocksupplier.tpl.php', '2016-11-02 22:02:42'),
+('34916164e75b58e10335fb065b47ff38', 'homefeatured|1|1|1|14', '', 'homefeatured\\1\\1\\1\\14\\c2\\40\\47\\c24047ed326f8a3302e256992564765cdc5929ce.homefeatured.tpl.php', '2016-11-02 22:02:44'),
+('453c32290d9c24e754d8b4bbeb471a34', 'blockcontact|1|1|1|14', '', 'blockcontact\\1\\1\\1\\14\\70\\1e\\47\\701e476678f957f511b461b0089cd1447832b55c.nav.tpl.php', '2016-11-02 22:02:45'),
+('46a5e6a922c70406ba240c05dde0871e', 'blocktags|1|1|1|14', '', '', '2016-11-03 16:19:35'),
+('47fbe1ebfeabd387289fd5ab7e92d0f0', 'blocksocial|1|1|1|14', '', 'blocksocial\\1\\1\\1\\14\\18\\f9\\61\\18f961826b3e8827e90efa828494bd8d0b5cd9b2.blocksocial.tpl.php', '2016-11-02 20:30:17'),
 ('4ec82c481e6cc79efda097d2d5c93118', 'blocksocial|1|1|1|14', '', 'blocksocial\\1\\1\\1\\14\\9c\\f2\\2d\\9cf22dd85128153e58ee6c9ef2147d9854737bbd.blocksocial.tpl.php', '2016-10-27 15:10:39'),
 ('5148d6798f805982157f82a50e65faaf', 'blocktopmenu|1|1|1|14|category|14', '', 'blocktopmenu\\1\\1\\1\\14\\category\\14\\74\\c6\\5e\\74c65e2e0e9c5aa5a5665523c4dbf363672ef83e.blocktopmenu.tpl.php', '2016-10-27 15:47:00'),
 ('5148d6798f805982157f82a50e65faaf', 'blocktopmenu|1|1|1|14|category|16', '', 'blocktopmenu\\1\\1\\1\\14\\category\\16\\74\\c6\\5e\\74c65e2e0e9c5aa5a5665523c4dbf363672ef83e.blocktopmenu.tpl.php', '2016-10-27 15:47:03'),
 ('5148d6798f805982157f82a50e65faaf', 'blocktopmenu|1|1|1|14|category|21', '', 'blocktopmenu\\1\\1\\1\\14\\category\\21\\74\\c6\\5e\\74c65e2e0e9c5aa5a5665523c4dbf363672ef83e.blocktopmenu.tpl.php', '2016-10-27 15:47:05'),
 ('5148d6798f805982157f82a50e65faaf', 'blocktopmenu|1|1|1|14|product|9', '', 'blocktopmenu\\1\\1\\1\\14\\product\\9\\74\\c6\\5e\\74c65e2e0e9c5aa5a5665523c4dbf363672ef83e.blocktopmenu.tpl.php', '2016-10-27 15:46:42'),
+('53860d91f0aaf6ebdeb3f48403baca57', 'blockcms|0|1|1|1|14', '', 'blockcms\\0\\1\\1\\1\\14\\e4\\a0\\a7\\e4a0a7ac1fca62dae3f29e77b5419c7bac904c88.blockcms.tpl.php', '2016-11-02 20:30:14'),
+('53860d91f0aaf6ebdeb3f48403baca57', 'blockcms|2|1|1|1|14', '', 'blockcms\\2\\1\\1\\1\\14\\e4\\a0\\a7\\e4a0a7ac1fca62dae3f29e77b5419c7bac904c88.blockcms.tpl.php', '2016-11-02 20:30:17'),
 ('53aadee84a20a5a2142d2fd45fb5b5d0', 'blockcontact|1|1|1|14', '', 'blockcontact\\1\\1\\1\\14\\84\\26\\35\\842635fcc0f5a9cf461255a17a00d4d155ec35fd.nav.tpl.php', '2016-10-27 15:10:40'),
+('597172f4f45de5f16ea0e04a78303d7c', 'blockcategories|1|1|1|14|1', '', 'blockcategories\\1\\1\\1\\14\\1\\6a\\f5\\f3\\6af5f335cd77d6ec971c7f9e88f405fd98294201.blockcategories_footer.tpl.php', '2016-11-02 20:30:18'),
+('597172f4f45de5f16ea0e04a78303d7c', 'blockcategories|1|1|1|14|16|1', '', 'blockcategories\\1\\1\\1\\14\\16\\1\\6a\\f5\\f3\\6af5f335cd77d6ec971c7f9e88f405fd98294201.blockcategories_footer.tpl.php', '2016-11-02 20:33:52'),
+('598dbf382192edb8c5dcc919ec0fa2a5', 'blockcmsinfo|1|1|1|14', '', 'blockcmsinfo\\1\\1\\1\\14\\f0\\16\\da\\f016dadd73c832692e11fc4330d4038474b4f385.blockcmsinfo.tpl.php', '2016-11-02 20:30:16'),
+('59bcb519b88d607cd9566e3f9f46e4b4', 'homefeatured-tab|1|1|1|14', '', 'homefeatured_tab\\1\\1\\1\\14\\e5\\38\\1c\\e5381c84c1632b5f3c40c9a3936542cb696ddb31.tab.tpl.php', '2016-11-02 20:30:16'),
+('5a310d70d119f507101e9db86e7a8bf9', 'blockcontactinfos|1|1|1|14', '', 'blockcontactinfos\\1\\1\\1\\14\\f5\\50\\ee\\f550ee0edcb36e7701d52f363df7be1ce3e1a494.blockcontactinfos.tpl.php', '2016-11-02 22:02:44'),
+('5c6834c439efd1095657bec058ad2b40', 'blocknewproducts-home|20161102|1|1|1|14', '', 'blocknewproducts_home\\20161102\\1\\1\\1\\14\\fb\\58\\06\\fb5806b8424b8b42f8630efcf18b41aa278e7d8f.blocknewproducts_home.tpl.php', '2016-11-02 20:30:16'),
 ('62ec0bee9f9bc9ca9c924d72dbdc8830', 'blocksupplier|1|1|1|14', '', 'blocksupplier\\1\\1\\1\\14\\70\\76\\1a\\70761aae3818044c3f9afa87db9ed81e2f71bd82.blocksupplier.tpl.php', '2016-10-27 15:10:38'),
 ('632d2f62a92bea5f04ebc92d0c31da1e', 'blockspecials|20161027|20|20161027|1|1|1|14', '', '', '2016-10-27 15:47:32'),
 ('6ef3e4cdf7b9cfb65f75faca1c6dd3b4', 'blocknewproducts|20161027|1|1|1|14', '', 'blocknewproducts\\20161027\\1\\1\\1\\14\\12\\a2\\4f\\12a24fd49f5c2f645e312ef603ba4258255b2aad.blocknewproducts.tpl.php', '2016-10-27 15:47:32'),
+('75fbbe7f8444298625be1e28d6473b99', 'homefeatured|1|1|1|14', '', 'homefeatured\\1\\1\\1\\14\\d9\\77\\f2\\d977f26bff3445b1f4f0cd543601b14bb98fa59f.homefeatured.tpl.php', '2016-11-02 20:30:17'),
 ('782f83685680a5c386fdbf111bbd35f1', 'blocktags|1|1|1|14', '', '', '2016-10-27 15:47:00'),
+('78ddfb737e80ba205bc1fb1e98532642', 'blocknewproducts|20161102|1|1|1|14', '', 'blocknewproducts\\20161102\\1\\1\\1\\14\\23\\4b\\3d\\234b3d4821924d4c345121db1b60acfd13a8a56c.blocknewproducts.tpl.php', '2016-11-02 20:30:13'),
+('7b41242df3f611669755b8b8e57d56c8', 'homeslider|1|1|1|14', '', 'homeslider\\1\\1\\1\\14\\22\\a5\\b8\\22a5b89f3341e05f4675afd9af5d76014ef8daf3.homeslider.tpl.php', '2016-11-02 22:02:45'),
+('8540c8df241ef9d6d606471410e4cba1', 'blocknewproducts|20161102|1|1|1|14', '', 'blocknewproducts\\20161102\\1\\1\\1\\14\\ca\\7c\\91\\ca7c91c15b503402acdfdc5893ac9a63b955ebed.blocknewproducts.tpl.php', '2016-11-02 22:02:40'),
+('8540c8df241ef9d6d606471410e4cba1', 'blocknewproducts|20161103|1|1|1|14', '', 'blocknewproducts\\20161103\\1\\1\\1\\14\\ca\\7c\\91\\ca7c91c15b503402acdfdc5893ac9a63b955ebed.blocknewproducts.tpl.php', '2016-11-03 16:17:53'),
+('8571d07da0850a3ab8094a6469e96db1', 'blockbestsellers-col|1|1|1|14', '', '', '2016-11-02 20:45:22'),
+('86a07a5ef3cc74f0127d212391815a77', 'blocknewproducts-tab|20161102|1|1|1|14', '', 'blocknewproducts_tab\\20161102\\1\\1\\1\\14\\88\\52\\bd\\8852bdc611373cea76768e3625689730e0e78c12.tab.tpl.php', '2016-11-02 22:02:43'),
+('86a07a5ef3cc74f0127d212391815a77', 'blocknewproducts-tab|20161103|1|1|1|14', '', 'blocknewproducts_tab\\20161103\\1\\1\\1\\14\\88\\52\\bd\\8852bdc611373cea76768e3625689730e0e78c12.tab.tpl.php', '2016-11-03 16:17:55'),
+('8ca78a214fe997ec4cb4b43939275623', 'blocksearch-top|1|1|1|14', '', 'blocksearch_top\\1\\1\\1\\14\\27\\28\\59\\2728597bae564e8fa424e75bad27ed5426f75ae1.blocksearch-top.tpl.php', '2016-11-02 22:02:38'),
+('96e772892a4a80273500868f422219fb', 'productlist_colors|9|1|1', '', '', '2016-11-02 20:33:52'),
+('a38de24e8be25271a4004416a18330fe', 'blockpaymentlogo|1|1|1|14', '', '', '2016-11-02 20:45:22'),
+('a72ec94b120f5749cc8524c9a7b86a2f', 'blocknewproducts-home|20161102|1|1|1|14', '', 'blocknewproducts_home\\20161102\\1\\1\\1\\14\\1b\\50\\97\\1b5097f8d96b560f5925bdf216101fffc2afd0cd.blocknewproducts_home.tpl.php', '2016-11-02 22:02:43'),
+('a72ec94b120f5749cc8524c9a7b86a2f', 'blocknewproducts-home|20161103|1|1|1|14', '', 'blocknewproducts_home\\20161103\\1\\1\\1\\14\\1b\\50\\97\\1b5097f8d96b560f5925bdf216101fffc2afd0cd.blocknewproducts_home.tpl.php', '2016-11-03 16:17:55'),
+('a85c17559f09d5727f043c923648e5cc', 'blockcontact|1|1|1|14', '', 'blockcontact\\1\\1\\1\\14\\3f\\39\\12\\3f3912abf9dad2bac82a528df31e3be8cf1bee41.nav.tpl.php', '2016-11-02 20:30:18'),
 ('b78e42ea939ca350c245b4573d37caac', 'blockcategories|1|1|1|14|2|21|1', '', 'blockcategories\\1\\1\\1\\14\\2\\21\\1\\da\\ff\\95\\daff95aaa946c76ba7e99a5d809e7fad0eaa7bcc.blockcategories.tpl.php', '2016-10-27 15:46:42'),
 ('b78e42ea939ca350c245b4573d37caac', 'blockcategories|1|1|1|14|2|2|1', '', 'blockcategories\\1\\1\\1\\14\\2\\2\\1\\da\\ff\\95\\daff95aaa946c76ba7e99a5d809e7fad0eaa7bcc.blockcategories.tpl.php', '2016-10-27 15:45:13'),
+('b998c51b5ca532b45c86f6c0cdfc63d5', 'productlist_colors|9|1|1', '', '', '2016-11-03 16:19:10'),
+('bbeb4f3b6a56f6d51b91f269a4883466', 'blocknewproducts-tab|20161102|1|1|1|14', '', 'blocknewproducts_tab\\20161102\\1\\1\\1\\14\\6f\\e7\\3f\\6fe73fd82c1a224d8bca24720591ceb0a30318af.tab.tpl.php', '2016-11-02 20:30:16'),
+('bc75e37317edcb3a5710a683ed76d18e', 'blockmyaccountfooter|1|1|1|14', '', 'blockmyaccountfooter\\1\\1\\1\\14\\c0\\35\\27\\c0352708f5e4220de90eb122c64b0842b972aec6.blockmyaccountfooter.tpl.php', '2016-11-02 20:30:17'),
+('bec3815e62615bbc023d7870a7469cf4', 'blockcms|0|1|1|1|14', '', 'blockcms\\0\\1\\1\\1\\14\\da\\fa\\7b\\dafa7bd29469060fdb6fd9c605151ecc8abe76d7.blockcms.tpl.php', '2016-11-02 22:02:41'),
+('bec3815e62615bbc023d7870a7469cf4', 'blockcms|2|1|1|1|14', '', 'blockcms\\2\\1\\1\\1\\14\\da\\fa\\7b\\dafa7bd29469060fdb6fd9c605151ecc8abe76d7.blockcms.tpl.php', '2016-11-02 22:02:44'),
+('cc82f74da6ab9d49fe831a3080322f59', 'blockcontactinfos|1|1|1|14', '', 'blockcontactinfos\\1\\1\\1\\14\\d6\\e4\\38\\d6e4380ef7bae9b128a973d619458c99927a0e8f.blockcontactinfos.tpl.php', '2016-11-02 20:30:17'),
+('d423b7435d2de4281748bc0f7b3f66fe', 'blocksocial|1|1|1|14', '', 'blocksocial\\1\\1\\1\\14\\64\\f5\\8b\\64f58b7fcc4cfd1135d86730982c71ee2b36ae3f.blocksocial.tpl.php', '2016-11-02 22:02:44'),
+('d4af35c7d649a44f3f702c8d918f7fee', 'blocksearch-top|1|1|1|14', '', 'blocksearch_top\\1\\1\\1\\14\\cb\\9b\\10\\cb9b10a4828af335bbeda25a5e3c49cc56125312.blocksearch-top.tpl.php', '2016-11-02 20:30:11'),
+('d4f9658dbaa902c52373f6697cba6e59', 'blockspecials|20161102|10|20161102|1|1|1|14', '', '', '2016-11-02 20:33:32'),
+('d4f9658dbaa902c52373f6697cba6e59', 'blockspecials|20161102|11|20161102|1|1|1|14', '', '', '2016-11-02 20:33:52'),
+('d4f9658dbaa902c52373f6697cba6e59', 'blockspecials|20161102|16|20161102|1|1|1|14', '', '', '2016-11-02 20:30:15'),
+('d4f9658dbaa902c52373f6697cba6e59', 'blockspecials|20161102|19|20161102|1|1|1|14', '', '', '2016-11-02 20:30:47'),
+('d4f9658dbaa902c52373f6697cba6e59', 'blockspecials|20161102|3|20161102|1|1|1|14', '', '', '2016-11-02 20:31:04'),
+('d4f9658dbaa902c52373f6697cba6e59', 'blockspecials|20161102|5|20161102|1|1|1|14', '', '', '2016-11-02 20:45:22'),
+('d4f9658dbaa902c52373f6697cba6e59', 'blockspecials|20161102|8|20161102|1|1|1|14', '', '', '2016-11-02 20:31:00'),
+('d59c730f388686dba72320249b6e904d', 'blocksupplier|1|1|1|14', '', 'blocksupplier\\1\\1\\1\\14\\34\\a4\\77\\34a47708a53dd20a8efa6bbf5e7116b717f04ac5.blocksupplier.tpl.php', '2016-11-02 20:30:15'),
+('d5df871be61cfd6a160907adbbc250a6', 'blockmanufacturer|1|1|1|14', '', 'blockmanufacturer\\1\\1\\1\\14\\ec\\43\\47\\ec4347b662217da8110d3853ef50d7de1a0dfd27.blockmanufacturer.tpl.php', '2016-11-02 22:02:41'),
+('db28392ff01f75e6cb8f9f18b831defa', 'blockbestsellers-tab|1|1|1|14', '', '', '2016-11-02 20:45:22'),
+('dc8462154404c7eddd7d8de21ec7bac8', 'blockstore|1|1|1|14', '', 'blockstore\\1\\1\\1\\14\\ee\\c7\\9f\\eec79fd7619c54d03281b9351b5c8774f0e6c083.blockstore.tpl.php', '2016-11-02 20:30:15'),
+('dd75a5f0346cefd957a4e0cdbc488040', 'blockmanufacturer|1|1|1|14', '', 'blockmanufacturer\\1\\1\\1\\14\\da\\33\\f3\\da33f3d3f7e7f95228b467d5543944bbc88c782d.blockmanufacturer.tpl.php', '2016-11-02 20:30:15'),
+('e67fb0233ed06424f26f345aa866bfb1', 'blockspecials|20161102|10|20161102|1|1|1|14', '', '', '2016-11-02 22:02:42'),
+('e67fb0233ed06424f26f345aa866bfb1', 'blockspecials|20161102|1|20161102|1|1|1|14', '', '', '2016-11-02 22:50:42'),
+('e67fb0233ed06424f26f345aa866bfb1', 'blockspecials|20161103|16|20161103|1|1|1|14', '', '', '2016-11-03 16:19:10'),
+('e67fb0233ed06424f26f345aa866bfb1', 'blockspecials|20161103|3|20161103|1|1|1|14', '', '', '2016-11-03 16:17:55'),
+('e67fb0233ed06424f26f345aa866bfb1', 'blockspecials|20161103|4|20161103|1|1|1|14', '', '', '2016-11-03 16:19:35'),
+('e67fb0233ed06424f26f345aa866bfb1', 'blockspecials|20161103|7|20161103|1|1|1|14', '', '', '2016-11-03 16:20:03'),
+('e9913a98b1e983cedf4e959048bce287', 'blockstore|1|1|1|14', '', 'blockstore\\1\\1\\1\\14\\e6\\09\\e9\\e609e98e196cefe6851b229b07265355040ca45c.blockstore.tpl.php', '2016-11-02 22:02:42'),
 ('ec1c44817ae81af07a42812406947d4b', 'productpaymentlogos|1|1|1|14', '', 'productpaymentlogos\\1\\1\\1\\14\\6b\\17\\3a\\6b173af1e8d0e0c0f6647feb80165a3f5aa35ecd.productpaymentlogos.tpl.php', '2016-10-27 15:45:14'),
 ('eff2d1f207fcf878ca47782179a84990', 'socialsharing|9|1|1|1|14', '', 'socialsharing\\9\\1\\1\\1\\14\\01\\b4\\40\\01b440d078ce075dd49c0df8b194da37392aa4ea.socialsharing.tpl.php', '2016-10-27 15:45:14'),
 ('f06ac8ec0a56dcf600144679757ac3de', 'blockmanufacturer|1|1|1|14', '', 'blockmanufacturer\\1\\1\\1\\14\\3e\\f3\\52\\3ef352e45c9b712c00c0d39617c81919651fed22.blockmanufacturer.tpl.php', '2016-10-27 15:10:37'),
 ('f1187bbfa29fcf87fa63e4f0be96f1a9', 'productlist_colors|9|1|1', '', '', '2016-10-27 15:47:00'),
 ('f1c3a294ff3b271b20fedf2062801aa6', 'socialsharing_header|9|1|1|1|14', '', 'socialsharing_header\\9\\1\\1\\1\\14\\47\\2d\\25\\472d2516a25740b6a97ed4ed3fd83bd8d9595c02.socialsharing_header.tpl.php', '2016-10-27 15:46:41'),
+('f1e3a7676e6ad9dc3d30f5f954d92512', 'homeslider|1|1|1|14', '', 'homeslider\\1\\1\\1\\14\\d6\\65\\25\\d66525bef2f5e27a4d4ca520c152b01438e5351f.homeslider.tpl.php', '2016-11-02 20:30:18'),
 ('f8ffab5fa34448791ee9de73fd2fdc34', 'blockcategories|1|1|1|14|14|1', '', 'blockcategories\\1\\1\\1\\14\\14\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php', '2016-10-27 15:37:09'),
 ('f8ffab5fa34448791ee9de73fd2fdc34', 'blockcategories|1|1|1|14|16|1', '', 'blockcategories\\1\\1\\1\\14\\16\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php', '2016-10-27 15:41:25'),
 ('f8ffab5fa34448791ee9de73fd2fdc34', 'blockcategories|1|1|1|14|21|1', '', 'blockcategories\\1\\1\\1\\14\\21\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php', '2016-10-27 15:41:29'),
-('f8ffab5fa34448791ee9de73fd2fdc34', 'blockcategories|1|1|1|14|2|1', '', 'blockcategories\\1\\1\\1\\14\\2\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php', '2016-10-27 15:45:14');
+('f8ffab5fa34448791ee9de73fd2fdc34', 'blockcategories|1|1|1|14|2|1', '', 'blockcategories\\1\\1\\1\\14\\2\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php', '2016-10-27 15:45:14'),
+('fea111e12365f448d4e70511be90d63a', 'blocktopmenu|1|1|1|14|category|16', '', 'blocktopmenu\\1\\1\\1\\14\\category\\16\\8a\\38\\3e\\8a383e306f240c5ca0a0b318affa735674ee1d54.blocktopmenu.tpl.php', '2016-11-02 20:33:51'),
+('fea111e12365f448d4e70511be90d63a', 'blocktopmenu|1|1|1|14|index', '', 'blocktopmenu\\1\\1\\1\\14\\index\\8a\\38\\3e\\8a383e306f240c5ca0a0b318affa735674ee1d54.blocktopmenu.tpl.php', '2016-11-02 20:30:12');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_specific_price`
+-- Table structure for table `ps_specific_price`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_specific_price` (
@@ -9890,12 +10495,12 @@ CREATE TABLE IF NOT EXISTS `ps_specific_price` (
   KEY `id_customer` (`id_customer`),
   KEY `from` (`from`),
   KEY `to` (`to`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_specific_price_priority`
+-- Table structure for table `ps_specific_price_priority`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_specific_price_priority` (
@@ -9907,7 +10512,7 @@ CREATE TABLE IF NOT EXISTS `ps_specific_price_priority` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_specific_price_priority`
+-- Dumping data for table `ps_specific_price_priority`
 --
 
 INSERT INTO `ps_specific_price_priority` (`id_specific_price_priority`, `id_product`, `priority`) VALUES
@@ -9917,7 +10522,7 @@ INSERT INTO `ps_specific_price_priority` (`id_specific_price_priority`, `id_prod
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_specific_price_rule`
+-- Table structure for table `ps_specific_price_rule`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_specific_price_rule` (
@@ -9941,7 +10546,7 @@ CREATE TABLE IF NOT EXISTS `ps_specific_price_rule` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_specific_price_rule_condition`
+-- Table structure for table `ps_specific_price_rule_condition`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_specific_price_rule_condition` (
@@ -9956,7 +10561,7 @@ CREATE TABLE IF NOT EXISTS `ps_specific_price_rule_condition` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_specific_price_rule_condition_group`
+-- Table structure for table `ps_specific_price_rule_condition_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_specific_price_rule_condition_group` (
@@ -9968,7 +10573,7 @@ CREATE TABLE IF NOT EXISTS `ps_specific_price_rule_condition_group` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_state`
+-- Table structure for table `ps_state`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_state` (
@@ -9986,7 +10591,7 @@ CREATE TABLE IF NOT EXISTS `ps_state` (
 ) ENGINE=InnoDB AUTO_INCREMENT=313 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_state`
+-- Dumping data for table `ps_state`
 --
 
 INSERT INTO `ps_state` (`id_state`, `id_country`, `id_zone`, `name`, `iso_code`, `tax_behavior`, `active`) VALUES
@@ -10306,7 +10911,7 @@ INSERT INTO `ps_state` (`id_state`, `id_country`, `id_zone`, `name`, `iso_code`,
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_statssearch`
+-- Table structure for table `ps_statssearch`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_statssearch` (
@@ -10322,7 +10927,7 @@ CREATE TABLE IF NOT EXISTS `ps_statssearch` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_stock`
+-- Table structure for table `ps_stock`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_stock` (
@@ -10345,7 +10950,7 @@ CREATE TABLE IF NOT EXISTS `ps_stock` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_stock_available`
+-- Table structure for table `ps_stock_available`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_stock_available` (
@@ -10366,7 +10971,7 @@ CREATE TABLE IF NOT EXISTS `ps_stock_available` (
 ) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_stock_available`
+-- Dumping data for table `ps_stock_available`
 --
 
 INSERT INTO `ps_stock_available` (`id_stock_available`, `id_product`, `id_product_attribute`, `id_shop`, `id_shop_group`, `quantity`, `depends_on_stock`, `out_of_stock`) VALUES
@@ -10382,7 +10987,7 @@ INSERT INTO `ps_stock_available` (`id_stock_available`, `id_product`, `id_produc
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_stock_mvt`
+-- Table structure for table `ps_stock_mvt`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_stock_mvt` (
@@ -10409,7 +11014,7 @@ CREATE TABLE IF NOT EXISTS `ps_stock_mvt` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_stock_mvt_reason`
+-- Table structure for table `ps_stock_mvt_reason`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_stock_mvt_reason` (
@@ -10422,7 +11027,7 @@ CREATE TABLE IF NOT EXISTS `ps_stock_mvt_reason` (
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_stock_mvt_reason`
+-- Dumping data for table `ps_stock_mvt_reason`
 --
 
 INSERT INTO `ps_stock_mvt_reason` (`id_stock_mvt_reason`, `sign`, `date_add`, `date_upd`, `deleted`) VALUES
@@ -10438,7 +11043,7 @@ INSERT INTO `ps_stock_mvt_reason` (`id_stock_mvt_reason`, `sign`, `date_add`, `d
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_stock_mvt_reason_lang`
+-- Table structure for table `ps_stock_mvt_reason_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_stock_mvt_reason_lang` (
@@ -10449,7 +11054,7 @@ CREATE TABLE IF NOT EXISTS `ps_stock_mvt_reason_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_stock_mvt_reason_lang`
+-- Dumping data for table `ps_stock_mvt_reason_lang`
 --
 
 INSERT INTO `ps_stock_mvt_reason_lang` (`id_stock_mvt_reason`, `id_lang`, `name`) VALUES
@@ -10473,7 +11078,7 @@ INSERT INTO `ps_stock_mvt_reason_lang` (`id_stock_mvt_reason`, `id_lang`, `name`
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_store`
+-- Table structure for table `ps_store`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_store` (
@@ -10499,7 +11104,7 @@ CREATE TABLE IF NOT EXISTS `ps_store` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_store`
+-- Dumping data for table `ps_store`
 --
 
 INSERT INTO `ps_store` (`id_store`, `id_country`, `id_state`, `name`, `address1`, `address2`, `city`, `postcode`, `latitude`, `longitude`, `hours`, `phone`, `fax`, `email`, `note`, `active`, `date_add`, `date_upd`) VALUES
@@ -10512,7 +11117,7 @@ INSERT INTO `ps_store` (`id_store`, `id_country`, `id_state`, `name`, `address1`
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_store_shop`
+-- Table structure for table `ps_store_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_store_shop` (
@@ -10523,7 +11128,7 @@ CREATE TABLE IF NOT EXISTS `ps_store_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_store_shop`
+-- Dumping data for table `ps_store_shop`
 --
 
 INSERT INTO `ps_store_shop` (`id_store`, `id_shop`) VALUES
@@ -10536,7 +11141,7 @@ INSERT INTO `ps_store_shop` (`id_store`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_supplier`
+-- Table structure for table `ps_supplier`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supplier` (
@@ -10546,12 +11151,12 @@ CREATE TABLE IF NOT EXISTS `ps_supplier` (
   `date_upd` datetime NOT NULL,
   `active` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_supplier`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_supplier_lang`
+-- Table structure for table `ps_supplier_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supplier_lang` (
@@ -10567,7 +11172,7 @@ CREATE TABLE IF NOT EXISTS `ps_supplier_lang` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_supplier_shop`
+-- Table structure for table `ps_supplier_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supplier_shop` (
@@ -10580,7 +11185,7 @@ CREATE TABLE IF NOT EXISTS `ps_supplier_shop` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_supply_order`
+-- Table structure for table `ps_supply_order`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supply_order` (
@@ -10612,7 +11217,7 @@ CREATE TABLE IF NOT EXISTS `ps_supply_order` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_supply_order_detail`
+-- Table structure for table `ps_supply_order_detail`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supply_order_detail` (
@@ -10648,7 +11253,7 @@ CREATE TABLE IF NOT EXISTS `ps_supply_order_detail` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_supply_order_history`
+-- Table structure for table `ps_supply_order_history`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supply_order_history` (
@@ -10668,7 +11273,7 @@ CREATE TABLE IF NOT EXISTS `ps_supply_order_history` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_supply_order_receipt_history`
+-- Table structure for table `ps_supply_order_receipt_history`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supply_order_receipt_history` (
@@ -10688,7 +11293,7 @@ CREATE TABLE IF NOT EXISTS `ps_supply_order_receipt_history` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_supply_order_state`
+-- Table structure for table `ps_supply_order_state`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supply_order_state` (
@@ -10703,7 +11308,7 @@ CREATE TABLE IF NOT EXISTS `ps_supply_order_state` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_supply_order_state`
+-- Dumping data for table `ps_supply_order_state`
 --
 
 INSERT INTO `ps_supply_order_state` (`id_supply_order_state`, `delivery_note`, `editable`, `receipt_state`, `pending_receipt`, `enclosed`, `color`) VALUES
@@ -10717,7 +11322,7 @@ INSERT INTO `ps_supply_order_state` (`id_supply_order_state`, `delivery_note`, `
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_supply_order_state_lang`
+-- Table structure for table `ps_supply_order_state_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supply_order_state_lang` (
@@ -10728,7 +11333,7 @@ CREATE TABLE IF NOT EXISTS `ps_supply_order_state_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_supply_order_state_lang`
+-- Dumping data for table `ps_supply_order_state_lang`
 --
 
 INSERT INTO `ps_supply_order_state_lang` (`id_supply_order_state`, `id_lang`, `name`) VALUES
@@ -10748,7 +11353,7 @@ INSERT INTO `ps_supply_order_state_lang` (`id_supply_order_state`, `id_lang`, `n
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_tab`
+-- Table structure for table `ps_tab`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tab` (
@@ -10765,7 +11370,7 @@ CREATE TABLE IF NOT EXISTS `ps_tab` (
 ) ENGINE=InnoDB AUTO_INCREMENT=108 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_tab`
+-- Dumping data for table `ps_tab`
 --
 
 INSERT INTO `ps_tab` (`id_tab`, `id_parent`, `class_name`, `module`, `position`, `active`, `hide_host_mode`) VALUES
@@ -10878,7 +11483,7 @@ INSERT INTO `ps_tab` (`id_tab`, `id_parent`, `class_name`, `module`, `position`,
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_tab_advice`
+-- Table structure for table `ps_tab_advice`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tab_advice` (
@@ -10890,7 +11495,7 @@ CREATE TABLE IF NOT EXISTS `ps_tab_advice` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_tab_lang`
+-- Table structure for table `ps_tab_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tab_lang` (
@@ -10901,7 +11506,7 @@ CREATE TABLE IF NOT EXISTS `ps_tab_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_tab_lang`
+-- Dumping data for table `ps_tab_lang`
 --
 
 INSERT INTO `ps_tab_lang` (`id_tab`, `id_lang`, `name`) VALUES
@@ -11119,7 +11724,7 @@ INSERT INTO `ps_tab_lang` (`id_tab`, `id_lang`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_tab_module_preference`
+-- Table structure for table `ps_tab_module_preference`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tab_module_preference` (
@@ -11134,7 +11739,7 @@ CREATE TABLE IF NOT EXISTS `ps_tab_module_preference` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_tag`
+-- Table structure for table `ps_tag`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tag` (
@@ -11149,7 +11754,7 @@ CREATE TABLE IF NOT EXISTS `ps_tag` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_tag_count`
+-- Table structure for table `ps_tag_count`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tag_count` (
@@ -11165,7 +11770,7 @@ CREATE TABLE IF NOT EXISTS `ps_tag_count` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_tax`
+-- Table structure for table `ps_tax`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tax` (
@@ -11177,7 +11782,7 @@ CREATE TABLE IF NOT EXISTS `ps_tax` (
 ) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_tax`
+-- Dumping data for table `ps_tax`
 --
 
 INSERT INTO `ps_tax` (`id_tax`, `rate`, `active`, `deleted`) VALUES
@@ -11216,7 +11821,7 @@ INSERT INTO `ps_tax` (`id_tax`, `rate`, `active`, `deleted`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_tax_lang`
+-- Table structure for table `ps_tax_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tax_lang` (
@@ -11227,7 +11832,7 @@ CREATE TABLE IF NOT EXISTS `ps_tax_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_tax_lang`
+-- Dumping data for table `ps_tax_lang`
 --
 
 INSERT INTO `ps_tax_lang` (`id_tax`, `id_lang`, `name`) VALUES
@@ -11297,7 +11902,7 @@ INSERT INTO `ps_tax_lang` (`id_tax`, `id_lang`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_tax_rule`
+-- Table structure for table `ps_tax_rule`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tax_rule` (
@@ -11317,7 +11922,7 @@ CREATE TABLE IF NOT EXISTS `ps_tax_rule` (
 ) ENGINE=InnoDB AUTO_INCREMENT=131 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_tax_rule`
+-- Dumping data for table `ps_tax_rule`
 --
 
 INSERT INTO `ps_tax_rule` (`id_tax_rule`, `id_tax_rules_group`, `id_country`, `id_state`, `zipcode_from`, `zipcode_to`, `id_tax`, `behavior`, `description`) VALUES
@@ -11455,7 +12060,7 @@ INSERT INTO `ps_tax_rule` (`id_tax_rule`, `id_tax_rules_group`, `id_country`, `i
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_tax_rules_group`
+-- Table structure for table `ps_tax_rules_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tax_rules_group` (
@@ -11469,7 +12074,7 @@ CREATE TABLE IF NOT EXISTS `ps_tax_rules_group` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_tax_rules_group`
+-- Dumping data for table `ps_tax_rules_group`
 --
 
 INSERT INTO `ps_tax_rules_group` (`id_tax_rules_group`, `name`, `active`, `deleted`, `date_add`, `date_upd`) VALUES
@@ -11482,7 +12087,7 @@ INSERT INTO `ps_tax_rules_group` (`id_tax_rules_group`, `name`, `active`, `delet
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_tax_rules_group_shop`
+-- Table structure for table `ps_tax_rules_group_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tax_rules_group_shop` (
@@ -11493,7 +12098,7 @@ CREATE TABLE IF NOT EXISTS `ps_tax_rules_group_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_tax_rules_group_shop`
+-- Dumping data for table `ps_tax_rules_group_shop`
 --
 
 INSERT INTO `ps_tax_rules_group_shop` (`id_tax_rules_group`, `id_shop`) VALUES
@@ -11506,7 +12111,7 @@ INSERT INTO `ps_tax_rules_group_shop` (`id_tax_rules_group`, `id_shop`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_theme`
+-- Table structure for table `ps_theme`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_theme` (
@@ -11521,7 +12126,7 @@ CREATE TABLE IF NOT EXISTS `ps_theme` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_theme`
+-- Dumping data for table `ps_theme`
 --
 
 INSERT INTO `ps_theme` (`id_theme`, `name`, `directory`, `responsive`, `default_left_column`, `default_right_column`, `product_per_page`) VALUES
@@ -11531,7 +12136,7 @@ INSERT INTO `ps_theme` (`id_theme`, `name`, `directory`, `responsive`, `default_
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_themeconfigurator`
+-- Table structure for table `ps_themeconfigurator`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_themeconfigurator` (
@@ -11550,12 +12155,12 @@ CREATE TABLE IF NOT EXISTS `ps_themeconfigurator` (
   `html` text,
   `active` tinyint(1) UNSIGNED NOT NULL DEFAULT '1',
   PRIMARY KEY (`id_item`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_theme_meta`
+-- Table structure for table `ps_theme_meta`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_theme_meta` (
@@ -11571,7 +12176,7 @@ CREATE TABLE IF NOT EXISTS `ps_theme_meta` (
 ) ENGINE=InnoDB AUTO_INCREMENT=148 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_theme_meta`
+-- Dumping data for table `ps_theme_meta`
 --
 
 INSERT INTO `ps_theme_meta` (`id_theme_meta`, `id_theme`, `id_meta`, `left_column`, `right_column`) VALUES
@@ -11652,7 +12257,7 @@ INSERT INTO `ps_theme_meta` (`id_theme_meta`, `id_theme`, `id_meta`, `left_colum
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_theme_specific`
+-- Table structure for table `ps_theme_specific`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_theme_specific` (
@@ -11666,7 +12271,7 @@ CREATE TABLE IF NOT EXISTS `ps_theme_specific` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_timezone`
+-- Table structure for table `ps_timezone`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_timezone` (
@@ -11676,7 +12281,7 @@ CREATE TABLE IF NOT EXISTS `ps_timezone` (
 ) ENGINE=InnoDB AUTO_INCREMENT=561 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_timezone`
+-- Dumping data for table `ps_timezone`
 --
 
 INSERT INTO `ps_timezone` (`id_timezone`, `name`) VALUES
@@ -12244,7 +12849,7 @@ INSERT INTO `ps_timezone` (`id_timezone`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_warehouse`
+-- Table structure for table `ps_warehouse`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_warehouse` (
@@ -12262,7 +12867,7 @@ CREATE TABLE IF NOT EXISTS `ps_warehouse` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_warehouse_carrier`
+-- Table structure for table `ps_warehouse_carrier`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_warehouse_carrier` (
@@ -12276,7 +12881,7 @@ CREATE TABLE IF NOT EXISTS `ps_warehouse_carrier` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_warehouse_product_location`
+-- Table structure for table `ps_warehouse_product_location`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_warehouse_product_location` (
@@ -12292,7 +12897,7 @@ CREATE TABLE IF NOT EXISTS `ps_warehouse_product_location` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_warehouse_shop`
+-- Table structure for table `ps_warehouse_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_warehouse_shop` (
@@ -12306,7 +12911,7 @@ CREATE TABLE IF NOT EXISTS `ps_warehouse_shop` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_webservice_account`
+-- Table structure for table `ps_webservice_account`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_webservice_account` (
@@ -12324,7 +12929,7 @@ CREATE TABLE IF NOT EXISTS `ps_webservice_account` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_webservice_account_shop`
+-- Table structure for table `ps_webservice_account_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_webservice_account_shop` (
@@ -12337,7 +12942,7 @@ CREATE TABLE IF NOT EXISTS `ps_webservice_account_shop` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_webservice_permission`
+-- Table structure for table `ps_webservice_permission`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_webservice_permission` (
@@ -12355,7 +12960,7 @@ CREATE TABLE IF NOT EXISTS `ps_webservice_permission` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_web_browser`
+-- Table structure for table `ps_web_browser`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_web_browser` (
@@ -12365,7 +12970,7 @@ CREATE TABLE IF NOT EXISTS `ps_web_browser` (
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_web_browser`
+-- Dumping data for table `ps_web_browser`
 --
 
 INSERT INTO `ps_web_browser` (`id_web_browser`, `name`) VALUES
@@ -12384,7 +12989,7 @@ INSERT INTO `ps_web_browser` (`id_web_browser`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_zone`
+-- Table structure for table `ps_zone`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_zone` (
@@ -12395,7 +13000,7 @@ CREATE TABLE IF NOT EXISTS `ps_zone` (
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_zone`
+-- Dumping data for table `ps_zone`
 --
 
 INSERT INTO `ps_zone` (`id_zone`, `name`, `active`) VALUES
@@ -12411,7 +13016,7 @@ INSERT INTO `ps_zone` (`id_zone`, `name`, `active`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `ps_zone_shop`
+-- Table structure for table `ps_zone_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_zone_shop` (
@@ -12422,7 +13027,7 @@ CREATE TABLE IF NOT EXISTS `ps_zone_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Zrzut danych tabeli `ps_zone_shop`
+-- Dumping data for table `ps_zone_shop`
 --
 
 INSERT INTO `ps_zone_shop` (`id_zone`, `id_shop`) VALUES
