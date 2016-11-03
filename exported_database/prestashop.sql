@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 03, 2016 at 05:47 PM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 5.6.24
+-- Czas generowania: 03 Lis 2016, 18:52
+-- Wersja serwera: 10.1.16-MariaDB
+-- Wersja PHP: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `prestashop`
+-- Baza danych: `prestashop`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_access`
+-- Struktura tabeli dla tabeli `ps_access`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_access` (
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `ps_access` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_access`
+-- Zrzut danych tabeli `ps_access`
 --
 
 UPDATE `ps_access` SET `id_profile` = 1,`id_tab` = 0,`view` = 1,`add` = 1,`edit` = 1,`delete` = 1 WHERE `ps_access`.`id_profile` = 1 AND `ps_access`.`id_tab` = 0;
@@ -443,7 +443,7 @@ UPDATE `ps_access` SET `id_profile` = 4,`id_tab` = 107,`view` = 0,`add` = 0,`edi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_accessory`
+-- Struktura tabeli dla tabeli `ps_accessory`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_accessory` (
@@ -455,7 +455,7 @@ CREATE TABLE IF NOT EXISTS `ps_accessory` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_address`
+-- Struktura tabeli dla tabeli `ps_address`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_address` (
@@ -493,7 +493,7 @@ CREATE TABLE IF NOT EXISTS `ps_address` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_address`
+-- Zrzut danych tabeli `ps_address`
 --
 
 UPDATE `ps_address` SET `id_address` = 1,`id_country` = 8,`id_state` = 0,`id_customer` = 1,`id_manufacturer` = 0,`id_supplier` = 0,`id_warehouse` = 0,`alias` = 'Mon adresse',`company` = 'My Company',`lastname` = 'DOE',`firstname` = 'John',`address1` = '16, Main street',`address2` = '2nd floor',`postcode` = '75002',`city` = 'Paris ',`other` = '',`phone` = '0102030405',`phone_mobile` = '',`vat_number` = '',`dni` = '',`date_add` = '2016-10-27 01:36:43',`date_upd` = '2016-10-27 01:36:43',`active` = 1,`deleted` = 0 WHERE `ps_address`.`id_address` = 1;
@@ -504,7 +504,7 @@ UPDATE `ps_address` SET `id_address` = 4,`id_country` = 21,`id_state` = 9,`id_cu
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_address_format`
+-- Struktura tabeli dla tabeli `ps_address_format`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_address_format` (
@@ -514,7 +514,7 @@ CREATE TABLE IF NOT EXISTS `ps_address_format` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_address_format`
+-- Zrzut danych tabeli `ps_address_format`
 --
 
 UPDATE `ps_address_format` SET `id_country` = 1,`format` = 'firstname lastname\ncompany\nvat_number\naddress1\naddress2\npostcode city\nCountry:name\nphone\nphone_mobile' WHERE `ps_address_format`.`id_country` = 1;
@@ -765,7 +765,7 @@ UPDATE `ps_address_format` SET `id_country` = 244,`format` = 'firstname lastname
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_advice`
+-- Struktura tabeli dla tabeli `ps_advice`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_advice` (
@@ -786,7 +786,7 @@ CREATE TABLE IF NOT EXISTS `ps_advice` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_advice_lang`
+-- Struktura tabeli dla tabeli `ps_advice_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_advice_lang` (
@@ -799,7 +799,7 @@ CREATE TABLE IF NOT EXISTS `ps_advice_lang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_alias`
+-- Struktura tabeli dla tabeli `ps_alias`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_alias` (
@@ -812,7 +812,7 @@ CREATE TABLE IF NOT EXISTS `ps_alias` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_alias`
+-- Zrzut danych tabeli `ps_alias`
 --
 
 UPDATE `ps_alias` SET `id_alias` = 1,`alias` = 'bloose',`search` = 'blouse',`active` = 1 WHERE `ps_alias`.`id_alias` = 1;
@@ -821,7 +821,7 @@ UPDATE `ps_alias` SET `id_alias` = 2,`alias` = 'blues',`search` = 'blouse',`acti
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_attachment`
+-- Struktura tabeli dla tabeli `ps_attachment`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attachment` (
@@ -836,7 +836,7 @@ CREATE TABLE IF NOT EXISTS `ps_attachment` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_attachment_lang`
+-- Struktura tabeli dla tabeli `ps_attachment_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attachment_lang` (
@@ -850,7 +850,7 @@ CREATE TABLE IF NOT EXISTS `ps_attachment_lang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_attribute`
+-- Struktura tabeli dla tabeli `ps_attribute`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attribute` (
@@ -865,7 +865,7 @@ CREATE TABLE IF NOT EXISTS `ps_attribute` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_attribute_group`
+-- Struktura tabeli dla tabeli `ps_attribute_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attribute_group` (
@@ -879,7 +879,7 @@ CREATE TABLE IF NOT EXISTS `ps_attribute_group` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_attribute_group_lang`
+-- Struktura tabeli dla tabeli `ps_attribute_group_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attribute_group_lang` (
@@ -893,7 +893,7 @@ CREATE TABLE IF NOT EXISTS `ps_attribute_group_lang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_attribute_group_shop`
+-- Struktura tabeli dla tabeli `ps_attribute_group_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attribute_group_shop` (
@@ -906,7 +906,7 @@ CREATE TABLE IF NOT EXISTS `ps_attribute_group_shop` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_attribute_impact`
+-- Struktura tabeli dla tabeli `ps_attribute_impact`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attribute_impact` (
@@ -922,7 +922,7 @@ CREATE TABLE IF NOT EXISTS `ps_attribute_impact` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_attribute_lang`
+-- Struktura tabeli dla tabeli `ps_attribute_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attribute_lang` (
@@ -936,7 +936,7 @@ CREATE TABLE IF NOT EXISTS `ps_attribute_lang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_attribute_shop`
+-- Struktura tabeli dla tabeli `ps_attribute_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_attribute_shop` (
@@ -949,7 +949,7 @@ CREATE TABLE IF NOT EXISTS `ps_attribute_shop` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_badge`
+-- Struktura tabeli dla tabeli `ps_badge`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_badge` (
@@ -962,10 +962,10 @@ CREATE TABLE IF NOT EXISTS `ps_badge` (
   `awb` int(11) DEFAULT '0',
   `validated` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_badge`)
-) ENGINE=InnoDB AUTO_INCREMENT=195 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_badge`
+-- Zrzut danych tabeli `ps_badge`
 --
 
 UPDATE `ps_badge` SET `id_badge` = 1,`id_ps_badge` = 131,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 1;
@@ -1047,126 +1047,11 @@ UPDATE `ps_badge` SET `id_badge` = 76,`id_ps_badge` = 287,`type` = 'feature',`id
 UPDATE `ps_badge` SET `id_badge` = 77,`id_ps_badge` = 288,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 77;
 UPDATE `ps_badge` SET `id_badge` = 78,`id_ps_badge` = 289,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 78;
 UPDATE `ps_badge` SET `id_badge` = 79,`id_ps_badge` = 290,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 79;
-UPDATE `ps_badge` SET `id_badge` = 80,`id_ps_badge` = 291,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 80;
-UPDATE `ps_badge` SET `id_badge` = 81,`id_ps_badge` = 292,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 81;
-UPDATE `ps_badge` SET `id_badge` = 82,`id_ps_badge` = 293,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 82;
-UPDATE `ps_badge` SET `id_badge` = 83,`id_ps_badge` = 294,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 83;
-UPDATE `ps_badge` SET `id_badge` = 84,`id_ps_badge` = 295,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 84;
-UPDATE `ps_badge` SET `id_badge` = 85,`id_ps_badge` = 296,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 85;
-UPDATE `ps_badge` SET `id_badge` = 86,`id_ps_badge` = 297,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 86;
-UPDATE `ps_badge` SET `id_badge` = 87,`id_ps_badge` = 298,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 87;
-UPDATE `ps_badge` SET `id_badge` = 88,`id_ps_badge` = 299,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 88;
-UPDATE `ps_badge` SET `id_badge` = 89,`id_ps_badge` = 300,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 89;
-UPDATE `ps_badge` SET `id_badge` = 90,`id_ps_badge` = 301,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 90;
-UPDATE `ps_badge` SET `id_badge` = 91,`id_ps_badge` = 302,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 91;
-UPDATE `ps_badge` SET `id_badge` = 92,`id_ps_badge` = 303,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 92;
-UPDATE `ps_badge` SET `id_badge` = 93,`id_ps_badge` = 304,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 93;
-UPDATE `ps_badge` SET `id_badge` = 94,`id_ps_badge` = 305,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 94;
-UPDATE `ps_badge` SET `id_badge` = 95,`id_ps_badge` = 306,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 95;
-UPDATE `ps_badge` SET `id_badge` = 96,`id_ps_badge` = 307,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 96;
-UPDATE `ps_badge` SET `id_badge` = 97,`id_ps_badge` = 308,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 97;
-UPDATE `ps_badge` SET `id_badge` = 98,`id_ps_badge` = 309,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 98;
-UPDATE `ps_badge` SET `id_badge` = 99,`id_ps_badge` = 310,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 99;
-UPDATE `ps_badge` SET `id_badge` = 100,`id_ps_badge` = 311,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 100;
-UPDATE `ps_badge` SET `id_badge` = 101,`id_ps_badge` = 312,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 101;
-UPDATE `ps_badge` SET `id_badge` = 102,`id_ps_badge` = 313,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 102;
-UPDATE `ps_badge` SET `id_badge` = 103,`id_ps_badge` = 314,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 103;
-UPDATE `ps_badge` SET `id_badge` = 104,`id_ps_badge` = 315,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 104;
-UPDATE `ps_badge` SET `id_badge` = 105,`id_ps_badge` = 316,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 105;
-UPDATE `ps_badge` SET `id_badge` = 106,`id_ps_badge` = 317,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 106;
-UPDATE `ps_badge` SET `id_badge` = 107,`id_ps_badge` = 318,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 107;
-UPDATE `ps_badge` SET `id_badge` = 108,`id_ps_badge` = 319,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 108;
-UPDATE `ps_badge` SET `id_badge` = 109,`id_ps_badge` = 320,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 109;
-UPDATE `ps_badge` SET `id_badge` = 110,`id_ps_badge` = 321,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 110;
-UPDATE `ps_badge` SET `id_badge` = 111,`id_ps_badge` = 322,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 111;
-UPDATE `ps_badge` SET `id_badge` = 112,`id_ps_badge` = 323,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 112;
-UPDATE `ps_badge` SET `id_badge` = 113,`id_ps_badge` = 324,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 113;
-UPDATE `ps_badge` SET `id_badge` = 114,`id_ps_badge` = 325,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 114;
-UPDATE `ps_badge` SET `id_badge` = 115,`id_ps_badge` = 326,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 115;
-UPDATE `ps_badge` SET `id_badge` = 116,`id_ps_badge` = 327,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 116;
-UPDATE `ps_badge` SET `id_badge` = 117,`id_ps_badge` = 328,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 117;
-UPDATE `ps_badge` SET `id_badge` = 118,`id_ps_badge` = 329,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 118;
-UPDATE `ps_badge` SET `id_badge` = 119,`id_ps_badge` = 330,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 119;
-UPDATE `ps_badge` SET `id_badge` = 120,`id_ps_badge` = 331,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 120;
-UPDATE `ps_badge` SET `id_badge` = 121,`id_ps_badge` = 332,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 121;
-UPDATE `ps_badge` SET `id_badge` = 122,`id_ps_badge` = 333,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 122;
-UPDATE `ps_badge` SET `id_badge` = 123,`id_ps_badge` = 334,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 123;
-UPDATE `ps_badge` SET `id_badge` = 124,`id_ps_badge` = 335,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 124;
-UPDATE `ps_badge` SET `id_badge` = 125,`id_ps_badge` = 336,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 125;
-UPDATE `ps_badge` SET `id_badge` = 126,`id_ps_badge` = 337,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 126;
-UPDATE `ps_badge` SET `id_badge` = 127,`id_ps_badge` = 338,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 127;
-UPDATE `ps_badge` SET `id_badge` = 128,`id_ps_badge` = 339,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 128;
-UPDATE `ps_badge` SET `id_badge` = 129,`id_ps_badge` = 340,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 129;
-UPDATE `ps_badge` SET `id_badge` = 130,`id_ps_badge` = 341,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 130;
-UPDATE `ps_badge` SET `id_badge` = 131,`id_ps_badge` = 342,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 131;
-UPDATE `ps_badge` SET `id_badge` = 132,`id_ps_badge` = 343,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 132;
-UPDATE `ps_badge` SET `id_badge` = 133,`id_ps_badge` = 344,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 133;
-UPDATE `ps_badge` SET `id_badge` = 134,`id_ps_badge` = 345,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 134;
-UPDATE `ps_badge` SET `id_badge` = 135,`id_ps_badge` = 346,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 135;
-UPDATE `ps_badge` SET `id_badge` = 136,`id_ps_badge` = 347,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 136;
-UPDATE `ps_badge` SET `id_badge` = 137,`id_ps_badge` = 348,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 137;
-UPDATE `ps_badge` SET `id_badge` = 138,`id_ps_badge` = 349,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 138;
-UPDATE `ps_badge` SET `id_badge` = 139,`id_ps_badge` = 350,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 139;
-UPDATE `ps_badge` SET `id_badge` = 140,`id_ps_badge` = 351,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 140;
-UPDATE `ps_badge` SET `id_badge` = 141,`id_ps_badge` = 352,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 141;
-UPDATE `ps_badge` SET `id_badge` = 142,`id_ps_badge` = 353,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 142;
-UPDATE `ps_badge` SET `id_badge` = 143,`id_ps_badge` = 354,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 143;
-UPDATE `ps_badge` SET `id_badge` = 144,`id_ps_badge` = 355,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 144;
-UPDATE `ps_badge` SET `id_badge` = 145,`id_ps_badge` = 356,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 145;
-UPDATE `ps_badge` SET `id_badge` = 146,`id_ps_badge` = 357,`type` = 'feature',`id_group` = 41,`group_position` = 1,`scoring` = 5,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 146;
-UPDATE `ps_badge` SET `id_badge` = 147,`id_ps_badge` = 358,`type` = 'feature',`id_group` = 41,`group_position` = 2,`scoring` = 10,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 147;
-UPDATE `ps_badge` SET `id_badge` = 148,`id_ps_badge` = 359,`type` = 'feature',`id_group` = 41,`group_position` = 3,`scoring` = 15,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 148;
-UPDATE `ps_badge` SET `id_badge` = 149,`id_ps_badge` = 360,`type` = 'feature',`id_group` = 41,`group_position` = 4,`scoring` = 20,`awb` = 1,`validated` = 0 WHERE `ps_badge`.`id_badge` = 149;
-UPDATE `ps_badge` SET `id_badge` = 150,`id_ps_badge` = 1,`type` = 'feature',`id_group` = 1,`group_position` = 1,`scoring` = 10,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 150;
-UPDATE `ps_badge` SET `id_badge` = 151,`id_ps_badge` = 2,`type` = 'feature',`id_group` = 2,`group_position` = 1,`scoring` = 10,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 151;
-UPDATE `ps_badge` SET `id_badge` = 152,`id_ps_badge` = 3,`type` = 'feature',`id_group` = 2,`group_position` = 2,`scoring` = 15,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 152;
-UPDATE `ps_badge` SET `id_badge` = 153,`id_ps_badge` = 4,`type` = 'feature',`id_group` = 3,`group_position` = 1,`scoring` = 15,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 153;
-UPDATE `ps_badge` SET `id_badge` = 154,`id_ps_badge` = 5,`type` = 'feature',`id_group` = 3,`group_position` = 2,`scoring` = 15,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 154;
-UPDATE `ps_badge` SET `id_badge` = 155,`id_ps_badge` = 6,`type` = 'feature',`id_group` = 4,`group_position` = 1,`scoring` = 15,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 155;
-UPDATE `ps_badge` SET `id_badge` = 156,`id_ps_badge` = 7,`type` = 'feature',`id_group` = 4,`group_position` = 2,`scoring` = 15,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 156;
-UPDATE `ps_badge` SET `id_badge` = 157,`id_ps_badge` = 8,`type` = 'feature',`id_group` = 5,`group_position` = 1,`scoring` = 5,`awb` = 0,`validated` = 1 WHERE `ps_badge`.`id_badge` = 157;
-UPDATE `ps_badge` SET `id_badge` = 158,`id_ps_badge` = 9,`type` = 'feature',`id_group` = 5,`group_position` = 2,`scoring` = 10,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 158;
-UPDATE `ps_badge` SET `id_badge` = 159,`id_ps_badge` = 10,`type` = 'feature',`id_group` = 6,`group_position` = 1,`scoring` = 15,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 159;
-UPDATE `ps_badge` SET `id_badge` = 160,`id_ps_badge` = 11,`type` = 'feature',`id_group` = 6,`group_position` = 2,`scoring` = 10,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 160;
-UPDATE `ps_badge` SET `id_badge` = 161,`id_ps_badge` = 12,`type` = 'feature',`id_group` = 6,`group_position` = 3,`scoring` = 10,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 161;
-UPDATE `ps_badge` SET `id_badge` = 162,`id_ps_badge` = 13,`type` = 'feature',`id_group` = 5,`group_position` = 3,`scoring` = 10,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 162;
-UPDATE `ps_badge` SET `id_badge` = 163,`id_ps_badge` = 14,`type` = 'feature',`id_group` = 5,`group_position` = 4,`scoring` = 15,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 163;
-UPDATE `ps_badge` SET `id_badge` = 164,`id_ps_badge` = 15,`type` = 'feature',`id_group` = 5,`group_position` = 5,`scoring` = 20,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 164;
-UPDATE `ps_badge` SET `id_badge` = 165,`id_ps_badge` = 16,`type` = 'feature',`id_group` = 5,`group_position` = 6,`scoring` = 20,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 165;
-UPDATE `ps_badge` SET `id_badge` = 166,`id_ps_badge` = 17,`type` = 'achievement',`id_group` = 7,`group_position` = 1,`scoring` = 5,`awb` = 0,`validated` = 1 WHERE `ps_badge`.`id_badge` = 166;
-UPDATE `ps_badge` SET `id_badge` = 167,`id_ps_badge` = 18,`type` = 'achievement',`id_group` = 7,`group_position` = 2,`scoring` = 10,`awb` = 0,`validated` = 1 WHERE `ps_badge`.`id_badge` = 167;
-UPDATE `ps_badge` SET `id_badge` = 168,`id_ps_badge` = 19,`type` = 'feature',`id_group` = 8,`group_position` = 1,`scoring` = 15,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 168;
-UPDATE `ps_badge` SET `id_badge` = 169,`id_ps_badge` = 20,`type` = 'feature',`id_group` = 8,`group_position` = 2,`scoring` = 15,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 169;
-UPDATE `ps_badge` SET `id_badge` = 170,`id_ps_badge` = 21,`type` = 'feature',`id_group` = 9,`group_position` = 1,`scoring` = 15,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 170;
-UPDATE `ps_badge` SET `id_badge` = 171,`id_ps_badge` = 22,`type` = 'feature',`id_group` = 10,`group_position` = 1,`scoring` = 10,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 171;
-UPDATE `ps_badge` SET `id_badge` = 172,`id_ps_badge` = 23,`type` = 'feature',`id_group` = 10,`group_position` = 2,`scoring` = 10,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 172;
-UPDATE `ps_badge` SET `id_badge` = 173,`id_ps_badge` = 24,`type` = 'feature',`id_group` = 10,`group_position` = 3,`scoring` = 10,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 173;
-UPDATE `ps_badge` SET `id_badge` = 174,`id_ps_badge` = 25,`type` = 'feature',`id_group` = 10,`group_position` = 4,`scoring` = 10,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 174;
-UPDATE `ps_badge` SET `id_badge` = 175,`id_ps_badge` = 26,`type` = 'feature',`id_group` = 10,`group_position` = 5,`scoring` = 10,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 175;
-UPDATE `ps_badge` SET `id_badge` = 176,`id_ps_badge` = 27,`type` = 'feature',`id_group` = 4,`group_position` = 3,`scoring` = 10,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 176;
-UPDATE `ps_badge` SET `id_badge` = 177,`id_ps_badge` = 28,`type` = 'feature',`id_group` = 3,`group_position` = 3,`scoring` = 10,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 177;
-UPDATE `ps_badge` SET `id_badge` = 178,`id_ps_badge` = 29,`type` = 'achievement',`id_group` = 11,`group_position` = 1,`scoring` = 5,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 178;
-UPDATE `ps_badge` SET `id_badge` = 179,`id_ps_badge` = 30,`type` = 'achievement',`id_group` = 11,`group_position` = 2,`scoring` = 10,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 179;
-UPDATE `ps_badge` SET `id_badge` = 180,`id_ps_badge` = 31,`type` = 'achievement',`id_group` = 11,`group_position` = 3,`scoring` = 15,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 180;
-UPDATE `ps_badge` SET `id_badge` = 181,`id_ps_badge` = 32,`type` = 'achievement',`id_group` = 11,`group_position` = 4,`scoring` = 20,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 181;
-UPDATE `ps_badge` SET `id_badge` = 182,`id_ps_badge` = 33,`type` = 'achievement',`id_group` = 11,`group_position` = 5,`scoring` = 25,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 182;
-UPDATE `ps_badge` SET `id_badge` = 183,`id_ps_badge` = 34,`type` = 'achievement',`id_group` = 11,`group_position` = 6,`scoring` = 30,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 183;
-UPDATE `ps_badge` SET `id_badge` = 184,`id_ps_badge` = 35,`type` = 'achievement',`id_group` = 7,`group_position` = 3,`scoring` = 15,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 184;
-UPDATE `ps_badge` SET `id_badge` = 185,`id_ps_badge` = 36,`type` = 'achievement',`id_group` = 7,`group_position` = 4,`scoring` = 20,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 185;
-UPDATE `ps_badge` SET `id_badge` = 186,`id_ps_badge` = 37,`type` = 'achievement',`id_group` = 7,`group_position` = 5,`scoring` = 25,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 186;
-UPDATE `ps_badge` SET `id_badge` = 187,`id_ps_badge` = 38,`type` = 'achievement',`id_group` = 7,`group_position` = 6,`scoring` = 30,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 187;
-UPDATE `ps_badge` SET `id_badge` = 188,`id_ps_badge` = 39,`type` = 'achievement',`id_group` = 12,`group_position` = 1,`scoring` = 5,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 188;
-UPDATE `ps_badge` SET `id_badge` = 189,`id_ps_badge` = 40,`type` = 'achievement',`id_group` = 12,`group_position` = 2,`scoring` = 10,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 189;
-UPDATE `ps_badge` SET `id_badge` = 190,`id_ps_badge` = 41,`type` = 'achievement',`id_group` = 12,`group_position` = 3,`scoring` = 15,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 190;
-UPDATE `ps_badge` SET `id_badge` = 191,`id_ps_badge` = 42,`type` = 'achievement',`id_group` = 12,`group_position` = 4,`scoring` = 20,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 191;
-UPDATE `ps_badge` SET `id_badge` = 192,`id_ps_badge` = 43,`type` = 'achievement',`id_group` = 12,`group_position` = 5,`scoring` = 25,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 192;
-UPDATE `ps_badge` SET `id_badge` = 193,`id_ps_badge` = 44,`type` = 'achievement',`id_group` = 12,`group_position` = 6,`scoring` = 30,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 193;
-UPDATE `ps_badge` SET `id_badge` = 194,`id_ps_badge` = 45,`type` = 'achievement',`id_group` = 13,`group_position` = 1,`scoring` = 5,`awb` = 0,`validated` = 0 WHERE `ps_badge`.`id_badge` = 194;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_badge_lang`
+-- Struktura tabeli dla tabeli `ps_badge_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_badge_lang` (
@@ -1179,7 +1064,7 @@ CREATE TABLE IF NOT EXISTS `ps_badge_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_badge_lang`
+-- Zrzut danych tabeli `ps_badge_lang`
 --
 
 UPDATE `ps_badge_lang` SET `id_badge` = 1,`id_lang` = 1,`name` = 'Ferbuy installed',`description` = 'You have installed the Ferbuy module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 1 AND `ps_badge_lang`.`id_lang` = 1;
@@ -1331,138 +1216,15 @@ UPDATE `ps_badge_lang` SET `id_badge` = 73,`id_lang` = 2,`name` = 'Clickline ver
 UPDATE `ps_badge_lang` SET `id_badge` = 74,`id_lang` = 1,`name` = 'CDiscount installed',`description` = 'You have installed the CDiscount module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 74 AND `ps_badge_lang`.`id_lang` = 1;
 UPDATE `ps_badge_lang` SET `id_badge` = 74,`id_lang` = 2,`name` = 'CDiscount installed',`description` = '',`group_name` = '' WHERE `ps_badge_lang`.`id_badge` = 74 AND `ps_badge_lang`.`id_lang` = 2;
 UPDATE `ps_badge_lang` SET `id_badge` = 75,`id_lang` = 1,`name` = 'CDiscount configured',`description` = 'You have configured the CDiscount module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 75 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 75,`id_lang` = 2,`name` = 'CDiscount configured',`description` = '',`group_name` = '' WHERE `ps_badge_lang`.`id_badge` = 75 AND `ps_badge_lang`.`id_lang` = 2;
 UPDATE `ps_badge_lang` SET `id_badge` = 76,`id_lang` = 1,`name` = 'CDiscount active',`description` = 'Your CDiscount module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 76 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 76,`id_lang` = 2,`name` = 'CDiscount active',`description` = '',`group_name` = '' WHERE `ps_badge_lang`.`id_badge` = 76 AND `ps_badge_lang`.`id_lang` = 2;
 UPDATE `ps_badge_lang` SET `id_badge` = 77,`id_lang` = 1,`name` = 'CDiscount very active',`description` = 'Your CDiscount module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 77 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 77,`id_lang` = 2,`name` = 'CDiscount very active',`description` = '',`group_name` = '' WHERE `ps_badge_lang`.`id_badge` = 77 AND `ps_badge_lang`.`id_lang` = 2;
 UPDATE `ps_badge_lang` SET `id_badge` = 78,`id_lang` = 1,`name` = 'illicoPresta installed',`description` = 'You have installed the illicoPresta module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 78 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 78,`id_lang` = 2,`name` = 'illicoPresta installed',`description` = '',`group_name` = '' WHERE `ps_badge_lang`.`id_badge` = 78 AND `ps_badge_lang`.`id_lang` = 2;
 UPDATE `ps_badge_lang` SET `id_badge` = 79,`id_lang` = 1,`name` = 'illicoPresta configured',`description` = 'You have configured the illicoPresta module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 79 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 79,`id_lang` = 2,`name` = 'illicoPresta configured',`description` = '',`group_name` = '' WHERE `ps_badge_lang`.`id_badge` = 79 AND `ps_badge_lang`.`id_lang` = 2;
-UPDATE `ps_badge_lang` SET `id_badge` = 80,`id_lang` = 1,`name` = 'illicoPresta active',`description` = 'Your illicoPresta module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 80 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 81,`id_lang` = 1,`name` = 'illicoPresta very active',`description` = 'Your illicoPresta module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 81 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 82,`id_lang` = 1,`name` = 'NetReviews installed',`description` = 'You have installed the NetReviews module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 82 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 83,`id_lang` = 1,`name` = 'NetReviews configured',`description` = 'You have configured the NetReviews module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 83 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 84,`id_lang` = 1,`name` = 'NetReviews active',`description` = 'Your NetReviews module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 84 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 85,`id_lang` = 1,`name` = 'NetReviews very active',`description` = 'Your NetReviews module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 85 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 86,`id_lang` = 1,`name` = 'Bluesnap installed',`description` = 'You have installed the Bluesnap module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 86 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 87,`id_lang` = 1,`name` = 'Bluesnap configured',`description` = 'You have configured the Bluesnap module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 87 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 88,`id_lang` = 1,`name` = 'Bluesnap active',`description` = 'Your Bluesnap module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 88 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 89,`id_lang` = 1,`name` = 'Bluesnap very active',`description` = 'Your Bluesnap module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 89 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 90,`id_lang` = 1,`name` = 'Desjardins installed',`description` = 'You have installed the Desjardins module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 90 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 91,`id_lang` = 1,`name` = 'Desjardins configured',`description` = 'You have configured the Desjardins module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 91 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 92,`id_lang` = 1,`name` = 'Desjardins active',`description` = 'Your Desjardins module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 92 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 93,`id_lang` = 1,`name` = 'Desjardins very active',`description` = 'Your Desjardins module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 93 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 94,`id_lang` = 1,`name` = 'First Data installed',`description` = 'You have installed the First Data module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 94 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 95,`id_lang` = 1,`name` = 'First Data configured',`description` = 'You have configured the First Data module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 95 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 96,`id_lang` = 1,`name` = 'First Data active',`description` = 'Your First Data module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 96 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 97,`id_lang` = 1,`name` = 'First Data very active',`description` = 'Your First Data module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 97 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 98,`id_lang` = 1,`name` = 'Give.it installed',`description` = 'You have installed the Give.it module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 98 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 99,`id_lang` = 1,`name` = 'Give.it configured',`description` = 'You have configured the Give.it module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 99 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 100,`id_lang` = 1,`name` = 'Give.it active',`description` = 'Your Give.it module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 100 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 101,`id_lang` = 1,`name` = 'Give.it very active',`description` = 'Your Give.it module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 101 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 102,`id_lang` = 1,`name` = 'Google Analytics installed',`description` = 'You have installed the Google Analytics module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 102 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 103,`id_lang` = 1,`name` = 'Google Analytics configured',`description` = 'You have configured the Google Analytics module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 103 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 104,`id_lang` = 1,`name` = 'Google Analytics active',`description` = 'Your Google Analytics module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 104 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 105,`id_lang` = 1,`name` = 'Google Analytics very active',`description` = 'Your Google Analytics module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 105 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 106,`id_lang` = 1,`name` = 'PagSeguro installed',`description` = 'You have installed the PagSeguro module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 106 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 107,`id_lang` = 1,`name` = 'PagSeguro configured',`description` = 'You have configured the PagSeguro module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 107 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 108,`id_lang` = 1,`name` = 'PagSeguro active',`description` = 'Your PagSeguro module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 108 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 109,`id_lang` = 1,`name` = 'PagSeguro very active',`description` = 'Your PagSeguro module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 109 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 110,`id_lang` = 1,`name` = 'Paypal MX installed',`description` = 'You have installed the Paypal MX module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 110 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 111,`id_lang` = 1,`name` = 'Paypal MX configured',`description` = 'You have configured the Paypal MX module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 111 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 112,`id_lang` = 1,`name` = 'Paypal MX active',`description` = 'Your Paypal MX module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 112 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 113,`id_lang` = 1,`name` = 'Paypal MX very active',`description` = 'Your Paypal MX module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 113 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 114,`id_lang` = 1,`name` = 'Paypal USA installed',`description` = 'You have installed the Paypal USA module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 114 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 115,`id_lang` = 1,`name` = 'Paypal USA configured',`description` = 'You have configured the Paypal USA module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 115 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 116,`id_lang` = 1,`name` = 'Paypal USA active',`description` = 'Your Paypal USA module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 116 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 117,`id_lang` = 1,`name` = 'Paypal USA very active',`description` = 'Your Paypal USA module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 117 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 118,`id_lang` = 1,`name` = 'PayULatam installed',`description` = 'You have installed the PayULatam module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 118 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 119,`id_lang` = 1,`name` = 'PayULatam configured',`description` = 'You have configured the PayULatam module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 119 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 120,`id_lang` = 1,`name` = 'PayULatam active',`description` = 'Your PayULatam module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 120 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 121,`id_lang` = 1,`name` = 'PayULatam very active',`description` = 'Your PayULatam module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 121 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 122,`id_lang` = 1,`name` = 'PrestaStats installed',`description` = 'You have installed the PrestaStats module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 122 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 123,`id_lang` = 1,`name` = 'PrestaStats configured',`description` = 'You have configured the PrestaStats module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 123 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 124,`id_lang` = 1,`name` = 'PrestaStats active',`description` = 'Your PrestaStats module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 124 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 125,`id_lang` = 1,`name` = 'PrestaStats very active',`description` = 'Your PrestaStats module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 125 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 126,`id_lang` = 1,`name` = 'Riskified installed',`description` = 'You have installed the Riskified module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 126 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 127,`id_lang` = 1,`name` = 'Riskified configured',`description` = 'You have configured the Riskified module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 127 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 128,`id_lang` = 1,`name` = 'Riskified active',`description` = 'Your Riskified module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 128 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 129,`id_lang` = 1,`name` = 'Riskified very active',`description` = 'Your Riskified module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 129 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 130,`id_lang` = 1,`name` = 'Simplify installed',`description` = 'You have installed the Simplify module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 130 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 131,`id_lang` = 1,`name` = 'Simplify configured',`description` = 'You have configured the Simplify module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 131 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 132,`id_lang` = 1,`name` = 'Simplify active',`description` = 'Your Simplify module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 132 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 133,`id_lang` = 1,`name` = 'Simplify very active',`description` = 'Your Simplify module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 133 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 134,`id_lang` = 1,`name` = 'VTPayment installed',`description` = 'You have installed the VTPayment module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 134 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 135,`id_lang` = 1,`name` = 'VTPayment configured',`description` = 'You have configured the VTPayment module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 135 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 136,`id_lang` = 1,`name` = 'VTPayment active',`description` = 'Your VTPayment module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 136 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 137,`id_lang` = 1,`name` = 'VTPayment very active',`description` = 'Your VTPayment module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 137 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 138,`id_lang` = 1,`name` = 'Yotpo installed',`description` = 'You have installed the Yotpo module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 138 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 139,`id_lang` = 1,`name` = 'Yotpo configured',`description` = 'You have configured the Yotpo module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 139 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 140,`id_lang` = 1,`name` = 'Yotpo active',`description` = 'Your Yotpo module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 140 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 141,`id_lang` = 1,`name` = 'Yotpo very active',`description` = 'Your Yotpo module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 141 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 142,`id_lang` = 1,`name` = 'Youstice installed',`description` = 'You have installed the Youstice module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 142 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 143,`id_lang` = 1,`name` = 'Youstice configured',`description` = 'You have configured the Youstice module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 143 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 144,`id_lang` = 1,`name` = 'Youstice active',`description` = 'Your Youstice module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 144 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 145,`id_lang` = 1,`name` = 'Youstice very active',`description` = 'Your Youstice module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 145 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 146,`id_lang` = 1,`name` = 'Loyalty Lion installed',`description` = 'You have installed the Loyalty Lion module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 146 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 147,`id_lang` = 1,`name` = 'Loyalty Lion configured',`description` = 'You have configured the Loyalty Lion module',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 147 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 148,`id_lang` = 1,`name` = 'Loyalty Lion active',`description` = 'Your Loyalty Lion module is active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 148 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 149,`id_lang` = 1,`name` = 'Loyalty Lion very active',`description` = 'Your Loyalty Lion module is very active',`group_name` = 'Partners' WHERE `ps_badge_lang`.`id_badge` = 149 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 150,`id_lang` = 1,`name` = 'SEO',`description` = 'You enabled the URL rewriting through the tab "Preferences > SEO and URLs".',`group_name` = 'SEO' WHERE `ps_badge_lang`.`id_badge` = 150 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 151,`id_lang` = 1,`name` = 'Site Performance',`description` = 'You enabled CCC (Combine, Compress and Cache), Rijndael and Smarty through the tab \r\nAdvanced Parameters > Performance.',`group_name` = 'Site Performance' WHERE `ps_badge_lang`.`id_badge` = 151 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 152,`id_lang` = 1,`name` = 'Site Performance',`description` = 'You enabled media servers through the tab "Advanced parameters > Performance".',`group_name` = 'Site Performance' WHERE `ps_badge_lang`.`id_badge` = 152 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 153,`id_lang` = 1,`name` = 'Payment',`description` = 'You configured a payment solution on your shop.',`group_name` = 'Payment' WHERE `ps_badge_lang`.`id_badge` = 153 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 154,`id_lang` = 1,`name` = 'Payment',`description` = 'You offer two different payment methods to your customers.',`group_name` = 'Payment' WHERE `ps_badge_lang`.`id_badge` = 154 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 155,`id_lang` = 1,`name` = 'Shipping',`description` = 'You configured a carrier on your shop.',`group_name` = 'Shipping' WHERE `ps_badge_lang`.`id_badge` = 155 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 156,`id_lang` = 1,`name` = 'Shipping',`description` = 'You offer two shipping solutions (carriers) to your customers.',`group_name` = 'Shipping' WHERE `ps_badge_lang`.`id_badge` = 156 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 157,`id_lang` = 1,`name` = 'Catalog Size',`description` = 'You added your first product to your catalog!',`group_name` = 'Catalog Size' WHERE `ps_badge_lang`.`id_badge` = 157 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 157,`id_lang` = 2,`name` = 'Catalog Size',`description` = '',`group_name` = '' WHERE `ps_badge_lang`.`id_badge` = 157 AND `ps_badge_lang`.`id_lang` = 2;
-UPDATE `ps_badge_lang` SET `id_badge` = 158,`id_lang` = 1,`name` = 'Catalog Size',`description` = 'You have 10 products within your catalog.',`group_name` = 'Catalog Size' WHERE `ps_badge_lang`.`id_badge` = 158 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 159,`id_lang` = 1,`name` = 'Contact information',`description` = 'You configured your phone number so your customers can reach you!',`group_name` = 'Contact information' WHERE `ps_badge_lang`.`id_badge` = 159 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 160,`id_lang` = 1,`name` = 'Contact information',`description` = 'You added a third email address to your contact form.',`group_name` = 'Contact information' WHERE `ps_badge_lang`.`id_badge` = 160 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 161,`id_lang` = 1,`name` = 'Contact information',`description` = 'You suggest a total of 5 departments to be reached by your customers via your contact form.',`group_name` = 'Contact information' WHERE `ps_badge_lang`.`id_badge` = 161 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 162,`id_lang` = 1,`name` = 'Catalog Size',`description` = 'You have 100 products within your catalog.',`group_name` = 'Catalog Size' WHERE `ps_badge_lang`.`id_badge` = 162 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 163,`id_lang` = 1,`name` = 'Catalog Size',`description` = 'You have 1,000 products within your catalog.',`group_name` = 'Catalog Size' WHERE `ps_badge_lang`.`id_badge` = 163 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 164,`id_lang` = 1,`name` = 'Catalog Size',`description` = 'You have 10,000 products within your catalog.',`group_name` = 'Catalog Size' WHERE `ps_badge_lang`.`id_badge` = 164 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 165,`id_lang` = 1,`name` = 'Catalog Size',`description` = 'You have 100,000 products within your catalog.',`group_name` = 'Catalog Size' WHERE `ps_badge_lang`.`id_badge` = 165 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 166,`id_lang` = 1,`name` = 'Days of Experience',`description` = 'You just installed PrestaShop!',`group_name` = 'Days of Experience' WHERE `ps_badge_lang`.`id_badge` = 166 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 166,`id_lang` = 2,`name` = 'Days of Experience',`description` = '',`group_name` = '' WHERE `ps_badge_lang`.`id_badge` = 166 AND `ps_badge_lang`.`id_lang` = 2;
-UPDATE `ps_badge_lang` SET `id_badge` = 167,`id_lang` = 1,`name` = 'Days of Experience',`description` = 'You installed PrestaShop a week ago!',`group_name` = 'Days of Experience' WHERE `ps_badge_lang`.`id_badge` = 167 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 167,`id_lang` = 2,`name` = 'Days of Experience',`description` = '',`group_name` = '' WHERE `ps_badge_lang`.`id_badge` = 167 AND `ps_badge_lang`.`id_lang` = 2;
-UPDATE `ps_badge_lang` SET `id_badge` = 168,`id_lang` = 1,`name` = 'Customization',`description` = 'You uploaded your own logo.',`group_name` = 'Customization' WHERE `ps_badge_lang`.`id_badge` = 168 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 169,`id_lang` = 1,`name` = 'Customization',`description` = 'You installed a new template.',`group_name` = 'Customization' WHERE `ps_badge_lang`.`id_badge` = 169 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 170,`id_lang` = 1,`name` = 'Addons',`description` = 'You connected your back-office to the Addons platform using your PrestaShop Addons account.',`group_name` = 'Addons' WHERE `ps_badge_lang`.`id_badge` = 170 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 171,`id_lang` = 1,`name` = 'Multistores',`description` = 'You enabled the Multistores feature.',`group_name` = 'Multistores' WHERE `ps_badge_lang`.`id_badge` = 171 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 172,`id_lang` = 1,`name` = 'Multistores',`description` = 'You manage two shops with the Multistores feature.',`group_name` = 'Multistores' WHERE `ps_badge_lang`.`id_badge` = 172 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 173,`id_lang` = 1,`name` = 'Multistores',`description` = 'You manage two different groups of shops using the Multistores feature.',`group_name` = 'Multistores' WHERE `ps_badge_lang`.`id_badge` = 173 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 174,`id_lang` = 1,`name` = 'Multistores',`description` = 'You manage five shops with the Multistores feature.',`group_name` = 'Multistores' WHERE `ps_badge_lang`.`id_badge` = 174 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 175,`id_lang` = 1,`name` = 'Multistores',`description` = 'You manage five different groups of shops using the Multistores feature.',`group_name` = 'Multistores' WHERE `ps_badge_lang`.`id_badge` = 175 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 176,`id_lang` = 1,`name` = 'Shipping',`description` = 'You offer three different shipping solutions (carriers) to your customers.',`group_name` = 'Shipping' WHERE `ps_badge_lang`.`id_badge` = 176 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 177,`id_lang` = 1,`name` = 'Payment',`description` = 'You offer three different payment methods to your customers.',`group_name` = 'Payment' WHERE `ps_badge_lang`.`id_badge` = 177 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 178,`id_lang` = 1,`name` = 'Revenue',`description` = 'You get this badge when you reach 500 PLN in sales.',`group_name` = 'Revenue' WHERE `ps_badge_lang`.`id_badge` = 178 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 179,`id_lang` = 1,`name` = 'Revenue',`description` = 'You get this badge when you reach 1000 PLN in sales.',`group_name` = 'Revenue' WHERE `ps_badge_lang`.`id_badge` = 179 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 180,`id_lang` = 1,`name` = 'Revenue',`description` = 'You get this badge when you reach 1000 PLN in sales.',`group_name` = 'Revenue' WHERE `ps_badge_lang`.`id_badge` = 180 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 181,`id_lang` = 1,`name` = 'Revenue',`description` = 'You get this badge when you reach 500 PLN in sales.',`group_name` = 'Revenue' WHERE `ps_badge_lang`.`id_badge` = 181 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 182,`id_lang` = 1,`name` = 'Revenue',`description` = 'You get this badge when you reach 1000 PLN in sales.',`group_name` = 'Revenue' WHERE `ps_badge_lang`.`id_badge` = 182 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 183,`id_lang` = 1,`name` = 'Revenue',`description` = 'You get this badge when you reach 1000 PLN in sales.',`group_name` = 'Revenue' WHERE `ps_badge_lang`.`id_badge` = 183 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 184,`id_lang` = 1,`name` = 'Days of Experience',`description` = 'You installed PrestaShop a month ago!',`group_name` = 'Days of Experience' WHERE `ps_badge_lang`.`id_badge` = 184 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 185,`id_lang` = 1,`name` = 'Days of Experience',`description` = 'You installed PrestaShop six months ago!',`group_name` = 'Days of Experience' WHERE `ps_badge_lang`.`id_badge` = 185 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 186,`id_lang` = 1,`name` = 'Days of Experience',`description` = 'You installed PrestaShop a year ago!',`group_name` = 'Days of Experience' WHERE `ps_badge_lang`.`id_badge` = 186 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 187,`id_lang` = 1,`name` = 'Days of Experience',`description` = 'You installed PrestaShop two years ago!',`group_name` = 'Days of Experience' WHERE `ps_badge_lang`.`id_badge` = 187 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 188,`id_lang` = 1,`name` = 'Visitors',`description` = 'You reached 10 visitors!',`group_name` = 'Visitors' WHERE `ps_badge_lang`.`id_badge` = 188 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 189,`id_lang` = 1,`name` = 'Visitors',`description` = 'You reached 100 visitors!',`group_name` = 'Visitors' WHERE `ps_badge_lang`.`id_badge` = 189 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 190,`id_lang` = 1,`name` = 'Visitors',`description` = 'You reached 1,000 visitors!',`group_name` = 'Visitors' WHERE `ps_badge_lang`.`id_badge` = 190 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 191,`id_lang` = 1,`name` = 'Visitors',`description` = 'You reached 10,000 visitors!',`group_name` = 'Visitors' WHERE `ps_badge_lang`.`id_badge` = 191 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 192,`id_lang` = 1,`name` = 'Visitors',`description` = 'You reached 100,000 visitors!',`group_name` = 'Visitors' WHERE `ps_badge_lang`.`id_badge` = 192 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 193,`id_lang` = 1,`name` = 'Visitors',`description` = 'You reached 1,000,000 visitors!',`group_name` = 'Visitors' WHERE `ps_badge_lang`.`id_badge` = 193 AND `ps_badge_lang`.`id_lang` = 1;
-UPDATE `ps_badge_lang` SET `id_badge` = 194,`id_lang` = 1,`name` = 'Customer Carts',`description` = 'Two carts have been created by visitors',`group_name` = 'Customer Carts' WHERE `ps_badge_lang`.`id_badge` = 194 AND `ps_badge_lang`.`id_lang` = 1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_carrier`
+-- Struktura tabeli dla tabeli `ps_carrier`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_carrier` (
@@ -1494,7 +1256,7 @@ CREATE TABLE IF NOT EXISTS `ps_carrier` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_carrier`
+-- Zrzut danych tabeli `ps_carrier`
 --
 
 UPDATE `ps_carrier` SET `id_carrier` = 1,`id_reference` = 1,`id_tax_rules_group` = 0,`name` = '0',`url` = '',`active` = 1,`deleted` = 0,`shipping_handling` = 0,`range_behavior` = 0,`is_module` = 0,`is_free` = 1,`shipping_external` = 0,`need_range` = 0,`external_module_name` = '',`shipping_method` = 0,`position` = 0,`max_width` = 0,`max_height` = 0,`max_depth` = 0,`max_weight` = '0.000000',`grade` = 0 WHERE `ps_carrier`.`id_carrier` = 1;
@@ -1503,7 +1265,7 @@ UPDATE `ps_carrier` SET `id_carrier` = 2,`id_reference` = 2,`id_tax_rules_group`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_carrier_group`
+-- Struktura tabeli dla tabeli `ps_carrier_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_carrier_group` (
@@ -1513,7 +1275,7 @@ CREATE TABLE IF NOT EXISTS `ps_carrier_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_carrier_group`
+-- Zrzut danych tabeli `ps_carrier_group`
 --
 
 UPDATE `ps_carrier_group` SET `id_carrier` = 1,`id_group` = 1 WHERE `ps_carrier_group`.`id_carrier` = 1 AND `ps_carrier_group`.`id_group` = 1;
@@ -1526,7 +1288,7 @@ UPDATE `ps_carrier_group` SET `id_carrier` = 2,`id_group` = 3 WHERE `ps_carrier_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_carrier_lang`
+-- Struktura tabeli dla tabeli `ps_carrier_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_carrier_lang` (
@@ -1538,7 +1300,7 @@ CREATE TABLE IF NOT EXISTS `ps_carrier_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_carrier_lang`
+-- Zrzut danych tabeli `ps_carrier_lang`
 --
 
 UPDATE `ps_carrier_lang` SET `id_carrier` = 1,`id_shop` = 1,`id_lang` = 1,`delay` = 'Pick up in-store' WHERE `ps_carrier_lang`.`id_carrier` = 1 AND `ps_carrier_lang`.`id_shop` = 1 AND `ps_carrier_lang`.`id_lang` = 1;
@@ -1549,7 +1311,7 @@ UPDATE `ps_carrier_lang` SET `id_carrier` = 2,`id_shop` = 1,`id_lang` = 2,`delay
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_carrier_shop`
+-- Struktura tabeli dla tabeli `ps_carrier_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_carrier_shop` (
@@ -1560,7 +1322,7 @@ CREATE TABLE IF NOT EXISTS `ps_carrier_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_carrier_shop`
+-- Zrzut danych tabeli `ps_carrier_shop`
 --
 
 UPDATE `ps_carrier_shop` SET `id_carrier` = 1,`id_shop` = 1 WHERE `ps_carrier_shop`.`id_carrier` = 1 AND `ps_carrier_shop`.`id_shop` = 1;
@@ -1569,7 +1331,7 @@ UPDATE `ps_carrier_shop` SET `id_carrier` = 2,`id_shop` = 1 WHERE `ps_carrier_sh
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_carrier_tax_rules_group_shop`
+-- Struktura tabeli dla tabeli `ps_carrier_tax_rules_group_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_carrier_tax_rules_group_shop` (
@@ -1580,7 +1342,7 @@ CREATE TABLE IF NOT EXISTS `ps_carrier_tax_rules_group_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_carrier_tax_rules_group_shop`
+-- Zrzut danych tabeli `ps_carrier_tax_rules_group_shop`
 --
 
 UPDATE `ps_carrier_tax_rules_group_shop` SET `id_carrier` = 1,`id_tax_rules_group` = 1,`id_shop` = 1 WHERE `ps_carrier_tax_rules_group_shop`.`id_carrier` = 1 AND `ps_carrier_tax_rules_group_shop`.`id_tax_rules_group` = 1 AND `ps_carrier_tax_rules_group_shop`.`id_shop` = 1;
@@ -1589,7 +1351,7 @@ UPDATE `ps_carrier_tax_rules_group_shop` SET `id_carrier` = 2,`id_tax_rules_grou
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_carrier_zone`
+-- Struktura tabeli dla tabeli `ps_carrier_zone`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_carrier_zone` (
@@ -1599,7 +1361,7 @@ CREATE TABLE IF NOT EXISTS `ps_carrier_zone` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_carrier_zone`
+-- Zrzut danych tabeli `ps_carrier_zone`
 --
 
 UPDATE `ps_carrier_zone` SET `id_carrier` = 1,`id_zone` = 1 WHERE `ps_carrier_zone`.`id_carrier` = 1 AND `ps_carrier_zone`.`id_zone` = 1;
@@ -1609,7 +1371,7 @@ UPDATE `ps_carrier_zone` SET `id_carrier` = 2,`id_zone` = 2 WHERE `ps_carrier_zo
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cart`
+-- Struktura tabeli dla tabeli `ps_cart`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart` (
@@ -1646,7 +1408,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_cart`
+-- Zrzut danych tabeli `ps_cart`
 --
 
 UPDATE `ps_cart` SET `id_cart` = 1,`id_shop_group` = 1,`id_shop` = 1,`id_carrier` = 2,`delivery_option` = 'a:1:{i:3;s:2:"2,";}',`id_lang` = 1,`id_address_delivery` = 4,`id_address_invoice` = 4,`id_currency` = 1,`id_customer` = 1,`id_guest` = 1,`secure_key` = 'b44a6d9efd7a0076a0fbce6b15eaf3b1',`recyclable` = 0,`gift` = 0,`gift_message` = '',`mobile_theme` = 0,`allow_seperated_package` = 0,`date_add` = '2016-10-27 01:36:51',`date_upd` = '2016-10-27 01:36:51' WHERE `ps_cart`.`id_cart` = 1;
@@ -1658,7 +1420,7 @@ UPDATE `ps_cart` SET `id_cart` = 5,`id_shop_group` = 1,`id_shop` = 1,`id_carrier
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cart_cart_rule`
+-- Struktura tabeli dla tabeli `ps_cart_cart_rule`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_cart_rule` (
@@ -1671,7 +1433,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_cart_rule` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cart_product`
+-- Struktura tabeli dla tabeli `ps_cart_product`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_product` (
@@ -1690,7 +1452,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_product` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cart_rule`
+-- Struktura tabeli dla tabeli `ps_cart_rule`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule` (
@@ -1736,7 +1498,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cart_rule_carrier`
+-- Struktura tabeli dla tabeli `ps_cart_rule_carrier`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_carrier` (
@@ -1748,7 +1510,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_carrier` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cart_rule_combination`
+-- Struktura tabeli dla tabeli `ps_cart_rule_combination`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_combination` (
@@ -1762,7 +1524,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_combination` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cart_rule_country`
+-- Struktura tabeli dla tabeli `ps_cart_rule_country`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_country` (
@@ -1774,7 +1536,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_country` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cart_rule_group`
+-- Struktura tabeli dla tabeli `ps_cart_rule_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_group` (
@@ -1786,7 +1548,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_group` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cart_rule_lang`
+-- Struktura tabeli dla tabeli `ps_cart_rule_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_lang` (
@@ -1799,7 +1561,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_lang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cart_rule_product_rule`
+-- Struktura tabeli dla tabeli `ps_cart_rule_product_rule`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_product_rule` (
@@ -1812,7 +1574,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_product_rule` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cart_rule_product_rule_group`
+-- Struktura tabeli dla tabeli `ps_cart_rule_product_rule_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_product_rule_group` (
@@ -1825,7 +1587,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_product_rule_group` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cart_rule_product_rule_value`
+-- Struktura tabeli dla tabeli `ps_cart_rule_product_rule_value`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_product_rule_value` (
@@ -1837,7 +1599,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_product_rule_value` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cart_rule_shop`
+-- Struktura tabeli dla tabeli `ps_cart_rule_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cart_rule_shop` (
@@ -1849,7 +1611,7 @@ CREATE TABLE IF NOT EXISTS `ps_cart_rule_shop` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_category`
+-- Struktura tabeli dla tabeli `ps_category`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_category` (
@@ -1871,10 +1633,10 @@ CREATE TABLE IF NOT EXISTS `ps_category` (
   KEY `nright` (`nright`),
   KEY `activenleft` (`active`,`nleft`),
   KEY `activenright` (`active`,`nright`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_category`
+-- Zrzut danych tabeli `ps_category`
 --
 
 UPDATE `ps_category` SET `id_category` = 1,`id_parent` = 0,`id_shop_default` = 1,`level_depth` = 0,`nleft` = 1,`nright` = 46,`active` = 1,`date_add` = '2016-10-27 01:35:59',`date_upd` = '2016-10-27 01:35:59',`position` = 0,`is_root_category` = 0 WHERE `ps_category`.`id_category` = 1;
@@ -1887,24 +1649,12 @@ UPDATE `ps_category` SET `id_category` = 17,`id_parent` = 14,`id_shop_default` =
 UPDATE `ps_category` SET `id_category` = 18,`id_parent` = 14,`id_shop_default` = 1,`level_depth` = 3,`nleft` = 12,`nright` = 13,`active` = 1,`date_add` = '2016-10-27 13:04:50',`date_upd` = '2016-10-27 15:36:31',`position` = 2,`is_root_category` = 0 WHERE `ps_category`.`id_category` = 18;
 UPDATE `ps_category` SET `id_category` = 19,`id_parent` = 14,`id_shop_default` = 1,`level_depth` = 3,`nleft` = 14,`nright` = 15,`active` = 1,`date_add` = '2016-10-27 13:05:30',`date_upd` = '2016-10-27 15:37:04',`position` = 3,`is_root_category` = 0 WHERE `ps_category`.`id_category` = 19;
 UPDATE `ps_category` SET `id_category` = 20,`id_parent` = 16,`id_shop_default` = 1,`level_depth` = 4,`nleft` = 5,`nright` = 6,`active` = 1,`date_add` = '2016-10-27 13:16:48',`date_upd` = '2016-10-27 15:26:29',`position` = 0,`is_root_category` = 0 WHERE `ps_category`.`id_category` = 20;
-UPDATE `ps_category` SET `id_category` = 21,`id_parent` = 16,`id_shop_default` = 1,`level_depth` = 4,`nleft` = 7,`nright` = 8,`active` = 1,`date_add` = '2016-10-27 15:30:13',`date_upd` = '2016-10-27 15:30:13',`position` = 0,`is_root_category` = 0 WHERE `ps_category`.`id_category` = 21;
 UPDATE `ps_category` SET `id_category` = 22,`id_parent` = 15,`id_shop_default` = 1,`level_depth` = 3,`nleft` = 20,`nright` = 25,`active` = 1,`date_add` = '2016-11-03 16:40:07',`date_upd` = '2016-11-03 16:40:07',`position` = 0,`is_root_category` = 0 WHERE `ps_category`.`id_category` = 22;
-UPDATE `ps_category` SET `id_category` = 23,`id_parent` = 22,`id_shop_default` = 1,`level_depth` = 4,`nleft` = 21,`nright` = 22,`active` = 1,`date_add` = '2016-11-03 16:40:57',`date_upd` = '2016-11-03 16:40:57',`position` = 0,`is_root_category` = 0 WHERE `ps_category`.`id_category` = 23;
-UPDATE `ps_category` SET `id_category` = 24,`id_parent` = 22,`id_shop_default` = 1,`level_depth` = 4,`nleft` = 23,`nright` = 24,`active` = 1,`date_add` = '2016-11-03 16:41:33',`date_upd` = '2016-11-03 16:41:33',`position` = 0,`is_root_category` = 0 WHERE `ps_category`.`id_category` = 24;
-UPDATE `ps_category` SET `id_category` = 25,`id_parent` = 15,`id_shop_default` = 1,`level_depth` = 3,`nleft` = 26,`nright` = 31,`active` = 1,`date_add` = '2016-11-03 16:46:25',`date_upd` = '2016-11-03 16:46:25',`position` = 0,`is_root_category` = 0 WHERE `ps_category`.`id_category` = 25;
-UPDATE `ps_category` SET `id_category` = 26,`id_parent` = 15,`id_shop_default` = 1,`level_depth` = 3,`nleft` = 32,`nright` = 37,`active` = 1,`date_add` = '2016-11-03 16:47:07',`date_upd` = '2016-11-03 16:47:07',`position` = 0,`is_root_category` = 0 WHERE `ps_category`.`id_category` = 26;
-UPDATE `ps_category` SET `id_category` = 27,`id_parent` = 15,`id_shop_default` = 1,`level_depth` = 3,`nleft` = 38,`nright` = 43,`active` = 1,`date_add` = '2016-11-03 16:47:48',`date_upd` = '2016-11-03 16:47:48',`position` = 0,`is_root_category` = 0 WHERE `ps_category`.`id_category` = 27;
-UPDATE `ps_category` SET `id_category` = 28,`id_parent` = 25,`id_shop_default` = 1,`level_depth` = 4,`nleft` = 27,`nright` = 28,`active` = 1,`date_add` = '2016-11-03 16:55:22',`date_upd` = '2016-11-03 16:55:22',`position` = 0,`is_root_category` = 0 WHERE `ps_category`.`id_category` = 28;
-UPDATE `ps_category` SET `id_category` = 29,`id_parent` = 25,`id_shop_default` = 1,`level_depth` = 4,`nleft` = 29,`nright` = 30,`active` = 1,`date_add` = '2016-11-03 16:56:15',`date_upd` = '2016-11-03 16:56:15',`position` = 0,`is_root_category` = 0 WHERE `ps_category`.`id_category` = 29;
-UPDATE `ps_category` SET `id_category` = 30,`id_parent` = 26,`id_shop_default` = 1,`level_depth` = 4,`nleft` = 33,`nright` = 34,`active` = 1,`date_add` = '2016-11-03 16:58:23',`date_upd` = '2016-11-03 16:58:23',`position` = 0,`is_root_category` = 0 WHERE `ps_category`.`id_category` = 30;
-UPDATE `ps_category` SET `id_category` = 31,`id_parent` = 26,`id_shop_default` = 1,`level_depth` = 4,`nleft` = 35,`nright` = 36,`active` = 1,`date_add` = '2016-11-03 16:58:59',`date_upd` = '2016-11-03 16:58:59',`position` = 0,`is_root_category` = 0 WHERE `ps_category`.`id_category` = 31;
-UPDATE `ps_category` SET `id_category` = 32,`id_parent` = 27,`id_shop_default` = 1,`level_depth` = 4,`nleft` = 39,`nright` = 40,`active` = 1,`date_add` = '2016-11-03 17:00:36',`date_upd` = '2016-11-03 17:00:36',`position` = 0,`is_root_category` = 0 WHERE `ps_category`.`id_category` = 32;
-UPDATE `ps_category` SET `id_category` = 33,`id_parent` = 27,`id_shop_default` = 1,`level_depth` = 4,`nleft` = 41,`nright` = 42,`active` = 1,`date_add` = '2016-11-03 17:01:05',`date_upd` = '2016-11-03 17:01:05',`position` = 0,`is_root_category` = 0 WHERE `ps_category`.`id_category` = 33;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_category_group`
+-- Struktura tabeli dla tabeli `ps_category_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_category_group` (
@@ -1916,7 +1666,7 @@ CREATE TABLE IF NOT EXISTS `ps_category_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_category_group`
+-- Zrzut danych tabeli `ps_category_group`
 --
 
 UPDATE `ps_category_group` SET `id_category` = 2,`id_group` = 0 WHERE `ps_category_group`.`id_category` = 2 AND `ps_category_group`.`id_group` = 0;
@@ -1947,50 +1697,14 @@ UPDATE `ps_category_group` SET `id_category` = 19,`id_group` = 3 WHERE `ps_categ
 UPDATE `ps_category_group` SET `id_category` = 20,`id_group` = 1 WHERE `ps_category_group`.`id_category` = 20 AND `ps_category_group`.`id_group` = 1;
 UPDATE `ps_category_group` SET `id_category` = 20,`id_group` = 2 WHERE `ps_category_group`.`id_category` = 20 AND `ps_category_group`.`id_group` = 2;
 UPDATE `ps_category_group` SET `id_category` = 20,`id_group` = 3 WHERE `ps_category_group`.`id_category` = 20 AND `ps_category_group`.`id_group` = 3;
-UPDATE `ps_category_group` SET `id_category` = 21,`id_group` = 1 WHERE `ps_category_group`.`id_category` = 21 AND `ps_category_group`.`id_group` = 1;
-UPDATE `ps_category_group` SET `id_category` = 21,`id_group` = 2 WHERE `ps_category_group`.`id_category` = 21 AND `ps_category_group`.`id_group` = 2;
-UPDATE `ps_category_group` SET `id_category` = 21,`id_group` = 3 WHERE `ps_category_group`.`id_category` = 21 AND `ps_category_group`.`id_group` = 3;
 UPDATE `ps_category_group` SET `id_category` = 22,`id_group` = 1 WHERE `ps_category_group`.`id_category` = 22 AND `ps_category_group`.`id_group` = 1;
 UPDATE `ps_category_group` SET `id_category` = 22,`id_group` = 2 WHERE `ps_category_group`.`id_category` = 22 AND `ps_category_group`.`id_group` = 2;
 UPDATE `ps_category_group` SET `id_category` = 22,`id_group` = 3 WHERE `ps_category_group`.`id_category` = 22 AND `ps_category_group`.`id_group` = 3;
-UPDATE `ps_category_group` SET `id_category` = 23,`id_group` = 1 WHERE `ps_category_group`.`id_category` = 23 AND `ps_category_group`.`id_group` = 1;
-UPDATE `ps_category_group` SET `id_category` = 23,`id_group` = 2 WHERE `ps_category_group`.`id_category` = 23 AND `ps_category_group`.`id_group` = 2;
-UPDATE `ps_category_group` SET `id_category` = 23,`id_group` = 3 WHERE `ps_category_group`.`id_category` = 23 AND `ps_category_group`.`id_group` = 3;
-UPDATE `ps_category_group` SET `id_category` = 24,`id_group` = 1 WHERE `ps_category_group`.`id_category` = 24 AND `ps_category_group`.`id_group` = 1;
-UPDATE `ps_category_group` SET `id_category` = 24,`id_group` = 2 WHERE `ps_category_group`.`id_category` = 24 AND `ps_category_group`.`id_group` = 2;
-UPDATE `ps_category_group` SET `id_category` = 24,`id_group` = 3 WHERE `ps_category_group`.`id_category` = 24 AND `ps_category_group`.`id_group` = 3;
-UPDATE `ps_category_group` SET `id_category` = 25,`id_group` = 1 WHERE `ps_category_group`.`id_category` = 25 AND `ps_category_group`.`id_group` = 1;
-UPDATE `ps_category_group` SET `id_category` = 25,`id_group` = 2 WHERE `ps_category_group`.`id_category` = 25 AND `ps_category_group`.`id_group` = 2;
-UPDATE `ps_category_group` SET `id_category` = 25,`id_group` = 3 WHERE `ps_category_group`.`id_category` = 25 AND `ps_category_group`.`id_group` = 3;
-UPDATE `ps_category_group` SET `id_category` = 26,`id_group` = 1 WHERE `ps_category_group`.`id_category` = 26 AND `ps_category_group`.`id_group` = 1;
-UPDATE `ps_category_group` SET `id_category` = 26,`id_group` = 2 WHERE `ps_category_group`.`id_category` = 26 AND `ps_category_group`.`id_group` = 2;
-UPDATE `ps_category_group` SET `id_category` = 26,`id_group` = 3 WHERE `ps_category_group`.`id_category` = 26 AND `ps_category_group`.`id_group` = 3;
-UPDATE `ps_category_group` SET `id_category` = 27,`id_group` = 1 WHERE `ps_category_group`.`id_category` = 27 AND `ps_category_group`.`id_group` = 1;
-UPDATE `ps_category_group` SET `id_category` = 27,`id_group` = 2 WHERE `ps_category_group`.`id_category` = 27 AND `ps_category_group`.`id_group` = 2;
-UPDATE `ps_category_group` SET `id_category` = 27,`id_group` = 3 WHERE `ps_category_group`.`id_category` = 27 AND `ps_category_group`.`id_group` = 3;
-UPDATE `ps_category_group` SET `id_category` = 28,`id_group` = 1 WHERE `ps_category_group`.`id_category` = 28 AND `ps_category_group`.`id_group` = 1;
-UPDATE `ps_category_group` SET `id_category` = 28,`id_group` = 2 WHERE `ps_category_group`.`id_category` = 28 AND `ps_category_group`.`id_group` = 2;
-UPDATE `ps_category_group` SET `id_category` = 28,`id_group` = 3 WHERE `ps_category_group`.`id_category` = 28 AND `ps_category_group`.`id_group` = 3;
-UPDATE `ps_category_group` SET `id_category` = 29,`id_group` = 1 WHERE `ps_category_group`.`id_category` = 29 AND `ps_category_group`.`id_group` = 1;
-UPDATE `ps_category_group` SET `id_category` = 29,`id_group` = 2 WHERE `ps_category_group`.`id_category` = 29 AND `ps_category_group`.`id_group` = 2;
-UPDATE `ps_category_group` SET `id_category` = 29,`id_group` = 3 WHERE `ps_category_group`.`id_category` = 29 AND `ps_category_group`.`id_group` = 3;
-UPDATE `ps_category_group` SET `id_category` = 30,`id_group` = 1 WHERE `ps_category_group`.`id_category` = 30 AND `ps_category_group`.`id_group` = 1;
-UPDATE `ps_category_group` SET `id_category` = 30,`id_group` = 2 WHERE `ps_category_group`.`id_category` = 30 AND `ps_category_group`.`id_group` = 2;
-UPDATE `ps_category_group` SET `id_category` = 30,`id_group` = 3 WHERE `ps_category_group`.`id_category` = 30 AND `ps_category_group`.`id_group` = 3;
-UPDATE `ps_category_group` SET `id_category` = 31,`id_group` = 1 WHERE `ps_category_group`.`id_category` = 31 AND `ps_category_group`.`id_group` = 1;
-UPDATE `ps_category_group` SET `id_category` = 31,`id_group` = 2 WHERE `ps_category_group`.`id_category` = 31 AND `ps_category_group`.`id_group` = 2;
-UPDATE `ps_category_group` SET `id_category` = 31,`id_group` = 3 WHERE `ps_category_group`.`id_category` = 31 AND `ps_category_group`.`id_group` = 3;
-UPDATE `ps_category_group` SET `id_category` = 32,`id_group` = 1 WHERE `ps_category_group`.`id_category` = 32 AND `ps_category_group`.`id_group` = 1;
-UPDATE `ps_category_group` SET `id_category` = 32,`id_group` = 2 WHERE `ps_category_group`.`id_category` = 32 AND `ps_category_group`.`id_group` = 2;
-UPDATE `ps_category_group` SET `id_category` = 32,`id_group` = 3 WHERE `ps_category_group`.`id_category` = 32 AND `ps_category_group`.`id_group` = 3;
-UPDATE `ps_category_group` SET `id_category` = 33,`id_group` = 1 WHERE `ps_category_group`.`id_category` = 33 AND `ps_category_group`.`id_group` = 1;
-UPDATE `ps_category_group` SET `id_category` = 33,`id_group` = 2 WHERE `ps_category_group`.`id_category` = 33 AND `ps_category_group`.`id_group` = 2;
-UPDATE `ps_category_group` SET `id_category` = 33,`id_group` = 3 WHERE `ps_category_group`.`id_category` = 33 AND `ps_category_group`.`id_group` = 3;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_category_lang`
+-- Struktura tabeli dla tabeli `ps_category_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_category_lang` (
@@ -2008,7 +1722,7 @@ CREATE TABLE IF NOT EXISTS `ps_category_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_category_lang`
+-- Zrzut danych tabeli `ps_category_lang`
 --
 
 UPDATE `ps_category_lang` SET `id_category` = 1,`id_shop` = 1,`id_lang` = 1,`name` = 'Root',`description` = '',`link_rewrite` = 'root',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 1 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 1;
@@ -2031,37 +1745,13 @@ UPDATE `ps_category_lang` SET `id_category` = 19,`id_shop` = 1,`id_lang` = 1,`na
 UPDATE `ps_category_lang` SET `id_category` = 19,`id_shop` = 1,`id_lang` = 2,`name` = 'BODY',`description` = '',`link_rewrite` = 'body',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 19 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 2;
 UPDATE `ps_category_lang` SET `id_category` = 20,`id_shop` = 1,`id_lang` = 1,`name` = 'Spark plug',`description` = '<p>Spark plugs</p>',`link_rewrite` = 'spark-plug',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 20 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 1;
 UPDATE `ps_category_lang` SET `id_category` = 20,`id_shop` = 1,`id_lang` = 2,`name` = 'Spark plug',`description` = '',`link_rewrite` = 'spark-plug',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 20 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 2;
-UPDATE `ps_category_lang` SET `id_category` = 21,`id_shop` = 1,`id_lang` = 1,`name` = 'Cooler',`description` = '',`link_rewrite` = 'cooler',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 21 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 1;
-UPDATE `ps_category_lang` SET `id_category` = 21,`id_shop` = 1,`id_lang` = 2,`name` = 'Cooler',`description` = '',`link_rewrite` = 'cooler',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 21 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 2;
 UPDATE `ps_category_lang` SET `id_category` = 22,`id_shop` = 1,`id_lang` = 1,`name` = 'ENGINE',`description` = '<p>Engine parts</p>',`link_rewrite` = 'engine',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 22 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 1;
 UPDATE `ps_category_lang` SET `id_category` = 22,`id_shop` = 1,`id_lang` = 2,`name` = 'ENGINE',`description` = '',`link_rewrite` = 'engine',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 22 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 2;
-UPDATE `ps_category_lang` SET `id_category` = 23,`id_shop` = 1,`id_lang` = 1,`name` = 'Spark plug',`description` = '<p>Spark plugs</p>',`link_rewrite` = 'spark-plug',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 23 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 1;
-UPDATE `ps_category_lang` SET `id_category` = 23,`id_shop` = 1,`id_lang` = 2,`name` = 'Spark plug',`description` = '',`link_rewrite` = 'spark-plug',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 23 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 2;
-UPDATE `ps_category_lang` SET `id_category` = 24,`id_shop` = 1,`id_lang` = 1,`name` = 'Radiator',`description` = '<p>Radiators</p>',`link_rewrite` = 'radiator',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 24 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 1;
-UPDATE `ps_category_lang` SET `id_category` = 24,`id_shop` = 1,`id_lang` = 2,`name` = 'Radiator',`description` = '',`link_rewrite` = 'radiator',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 24 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 2;
-UPDATE `ps_category_lang` SET `id_category` = 25,`id_shop` = 1,`id_lang` = 1,`name` = 'BREAKS',`description` = '<p>Breaks parts</p>',`link_rewrite` = 'breaks',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 25 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 1;
-UPDATE `ps_category_lang` SET `id_category` = 25,`id_shop` = 1,`id_lang` = 2,`name` = 'BREAKS',`description` = '',`link_rewrite` = 'breaks',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 25 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 2;
-UPDATE `ps_category_lang` SET `id_category` = 26,`id_shop` = 1,`id_lang` = 1,`name` = 'SUSPENSION',`description` = '<p>Suspiension parts.</p>',`link_rewrite` = 'suspension',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 26 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 1;
-UPDATE `ps_category_lang` SET `id_category` = 26,`id_shop` = 1,`id_lang` = 2,`name` = 'SUSPENSION',`description` = '',`link_rewrite` = 'suspension',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 26 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 2;
-UPDATE `ps_category_lang` SET `id_category` = 27,`id_shop` = 1,`id_lang` = 1,`name` = 'BODY',`description` = '<p>Body parts</p>',`link_rewrite` = 'body',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 27 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 1;
-UPDATE `ps_category_lang` SET `id_category` = 27,`id_shop` = 1,`id_lang` = 2,`name` = 'BODY',`description` = '',`link_rewrite` = 'body',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 27 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 2;
-UPDATE `ps_category_lang` SET `id_category` = 28,`id_shop` = 1,`id_lang` = 1,`name` = 'Brake Disc',`description` = '<p>Brake discs</p>',`link_rewrite` = 'brake-disc',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 28 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 1;
-UPDATE `ps_category_lang` SET `id_category` = 28,`id_shop` = 1,`id_lang` = 2,`name` = 'Brake Disc',`description` = '',`link_rewrite` = 'brake-disc',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 28 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 2;
-UPDATE `ps_category_lang` SET `id_category` = 29,`id_shop` = 1,`id_lang` = 1,`name` = 'Brake Pad Set',`description` = '<p>Brake pad sets</p>',`link_rewrite` = 'brake-pad-set',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 29 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 1;
-UPDATE `ps_category_lang` SET `id_category` = 29,`id_shop` = 1,`id_lang` = 2,`name` = 'Brake Pad Set',`description` = '',`link_rewrite` = 'brake-pad-set',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 29 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 2;
-UPDATE `ps_category_lang` SET `id_category` = 30,`id_shop` = 1,`id_lang` = 1,`name` = 'Coil Springs',`description` = '<p>Coil springs</p>',`link_rewrite` = 'coil-springs',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 30 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 1;
-UPDATE `ps_category_lang` SET `id_category` = 30,`id_shop` = 1,`id_lang` = 2,`name` = 'Coil Springs',`description` = '',`link_rewrite` = 'coil-springs',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 30 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 2;
-UPDATE `ps_category_lang` SET `id_category` = 31,`id_shop` = 1,`id_lang` = 1,`name` = 'Shock Absorber',`description` = '<p>Shock absorbers</p>',`link_rewrite` = 'shock-absorber',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 31 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 1;
-UPDATE `ps_category_lang` SET `id_category` = 31,`id_shop` = 1,`id_lang` = 2,`name` = 'Shock Absorber',`description` = '',`link_rewrite` = 'shock-absorber',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 31 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 2;
-UPDATE `ps_category_lang` SET `id_category` = 32,`id_shop` = 1,`id_lang` = 1,`name` = 'Windows',`description` = '<p>Windows</p>',`link_rewrite` = 'windows',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 32 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 1;
-UPDATE `ps_category_lang` SET `id_category` = 32,`id_shop` = 1,`id_lang` = 2,`name` = 'Windows',`description` = '',`link_rewrite` = 'windows',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 32 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 2;
-UPDATE `ps_category_lang` SET `id_category` = 33,`id_shop` = 1,`id_lang` = 1,`name` = 'Bumpers',`description` = '<p>Bumpers</p>',`link_rewrite` = 'bumpers',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 33 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 1;
-UPDATE `ps_category_lang` SET `id_category` = 33,`id_shop` = 1,`id_lang` = 2,`name` = 'Bumpers',`description` = '',`link_rewrite` = 'bumpers',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_category_lang`.`id_category` = 33 AND `ps_category_lang`.`id_shop` = 1 AND `ps_category_lang`.`id_lang` = 2;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_category_product`
+-- Struktura tabeli dla tabeli `ps_category_product`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_category_product` (
@@ -2074,16 +1764,17 @@ CREATE TABLE IF NOT EXISTS `ps_category_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_category_product`
+-- Zrzut danych tabeli `ps_category_product`
 --
 
 UPDATE `ps_category_product` SET `id_category` = 2,`id_product` = 4,`position` = 0 WHERE `ps_category_product`.`id_category` = 2 AND `ps_category_product`.`id_product` = 4;
-UPDATE `ps_category_product` SET `id_category` = 21,`id_product` = 9,`position` = 0 WHERE `ps_category_product`.`id_category` = 21 AND `ps_category_product`.`id_product` = 9;
+UPDATE `ps_category_product` SET `id_category` = 22,`id_product` = 10,`position` = 0 WHERE `ps_category_product`.`id_category` = 22 AND `ps_category_product`.`id_product` = 10;
+UPDATE `ps_category_product` SET `id_category` = 22,`id_product` = 11,`position` = 1 WHERE `ps_category_product`.`id_category` = 22 AND `ps_category_product`.`id_product` = 11;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_category_shop`
+-- Struktura tabeli dla tabeli `ps_category_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_category_shop` (
@@ -2094,7 +1785,7 @@ CREATE TABLE IF NOT EXISTS `ps_category_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_category_shop`
+-- Zrzut danych tabeli `ps_category_shop`
 --
 
 UPDATE `ps_category_shop` SET `id_category` = 1,`id_shop` = 1,`position` = 0 WHERE `ps_category_shop`.`id_category` = 1 AND `ps_category_shop`.`id_shop` = 1;
@@ -2107,24 +1798,12 @@ UPDATE `ps_category_shop` SET `id_category` = 17,`id_shop` = 1,`position` = 1 WH
 UPDATE `ps_category_shop` SET `id_category` = 18,`id_shop` = 1,`position` = 2 WHERE `ps_category_shop`.`id_category` = 18 AND `ps_category_shop`.`id_shop` = 1;
 UPDATE `ps_category_shop` SET `id_category` = 19,`id_shop` = 1,`position` = 3 WHERE `ps_category_shop`.`id_category` = 19 AND `ps_category_shop`.`id_shop` = 1;
 UPDATE `ps_category_shop` SET `id_category` = 20,`id_shop` = 1,`position` = 0 WHERE `ps_category_shop`.`id_category` = 20 AND `ps_category_shop`.`id_shop` = 1;
-UPDATE `ps_category_shop` SET `id_category` = 21,`id_shop` = 1,`position` = 1 WHERE `ps_category_shop`.`id_category` = 21 AND `ps_category_shop`.`id_shop` = 1;
 UPDATE `ps_category_shop` SET `id_category` = 22,`id_shop` = 1,`position` = 0 WHERE `ps_category_shop`.`id_category` = 22 AND `ps_category_shop`.`id_shop` = 1;
-UPDATE `ps_category_shop` SET `id_category` = 23,`id_shop` = 1,`position` = 0 WHERE `ps_category_shop`.`id_category` = 23 AND `ps_category_shop`.`id_shop` = 1;
-UPDATE `ps_category_shop` SET `id_category` = 24,`id_shop` = 1,`position` = 1 WHERE `ps_category_shop`.`id_category` = 24 AND `ps_category_shop`.`id_shop` = 1;
-UPDATE `ps_category_shop` SET `id_category` = 25,`id_shop` = 1,`position` = 1 WHERE `ps_category_shop`.`id_category` = 25 AND `ps_category_shop`.`id_shop` = 1;
-UPDATE `ps_category_shop` SET `id_category` = 26,`id_shop` = 1,`position` = 2 WHERE `ps_category_shop`.`id_category` = 26 AND `ps_category_shop`.`id_shop` = 1;
-UPDATE `ps_category_shop` SET `id_category` = 27,`id_shop` = 1,`position` = 3 WHERE `ps_category_shop`.`id_category` = 27 AND `ps_category_shop`.`id_shop` = 1;
-UPDATE `ps_category_shop` SET `id_category` = 28,`id_shop` = 1,`position` = 0 WHERE `ps_category_shop`.`id_category` = 28 AND `ps_category_shop`.`id_shop` = 1;
-UPDATE `ps_category_shop` SET `id_category` = 29,`id_shop` = 1,`position` = 1 WHERE `ps_category_shop`.`id_category` = 29 AND `ps_category_shop`.`id_shop` = 1;
-UPDATE `ps_category_shop` SET `id_category` = 30,`id_shop` = 1,`position` = 0 WHERE `ps_category_shop`.`id_category` = 30 AND `ps_category_shop`.`id_shop` = 1;
-UPDATE `ps_category_shop` SET `id_category` = 31,`id_shop` = 1,`position` = 1 WHERE `ps_category_shop`.`id_category` = 31 AND `ps_category_shop`.`id_shop` = 1;
-UPDATE `ps_category_shop` SET `id_category` = 32,`id_shop` = 1,`position` = 0 WHERE `ps_category_shop`.`id_category` = 32 AND `ps_category_shop`.`id_shop` = 1;
-UPDATE `ps_category_shop` SET `id_category` = 33,`id_shop` = 1,`position` = 1 WHERE `ps_category_shop`.`id_category` = 33 AND `ps_category_shop`.`id_shop` = 1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cms`
+-- Struktura tabeli dla tabeli `ps_cms`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms` (
@@ -2137,7 +1816,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_cms`
+-- Zrzut danych tabeli `ps_cms`
 --
 
 UPDATE `ps_cms` SET `id_cms` = 1,`id_cms_category` = 1,`position` = 0,`active` = 1,`indexation` = 0 WHERE `ps_cms`.`id_cms` = 1;
@@ -2149,7 +1828,7 @@ UPDATE `ps_cms` SET `id_cms` = 5,`id_cms_category` = 1,`position` = 4,`active` =
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cms_block`
+-- Struktura tabeli dla tabeli `ps_cms_block`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_block` (
@@ -2162,7 +1841,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_block` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_cms_block`
+-- Zrzut danych tabeli `ps_cms_block`
 --
 
 UPDATE `ps_cms_block` SET `id_cms_block` = 1,`id_cms_category` = 1,`location` = 0,`position` = 0,`display_store` = 1 WHERE `ps_cms_block`.`id_cms_block` = 1;
@@ -2170,7 +1849,7 @@ UPDATE `ps_cms_block` SET `id_cms_block` = 1,`id_cms_category` = 1,`location` = 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cms_block_lang`
+-- Struktura tabeli dla tabeli `ps_cms_block_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_block_lang` (
@@ -2181,7 +1860,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_block_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_cms_block_lang`
+-- Zrzut danych tabeli `ps_cms_block_lang`
 --
 
 UPDATE `ps_cms_block_lang` SET `id_cms_block` = 1,`id_lang` = 1,`name` = 'Information' WHERE `ps_cms_block_lang`.`id_cms_block` = 1 AND `ps_cms_block_lang`.`id_lang` = 1;
@@ -2190,7 +1869,7 @@ UPDATE `ps_cms_block_lang` SET `id_cms_block` = 1,`id_lang` = 2,`name` = 'Inform
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cms_block_page`
+-- Struktura tabeli dla tabeli `ps_cms_block_page`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_block_page` (
@@ -2202,7 +1881,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_block_page` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_cms_block_page`
+-- Zrzut danych tabeli `ps_cms_block_page`
 --
 
 UPDATE `ps_cms_block_page` SET `id_cms_block_page` = 1,`id_cms_block` = 1,`id_cms` = 1,`is_category` = 0 WHERE `ps_cms_block_page`.`id_cms_block_page` = 1;
@@ -2214,7 +1893,7 @@ UPDATE `ps_cms_block_page` SET `id_cms_block_page` = 5,`id_cms_block` = 1,`id_cm
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cms_block_shop`
+-- Struktura tabeli dla tabeli `ps_cms_block_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_block_shop` (
@@ -2224,7 +1903,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_block_shop` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_cms_block_shop`
+-- Zrzut danych tabeli `ps_cms_block_shop`
 --
 
 UPDATE `ps_cms_block_shop` SET `id_cms_block` = 1,`id_shop` = 1 WHERE `ps_cms_block_shop`.`id_cms_block` = 1 AND `ps_cms_block_shop`.`id_shop` = 1;
@@ -2232,7 +1911,7 @@ UPDATE `ps_cms_block_shop` SET `id_cms_block` = 1,`id_shop` = 1 WHERE `ps_cms_bl
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cms_category`
+-- Struktura tabeli dla tabeli `ps_cms_category`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_category` (
@@ -2248,7 +1927,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_category` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_cms_category`
+-- Zrzut danych tabeli `ps_cms_category`
 --
 
 UPDATE `ps_cms_category` SET `id_cms_category` = 1,`id_parent` = 0,`level_depth` = 1,`active` = 1,`date_add` = '2016-10-27 01:36:00',`date_upd` = '2016-10-27 01:36:00',`position` = 0 WHERE `ps_cms_category`.`id_cms_category` = 1;
@@ -2256,7 +1935,7 @@ UPDATE `ps_cms_category` SET `id_cms_category` = 1,`id_parent` = 0,`level_depth`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cms_category_lang`
+-- Struktura tabeli dla tabeli `ps_cms_category_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_category_lang` (
@@ -2274,7 +1953,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_category_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_cms_category_lang`
+-- Zrzut danych tabeli `ps_cms_category_lang`
 --
 
 UPDATE `ps_cms_category_lang` SET `id_cms_category` = 1,`id_lang` = 1,`id_shop` = 1,`name` = 'Home',`description` = '',`link_rewrite` = 'home',`meta_title` = '',`meta_keywords` = '',`meta_description` = '' WHERE `ps_cms_category_lang`.`id_cms_category` = 1 AND `ps_cms_category_lang`.`id_lang` = 1 AND `ps_cms_category_lang`.`id_shop` = 1;
@@ -2283,7 +1962,7 @@ UPDATE `ps_cms_category_lang` SET `id_cms_category` = 1,`id_lang` = 2,`id_shop` 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cms_category_shop`
+-- Struktura tabeli dla tabeli `ps_cms_category_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_category_shop` (
@@ -2294,7 +1973,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_category_shop` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_cms_category_shop`
+-- Zrzut danych tabeli `ps_cms_category_shop`
 --
 
 UPDATE `ps_cms_category_shop` SET `id_cms_category` = 1,`id_shop` = 1 WHERE `ps_cms_category_shop`.`id_cms_category` = 1 AND `ps_cms_category_shop`.`id_shop` = 1;
@@ -2302,7 +1981,7 @@ UPDATE `ps_cms_category_shop` SET `id_cms_category` = 1,`id_shop` = 1 WHERE `ps_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cms_lang`
+-- Struktura tabeli dla tabeli `ps_cms_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_lang` (
@@ -2318,7 +1997,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_cms_lang`
+-- Zrzut danych tabeli `ps_cms_lang`
 --
 
 UPDATE `ps_cms_lang` SET `id_cms` = 1,`id_lang` = 1,`id_shop` = 1,`meta_title` = 'Delivery',`meta_description` = 'Our terms and conditions of delivery',`meta_keywords` = 'conditions, delivery, delay, shipment, pack',`content` = '<h2>Shipments and returns</h2><h3>Your pack shipment</h3><p>Packages are generally dispatched within 2 days after receipt of payment and are shipped via UPS with tracking and drop-off without signature. If you prefer delivery by UPS Extra with required signature, an additional cost will be applied, so please contact us before choosing this method. Whichever shipment choice you make, we will provide you with a link to track your package online.</p><p>Shipping fees include handling and packing fees as well as postage costs. Handling fees are fixed, whereas transport fees vary according to total weight of the shipment. We advise you to group your items in one order. We cannot group two distinct orders placed separately, and shipping fees will apply to each of them. Your package will be dispatched at your own risk, but special care is taken to protect fragile objects.<br /><br />Boxes are amply sized and your items are well-protected.</p>',`link_rewrite` = 'delivery' WHERE `ps_cms_lang`.`id_cms` = 1 AND `ps_cms_lang`.`id_lang` = 1 AND `ps_cms_lang`.`id_shop` = 1;
@@ -2335,7 +2014,7 @@ UPDATE `ps_cms_lang` SET `id_cms` = 5,`id_lang` = 2,`id_shop` = 1,`meta_title` =
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cms_role`
+-- Struktura tabeli dla tabeli `ps_cms_role`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_role` (
@@ -2349,7 +2028,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_role` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cms_role_lang`
+-- Struktura tabeli dla tabeli `ps_cms_role_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_role_lang` (
@@ -2363,7 +2042,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_role_lang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cms_shop`
+-- Struktura tabeli dla tabeli `ps_cms_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cms_shop` (
@@ -2374,7 +2053,7 @@ CREATE TABLE IF NOT EXISTS `ps_cms_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_cms_shop`
+-- Zrzut danych tabeli `ps_cms_shop`
 --
 
 UPDATE `ps_cms_shop` SET `id_cms` = 1,`id_shop` = 1 WHERE `ps_cms_shop`.`id_cms` = 1 AND `ps_cms_shop`.`id_shop` = 1;
@@ -2386,7 +2065,7 @@ UPDATE `ps_cms_shop` SET `id_cms` = 5,`id_shop` = 1 WHERE `ps_cms_shop`.`id_cms`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_compare`
+-- Struktura tabeli dla tabeli `ps_compare`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_compare` (
@@ -2398,7 +2077,7 @@ CREATE TABLE IF NOT EXISTS `ps_compare` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_compare_product`
+-- Struktura tabeli dla tabeli `ps_compare_product`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_compare_product` (
@@ -2412,7 +2091,7 @@ CREATE TABLE IF NOT EXISTS `ps_compare_product` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_condition`
+-- Struktura tabeli dla tabeli `ps_condition`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_condition` (
@@ -2432,7 +2111,7 @@ CREATE TABLE IF NOT EXISTS `ps_condition` (
 ) ENGINE=InnoDB AUTO_INCREMENT=272 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_condition`
+-- Zrzut danych tabeli `ps_condition`
 --
 
 UPDATE `ps_condition` SET `id_condition` = 1,`id_ps_condition` = 19,`type` = 'install',`request` = '',`operator` = '>',`value` = '0',`result` = '1',`calculation_type` = 'time',`calculation_detail` = '1',`validated` = 1,`date_add` = '2016-11-02 22:06:55',`date_upd` = '2016-11-02 22:06:55' WHERE `ps_condition`.`id_condition` = 1 AND `ps_condition`.`id_ps_condition` = 19;
@@ -2710,7 +2389,7 @@ UPDATE `ps_condition` SET `id_condition` = 271,`id_ps_condition` = 540,`type` = 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_condition_advice`
+-- Struktura tabeli dla tabeli `ps_condition_advice`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_condition_advice` (
@@ -2723,7 +2402,7 @@ CREATE TABLE IF NOT EXISTS `ps_condition_advice` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_condition_badge`
+-- Struktura tabeli dla tabeli `ps_condition_badge`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_condition_badge` (
@@ -2733,57 +2412,10 @@ CREATE TABLE IF NOT EXISTS `ps_condition_badge` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_condition_badge`
+-- Zrzut danych tabeli `ps_condition_badge`
 --
 
-UPDATE `ps_condition_badge` SET `id_condition` = 1,`id_badge` = 166 WHERE `ps_condition_badge`.`id_condition` = 1 AND `ps_condition_badge`.`id_badge` = 166;
 UPDATE `ps_condition_badge` SET `id_condition` = 2,`id_badge` = 17 WHERE `ps_condition_badge`.`id_condition` = 2 AND `ps_condition_badge`.`id_badge` = 17;
-UPDATE `ps_condition_badge` SET `id_condition` = 3,`id_badge` = 187 WHERE `ps_condition_badge`.`id_condition` = 3 AND `ps_condition_badge`.`id_badge` = 187;
-UPDATE `ps_condition_badge` SET `id_condition` = 4,`id_badge` = 153 WHERE `ps_condition_badge`.`id_condition` = 4 AND `ps_condition_badge`.`id_badge` = 153;
-UPDATE `ps_condition_badge` SET `id_condition` = 12,`id_badge` = 162 WHERE `ps_condition_badge`.`id_condition` = 12 AND `ps_condition_badge`.`id_badge` = 162;
-UPDATE `ps_condition_badge` SET `id_condition` = 13,`id_badge` = 186 WHERE `ps_condition_badge`.`id_condition` = 13 AND `ps_condition_badge`.`id_badge` = 186;
-UPDATE `ps_condition_badge` SET `id_condition` = 15,`id_badge` = 150 WHERE `ps_condition_badge`.`id_condition` = 15 AND `ps_condition_badge`.`id_badge` = 150;
-UPDATE `ps_condition_badge` SET `id_condition` = 16,`id_badge` = 151 WHERE `ps_condition_badge`.`id_condition` = 16 AND `ps_condition_badge`.`id_badge` = 151;
-UPDATE `ps_condition_badge` SET `id_condition` = 17,`id_badge` = 151 WHERE `ps_condition_badge`.`id_condition` = 17 AND `ps_condition_badge`.`id_badge` = 151;
-UPDATE `ps_condition_badge` SET `id_condition` = 18,`id_badge` = 151 WHERE `ps_condition_badge`.`id_condition` = 18 AND `ps_condition_badge`.`id_badge` = 151;
-UPDATE `ps_condition_badge` SET `id_condition` = 19,`id_badge` = 152 WHERE `ps_condition_badge`.`id_condition` = 19 AND `ps_condition_badge`.`id_badge` = 152;
-UPDATE `ps_condition_badge` SET `id_condition` = 20,`id_badge` = 154 WHERE `ps_condition_badge`.`id_condition` = 20 AND `ps_condition_badge`.`id_badge` = 154;
-UPDATE `ps_condition_badge` SET `id_condition` = 21,`id_badge` = 155 WHERE `ps_condition_badge`.`id_condition` = 21 AND `ps_condition_badge`.`id_badge` = 155;
-UPDATE `ps_condition_badge` SET `id_condition` = 22,`id_badge` = 156 WHERE `ps_condition_badge`.`id_condition` = 22 AND `ps_condition_badge`.`id_badge` = 156;
-UPDATE `ps_condition_badge` SET `id_condition` = 23,`id_badge` = 157 WHERE `ps_condition_badge`.`id_condition` = 23 AND `ps_condition_badge`.`id_badge` = 157;
-UPDATE `ps_condition_badge` SET `id_condition` = 24,`id_badge` = 158 WHERE `ps_condition_badge`.`id_condition` = 24 AND `ps_condition_badge`.`id_badge` = 158;
-UPDATE `ps_condition_badge` SET `id_condition` = 25,`id_badge` = 159 WHERE `ps_condition_badge`.`id_condition` = 25 AND `ps_condition_badge`.`id_badge` = 159;
-UPDATE `ps_condition_badge` SET `id_condition` = 26,`id_badge` = 160 WHERE `ps_condition_badge`.`id_condition` = 26 AND `ps_condition_badge`.`id_badge` = 160;
-UPDATE `ps_condition_badge` SET `id_condition` = 27,`id_badge` = 161 WHERE `ps_condition_badge`.`id_condition` = 27 AND `ps_condition_badge`.`id_badge` = 161;
-UPDATE `ps_condition_badge` SET `id_condition` = 28,`id_badge` = 163 WHERE `ps_condition_badge`.`id_condition` = 28 AND `ps_condition_badge`.`id_badge` = 163;
-UPDATE `ps_condition_badge` SET `id_condition` = 29,`id_badge` = 164 WHERE `ps_condition_badge`.`id_condition` = 29 AND `ps_condition_badge`.`id_badge` = 164;
-UPDATE `ps_condition_badge` SET `id_condition` = 30,`id_badge` = 165 WHERE `ps_condition_badge`.`id_condition` = 30 AND `ps_condition_badge`.`id_badge` = 165;
-UPDATE `ps_condition_badge` SET `id_condition` = 31,`id_badge` = 167 WHERE `ps_condition_badge`.`id_condition` = 31 AND `ps_condition_badge`.`id_badge` = 167;
-UPDATE `ps_condition_badge` SET `id_condition` = 32,`id_badge` = 168 WHERE `ps_condition_badge`.`id_condition` = 32 AND `ps_condition_badge`.`id_badge` = 168;
-UPDATE `ps_condition_badge` SET `id_condition` = 33,`id_badge` = 169 WHERE `ps_condition_badge`.`id_condition` = 33 AND `ps_condition_badge`.`id_badge` = 169;
-UPDATE `ps_condition_badge` SET `id_condition` = 34,`id_badge` = 170 WHERE `ps_condition_badge`.`id_condition` = 34 AND `ps_condition_badge`.`id_badge` = 170;
-UPDATE `ps_condition_badge` SET `id_condition` = 35,`id_badge` = 171 WHERE `ps_condition_badge`.`id_condition` = 35 AND `ps_condition_badge`.`id_badge` = 171;
-UPDATE `ps_condition_badge` SET `id_condition` = 36,`id_badge` = 172 WHERE `ps_condition_badge`.`id_condition` = 36 AND `ps_condition_badge`.`id_badge` = 172;
-UPDATE `ps_condition_badge` SET `id_condition` = 37,`id_badge` = 173 WHERE `ps_condition_badge`.`id_condition` = 37 AND `ps_condition_badge`.`id_badge` = 173;
-UPDATE `ps_condition_badge` SET `id_condition` = 38,`id_badge` = 174 WHERE `ps_condition_badge`.`id_condition` = 38 AND `ps_condition_badge`.`id_badge` = 174;
-UPDATE `ps_condition_badge` SET `id_condition` = 39,`id_badge` = 175 WHERE `ps_condition_badge`.`id_condition` = 39 AND `ps_condition_badge`.`id_badge` = 175;
-UPDATE `ps_condition_badge` SET `id_condition` = 40,`id_badge` = 176 WHERE `ps_condition_badge`.`id_condition` = 40 AND `ps_condition_badge`.`id_badge` = 176;
-UPDATE `ps_condition_badge` SET `id_condition` = 41,`id_badge` = 177 WHERE `ps_condition_badge`.`id_condition` = 41 AND `ps_condition_badge`.`id_badge` = 177;
-UPDATE `ps_condition_badge` SET `id_condition` = 42,`id_badge` = 178 WHERE `ps_condition_badge`.`id_condition` = 42 AND `ps_condition_badge`.`id_badge` = 178;
-UPDATE `ps_condition_badge` SET `id_condition` = 43,`id_badge` = 179 WHERE `ps_condition_badge`.`id_condition` = 43 AND `ps_condition_badge`.`id_badge` = 179;
-UPDATE `ps_condition_badge` SET `id_condition` = 44,`id_badge` = 180 WHERE `ps_condition_badge`.`id_condition` = 44 AND `ps_condition_badge`.`id_badge` = 180;
-UPDATE `ps_condition_badge` SET `id_condition` = 45,`id_badge` = 181 WHERE `ps_condition_badge`.`id_condition` = 45 AND `ps_condition_badge`.`id_badge` = 181;
-UPDATE `ps_condition_badge` SET `id_condition` = 46,`id_badge` = 182 WHERE `ps_condition_badge`.`id_condition` = 46 AND `ps_condition_badge`.`id_badge` = 182;
-UPDATE `ps_condition_badge` SET `id_condition` = 47,`id_badge` = 183 WHERE `ps_condition_badge`.`id_condition` = 47 AND `ps_condition_badge`.`id_badge` = 183;
-UPDATE `ps_condition_badge` SET `id_condition` = 48,`id_badge` = 184 WHERE `ps_condition_badge`.`id_condition` = 48 AND `ps_condition_badge`.`id_badge` = 184;
-UPDATE `ps_condition_badge` SET `id_condition` = 49,`id_badge` = 185 WHERE `ps_condition_badge`.`id_condition` = 49 AND `ps_condition_badge`.`id_badge` = 185;
-UPDATE `ps_condition_badge` SET `id_condition` = 50,`id_badge` = 188 WHERE `ps_condition_badge`.`id_condition` = 50 AND `ps_condition_badge`.`id_badge` = 188;
-UPDATE `ps_condition_badge` SET `id_condition` = 51,`id_badge` = 189 WHERE `ps_condition_badge`.`id_condition` = 51 AND `ps_condition_badge`.`id_badge` = 189;
-UPDATE `ps_condition_badge` SET `id_condition` = 52,`id_badge` = 190 WHERE `ps_condition_badge`.`id_condition` = 52 AND `ps_condition_badge`.`id_badge` = 190;
-UPDATE `ps_condition_badge` SET `id_condition` = 53,`id_badge` = 191 WHERE `ps_condition_badge`.`id_condition` = 53 AND `ps_condition_badge`.`id_badge` = 191;
-UPDATE `ps_condition_badge` SET `id_condition` = 54,`id_badge` = 192 WHERE `ps_condition_badge`.`id_condition` = 54 AND `ps_condition_badge`.`id_badge` = 192;
-UPDATE `ps_condition_badge` SET `id_condition` = 55,`id_badge` = 193 WHERE `ps_condition_badge`.`id_condition` = 55 AND `ps_condition_badge`.`id_badge` = 193;
-UPDATE `ps_condition_badge` SET `id_condition` = 56,`id_badge` = 194 WHERE `ps_condition_badge`.`id_condition` = 56 AND `ps_condition_badge`.`id_badge` = 194;
 UPDATE `ps_condition_badge` SET `id_condition` = 124,`id_badge` = 1 WHERE `ps_condition_badge`.`id_condition` = 124 AND `ps_condition_badge`.`id_badge` = 1;
 UPDATE `ps_condition_badge` SET `id_condition` = 125,`id_badge` = 2 WHERE `ps_condition_badge`.`id_condition` = 125 AND `ps_condition_badge`.`id_badge` = 2;
 UPDATE `ps_condition_badge` SET `id_condition` = 126,`id_badge` = 3 WHERE `ps_condition_badge`.`id_condition` = 126 AND `ps_condition_badge`.`id_badge` = 3;
@@ -2862,81 +2494,11 @@ UPDATE `ps_condition_badge` SET `id_condition` = 198,`id_badge` = 76 WHERE `ps_c
 UPDATE `ps_condition_badge` SET `id_condition` = 199,`id_badge` = 77 WHERE `ps_condition_badge`.`id_condition` = 199 AND `ps_condition_badge`.`id_badge` = 77;
 UPDATE `ps_condition_badge` SET `id_condition` = 200,`id_badge` = 78 WHERE `ps_condition_badge`.`id_condition` = 200 AND `ps_condition_badge`.`id_badge` = 78;
 UPDATE `ps_condition_badge` SET `id_condition` = 201,`id_badge` = 79 WHERE `ps_condition_badge`.`id_condition` = 201 AND `ps_condition_badge`.`id_badge` = 79;
-UPDATE `ps_condition_badge` SET `id_condition` = 202,`id_badge` = 80 WHERE `ps_condition_badge`.`id_condition` = 202 AND `ps_condition_badge`.`id_badge` = 80;
-UPDATE `ps_condition_badge` SET `id_condition` = 203,`id_badge` = 81 WHERE `ps_condition_badge`.`id_condition` = 203 AND `ps_condition_badge`.`id_badge` = 81;
-UPDATE `ps_condition_badge` SET `id_condition` = 204,`id_badge` = 82 WHERE `ps_condition_badge`.`id_condition` = 204 AND `ps_condition_badge`.`id_badge` = 82;
-UPDATE `ps_condition_badge` SET `id_condition` = 205,`id_badge` = 83 WHERE `ps_condition_badge`.`id_condition` = 205 AND `ps_condition_badge`.`id_badge` = 83;
-UPDATE `ps_condition_badge` SET `id_condition` = 206,`id_badge` = 84 WHERE `ps_condition_badge`.`id_condition` = 206 AND `ps_condition_badge`.`id_badge` = 84;
-UPDATE `ps_condition_badge` SET `id_condition` = 207,`id_badge` = 85 WHERE `ps_condition_badge`.`id_condition` = 207 AND `ps_condition_badge`.`id_badge` = 85;
-UPDATE `ps_condition_badge` SET `id_condition` = 208,`id_badge` = 86 WHERE `ps_condition_badge`.`id_condition` = 208 AND `ps_condition_badge`.`id_badge` = 86;
-UPDATE `ps_condition_badge` SET `id_condition` = 209,`id_badge` = 87 WHERE `ps_condition_badge`.`id_condition` = 209 AND `ps_condition_badge`.`id_badge` = 87;
-UPDATE `ps_condition_badge` SET `id_condition` = 210,`id_badge` = 88 WHERE `ps_condition_badge`.`id_condition` = 210 AND `ps_condition_badge`.`id_badge` = 88;
-UPDATE `ps_condition_badge` SET `id_condition` = 211,`id_badge` = 89 WHERE `ps_condition_badge`.`id_condition` = 211 AND `ps_condition_badge`.`id_badge` = 89;
-UPDATE `ps_condition_badge` SET `id_condition` = 212,`id_badge` = 90 WHERE `ps_condition_badge`.`id_condition` = 212 AND `ps_condition_badge`.`id_badge` = 90;
-UPDATE `ps_condition_badge` SET `id_condition` = 213,`id_badge` = 91 WHERE `ps_condition_badge`.`id_condition` = 213 AND `ps_condition_badge`.`id_badge` = 91;
-UPDATE `ps_condition_badge` SET `id_condition` = 214,`id_badge` = 92 WHERE `ps_condition_badge`.`id_condition` = 214 AND `ps_condition_badge`.`id_badge` = 92;
-UPDATE `ps_condition_badge` SET `id_condition` = 215,`id_badge` = 93 WHERE `ps_condition_badge`.`id_condition` = 215 AND `ps_condition_badge`.`id_badge` = 93;
-UPDATE `ps_condition_badge` SET `id_condition` = 216,`id_badge` = 94 WHERE `ps_condition_badge`.`id_condition` = 216 AND `ps_condition_badge`.`id_badge` = 94;
-UPDATE `ps_condition_badge` SET `id_condition` = 217,`id_badge` = 95 WHERE `ps_condition_badge`.`id_condition` = 217 AND `ps_condition_badge`.`id_badge` = 95;
-UPDATE `ps_condition_badge` SET `id_condition` = 218,`id_badge` = 96 WHERE `ps_condition_badge`.`id_condition` = 218 AND `ps_condition_badge`.`id_badge` = 96;
-UPDATE `ps_condition_badge` SET `id_condition` = 219,`id_badge` = 97 WHERE `ps_condition_badge`.`id_condition` = 219 AND `ps_condition_badge`.`id_badge` = 97;
-UPDATE `ps_condition_badge` SET `id_condition` = 220,`id_badge` = 98 WHERE `ps_condition_badge`.`id_condition` = 220 AND `ps_condition_badge`.`id_badge` = 98;
-UPDATE `ps_condition_badge` SET `id_condition` = 221,`id_badge` = 99 WHERE `ps_condition_badge`.`id_condition` = 221 AND `ps_condition_badge`.`id_badge` = 99;
-UPDATE `ps_condition_badge` SET `id_condition` = 222,`id_badge` = 100 WHERE `ps_condition_badge`.`id_condition` = 222 AND `ps_condition_badge`.`id_badge` = 100;
-UPDATE `ps_condition_badge` SET `id_condition` = 223,`id_badge` = 101 WHERE `ps_condition_badge`.`id_condition` = 223 AND `ps_condition_badge`.`id_badge` = 101;
-UPDATE `ps_condition_badge` SET `id_condition` = 224,`id_badge` = 102 WHERE `ps_condition_badge`.`id_condition` = 224 AND `ps_condition_badge`.`id_badge` = 102;
-UPDATE `ps_condition_badge` SET `id_condition` = 225,`id_badge` = 103 WHERE `ps_condition_badge`.`id_condition` = 225 AND `ps_condition_badge`.`id_badge` = 103;
-UPDATE `ps_condition_badge` SET `id_condition` = 226,`id_badge` = 104 WHERE `ps_condition_badge`.`id_condition` = 226 AND `ps_condition_badge`.`id_badge` = 104;
-UPDATE `ps_condition_badge` SET `id_condition` = 227,`id_badge` = 105 WHERE `ps_condition_badge`.`id_condition` = 227 AND `ps_condition_badge`.`id_badge` = 105;
-UPDATE `ps_condition_badge` SET `id_condition` = 228,`id_badge` = 106 WHERE `ps_condition_badge`.`id_condition` = 228 AND `ps_condition_badge`.`id_badge` = 106;
-UPDATE `ps_condition_badge` SET `id_condition` = 229,`id_badge` = 107 WHERE `ps_condition_badge`.`id_condition` = 229 AND `ps_condition_badge`.`id_badge` = 107;
-UPDATE `ps_condition_badge` SET `id_condition` = 230,`id_badge` = 108 WHERE `ps_condition_badge`.`id_condition` = 230 AND `ps_condition_badge`.`id_badge` = 108;
-UPDATE `ps_condition_badge` SET `id_condition` = 231,`id_badge` = 109 WHERE `ps_condition_badge`.`id_condition` = 231 AND `ps_condition_badge`.`id_badge` = 109;
-UPDATE `ps_condition_badge` SET `id_condition` = 232,`id_badge` = 110 WHERE `ps_condition_badge`.`id_condition` = 232 AND `ps_condition_badge`.`id_badge` = 110;
-UPDATE `ps_condition_badge` SET `id_condition` = 233,`id_badge` = 111 WHERE `ps_condition_badge`.`id_condition` = 233 AND `ps_condition_badge`.`id_badge` = 111;
-UPDATE `ps_condition_badge` SET `id_condition` = 234,`id_badge` = 112 WHERE `ps_condition_badge`.`id_condition` = 234 AND `ps_condition_badge`.`id_badge` = 112;
-UPDATE `ps_condition_badge` SET `id_condition` = 235,`id_badge` = 113 WHERE `ps_condition_badge`.`id_condition` = 235 AND `ps_condition_badge`.`id_badge` = 113;
-UPDATE `ps_condition_badge` SET `id_condition` = 236,`id_badge` = 114 WHERE `ps_condition_badge`.`id_condition` = 236 AND `ps_condition_badge`.`id_badge` = 114;
-UPDATE `ps_condition_badge` SET `id_condition` = 237,`id_badge` = 115 WHERE `ps_condition_badge`.`id_condition` = 237 AND `ps_condition_badge`.`id_badge` = 115;
-UPDATE `ps_condition_badge` SET `id_condition` = 238,`id_badge` = 116 WHERE `ps_condition_badge`.`id_condition` = 238 AND `ps_condition_badge`.`id_badge` = 116;
-UPDATE `ps_condition_badge` SET `id_condition` = 239,`id_badge` = 117 WHERE `ps_condition_badge`.`id_condition` = 239 AND `ps_condition_badge`.`id_badge` = 117;
-UPDATE `ps_condition_badge` SET `id_condition` = 240,`id_badge` = 118 WHERE `ps_condition_badge`.`id_condition` = 240 AND `ps_condition_badge`.`id_badge` = 118;
-UPDATE `ps_condition_badge` SET `id_condition` = 241,`id_badge` = 119 WHERE `ps_condition_badge`.`id_condition` = 241 AND `ps_condition_badge`.`id_badge` = 119;
-UPDATE `ps_condition_badge` SET `id_condition` = 242,`id_badge` = 120 WHERE `ps_condition_badge`.`id_condition` = 242 AND `ps_condition_badge`.`id_badge` = 120;
-UPDATE `ps_condition_badge` SET `id_condition` = 243,`id_badge` = 121 WHERE `ps_condition_badge`.`id_condition` = 243 AND `ps_condition_badge`.`id_badge` = 121;
-UPDATE `ps_condition_badge` SET `id_condition` = 244,`id_badge` = 122 WHERE `ps_condition_badge`.`id_condition` = 244 AND `ps_condition_badge`.`id_badge` = 122;
-UPDATE `ps_condition_badge` SET `id_condition` = 245,`id_badge` = 123 WHERE `ps_condition_badge`.`id_condition` = 245 AND `ps_condition_badge`.`id_badge` = 123;
-UPDATE `ps_condition_badge` SET `id_condition` = 246,`id_badge` = 124 WHERE `ps_condition_badge`.`id_condition` = 246 AND `ps_condition_badge`.`id_badge` = 124;
-UPDATE `ps_condition_badge` SET `id_condition` = 247,`id_badge` = 125 WHERE `ps_condition_badge`.`id_condition` = 247 AND `ps_condition_badge`.`id_badge` = 125;
-UPDATE `ps_condition_badge` SET `id_condition` = 248,`id_badge` = 126 WHERE `ps_condition_badge`.`id_condition` = 248 AND `ps_condition_badge`.`id_badge` = 126;
-UPDATE `ps_condition_badge` SET `id_condition` = 249,`id_badge` = 127 WHERE `ps_condition_badge`.`id_condition` = 249 AND `ps_condition_badge`.`id_badge` = 127;
-UPDATE `ps_condition_badge` SET `id_condition` = 250,`id_badge` = 128 WHERE `ps_condition_badge`.`id_condition` = 250 AND `ps_condition_badge`.`id_badge` = 128;
-UPDATE `ps_condition_badge` SET `id_condition` = 251,`id_badge` = 129 WHERE `ps_condition_badge`.`id_condition` = 251 AND `ps_condition_badge`.`id_badge` = 129;
-UPDATE `ps_condition_badge` SET `id_condition` = 252,`id_badge` = 130 WHERE `ps_condition_badge`.`id_condition` = 252 AND `ps_condition_badge`.`id_badge` = 130;
-UPDATE `ps_condition_badge` SET `id_condition` = 253,`id_badge` = 131 WHERE `ps_condition_badge`.`id_condition` = 253 AND `ps_condition_badge`.`id_badge` = 131;
-UPDATE `ps_condition_badge` SET `id_condition` = 254,`id_badge` = 132 WHERE `ps_condition_badge`.`id_condition` = 254 AND `ps_condition_badge`.`id_badge` = 132;
-UPDATE `ps_condition_badge` SET `id_condition` = 255,`id_badge` = 133 WHERE `ps_condition_badge`.`id_condition` = 255 AND `ps_condition_badge`.`id_badge` = 133;
-UPDATE `ps_condition_badge` SET `id_condition` = 256,`id_badge` = 134 WHERE `ps_condition_badge`.`id_condition` = 256 AND `ps_condition_badge`.`id_badge` = 134;
-UPDATE `ps_condition_badge` SET `id_condition` = 257,`id_badge` = 135 WHERE `ps_condition_badge`.`id_condition` = 257 AND `ps_condition_badge`.`id_badge` = 135;
-UPDATE `ps_condition_badge` SET `id_condition` = 258,`id_badge` = 136 WHERE `ps_condition_badge`.`id_condition` = 258 AND `ps_condition_badge`.`id_badge` = 136;
-UPDATE `ps_condition_badge` SET `id_condition` = 259,`id_badge` = 137 WHERE `ps_condition_badge`.`id_condition` = 259 AND `ps_condition_badge`.`id_badge` = 137;
-UPDATE `ps_condition_badge` SET `id_condition` = 260,`id_badge` = 138 WHERE `ps_condition_badge`.`id_condition` = 260 AND `ps_condition_badge`.`id_badge` = 138;
-UPDATE `ps_condition_badge` SET `id_condition` = 261,`id_badge` = 139 WHERE `ps_condition_badge`.`id_condition` = 261 AND `ps_condition_badge`.`id_badge` = 139;
-UPDATE `ps_condition_badge` SET `id_condition` = 262,`id_badge` = 140 WHERE `ps_condition_badge`.`id_condition` = 262 AND `ps_condition_badge`.`id_badge` = 140;
-UPDATE `ps_condition_badge` SET `id_condition` = 263,`id_badge` = 141 WHERE `ps_condition_badge`.`id_condition` = 263 AND `ps_condition_badge`.`id_badge` = 141;
-UPDATE `ps_condition_badge` SET `id_condition` = 264,`id_badge` = 142 WHERE `ps_condition_badge`.`id_condition` = 264 AND `ps_condition_badge`.`id_badge` = 142;
-UPDATE `ps_condition_badge` SET `id_condition` = 265,`id_badge` = 143 WHERE `ps_condition_badge`.`id_condition` = 265 AND `ps_condition_badge`.`id_badge` = 143;
-UPDATE `ps_condition_badge` SET `id_condition` = 266,`id_badge` = 144 WHERE `ps_condition_badge`.`id_condition` = 266 AND `ps_condition_badge`.`id_badge` = 144;
-UPDATE `ps_condition_badge` SET `id_condition` = 267,`id_badge` = 145 WHERE `ps_condition_badge`.`id_condition` = 267 AND `ps_condition_badge`.`id_badge` = 145;
-UPDATE `ps_condition_badge` SET `id_condition` = 268,`id_badge` = 146 WHERE `ps_condition_badge`.`id_condition` = 268 AND `ps_condition_badge`.`id_badge` = 146;
-UPDATE `ps_condition_badge` SET `id_condition` = 269,`id_badge` = 147 WHERE `ps_condition_badge`.`id_condition` = 269 AND `ps_condition_badge`.`id_badge` = 147;
-UPDATE `ps_condition_badge` SET `id_condition` = 270,`id_badge` = 148 WHERE `ps_condition_badge`.`id_condition` = 270 AND `ps_condition_badge`.`id_badge` = 148;
-UPDATE `ps_condition_badge` SET `id_condition` = 271,`id_badge` = 149 WHERE `ps_condition_badge`.`id_condition` = 271 AND `ps_condition_badge`.`id_badge` = 149;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_configuration`
+-- Struktura tabeli dla tabeli `ps_configuration`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_configuration` (
@@ -2954,7 +2516,7 @@ CREATE TABLE IF NOT EXISTS `ps_configuration` (
 ) ENGINE=InnoDB AUTO_INCREMENT=374 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_configuration`
+-- Zrzut danych tabeli `ps_configuration`
 --
 
 UPDATE `ps_configuration` SET `id_configuration` = 1,`id_shop_group` = NULL,`id_shop` = NULL,`name` = 'PS_LANG_DEFAULT',`value` = '1',`date_add` = '2016-10-27 01:35:39',`date_upd` = '2016-10-27 01:35:39' WHERE `ps_configuration`.`id_configuration` = 1;
@@ -3331,7 +2893,7 @@ UPDATE `ps_configuration` SET `id_configuration` = 373,`id_shop_group` = NULL,`i
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_configuration_kpi`
+-- Struktura tabeli dla tabeli `ps_configuration_kpi`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_configuration_kpi` (
@@ -3349,7 +2911,7 @@ CREATE TABLE IF NOT EXISTS `ps_configuration_kpi` (
 ) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_configuration_kpi`
+-- Zrzut danych tabeli `ps_configuration_kpi`
 --
 
 UPDATE `ps_configuration_kpi` SET `id_configuration_kpi` = 1,`id_shop_group` = NULL,`id_shop` = NULL,`name` = 'DASHGOALS_TRAFFIC_01_2016',`value` = '600',`date_add` = '2016-10-27 01:38:47',`date_upd` = '2016-10-27 01:38:47' WHERE `ps_configuration_kpi`.`id_configuration_kpi` = 1;
@@ -3414,7 +2976,7 @@ UPDATE `ps_configuration_kpi` SET `id_configuration_kpi` = 58,`id_shop_group` = 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_configuration_kpi_lang`
+-- Struktura tabeli dla tabeli `ps_configuration_kpi_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_configuration_kpi_lang` (
@@ -3426,7 +2988,7 @@ CREATE TABLE IF NOT EXISTS `ps_configuration_kpi_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_configuration_kpi_lang`
+-- Zrzut danych tabeli `ps_configuration_kpi_lang`
 --
 
 UPDATE `ps_configuration_kpi_lang` SET `id_configuration_kpi` = 50,`id_lang` = 1,`value` = 'SUSPENSION',`date_upd` = '2016-11-03 16:32:27' WHERE `ps_configuration_kpi_lang`.`id_configuration_kpi` = 50 AND `ps_configuration_kpi_lang`.`id_lang` = 1;
@@ -3435,7 +2997,7 @@ UPDATE `ps_configuration_kpi_lang` SET `id_configuration_kpi` = 52,`id_lang` = 1
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_configuration_lang`
+-- Struktura tabeli dla tabeli `ps_configuration_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_configuration_lang` (
@@ -3447,7 +3009,7 @@ CREATE TABLE IF NOT EXISTS `ps_configuration_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_configuration_lang`
+-- Zrzut danych tabeli `ps_configuration_lang`
 --
 
 UPDATE `ps_configuration_lang` SET `id_configuration` = 41,`id_lang` = 1,`value` = '#IN',`date_upd` = NULL WHERE `ps_configuration_lang`.`id_configuration` = 41 AND `ps_configuration_lang`.`id_lang` = 1;
@@ -3472,7 +3034,7 @@ UPDATE `ps_configuration_lang` SET `id_configuration` = 290,`id_lang` = 2,`value
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_connections`
+-- Struktura tabeli dla tabeli `ps_connections`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_connections` (
@@ -3488,10 +3050,10 @@ CREATE TABLE IF NOT EXISTS `ps_connections` (
   KEY `id_guest` (`id_guest`),
   KEY `date_add` (`date_add`),
   KEY `id_page` (`id_page`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_connections`
+-- Zrzut danych tabeli `ps_connections`
 --
 
 UPDATE `ps_connections` SET `id_connections` = 1,`id_shop_group` = 1,`id_shop` = 1,`id_guest` = 1,`id_page` = 1,`ip_address` = 2130706433,`date_add` = '2016-10-27 01:37:20',`http_referer` = 'http://www.prestashop.com' WHERE `ps_connections`.`id_connections` = 1;
@@ -3504,13 +3066,12 @@ UPDATE `ps_connections` SET `id_connections` = 7,`id_shop_group` = 1,`id_shop` =
 UPDATE `ps_connections` SET `id_connections` = 8,`id_shop_group` = 1,`id_shop` = 1,`id_guest` = 2,`id_page` = 2,`ip_address` = 2130706433,`date_add` = '2016-10-27 14:54:05',`http_referer` = '' WHERE `ps_connections`.`id_connections` = 8;
 UPDATE `ps_connections` SET `id_connections` = 9,`id_shop_group` = 1,`id_shop` = 1,`id_guest` = 3,`id_page` = 2,`ip_address` = 2130706433,`date_add` = '2016-10-27 14:54:24',`http_referer` = '' WHERE `ps_connections`.`id_connections` = 9;
 UPDATE `ps_connections` SET `id_connections` = 10,`id_shop_group` = 1,`id_shop` = 1,`id_guest` = 4,`id_page` = 2,`ip_address` = 2130706433,`date_add` = '2016-11-02 20:30:18',`http_referer` = '' WHERE `ps_connections`.`id_connections` = 10;
-UPDATE `ps_connections` SET `id_connections` = 11,`id_shop_group` = 1,`id_shop` = 1,`id_guest` = 5,`id_page` = 2,`ip_address` = 2130706433,`date_add` = '2016-11-02 22:50:42',`http_referer` = '' WHERE `ps_connections`.`id_connections` = 11;
-UPDATE `ps_connections` SET `id_connections` = 12,`id_shop_group` = 1,`id_shop` = 1,`id_guest` = 4,`id_page` = 2,`ip_address` = 2130706433,`date_add` = '2016-11-03 16:17:56',`http_referer` = '' WHERE `ps_connections`.`id_connections` = 12;
+UPDATE `ps_connections` SET `id_connections` = 11,`id_shop_group` = 1,`id_shop` = 1,`id_guest` = 4,`id_page` = 2,`ip_address` = 2130706433,`date_add` = '2016-11-03 18:51:07',`http_referer` = '' WHERE `ps_connections`.`id_connections` = 11;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_connections_page`
+-- Struktura tabeli dla tabeli `ps_connections_page`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_connections_page` (
@@ -3524,7 +3085,7 @@ CREATE TABLE IF NOT EXISTS `ps_connections_page` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_connections_source`
+-- Struktura tabeli dla tabeli `ps_connections_source`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_connections_source` (
@@ -3539,10 +3100,10 @@ CREATE TABLE IF NOT EXISTS `ps_connections_source` (
   KEY `orderby` (`date_add`),
   KEY `http_referer` (`http_referer`),
   KEY `request_uri` (`request_uri`)
-) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=123 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_connections_source`
+-- Zrzut danych tabeli `ps_connections_source`
 --
 
 UPDATE `ps_connections_source` SET `id_connections_source` = 1,`id_connections` = 2,`http_referer` = 'http://127.0.0.1:83/myshop/install/index.php',`request_uri` = '127.0.0.1:83/myshop/admin',`keywords` = '',`date_add` = '2016-10-27 01:40:06' WHERE `ps_connections_source`.`id_connections_source` = 1;
@@ -3635,11 +3196,43 @@ UPDATE `ps_connections_source` SET `id_connections_source` = 87,`id_connections`
 UPDATE `ps_connections_source` SET `id_connections_source` = 88,`id_connections` = 12,`http_referer` = 'http://127.0.0.1:83/myshop/en/',`request_uri` = '127.0.0.1:83/myshop/en/12-bmw',`keywords` = '',`date_add` = '2016-11-03 16:19:35' WHERE `ps_connections_source`.`id_connections_source` = 88;
 UPDATE `ps_connections_source` SET `id_connections_source` = 89,`id_connections` = 12,`http_referer` = 'http://127.0.0.1:83/myshop/en/12-bmw',`request_uri` = '127.0.0.1:83/myshop/en/',`keywords` = '',`date_add` = '2016-11-03 16:20:03' WHERE `ps_connections_source`.`id_connections_source` = 89;
 UPDATE `ps_connections_source` SET `id_connections_source` = 90,`id_connections` = 12,`http_referer` = 'http://127.0.0.1:83/myshop/en/',`request_uri` = '127.0.0.1:83/myshop/en/15-mercedes',`keywords` = '',`date_add` = '2016-11-03 16:20:11' WHERE `ps_connections_source`.`id_connections_source` = 90;
+UPDATE `ps_connections_source` SET `id_connections_source` = 91,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/21-cooler',`request_uri` = '127.0.0.1:83/myshop/pl/16-engine',`keywords` = '',`date_add` = '2016-11-03 16:34:49' WHERE `ps_connections_source`.`id_connections_source` = 91;
+UPDATE `ps_connections_source` SET `id_connections_source` = 92,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/21-cooler',`request_uri` = '127.0.0.1:83/myshop/pl/16-engine',`keywords` = '',`date_add` = '2016-11-03 16:35:51' WHERE `ps_connections_source`.`id_connections_source` = 92;
+UPDATE `ps_connections_source` SET `id_connections_source` = 93,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/21-cooler',`request_uri` = '127.0.0.1:83/myshop/pl/16-engine',`keywords` = '',`date_add` = '2016-11-03 16:35:54' WHERE `ps_connections_source`.`id_connections_source` = 93;
+UPDATE `ps_connections_source` SET `id_connections_source` = 94,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/16-engine',`request_uri` = '127.0.0.1:83/myshop/pl/',`keywords` = '',`date_add` = '2016-11-03 16:35:59' WHERE `ps_connections_source`.`id_connections_source` = 94;
+UPDATE `ps_connections_source` SET `id_connections_source` = 95,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/',`request_uri` = '127.0.0.1:83/myshop/pl/16-engine',`keywords` = '',`date_add` = '2016-11-03 16:36:01' WHERE `ps_connections_source`.`id_connections_source` = 95;
+UPDATE `ps_connections_source` SET `id_connections_source` = 96,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/16-engine',`request_uri` = '127.0.0.1:83/myshop/pl/21-cooler',`keywords` = '',`date_add` = '2016-11-03 16:36:03' WHERE `ps_connections_source`.`id_connections_source` = 96;
+UPDATE `ps_connections_source` SET `id_connections_source` = 97,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/',`request_uri` = '127.0.0.1:83/myshop/pl/16-engine',`keywords` = '',`date_add` = '2016-11-03 16:36:29' WHERE `ps_connections_source`.`id_connections_source` = 97;
+UPDATE `ps_connections_source` SET `id_connections_source` = 98,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/',`request_uri` = '127.0.0.1:83/myshop/pl/16-engine',`keywords` = '',`date_add` = '2016-11-03 16:36:32' WHERE `ps_connections_source`.`id_connections_source` = 98;
+UPDATE `ps_connections_source` SET `id_connections_source` = 99,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/',`request_uri` = '127.0.0.1:83/myshop/pl/16-engine',`keywords` = '',`date_add` = '2016-11-03 16:37:17' WHERE `ps_connections_source`.`id_connections_source` = 99;
+UPDATE `ps_connections_source` SET `id_connections_source` = 100,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/',`request_uri` = '127.0.0.1:83/myshop/pl/16-engine',`keywords` = '',`date_add` = '2016-11-03 16:38:14' WHERE `ps_connections_source`.`id_connections_source` = 100;
+UPDATE `ps_connections_source` SET `id_connections_source` = 101,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/16-engine',`request_uri` = '127.0.0.1:83/myshop/pl/22-radiator',`keywords` = '',`date_add` = '2016-11-03 16:40:55' WHERE `ps_connections_source`.`id_connections_source` = 101;
+UPDATE `ps_connections_source` SET `id_connections_source` = 102,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/16-engine',`request_uri` = '127.0.0.1:83/myshop/pl/22-radiator',`keywords` = '',`date_add` = '2016-11-03 16:48:06' WHERE `ps_connections_source`.`id_connections_source` = 102;
+UPDATE `ps_connections_source` SET `id_connections_source` = 103,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/16-engine',`request_uri` = '127.0.0.1:83/myshop/pl/22-radiator',`keywords` = '',`date_add` = '2016-11-03 16:49:13' WHERE `ps_connections_source`.`id_connections_source` = 103;
+UPDATE `ps_connections_source` SET `id_connections_source` = 104,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/22-radiator',`request_uri` = '127.0.0.1:83/myshop/pl/14-audi',`keywords` = '',`date_add` = '2016-11-03 16:50:03' WHERE `ps_connections_source`.`id_connections_source` = 104;
+UPDATE `ps_connections_source` SET `id_connections_source` = 105,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/14-audi',`request_uri` = '127.0.0.1:83/myshop/pl/17-breaks',`keywords` = '',`date_add` = '2016-11-03 16:50:06' WHERE `ps_connections_source`.`id_connections_source` = 105;
+UPDATE `ps_connections_source` SET `id_connections_source` = 106,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/14-audi',`request_uri` = '127.0.0.1:83/myshop/pl/16-engine',`keywords` = '',`date_add` = '2016-11-03 16:58:58' WHERE `ps_connections_source`.`id_connections_source` = 106;
+UPDATE `ps_connections_source` SET `id_connections_source` = 107,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/16-engine',`request_uri` = '127.0.0.1:83/myshop/pl/22-radiator',`keywords` = '',`date_add` = '2016-11-03 16:59:03' WHERE `ps_connections_source`.`id_connections_source` = 107;
+UPDATE `ps_connections_source` SET `id_connections_source` = 108,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/16-engine',`request_uri` = '127.0.0.1:83/myshop/pl/22-radiator',`keywords` = '',`date_add` = '2016-11-03 16:59:06' WHERE `ps_connections_source`.`id_connections_source` = 108;
+UPDATE `ps_connections_source` SET `id_connections_source` = 109,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/16-engine',`request_uri` = '127.0.0.1:83/myshop/pl/22-radiator',`keywords` = '',`date_add` = '2016-11-03 16:59:17' WHERE `ps_connections_source`.`id_connections_source` = 109;
+UPDATE `ps_connections_source` SET `id_connections_source` = 110,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/16-engine',`request_uri` = '127.0.0.1:83/myshop/pl/22-radiator',`keywords` = '',`date_add` = '2016-11-03 17:00:29' WHERE `ps_connections_source`.`id_connections_source` = 110;
+UPDATE `ps_connections_source` SET `id_connections_source` = 111,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/16-engine',`request_uri` = '127.0.0.1:83/myshop/pl/22-radiator',`keywords` = '',`date_add` = '2016-11-03 17:00:44' WHERE `ps_connections_source`.`id_connections_source` = 111;
+UPDATE `ps_connections_source` SET `id_connections_source` = 112,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/16-engine',`request_uri` = '127.0.0.1:83/myshop/pl/22-radiator',`keywords` = '',`date_add` = '2016-11-03 17:00:55' WHERE `ps_connections_source`.`id_connections_source` = 112;
+UPDATE `ps_connections_source` SET `id_connections_source` = 113,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/16-engine',`request_uri` = '127.0.0.1:83/myshop/pl/22-radiator',`keywords` = '',`date_add` = '2016-11-03 17:01:30' WHERE `ps_connections_source`.`id_connections_source` = 113;
+UPDATE `ps_connections_source` SET `id_connections_source` = 114,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/16-engine',`request_uri` = '127.0.0.1:83/myshop/pl/22-radiator',`keywords` = '',`date_add` = '2016-11-03 17:05:26' WHERE `ps_connections_source`.`id_connections_source` = 114;
+UPDATE `ps_connections_source` SET `id_connections_source` = 115,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/16-engine',`request_uri` = '127.0.0.1:83/myshop/pl/22-radiator',`keywords` = '',`date_add` = '2016-11-03 17:09:04' WHERE `ps_connections_source`.`id_connections_source` = 115;
+UPDATE `ps_connections_source` SET `id_connections_source` = 116,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/16-engine',`request_uri` = '127.0.0.1:83/myshop/pl/22-radiator',`keywords` = '',`date_add` = '2016-11-03 17:09:23' WHERE `ps_connections_source`.`id_connections_source` = 116;
+UPDATE `ps_connections_source` SET `id_connections_source` = 117,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/16-engine',`request_uri` = '127.0.0.1:83/myshop/pl/22-radiator',`keywords` = '',`date_add` = '2016-11-03 17:10:16' WHERE `ps_connections_source`.`id_connections_source` = 117;
+UPDATE `ps_connections_source` SET `id_connections_source` = 118,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/22-radiator',`request_uri` = '127.0.0.1:83/myshop/pl/14-audi',`keywords` = '',`date_add` = '2016-11-03 17:33:15' WHERE `ps_connections_source`.`id_connections_source` = 118;
+UPDATE `ps_connections_source` SET `id_connections_source` = 119,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/14-audi',`request_uri` = '127.0.0.1:83/myshop/pl/',`keywords` = '',`date_add` = '2016-11-03 17:33:18' WHERE `ps_connections_source`.`id_connections_source` = 119;
+UPDATE `ps_connections_source` SET `id_connections_source` = 120,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/14-audi',`request_uri` = '127.0.0.1:83/myshop/pl/',`keywords` = '',`date_add` = '2016-11-03 17:34:30' WHERE `ps_connections_source`.`id_connections_source` = 120;
+UPDATE `ps_connections_source` SET `id_connections_source` = 121,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/14-audi',`request_uri` = '127.0.0.1:83/myshop/pl/',`keywords` = '',`date_add` = '2016-11-03 17:35:31' WHERE `ps_connections_source`.`id_connections_source` = 121;
+UPDATE `ps_connections_source` SET `id_connections_source` = 122,`id_connections` = 10,`http_referer` = 'http://127.0.0.1:83/myshop/pl/14-audi',`request_uri` = '127.0.0.1:83/myshop/pl/',`keywords` = '',`date_add` = '2016-11-03 17:35:35' WHERE `ps_connections_source`.`id_connections_source` = 122;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_contact`
+-- Struktura tabeli dla tabeli `ps_contact`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_contact` (
@@ -3651,7 +3244,7 @@ CREATE TABLE IF NOT EXISTS `ps_contact` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_contact`
+-- Zrzut danych tabeli `ps_contact`
 --
 
 UPDATE `ps_contact` SET `id_contact` = 1,`email` = 'cissewskikarol@gmail.com',`customer_service` = 1,`position` = 0 WHERE `ps_contact`.`id_contact` = 1;
@@ -3660,7 +3253,7 @@ UPDATE `ps_contact` SET `id_contact` = 2,`email` = 'cissewskikarol@gmail.com',`c
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_contact_lang`
+-- Struktura tabeli dla tabeli `ps_contact_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_contact_lang` (
@@ -3672,7 +3265,7 @@ CREATE TABLE IF NOT EXISTS `ps_contact_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_contact_lang`
+-- Zrzut danych tabeli `ps_contact_lang`
 --
 
 UPDATE `ps_contact_lang` SET `id_contact` = 1,`id_lang` = 1,`name` = 'Webmaster',`description` = 'If a technical problem occurs on this website' WHERE `ps_contact_lang`.`id_contact` = 1 AND `ps_contact_lang`.`id_lang` = 1;
@@ -3683,7 +3276,7 @@ UPDATE `ps_contact_lang` SET `id_contact` = 2,`id_lang` = 2,`name` = 'Obsługa k
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_contact_shop`
+-- Struktura tabeli dla tabeli `ps_contact_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_contact_shop` (
@@ -3694,7 +3287,7 @@ CREATE TABLE IF NOT EXISTS `ps_contact_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_contact_shop`
+-- Zrzut danych tabeli `ps_contact_shop`
 --
 
 UPDATE `ps_contact_shop` SET `id_contact` = 1,`id_shop` = 1 WHERE `ps_contact_shop`.`id_contact` = 1 AND `ps_contact_shop`.`id_shop` = 1;
@@ -3703,7 +3296,7 @@ UPDATE `ps_contact_shop` SET `id_contact` = 2,`id_shop` = 1 WHERE `ps_contact_sh
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_country`
+-- Struktura tabeli dla tabeli `ps_country`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_country` (
@@ -3724,7 +3317,7 @@ CREATE TABLE IF NOT EXISTS `ps_country` (
 ) ENGINE=InnoDB AUTO_INCREMENT=245 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_country`
+-- Zrzut danych tabeli `ps_country`
 --
 
 UPDATE `ps_country` SET `id_country` = 1,`id_zone` = 1,`id_currency` = 0,`iso_code` = 'DE',`call_prefix` = 49,`active` = 0,`contains_states` = 0,`need_identification_number` = 0,`need_zip_code` = 1,`zip_code_format` = 'NNNNN',`display_tax_label` = 1 WHERE `ps_country`.`id_country` = 1;
@@ -3975,7 +3568,7 @@ UPDATE `ps_country` SET `id_country` = 244,`id_zone` = 7,`id_currency` = 0,`iso_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_country_lang`
+-- Struktura tabeli dla tabeli `ps_country_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_country_lang` (
@@ -3986,7 +3579,7 @@ CREATE TABLE IF NOT EXISTS `ps_country_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_country_lang`
+-- Zrzut danych tabeli `ps_country_lang`
 --
 
 UPDATE `ps_country_lang` SET `id_country` = 1,`id_lang` = 1,`name` = 'Germany' WHERE `ps_country_lang`.`id_country` = 1 AND `ps_country_lang`.`id_lang` = 1;
@@ -4481,7 +4074,7 @@ UPDATE `ps_country_lang` SET `id_country` = 244,`id_lang` = 2,`name` = 'Wyspy Al
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_country_shop`
+-- Struktura tabeli dla tabeli `ps_country_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_country_shop` (
@@ -4492,7 +4085,7 @@ CREATE TABLE IF NOT EXISTS `ps_country_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_country_shop`
+-- Zrzut danych tabeli `ps_country_shop`
 --
 
 UPDATE `ps_country_shop` SET `id_country` = 1,`id_shop` = 1 WHERE `ps_country_shop`.`id_country` = 1 AND `ps_country_shop`.`id_shop` = 1;
@@ -4743,7 +4336,7 @@ UPDATE `ps_country_shop` SET `id_country` = 244,`id_shop` = 1 WHERE `ps_country_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_cronjobs`
+-- Struktura tabeli dla tabeli `ps_cronjobs`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_cronjobs` (
@@ -4767,7 +4360,7 @@ CREATE TABLE IF NOT EXISTS `ps_cronjobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_currency`
+-- Struktura tabeli dla tabeli `ps_currency`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_currency` (
@@ -4786,7 +4379,7 @@ CREATE TABLE IF NOT EXISTS `ps_currency` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_currency`
+-- Zrzut danych tabeli `ps_currency`
 --
 
 UPDATE `ps_currency` SET `id_currency` = 1,`name` = 'Złoty',`iso_code` = 'PLN',`iso_code_num` = '985',`sign` = 'zł',`blank` = 1,`format` = 2,`decimals` = 1,`conversion_rate` = '1.000000',`deleted` = 0,`active` = 1 WHERE `ps_currency`.`id_currency` = 1;
@@ -4794,7 +4387,7 @@ UPDATE `ps_currency` SET `id_currency` = 1,`name` = 'Złoty',`iso_code` = 'PLN',
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_currency_shop`
+-- Struktura tabeli dla tabeli `ps_currency_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_currency_shop` (
@@ -4806,7 +4399,7 @@ CREATE TABLE IF NOT EXISTS `ps_currency_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_currency_shop`
+-- Zrzut danych tabeli `ps_currency_shop`
 --
 
 UPDATE `ps_currency_shop` SET `id_currency` = 1,`id_shop` = 1,`conversion_rate` = '1.000000' WHERE `ps_currency_shop`.`id_currency` = 1 AND `ps_currency_shop`.`id_shop` = 1;
@@ -4814,7 +4407,7 @@ UPDATE `ps_currency_shop` SET `id_currency` = 1,`id_shop` = 1,`conversion_rate` 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_customer`
+-- Struktura tabeli dla tabeli `ps_customer`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customer` (
@@ -4859,7 +4452,7 @@ CREATE TABLE IF NOT EXISTS `ps_customer` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_customer`
+-- Zrzut danych tabeli `ps_customer`
 --
 
 UPDATE `ps_customer` SET `id_customer` = 1,`id_shop_group` = 1,`id_shop` = 1,`id_gender` = 1,`id_default_group` = 3,`id_lang` = 1,`id_risk` = 0,`company` = '',`siret` = '',`ape` = '',`firstname` = 'John',`lastname` = 'DOE',`email` = 'pub@prestashop.com',`passwd` = 'b0d45ea1cc98a8dbb8fac9079fb89fb1',`last_passwd_gen` = '2016-10-26 17:36:42',`birthday` = '1970-01-15',`newsletter` = 1,`ip_registration_newsletter` = '',`newsletter_date_add` = '2013-12-13 08:19:15',`optin` = 1,`website` = '',`outstanding_allow_amount` = '0.000000',`show_public_prices` = 0,`max_payment_days` = 0,`secure_key` = '62cef8a7594c6c55d4a8ee0933222a0f',`note` = '',`active` = 1,`is_guest` = 0,`deleted` = 0,`date_add` = '2016-10-27 01:36:42',`date_upd` = '2016-10-27 01:36:42' WHERE `ps_customer`.`id_customer` = 1;
@@ -4867,7 +4460,7 @@ UPDATE `ps_customer` SET `id_customer` = 1,`id_shop_group` = 1,`id_shop` = 1,`id
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_customer_group`
+-- Struktura tabeli dla tabeli `ps_customer_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customer_group` (
@@ -4879,7 +4472,7 @@ CREATE TABLE IF NOT EXISTS `ps_customer_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_customer_group`
+-- Zrzut danych tabeli `ps_customer_group`
 --
 
 UPDATE `ps_customer_group` SET `id_customer` = 1,`id_group` = 3 WHERE `ps_customer_group`.`id_customer` = 1 AND `ps_customer_group`.`id_group` = 3;
@@ -4887,7 +4480,7 @@ UPDATE `ps_customer_group` SET `id_customer` = 1,`id_group` = 3 WHERE `ps_custom
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_customer_message`
+-- Struktura tabeli dla tabeli `ps_customer_message`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customer_message` (
@@ -4910,7 +4503,7 @@ CREATE TABLE IF NOT EXISTS `ps_customer_message` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_customer_message_sync_imap`
+-- Struktura tabeli dla tabeli `ps_customer_message_sync_imap`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customer_message_sync_imap` (
@@ -4921,7 +4514,7 @@ CREATE TABLE IF NOT EXISTS `ps_customer_message_sync_imap` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_customer_thread`
+-- Struktura tabeli dla tabeli `ps_customer_thread`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customer_thread` (
@@ -4949,7 +4542,7 @@ CREATE TABLE IF NOT EXISTS `ps_customer_thread` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_customization`
+-- Struktura tabeli dla tabeli `ps_customization`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customization` (
@@ -4970,7 +4563,7 @@ CREATE TABLE IF NOT EXISTS `ps_customization` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_customization_field`
+-- Struktura tabeli dla tabeli `ps_customization_field`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customization_field` (
@@ -4985,7 +4578,7 @@ CREATE TABLE IF NOT EXISTS `ps_customization_field` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_customization_field_lang`
+-- Struktura tabeli dla tabeli `ps_customization_field_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customization_field_lang` (
@@ -4999,7 +4592,7 @@ CREATE TABLE IF NOT EXISTS `ps_customization_field_lang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_customized_data`
+-- Struktura tabeli dla tabeli `ps_customized_data`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_customized_data` (
@@ -5013,7 +4606,7 @@ CREATE TABLE IF NOT EXISTS `ps_customized_data` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_date_range`
+-- Struktura tabeli dla tabeli `ps_date_range`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_date_range` (
@@ -5026,7 +4619,7 @@ CREATE TABLE IF NOT EXISTS `ps_date_range` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_delivery`
+-- Struktura tabeli dla tabeli `ps_delivery`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_delivery` (
@@ -5046,7 +4639,7 @@ CREATE TABLE IF NOT EXISTS `ps_delivery` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_delivery`
+-- Zrzut danych tabeli `ps_delivery`
 --
 
 UPDATE `ps_delivery` SET `id_delivery` = 1,`id_shop` = NULL,`id_shop_group` = NULL,`id_carrier` = 2,`id_range_price` = 0,`id_range_weight` = 1,`id_zone` = 1,`price` = '5.000000' WHERE `ps_delivery`.`id_delivery` = 1;
@@ -5057,7 +4650,7 @@ UPDATE `ps_delivery` SET `id_delivery` = 4,`id_shop` = NULL,`id_shop_group` = NU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_employee`
+-- Struktura tabeli dla tabeli `ps_employee`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_employee` (
@@ -5094,7 +4687,7 @@ CREATE TABLE IF NOT EXISTS `ps_employee` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_employee`
+-- Zrzut danych tabeli `ps_employee`
 --
 
 UPDATE `ps_employee` SET `id_employee` = 1,`id_profile` = 1,`id_lang` = 1,`lastname` = 'Karol',`firstname` = 'Karol',`email` = 'pankarol@mycarparts.com',`passwd` = 'c4a9a2f554809c0fe306f712a18b64f7',`last_passwd_gen` = '2016-10-26 17:36:37',`stats_date_from` = '2016-10-27',`stats_date_to` = '2016-10-27',`stats_compare_from` = '0000-00-00',`stats_compare_to` = '0000-00-00',`stats_compare_option` = 1,`preselect_date_range` = 'day',`bo_color` = '',`bo_theme` = 'default',`bo_css` = 'admin-theme.css',`default_tab` = 1,`bo_width` = 0,`bo_menu` = 1,`active` = 1,`optin` = 1,`id_last_order` = 5,`id_last_customer_message` = 0,`id_last_customer` = 1,`last_connection_date` = '2016-10-27' WHERE `ps_employee`.`id_employee` = 1;
@@ -5104,7 +4697,7 @@ UPDATE `ps_employee` SET `id_employee` = 3,`id_profile` = 1,`id_lang` = 1,`lastn
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_employee_shop`
+-- Struktura tabeli dla tabeli `ps_employee_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_employee_shop` (
@@ -5115,7 +4708,7 @@ CREATE TABLE IF NOT EXISTS `ps_employee_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_employee_shop`
+-- Zrzut danych tabeli `ps_employee_shop`
 --
 
 UPDATE `ps_employee_shop` SET `id_employee` = 1,`id_shop` = 1 WHERE `ps_employee_shop`.`id_employee` = 1 AND `ps_employee_shop`.`id_shop` = 1;
@@ -5125,7 +4718,7 @@ UPDATE `ps_employee_shop` SET `id_employee` = 3,`id_shop` = 1 WHERE `ps_employee
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_feature`
+-- Struktura tabeli dla tabeli `ps_feature`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_feature` (
@@ -5137,7 +4730,7 @@ CREATE TABLE IF NOT EXISTS `ps_feature` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_feature_lang`
+-- Struktura tabeli dla tabeli `ps_feature_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_feature_lang` (
@@ -5151,7 +4744,7 @@ CREATE TABLE IF NOT EXISTS `ps_feature_lang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_feature_product`
+-- Struktura tabeli dla tabeli `ps_feature_product`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_feature_product` (
@@ -5166,7 +4759,7 @@ CREATE TABLE IF NOT EXISTS `ps_feature_product` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_feature_shop`
+-- Struktura tabeli dla tabeli `ps_feature_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_feature_shop` (
@@ -5179,7 +4772,7 @@ CREATE TABLE IF NOT EXISTS `ps_feature_shop` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_feature_value`
+-- Struktura tabeli dla tabeli `ps_feature_value`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_feature_value` (
@@ -5193,7 +4786,7 @@ CREATE TABLE IF NOT EXISTS `ps_feature_value` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_feature_value_lang`
+-- Struktura tabeli dla tabeli `ps_feature_value_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_feature_value_lang` (
@@ -5206,7 +4799,7 @@ CREATE TABLE IF NOT EXISTS `ps_feature_value_lang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_gender`
+-- Struktura tabeli dla tabeli `ps_gender`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_gender` (
@@ -5216,7 +4809,7 @@ CREATE TABLE IF NOT EXISTS `ps_gender` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_gender`
+-- Zrzut danych tabeli `ps_gender`
 --
 
 UPDATE `ps_gender` SET `id_gender` = 1,`type` = 0 WHERE `ps_gender`.`id_gender` = 1;
@@ -5225,7 +4818,7 @@ UPDATE `ps_gender` SET `id_gender` = 2,`type` = 1 WHERE `ps_gender`.`id_gender` 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_gender_lang`
+-- Struktura tabeli dla tabeli `ps_gender_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_gender_lang` (
@@ -5237,7 +4830,7 @@ CREATE TABLE IF NOT EXISTS `ps_gender_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_gender_lang`
+-- Zrzut danych tabeli `ps_gender_lang`
 --
 
 UPDATE `ps_gender_lang` SET `id_gender` = 1,`id_lang` = 1,`name` = 'Mr.' WHERE `ps_gender_lang`.`id_gender` = 1 AND `ps_gender_lang`.`id_lang` = 1;
@@ -5248,7 +4841,7 @@ UPDATE `ps_gender_lang` SET `id_gender` = 2,`id_lang` = 2,`name` = 'Pani' WHERE 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_group`
+-- Struktura tabeli dla tabeli `ps_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_group` (
@@ -5262,7 +4855,7 @@ CREATE TABLE IF NOT EXISTS `ps_group` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_group`
+-- Zrzut danych tabeli `ps_group`
 --
 
 UPDATE `ps_group` SET `id_group` = 1,`reduction` = '0.00',`price_display_method` = 0,`show_prices` = 1,`date_add` = '2016-10-27 01:35:57',`date_upd` = '2016-10-27 01:35:57' WHERE `ps_group`.`id_group` = 1;
@@ -5272,7 +4865,7 @@ UPDATE `ps_group` SET `id_group` = 3,`reduction` = '0.00',`price_display_method`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_group_lang`
+-- Struktura tabeli dla tabeli `ps_group_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_group_lang` (
@@ -5283,7 +4876,7 @@ CREATE TABLE IF NOT EXISTS `ps_group_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_group_lang`
+-- Zrzut danych tabeli `ps_group_lang`
 --
 
 UPDATE `ps_group_lang` SET `id_group` = 1,`id_lang` = 1,`name` = 'Visitor' WHERE `ps_group_lang`.`id_group` = 1 AND `ps_group_lang`.`id_lang` = 1;
@@ -5296,7 +4889,7 @@ UPDATE `ps_group_lang` SET `id_group` = 3,`id_lang` = 2,`name` = 'Klient' WHERE 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_group_reduction`
+-- Struktura tabeli dla tabeli `ps_group_reduction`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_group_reduction` (
@@ -5311,7 +4904,7 @@ CREATE TABLE IF NOT EXISTS `ps_group_reduction` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_group_shop`
+-- Struktura tabeli dla tabeli `ps_group_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_group_shop` (
@@ -5322,7 +4915,7 @@ CREATE TABLE IF NOT EXISTS `ps_group_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_group_shop`
+-- Zrzut danych tabeli `ps_group_shop`
 --
 
 UPDATE `ps_group_shop` SET `id_group` = 1,`id_shop` = 1 WHERE `ps_group_shop`.`id_group` = 1 AND `ps_group_shop`.`id_shop` = 1;
@@ -5332,7 +4925,7 @@ UPDATE `ps_group_shop` SET `id_group` = 3,`id_shop` = 1 WHERE `ps_group_shop`.`i
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_guest`
+-- Struktura tabeli dla tabeli `ps_guest`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_guest` (
@@ -5356,22 +4949,21 @@ CREATE TABLE IF NOT EXISTS `ps_guest` (
   KEY `id_customer` (`id_customer`),
   KEY `id_operating_system` (`id_operating_system`),
   KEY `id_web_browser` (`id_web_browser`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_guest`
+-- Zrzut danych tabeli `ps_guest`
 --
 
 UPDATE `ps_guest` SET `id_guest` = 1,`id_operating_system` = 0,`id_web_browser` = 0,`id_customer` = 1,`javascript` = 0,`screen_resolution_x` = 0,`screen_resolution_y` = 0,`screen_color` = 0,`sun_java` = 0,`adobe_flash` = 0,`adobe_director` = 0,`apple_quicktime` = 0,`real_player` = 0,`windows_media` = 0,`accept_language` = '',`mobile_theme` = 0 WHERE `ps_guest`.`id_guest` = 1;
 UPDATE `ps_guest` SET `id_guest` = 2,`id_operating_system` = 0,`id_web_browser` = 11,`id_customer` = 0,`javascript` = 0,`screen_resolution_x` = 0,`screen_resolution_y` = 0,`screen_color` = 0,`sun_java` = 0,`adobe_flash` = 0,`adobe_director` = 0,`apple_quicktime` = 0,`real_player` = 0,`windows_media` = 0,`accept_language` = 'pl',`mobile_theme` = 0 WHERE `ps_guest`.`id_guest` = 2;
 UPDATE `ps_guest` SET `id_guest` = 3,`id_operating_system` = 0,`id_web_browser` = 0,`id_customer` = 0,`javascript` = 0,`screen_resolution_x` = 0,`screen_resolution_y` = 0,`screen_color` = 0,`sun_java` = 0,`adobe_flash` = 0,`adobe_director` = 0,`apple_quicktime` = 0,`real_player` = 0,`windows_media` = 0,`accept_language` = '',`mobile_theme` = 0 WHERE `ps_guest`.`id_guest` = 3;
 UPDATE `ps_guest` SET `id_guest` = 4,`id_operating_system` = 0,`id_web_browser` = 3,`id_customer` = 0,`javascript` = 0,`screen_resolution_x` = 0,`screen_resolution_y` = 0,`screen_color` = 0,`sun_java` = 0,`adobe_flash` = 0,`adobe_director` = 0,`apple_quicktime` = 0,`real_player` = 0,`windows_media` = 0,`accept_language` = '',`mobile_theme` = 0 WHERE `ps_guest`.`id_guest` = 4;
-UPDATE `ps_guest` SET `id_guest` = 5,`id_operating_system` = 0,`id_web_browser` = 3,`id_customer` = 0,`javascript` = 0,`screen_resolution_x` = 0,`screen_resolution_y` = 0,`screen_color` = 0,`sun_java` = 0,`adobe_flash` = 0,`adobe_director` = 0,`apple_quicktime` = 0,`real_player` = 0,`windows_media` = 0,`accept_language` = '',`mobile_theme` = 0 WHERE `ps_guest`.`id_guest` = 5;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_homeslider`
+-- Struktura tabeli dla tabeli `ps_homeslider`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_homeslider` (
@@ -5381,7 +4973,7 @@ CREATE TABLE IF NOT EXISTS `ps_homeslider` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_homeslider`
+-- Zrzut danych tabeli `ps_homeslider`
 --
 
 UPDATE `ps_homeslider` SET `id_homeslider_slides` = 1,`id_shop` = 1 WHERE `ps_homeslider`.`id_homeslider_slides` = 1 AND `ps_homeslider`.`id_shop` = 1;
@@ -5391,7 +4983,7 @@ UPDATE `ps_homeslider` SET `id_homeslider_slides` = 3,`id_shop` = 1 WHERE `ps_ho
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_homeslider_slides`
+-- Struktura tabeli dla tabeli `ps_homeslider_slides`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_homeslider_slides` (
@@ -5402,7 +4994,7 @@ CREATE TABLE IF NOT EXISTS `ps_homeslider_slides` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_homeslider_slides`
+-- Zrzut danych tabeli `ps_homeslider_slides`
 --
 
 UPDATE `ps_homeslider_slides` SET `id_homeslider_slides` = 1,`position` = 1,`active` = 1 WHERE `ps_homeslider_slides`.`id_homeslider_slides` = 1;
@@ -5412,7 +5004,7 @@ UPDATE `ps_homeslider_slides` SET `id_homeslider_slides` = 3,`position` = 3,`act
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_homeslider_slides_lang`
+-- Struktura tabeli dla tabeli `ps_homeslider_slides_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_homeslider_slides_lang` (
@@ -5427,7 +5019,7 @@ CREATE TABLE IF NOT EXISTS `ps_homeslider_slides_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_homeslider_slides_lang`
+-- Zrzut danych tabeli `ps_homeslider_slides_lang`
 --
 
 UPDATE `ps_homeslider_slides_lang` SET `id_homeslider_slides` = 1,`id_lang` = 1,`title` = 'Sample 1',`description` = '<h2>EXCEPTEUR<br />OCCAECAT</h2>\n				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique in tortor et dignissim. Quisque non tempor leo. Maecenas egestas sem elit</p>\n				<p><button class="btn btn-default" type="button">Shop now !</button></p>',`legend` = 'sample-1',`url` = 'http://www.prestashop.com/?utm_source=back-office&utm_medium=v16_homeslider&utm_campaign=back-office-EN&utm_content=download',`image` = 'sample-1.jpg' WHERE `ps_homeslider_slides_lang`.`id_homeslider_slides` = 1 AND `ps_homeslider_slides_lang`.`id_lang` = 1;
@@ -5440,7 +5032,7 @@ UPDATE `ps_homeslider_slides_lang` SET `id_homeslider_slides` = 3,`id_lang` = 2,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_hook`
+-- Struktura tabeli dla tabeli `ps_hook`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_hook` (
@@ -5455,7 +5047,7 @@ CREATE TABLE IF NOT EXISTS `ps_hook` (
 ) ENGINE=InnoDB AUTO_INCREMENT=163 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_hook`
+-- Zrzut danych tabeli `ps_hook`
 --
 
 UPDATE `ps_hook` SET `id_hook` = 1,`name` = 'displayPayment',`title` = 'Payment',`description` = 'This hook displays new elements on the payment page',`position` = 1,`live_edit` = 1 WHERE `ps_hook`.`id_hook` = 1;
@@ -5623,7 +5215,7 @@ UPDATE `ps_hook` SET `id_hook` = 162,`name` = 'actionAdminWebserviceControllerSa
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_hook_alias`
+-- Struktura tabeli dla tabeli `ps_hook_alias`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_hook_alias` (
@@ -5635,7 +5227,7 @@ CREATE TABLE IF NOT EXISTS `ps_hook_alias` (
 ) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_hook_alias`
+-- Zrzut danych tabeli `ps_hook_alias`
 --
 
 UPDATE `ps_hook_alias` SET `id_hook_alias` = 1,`alias` = 'payment',`name` = 'displayPayment' WHERE `ps_hook_alias`.`id_hook_alias` = 1;
@@ -5728,7 +5320,7 @@ UPDATE `ps_hook_alias` SET `id_hook_alias` = 86,`alias` = 'myAccountBlock',`name
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_hook_module`
+-- Struktura tabeli dla tabeli `ps_hook_module`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_hook_module` (
@@ -5743,7 +5335,7 @@ CREATE TABLE IF NOT EXISTS `ps_hook_module` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_hook_module`
+-- Zrzut danych tabeli `ps_hook_module`
 --
 
 UPDATE `ps_hook_module` SET `id_module` = 1,`id_shop` = 1,`id_hook` = 10,`position` = 1 WHERE `ps_hook_module`.`id_module` = 1 AND `ps_hook_module`.`id_shop` = 1 AND `ps_hook_module`.`id_hook` = 10;
@@ -5991,7 +5583,7 @@ UPDATE `ps_hook_module` SET `id_module` = 68,`id_shop` = 1,`id_hook` = 10,`posit
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_hook_module_exceptions`
+-- Struktura tabeli dla tabeli `ps_hook_module_exceptions`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_hook_module_exceptions` (
@@ -6006,7 +5598,7 @@ CREATE TABLE IF NOT EXISTS `ps_hook_module_exceptions` (
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_hook_module_exceptions`
+-- Zrzut danych tabeli `ps_hook_module_exceptions`
 --
 
 UPDATE `ps_hook_module_exceptions` SET `id_hook_module_exceptions` = 1,`id_shop` = 1,`id_module` = 4,`id_hook` = 8,`file_name` = 'category' WHERE `ps_hook_module_exceptions`.`id_hook_module_exceptions` = 1;
@@ -6024,7 +5616,7 @@ UPDATE `ps_hook_module_exceptions` SET `id_hook_module_exceptions` = 17,`id_shop
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_image`
+-- Struktura tabeli dla tabeli `ps_image`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_image` (
@@ -6036,20 +5628,21 @@ CREATE TABLE IF NOT EXISTS `ps_image` (
   UNIQUE KEY `id_product_cover` (`id_product`,`cover`),
   UNIQUE KEY `idx_product_image` (`id_image`,`id_product`,`cover`),
   KEY `image_product` (`id_product`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_image`
+-- Zrzut danych tabeli `ps_image`
 --
 
 UPDATE `ps_image` SET `id_image` = 10,`id_product` = 4,`position` = 1,`cover` = 1 WHERE `ps_image`.`id_image` = 10;
 UPDATE `ps_image` SET `id_image` = 11,`id_product` = 4,`position` = 2,`cover` = NULL WHERE `ps_image`.`id_image` = 11;
-UPDATE `ps_image` SET `id_image` = 24,`id_product` = 9,`position` = 1,`cover` = 1 WHERE `ps_image`.`id_image` = 24;
+UPDATE `ps_image` SET `id_image` = 25,`id_product` = 10,`position` = 1,`cover` = 1 WHERE `ps_image`.`id_image` = 25;
+UPDATE `ps_image` SET `id_image` = 26,`id_product` = 11,`position` = 1,`cover` = 1 WHERE `ps_image`.`id_image` = 26;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_image_lang`
+-- Struktura tabeli dla tabeli `ps_image_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_image_lang` (
@@ -6061,20 +5654,22 @@ CREATE TABLE IF NOT EXISTS `ps_image_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_image_lang`
+-- Zrzut danych tabeli `ps_image_lang`
 --
 
 UPDATE `ps_image_lang` SET `id_image` = 10,`id_lang` = 1,`legend` = '' WHERE `ps_image_lang`.`id_image` = 10 AND `ps_image_lang`.`id_lang` = 1;
 UPDATE `ps_image_lang` SET `id_image` = 10,`id_lang` = 2,`legend` = '' WHERE `ps_image_lang`.`id_image` = 10 AND `ps_image_lang`.`id_lang` = 2;
 UPDATE `ps_image_lang` SET `id_image` = 11,`id_lang` = 1,`legend` = '' WHERE `ps_image_lang`.`id_image` = 11 AND `ps_image_lang`.`id_lang` = 1;
 UPDATE `ps_image_lang` SET `id_image` = 11,`id_lang` = 2,`legend` = '' WHERE `ps_image_lang`.`id_image` = 11 AND `ps_image_lang`.`id_lang` = 2;
-UPDATE `ps_image_lang` SET `id_image` = 24,`id_lang` = 1,`legend` = 'Cooler Audi A4' WHERE `ps_image_lang`.`id_image` = 24 AND `ps_image_lang`.`id_lang` = 1;
-UPDATE `ps_image_lang` SET `id_image` = 24,`id_lang` = 2,`legend` = 'Cooler Audi A4' WHERE `ps_image_lang`.`id_image` = 24 AND `ps_image_lang`.`id_lang` = 2;
+UPDATE `ps_image_lang` SET `id_image` = 25,`id_lang` = 1,`legend` = 'VAN WEZEL Radiator' WHERE `ps_image_lang`.`id_image` = 25 AND `ps_image_lang`.`id_lang` = 1;
+UPDATE `ps_image_lang` SET `id_image` = 25,`id_lang` = 2,`legend` = 'VAN WEZEL Radiator' WHERE `ps_image_lang`.`id_image` = 25 AND `ps_image_lang`.`id_lang` = 2;
+UPDATE `ps_image_lang` SET `id_image` = 26,`id_lang` = 1,`legend` = 'AKS DASIS Radiator' WHERE `ps_image_lang`.`id_image` = 26 AND `ps_image_lang`.`id_lang` = 1;
+UPDATE `ps_image_lang` SET `id_image` = 26,`id_lang` = 2,`legend` = 'AKS DASIS Radiator' WHERE `ps_image_lang`.`id_image` = 26 AND `ps_image_lang`.`id_lang` = 2;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_image_shop`
+-- Struktura tabeli dla tabeli `ps_image_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_image_shop` (
@@ -6088,17 +5683,18 @@ CREATE TABLE IF NOT EXISTS `ps_image_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_image_shop`
+-- Zrzut danych tabeli `ps_image_shop`
 --
 
 UPDATE `ps_image_shop` SET `id_product` = 4,`id_image` = 11,`id_shop` = 1,`cover` = NULL WHERE `ps_image_shop`.`id_image` = 11 AND `ps_image_shop`.`id_shop` = 1;
 UPDATE `ps_image_shop` SET `id_product` = 4,`id_image` = 10,`id_shop` = 1,`cover` = 1 WHERE `ps_image_shop`.`id_image` = 10 AND `ps_image_shop`.`id_shop` = 1;
-UPDATE `ps_image_shop` SET `id_product` = 9,`id_image` = 24,`id_shop` = 1,`cover` = 1 WHERE `ps_image_shop`.`id_image` = 24 AND `ps_image_shop`.`id_shop` = 1;
+UPDATE `ps_image_shop` SET `id_product` = 10,`id_image` = 25,`id_shop` = 1,`cover` = 1 WHERE `ps_image_shop`.`id_image` = 25 AND `ps_image_shop`.`id_shop` = 1;
+UPDATE `ps_image_shop` SET `id_product` = 11,`id_image` = 26,`id_shop` = 1,`cover` = 1 WHERE `ps_image_shop`.`id_image` = 26 AND `ps_image_shop`.`id_shop` = 1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_image_type`
+-- Struktura tabeli dla tabeli `ps_image_type`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_image_type` (
@@ -6117,7 +5713,7 @@ CREATE TABLE IF NOT EXISTS `ps_image_type` (
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_image_type`
+-- Zrzut danych tabeli `ps_image_type`
 --
 
 UPDATE `ps_image_type` SET `id_image_type` = 10,`name` = 'cart_default',`width` = 80,`height` = 80,`products` = 1,`categories` = 0,`manufacturers` = 0,`suppliers` = 0,`scenes` = 0,`stores` = 1 WHERE `ps_image_type`.`id_image_type` = 10;
@@ -6133,7 +5729,7 @@ UPDATE `ps_image_type` SET `id_image_type` = 18,`name` = 'm_scene_default',`widt
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_import_match`
+-- Struktura tabeli dla tabeli `ps_import_match`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_import_match` (
@@ -6147,7 +5743,7 @@ CREATE TABLE IF NOT EXISTS `ps_import_match` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_info`
+-- Struktura tabeli dla tabeli `ps_info`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_info` (
@@ -6157,7 +5753,7 @@ CREATE TABLE IF NOT EXISTS `ps_info` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_info`
+-- Zrzut danych tabeli `ps_info`
 --
 
 UPDATE `ps_info` SET `id_info` = 1,`id_shop` = 1 WHERE `ps_info`.`id_info` = 1;
@@ -6166,7 +5762,7 @@ UPDATE `ps_info` SET `id_info` = 2,`id_shop` = 1 WHERE `ps_info`.`id_info` = 2;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_info_lang`
+-- Struktura tabeli dla tabeli `ps_info_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_info_lang` (
@@ -6177,7 +5773,7 @@ CREATE TABLE IF NOT EXISTS `ps_info_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_info_lang`
+-- Zrzut danych tabeli `ps_info_lang`
 --
 
 UPDATE `ps_info_lang` SET `id_info` = 1,`id_lang` = 1,`text` = '<ul>\n<li><em class="icon-truck" id="icon-truck"></em>\n<div class="type-text">\n<h3>Lorem Ipsum</h3>\n<p>Lorem ipsum dolor sit amet conse ctetur voluptate velit esse cillum dolore eu</p>\n</div>\n</li>\n<li><em class="icon-phone" id="icon-phone"></em>\n<div class="type-text">\n<h3>Dolor Sit Amet</h3>\n<p>Lorem ipsum dolor sit amet conse ctetur voluptate velit esse cillum dolore eu</p>\n</div>\n</li>\n<li><em class="icon-credit-card" id="icon-credit-card"></em>\n<div class="type-text">\n<h3>Ctetur Voluptate</h3>\n<p>Lorem ipsum dolor sit amet conse ctetur voluptate velit esse cillum dolore eu</p>\n</div>\n</li>\n</ul>' WHERE `ps_info_lang`.`id_info` = 1 AND `ps_info_lang`.`id_lang` = 1;
@@ -6188,7 +5784,7 @@ UPDATE `ps_info_lang` SET `id_info` = 2,`id_lang` = 2,`text` = '<h3>Custom Block
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_lang`
+-- Struktura tabeli dla tabeli `ps_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_lang` (
@@ -6205,7 +5801,7 @@ CREATE TABLE IF NOT EXISTS `ps_lang` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_lang`
+-- Zrzut danych tabeli `ps_lang`
 --
 
 UPDATE `ps_lang` SET `id_lang` = 1,`name` = 'English (English)',`active` = 1,`iso_code` = 'en',`language_code` = 'en-us',`date_format_lite` = 'm/d/Y',`date_format_full` = 'm/d/Y H:i:s',`is_rtl` = 0 WHERE `ps_lang`.`id_lang` = 1;
@@ -6214,7 +5810,7 @@ UPDATE `ps_lang` SET `id_lang` = 2,`name` = 'Polski (Polish)',`active` = 1,`iso_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_lang_shop`
+-- Struktura tabeli dla tabeli `ps_lang_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_lang_shop` (
@@ -6225,7 +5821,7 @@ CREATE TABLE IF NOT EXISTS `ps_lang_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_lang_shop`
+-- Zrzut danych tabeli `ps_lang_shop`
 --
 
 UPDATE `ps_lang_shop` SET `id_lang` = 1,`id_shop` = 1 WHERE `ps_lang_shop`.`id_lang` = 1 AND `ps_lang_shop`.`id_shop` = 1;
@@ -6234,7 +5830,7 @@ UPDATE `ps_lang_shop` SET `id_lang` = 2,`id_shop` = 1 WHERE `ps_lang_shop`.`id_l
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_layered_category`
+-- Struktura tabeli dla tabeli `ps_layered_category`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_category` (
@@ -6251,7 +5847,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_category` (
 ) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `ps_layered_category`
+-- Zrzut danych tabeli `ps_layered_category`
 --
 
 UPDATE `ps_layered_category` SET `id_layered_category` = 1,`id_shop` = 1,`id_category` = 2,`id_value` = NULL,`type` = 'category',`position` = 1,`filter_type` = 2,`filter_show_limit` = 0 WHERE `ps_layered_category`.`id_layered_category` = 1;
@@ -6312,7 +5908,7 @@ UPDATE `ps_layered_category` SET `id_layered_category` = 54,`id_shop` = 1,`id_ca
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_layered_filter`
+-- Struktura tabeli dla tabeli `ps_layered_filter`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_filter` (
@@ -6325,7 +5921,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_filter` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_layered_filter`
+-- Zrzut danych tabeli `ps_layered_filter`
 --
 
 UPDATE `ps_layered_filter` SET `id_layered_filter` = 1,`name` = 'My template 2016-10-27',`filters` = 'a:8:{s:10:"categories";a:9:{i:0;i:2;i:1;i:14;i:2;i:16;i:3;i:20;i:4;i:17;i:5;i:18;i:6;i:19;i:7;i:12;i:8;i:15;}s:9:"shop_list";a:1:{i:0;i:1;}s:31:"layered_selection_subcategories";a:2:{s:11:"filter_type";i:2;s:17:"filter_show_limit";i:0;}s:23:"layered_selection_stock";a:2:{s:11:"filter_type";i:0;s:17:"filter_show_limit";i:0;}s:27:"layered_selection_condition";a:2:{s:11:"filter_type";i:0;s:17:"filter_show_limit";i:0;}s:30:"layered_selection_manufacturer";a:2:{s:11:"filter_type";i:0;s:17:"filter_show_limit";i:0;}s:31:"layered_selection_weight_slider";a:2:{s:11:"filter_type";i:0;s:17:"filter_show_limit";i:0;}s:30:"layered_selection_price_slider";a:2:{s:11:"filter_type";i:0;s:17:"filter_show_limit";i:0;}}',`n_categories` = 9,`date_add` = '2016-10-27 14:01:52' WHERE `ps_layered_filter`.`id_layered_filter` = 1;
@@ -6333,7 +5929,7 @@ UPDATE `ps_layered_filter` SET `id_layered_filter` = 1,`name` = 'My template 201
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_layered_filter_shop`
+-- Struktura tabeli dla tabeli `ps_layered_filter_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_filter_shop` (
@@ -6346,7 +5942,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_filter_shop` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_layered_friendly_url`
+-- Struktura tabeli dla tabeli `ps_layered_friendly_url`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_friendly_url` (
@@ -6360,7 +5956,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_friendly_url` (
 ) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_layered_friendly_url`
+-- Zrzut danych tabeli `ps_layered_friendly_url`
 --
 
 UPDATE `ps_layered_friendly_url` SET `id_layered_friendly_url` = 1,`url_key` = '3f1005f8be7881795fc5feddfdba756f',`data` = 'a:1:{s:8:"category";a:1:{i:1;s:1:"1";}}',`id_lang` = 1 WHERE `ps_layered_friendly_url`.`id_layered_friendly_url` = 1;
@@ -6477,7 +6073,7 @@ UPDATE `ps_layered_friendly_url` SET `id_layered_friendly_url` = 110,`url_key` =
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_layered_indexable_attribute_group`
+-- Struktura tabeli dla tabeli `ps_layered_indexable_attribute_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_indexable_attribute_group` (
@@ -6489,7 +6085,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_indexable_attribute_group` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_layered_indexable_attribute_group_lang_value`
+-- Struktura tabeli dla tabeli `ps_layered_indexable_attribute_group_lang_value`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_indexable_attribute_group_lang_value` (
@@ -6503,7 +6099,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_indexable_attribute_group_lang_value` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_layered_indexable_attribute_lang_value`
+-- Struktura tabeli dla tabeli `ps_layered_indexable_attribute_lang_value`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_indexable_attribute_lang_value` (
@@ -6517,7 +6113,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_indexable_attribute_lang_value` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_layered_indexable_feature`
+-- Struktura tabeli dla tabeli `ps_layered_indexable_feature`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_indexable_feature` (
@@ -6529,7 +6125,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_indexable_feature` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_layered_indexable_feature_lang_value`
+-- Struktura tabeli dla tabeli `ps_layered_indexable_feature_lang_value`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_indexable_feature_lang_value` (
@@ -6543,7 +6139,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_indexable_feature_lang_value` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_layered_indexable_feature_value_lang_value`
+-- Struktura tabeli dla tabeli `ps_layered_indexable_feature_value_lang_value`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_indexable_feature_value_lang_value` (
@@ -6557,7 +6153,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_indexable_feature_value_lang_value` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_layered_price_index`
+-- Struktura tabeli dla tabeli `ps_layered_price_index`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_price_index` (
@@ -6573,7 +6169,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_price_index` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_layered_price_index`
+-- Zrzut danych tabeli `ps_layered_price_index`
 --
 
 UPDATE `ps_layered_price_index` SET `id_product` = 1,`id_currency` = 1,`id_shop` = 1,`price_min` = 16,`price_max` = 20 WHERE `ps_layered_price_index`.`id_product` = 1 AND `ps_layered_price_index`.`id_currency` = 1 AND `ps_layered_price_index`.`id_shop` = 1;
@@ -6585,11 +6181,13 @@ UPDATE `ps_layered_price_index` SET `id_product` = 6,`id_currency` = 1,`id_shop`
 UPDATE `ps_layered_price_index` SET `id_product` = 7,`id_currency` = 1,`id_shop` = 1,`price_min` = 16,`price_max` = 20 WHERE `ps_layered_price_index`.`id_product` = 7 AND `ps_layered_price_index`.`id_currency` = 1 AND `ps_layered_price_index`.`id_shop` = 1;
 UPDATE `ps_layered_price_index` SET `id_product` = 8,`id_currency` = 1,`id_shop` = 1,`price_min` = 60,`price_max` = 74 WHERE `ps_layered_price_index`.`id_product` = 8 AND `ps_layered_price_index`.`id_currency` = 1 AND `ps_layered_price_index`.`id_shop` = 1;
 UPDATE `ps_layered_price_index` SET `id_product` = 9,`id_currency` = 1,`id_shop` = 1,`price_min` = 300,`price_max` = 369 WHERE `ps_layered_price_index`.`id_product` = 9 AND `ps_layered_price_index`.`id_currency` = 1 AND `ps_layered_price_index`.`id_shop` = 1;
+UPDATE `ps_layered_price_index` SET `id_product` = 10,`id_currency` = 1,`id_shop` = 1,`price_min` = 352,`price_max` = 433 WHERE `ps_layered_price_index`.`id_product` = 10 AND `ps_layered_price_index`.`id_currency` = 1 AND `ps_layered_price_index`.`id_shop` = 1;
+UPDATE `ps_layered_price_index` SET `id_product` = 11,`id_currency` = 1,`id_shop` = 1,`price_min` = 420,`price_max` = 517 WHERE `ps_layered_price_index`.`id_product` = 11 AND `ps_layered_price_index`.`id_currency` = 1 AND `ps_layered_price_index`.`id_shop` = 1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_layered_product_attribute`
+-- Struktura tabeli dla tabeli `ps_layered_product_attribute`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_layered_product_attribute` (
@@ -6602,7 +6200,7 @@ CREATE TABLE IF NOT EXISTS `ps_layered_product_attribute` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_layered_product_attribute`
+-- Zrzut danych tabeli `ps_layered_product_attribute`
 --
 
 UPDATE `ps_layered_product_attribute` SET `id_attribute` = 1,`id_product` = 1,`id_attribute_group` = 1,`id_shop` = 1 WHERE `ps_layered_product_attribute`.`id_attribute` = 1 AND `ps_layered_product_attribute`.`id_product` = 1 AND `ps_layered_product_attribute`.`id_shop` = 1;
@@ -6645,7 +6243,7 @@ UPDATE `ps_layered_product_attribute` SET `id_attribute` = 24,`id_product` = 4,`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_linksmenutop`
+-- Struktura tabeli dla tabeli `ps_linksmenutop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_linksmenutop` (
@@ -6659,7 +6257,7 @@ CREATE TABLE IF NOT EXISTS `ps_linksmenutop` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_linksmenutop_lang`
+-- Struktura tabeli dla tabeli `ps_linksmenutop_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_linksmenutop_lang` (
@@ -6674,7 +6272,7 @@ CREATE TABLE IF NOT EXISTS `ps_linksmenutop_lang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_log`
+-- Struktura tabeli dla tabeli `ps_log`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_log` (
@@ -6688,10 +6286,10 @@ CREATE TABLE IF NOT EXISTS `ps_log` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id_log`)
-) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_log`
+-- Zrzut danych tabeli `ps_log`
 --
 
 UPDATE `ps_log` SET `id_log` = 1,`severity` = 1,`error_code` = 0,`message` = 'Back Office connection from 127.0.0.1',`object_type` = '',`object_id` = 0,`id_employee` = 1,`date_add` = '2016-10-27 01:40:59',`date_upd` = '2016-10-27 01:40:59' WHERE `ps_log`.`id_log` = 1;
@@ -6772,12 +6370,11 @@ UPDATE `ps_log` SET `id_log` = 75,`severity` = 1,`error_code` = 0,`message` = 'C
 UPDATE `ps_log` SET `id_log` = 76,`severity` = 1,`error_code` = 0,`message` = 'Category addition',`object_type` = 'Category',`object_id` = 30,`id_employee` = 3,`date_add` = '2016-11-03 16:58:24',`date_upd` = '2016-11-03 16:58:24' WHERE `ps_log`.`id_log` = 76;
 UPDATE `ps_log` SET `id_log` = 77,`severity` = 1,`error_code` = 0,`message` = 'Category addition',`object_type` = 'Category',`object_id` = 31,`id_employee` = 3,`date_add` = '2016-11-03 16:59:00',`date_upd` = '2016-11-03 16:59:00' WHERE `ps_log`.`id_log` = 77;
 UPDATE `ps_log` SET `id_log` = 78,`severity` = 1,`error_code` = 0,`message` = 'Category addition',`object_type` = 'Category',`object_id` = 32,`id_employee` = 3,`date_add` = '2016-11-03 17:00:37',`date_upd` = '2016-11-03 17:00:37' WHERE `ps_log`.`id_log` = 78;
-UPDATE `ps_log` SET `id_log` = 79,`severity` = 1,`error_code` = 0,`message` = 'Category addition',`object_type` = 'Category',`object_id` = 33,`id_employee` = 3,`date_add` = '2016-11-03 17:01:07',`date_upd` = '2016-11-03 17:01:07' WHERE `ps_log`.`id_log` = 79;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_mail`
+-- Struktura tabeli dla tabeli `ps_mail`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_mail` (
@@ -6794,7 +6391,7 @@ CREATE TABLE IF NOT EXISTS `ps_mail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_manufacturer`
+-- Struktura tabeli dla tabeli `ps_manufacturer`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_manufacturer` (
@@ -6809,7 +6406,7 @@ CREATE TABLE IF NOT EXISTS `ps_manufacturer` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_manufacturer_lang`
+-- Struktura tabeli dla tabeli `ps_manufacturer_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_manufacturer_lang` (
@@ -6826,7 +6423,7 @@ CREATE TABLE IF NOT EXISTS `ps_manufacturer_lang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_manufacturer_shop`
+-- Struktura tabeli dla tabeli `ps_manufacturer_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_manufacturer_shop` (
@@ -6839,7 +6436,7 @@ CREATE TABLE IF NOT EXISTS `ps_manufacturer_shop` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_memcached_servers`
+-- Struktura tabeli dla tabeli `ps_memcached_servers`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_memcached_servers` (
@@ -6853,7 +6450,7 @@ CREATE TABLE IF NOT EXISTS `ps_memcached_servers` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_message`
+-- Struktura tabeli dla tabeli `ps_message`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_message` (
@@ -6875,7 +6472,7 @@ CREATE TABLE IF NOT EXISTS `ps_message` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_message_readed`
+-- Struktura tabeli dla tabeli `ps_message_readed`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_message_readed` (
@@ -6888,7 +6485,7 @@ CREATE TABLE IF NOT EXISTS `ps_message_readed` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_meta`
+-- Struktura tabeli dla tabeli `ps_meta`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_meta` (
@@ -6900,7 +6497,7 @@ CREATE TABLE IF NOT EXISTS `ps_meta` (
 ) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_meta`
+-- Zrzut danych tabeli `ps_meta`
 --
 
 UPDATE `ps_meta` SET `id_meta` = 1,`page` = 'pagenotfound',`configurable` = 1 WHERE `ps_meta`.`id_meta` = 1;
@@ -6944,7 +6541,7 @@ UPDATE `ps_meta` SET `id_meta` = 37,`page` = 'module-cronjobs-callback',`configu
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_meta_lang`
+-- Struktura tabeli dla tabeli `ps_meta_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_meta_lang` (
@@ -6961,7 +6558,7 @@ CREATE TABLE IF NOT EXISTS `ps_meta_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_meta_lang`
+-- Zrzut danych tabeli `ps_meta_lang`
 --
 
 UPDATE `ps_meta_lang` SET `id_meta` = 1,`id_shop` = 1,`id_lang` = 1,`title` = '404 error',`description` = 'This page cannot be found',`keywords` = '',`url_rewrite` = 'page-not-found' WHERE `ps_meta_lang`.`id_meta` = 1 AND `ps_meta_lang`.`id_shop` = 1 AND `ps_meta_lang`.`id_lang` = 1;
@@ -7026,7 +6623,7 @@ UPDATE `ps_meta_lang` SET `id_meta` = 37,`id_shop` = 1,`id_lang` = 2,`title` = '
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_module`
+-- Struktura tabeli dla tabeli `ps_module`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_module` (
@@ -7039,7 +6636,7 @@ CREATE TABLE IF NOT EXISTS `ps_module` (
 ) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_module`
+-- Zrzut danych tabeli `ps_module`
 --
 
 UPDATE `ps_module` SET `id_module` = 1,`name` = 'socialsharing',`active` = 1,`version` = '1.4.3' WHERE `ps_module`.`id_module` = 1;
@@ -7112,7 +6709,7 @@ UPDATE `ps_module` SET `id_module` = 68,`name` = 'blockcategories',`active` = 1,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_modules_perfs`
+-- Struktura tabeli dla tabeli `ps_modules_perfs`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_modules_perfs` (
@@ -7131,7 +6728,7 @@ CREATE TABLE IF NOT EXISTS `ps_modules_perfs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_module_access`
+-- Struktura tabeli dla tabeli `ps_module_access`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_module_access` (
@@ -7144,7 +6741,7 @@ CREATE TABLE IF NOT EXISTS `ps_module_access` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_module_access`
+-- Zrzut danych tabeli `ps_module_access`
 --
 
 UPDATE `ps_module_access` SET `id_profile` = 2,`id_module` = 1,`view` = 1,`configure` = 1,`uninstall` = 1 WHERE `ps_module_access`.`id_profile` = 2 AND `ps_module_access`.`id_module` = 1;
@@ -7349,7 +6946,7 @@ UPDATE `ps_module_access` SET `id_profile` = 4,`id_module` = 68,`view` = 1,`conf
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_module_country`
+-- Struktura tabeli dla tabeli `ps_module_country`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_module_country` (
@@ -7360,7 +6957,7 @@ CREATE TABLE IF NOT EXISTS `ps_module_country` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_module_country`
+-- Zrzut danych tabeli `ps_module_country`
 --
 
 UPDATE `ps_module_country` SET `id_module` = 3,`id_shop` = 1,`id_country` = 14 WHERE `ps_module_country`.`id_module` = 3 AND `ps_module_country`.`id_shop` = 1 AND `ps_module_country`.`id_country` = 14;
@@ -7369,7 +6966,7 @@ UPDATE `ps_module_country` SET `id_module` = 30,`id_shop` = 1,`id_country` = 14 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_module_currency`
+-- Struktura tabeli dla tabeli `ps_module_currency`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_module_currency` (
@@ -7381,7 +6978,7 @@ CREATE TABLE IF NOT EXISTS `ps_module_currency` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_module_currency`
+-- Zrzut danych tabeli `ps_module_currency`
 --
 
 UPDATE `ps_module_currency` SET `id_module` = 3,`id_shop` = 1,`id_currency` = 1 WHERE `ps_module_currency`.`id_module` = 3 AND `ps_module_currency`.`id_shop` = 1 AND `ps_module_currency`.`id_currency` = 1;
@@ -7390,7 +6987,7 @@ UPDATE `ps_module_currency` SET `id_module` = 30,`id_shop` = 1,`id_currency` = 1
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_module_group`
+-- Struktura tabeli dla tabeli `ps_module_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_module_group` (
@@ -7401,7 +6998,7 @@ CREATE TABLE IF NOT EXISTS `ps_module_group` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_module_group`
+-- Zrzut danych tabeli `ps_module_group`
 --
 
 UPDATE `ps_module_group` SET `id_module` = 1,`id_shop` = 1,`id_group` = 1 WHERE `ps_module_group`.`id_module` = 1 AND `ps_module_group`.`id_shop` = 1 AND `ps_module_group`.`id_group` = 1;
@@ -7606,7 +7203,7 @@ UPDATE `ps_module_group` SET `id_module` = 68,`id_shop` = 1,`id_group` = 3 WHERE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_module_preference`
+-- Struktura tabeli dla tabeli `ps_module_preference`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_module_preference` (
@@ -7622,7 +7219,7 @@ CREATE TABLE IF NOT EXISTS `ps_module_preference` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_module_shop`
+-- Struktura tabeli dla tabeli `ps_module_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_module_shop` (
@@ -7634,7 +7231,7 @@ CREATE TABLE IF NOT EXISTS `ps_module_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_module_shop`
+-- Zrzut danych tabeli `ps_module_shop`
 --
 
 UPDATE `ps_module_shop` SET `id_module` = 1,`id_shop` = 1,`enable_device` = 7 WHERE `ps_module_shop`.`id_module` = 1 AND `ps_module_shop`.`id_shop` = 1;
@@ -7705,7 +7302,7 @@ UPDATE `ps_module_shop` SET `id_module` = 68,`id_shop` = 1,`enable_device` = 7 W
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_newsletter`
+-- Struktura tabeli dla tabeli `ps_newsletter`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_newsletter` (
@@ -7723,7 +7320,7 @@ CREATE TABLE IF NOT EXISTS `ps_newsletter` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_operating_system`
+-- Struktura tabeli dla tabeli `ps_operating_system`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_operating_system` (
@@ -7733,7 +7330,7 @@ CREATE TABLE IF NOT EXISTS `ps_operating_system` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_operating_system`
+-- Zrzut danych tabeli `ps_operating_system`
 --
 
 UPDATE `ps_operating_system` SET `id_operating_system` = 1,`name` = 'Windows XP' WHERE `ps_operating_system`.`id_operating_system` = 1;
@@ -7747,7 +7344,7 @@ UPDATE `ps_operating_system` SET `id_operating_system` = 7,`name` = 'Android' WH
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_orders`
+-- Struktura tabeli dla tabeli `ps_orders`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_orders` (
@@ -7814,7 +7411,7 @@ CREATE TABLE IF NOT EXISTS `ps_orders` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_orders`
+-- Zrzut danych tabeli `ps_orders`
 --
 
 UPDATE `ps_orders` SET `id_order` = 1,`reference` = 'XKBKNABJK',`id_shop_group` = 1,`id_shop` = 1,`id_carrier` = 2,`id_lang` = 1,`id_customer` = 1,`id_cart` = 1,`id_currency` = 1,`id_address_delivery` = 4,`id_address_invoice` = 4,`current_state` = 6,`secure_key` = 'b44a6d9efd7a0076a0fbce6b15eaf3b1',`payment` = 'Payment by check',`conversion_rate` = '1.000000',`module` = 'cheque',`recyclable` = 0,`gift` = 0,`gift_message` = '',`mobile_theme` = 0,`shipping_number` = '',`total_discounts` = '0.000000',`total_discounts_tax_incl` = '0.000000',`total_discounts_tax_excl` = '0.000000',`total_paid` = '55.000000',`total_paid_tax_incl` = '55.000000',`total_paid_tax_excl` = '55.000000',`total_paid_real` = '0.000000',`total_products` = '53.000000',`total_products_wt` = '53.000000',`total_shipping` = '2.000000',`total_shipping_tax_incl` = '2.000000',`total_shipping_tax_excl` = '2.000000',`carrier_tax_rate` = '0.000',`total_wrapping` = '0.000000',`total_wrapping_tax_incl` = '0.000000',`total_wrapping_tax_excl` = '0.000000',`round_mode` = 0,`round_type` = 0,`invoice_number` = 0,`delivery_number` = 0,`invoice_date` = '0000-00-00 00:00:00',`delivery_date` = '0000-00-00 00:00:00',`valid` = 0,`date_add` = '2016-10-27 01:37:37',`date_upd` = '2016-10-27 01:37:40' WHERE `ps_orders`.`id_order` = 1;
@@ -7826,7 +7423,7 @@ UPDATE `ps_orders` SET `id_order` = 5,`reference` = 'KHWLILZLL',`id_shop_group` 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_carrier`
+-- Struktura tabeli dla tabeli `ps_order_carrier`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_carrier` (
@@ -7846,7 +7443,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_carrier` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_order_carrier`
+-- Zrzut danych tabeli `ps_order_carrier`
 --
 
 UPDATE `ps_order_carrier` SET `id_order_carrier` = 1,`id_order` = 1,`id_carrier` = 2,`id_order_invoice` = 0,`weight` = '0.000000',`shipping_cost_tax_excl` = '2.000000',`shipping_cost_tax_incl` = '2.000000',`tracking_number` = '',`date_add` = '2016-10-27 01:37:38' WHERE `ps_order_carrier`.`id_order_carrier` = 1;
@@ -7858,7 +7455,7 @@ UPDATE `ps_order_carrier` SET `id_order_carrier` = 5,`id_order` = 5,`id_carrier`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_cart_rule`
+-- Struktura tabeli dla tabeli `ps_order_cart_rule`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_cart_rule` (
@@ -7878,7 +7475,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_cart_rule` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_detail`
+-- Struktura tabeli dla tabeli `ps_order_detail`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_detail` (
@@ -7935,7 +7532,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_detail` (
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_order_detail`
+-- Zrzut danych tabeli `ps_order_detail`
 --
 
 UPDATE `ps_order_detail` SET `id_order_detail` = 1,`id_order` = 1,`id_order_invoice` = 0,`id_warehouse` = 0,`id_shop` = 1,`product_id` = 2,`product_attribute_id` = 10,`product_name` = 'Blouse - Color : White, Size : M',`product_quantity` = 1,`product_quantity_in_stock` = 1,`product_quantity_refunded` = 0,`product_quantity_return` = 0,`product_quantity_reinjected` = 0,`product_price` = '26.999852',`reduction_percent` = '0.00',`reduction_amount` = '0.000000',`reduction_amount_tax_incl` = '0.000000',`reduction_amount_tax_excl` = '0.000000',`group_reduction` = '0.00',`product_quantity_discount` = '0.000000',`product_ean13` = '',`product_upc` = '',`product_reference` = 'demo_2',`product_supplier_reference` = '',`product_weight` = '0.000000',`id_tax_rules_group` = 0,`tax_computation_method` = 0,`tax_name` = '',`tax_rate` = '0.000',`ecotax` = '0.000000',`ecotax_tax_rate` = '0.000',`discount_quantity_applied` = 0,`download_hash` = '',`download_nb` = 0,`download_deadline` = '0000-00-00 00:00:00',`total_price_tax_incl` = '27.000000',`total_price_tax_excl` = '27.000000',`unit_price_tax_incl` = '27.000000',`unit_price_tax_excl` = '27.000000',`total_shipping_price_tax_incl` = '0.000000',`total_shipping_price_tax_excl` = '0.000000',`purchase_supplier_price` = '0.000000',`original_product_price` = '26.999852',`original_wholesale_price` = '8.100000' WHERE `ps_order_detail`.`id_order_detail` = 1;
@@ -7957,7 +7554,7 @@ UPDATE `ps_order_detail` SET `id_order_detail` = 15,`id_order` = 5,`id_order_inv
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_detail_tax`
+-- Struktura tabeli dla tabeli `ps_order_detail_tax`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_detail_tax` (
@@ -7972,7 +7569,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_detail_tax` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_history`
+-- Struktura tabeli dla tabeli `ps_order_history`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_history` (
@@ -7988,7 +7585,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_history` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_order_history`
+-- Zrzut danych tabeli `ps_order_history`
 --
 
 UPDATE `ps_order_history` SET `id_order_history` = 1,`id_employee` = 0,`id_order` = 1,`id_order_state` = 1,`date_add` = '2016-10-27 01:37:39' WHERE `ps_order_history`.`id_order_history` = 1;
@@ -8002,7 +7599,7 @@ UPDATE `ps_order_history` SET `id_order_history` = 7,`id_employee` = 1,`id_order
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_invoice`
+-- Struktura tabeli dla tabeli `ps_order_invoice`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_invoice` (
@@ -8034,7 +7631,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_invoice` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_invoice_payment`
+-- Struktura tabeli dla tabeli `ps_order_invoice_payment`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_invoice_payment` (
@@ -8049,7 +7646,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_invoice_payment` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_invoice_tax`
+-- Struktura tabeli dla tabeli `ps_order_invoice_tax`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_invoice_tax` (
@@ -8063,7 +7660,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_invoice_tax` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_message`
+-- Struktura tabeli dla tabeli `ps_order_message`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_message` (
@@ -8073,7 +7670,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_message` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_order_message`
+-- Zrzut danych tabeli `ps_order_message`
 --
 
 UPDATE `ps_order_message` SET `id_order_message` = 1,`date_add` = '2016-10-27 01:37:40' WHERE `ps_order_message`.`id_order_message` = 1;
@@ -8081,7 +7678,7 @@ UPDATE `ps_order_message` SET `id_order_message` = 1,`date_add` = '2016-10-27 01
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_message_lang`
+-- Struktura tabeli dla tabeli `ps_order_message_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_message_lang` (
@@ -8093,7 +7690,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_message_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_order_message_lang`
+-- Zrzut danych tabeli `ps_order_message_lang`
 --
 
 UPDATE `ps_order_message_lang` SET `id_order_message` = 1,`id_lang` = 1,`name` = 'Delay',`message` = 'Hi,\n\nUnfortunately, an item on your order is currently out of stock. This may cause a slight delay in delivery.\nPlease accept our apologies and rest assured that we are working hard to rectify this.\n\nBest regards,' WHERE `ps_order_message_lang`.`id_order_message` = 1 AND `ps_order_message_lang`.`id_lang` = 1;
@@ -8102,7 +7699,7 @@ UPDATE `ps_order_message_lang` SET `id_order_message` = 1,`id_lang` = 2,`name` =
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_payment`
+-- Struktura tabeli dla tabeli `ps_order_payment`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_payment` (
@@ -8125,7 +7722,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_payment` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_return`
+-- Struktura tabeli dla tabeli `ps_order_return`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_return` (
@@ -8144,7 +7741,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_return` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_return_detail`
+-- Struktura tabeli dla tabeli `ps_order_return_detail`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_return_detail` (
@@ -8158,7 +7755,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_return_detail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_return_state`
+-- Struktura tabeli dla tabeli `ps_order_return_state`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_return_state` (
@@ -8168,7 +7765,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_return_state` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_order_return_state`
+-- Zrzut danych tabeli `ps_order_return_state`
 --
 
 UPDATE `ps_order_return_state` SET `id_order_return_state` = 1,`color` = '#4169E1' WHERE `ps_order_return_state`.`id_order_return_state` = 1;
@@ -8180,7 +7777,7 @@ UPDATE `ps_order_return_state` SET `id_order_return_state` = 5,`color` = '#10851
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_return_state_lang`
+-- Struktura tabeli dla tabeli `ps_order_return_state_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_return_state_lang` (
@@ -8191,7 +7788,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_return_state_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_order_return_state_lang`
+-- Zrzut danych tabeli `ps_order_return_state_lang`
 --
 
 UPDATE `ps_order_return_state_lang` SET `id_order_return_state` = 1,`id_lang` = 1,`name` = 'Waiting for confirmation' WHERE `ps_order_return_state_lang`.`id_order_return_state` = 1 AND `ps_order_return_state_lang`.`id_lang` = 1;
@@ -8208,7 +7805,7 @@ UPDATE `ps_order_return_state_lang` SET `id_order_return_state` = 5,`id_lang` = 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_slip`
+-- Struktura tabeli dla tabeli `ps_order_slip`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_slip` (
@@ -8235,7 +7832,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_slip` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_slip_detail`
+-- Struktura tabeli dla tabeli `ps_order_slip_detail`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_slip_detail` (
@@ -8254,7 +7851,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_slip_detail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_slip_detail_tax`
+-- Struktura tabeli dla tabeli `ps_order_slip_detail_tax`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_slip_detail_tax` (
@@ -8269,7 +7866,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_slip_detail_tax` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_state`
+-- Struktura tabeli dla tabeli `ps_order_state`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_state` (
@@ -8292,7 +7889,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_state` (
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_order_state`
+-- Zrzut danych tabeli `ps_order_state`
 --
 
 UPDATE `ps_order_state` SET `id_order_state` = 1,`invoice` = 0,`send_email` = 1,`module_name` = 'cheque',`color` = '#4169E1',`unremovable` = 1,`hidden` = 0,`logable` = 0,`delivery` = 0,`shipped` = 0,`paid` = 0,`pdf_invoice` = 0,`pdf_delivery` = 0,`deleted` = 0 WHERE `ps_order_state`.`id_order_state` = 1;
@@ -8313,7 +7910,7 @@ UPDATE `ps_order_state` SET `id_order_state` = 14,`invoice` = 0,`send_email` = 0
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_order_state_lang`
+-- Struktura tabeli dla tabeli `ps_order_state_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_order_state_lang` (
@@ -8325,7 +7922,7 @@ CREATE TABLE IF NOT EXISTS `ps_order_state_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_order_state_lang`
+-- Zrzut danych tabeli `ps_order_state_lang`
 --
 
 UPDATE `ps_order_state_lang` SET `id_order_state` = 1,`id_lang` = 1,`name` = 'Awaiting check payment',`template` = 'cheque' WHERE `ps_order_state_lang`.`id_order_state` = 1 AND `ps_order_state_lang`.`id_lang` = 1;
@@ -8360,7 +7957,7 @@ UPDATE `ps_order_state_lang` SET `id_order_state` = 14,`id_lang` = 2,`name` = 'A
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_pack`
+-- Struktura tabeli dla tabeli `ps_pack`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_pack` (
@@ -8375,7 +7972,7 @@ CREATE TABLE IF NOT EXISTS `ps_pack` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_page`
+-- Struktura tabeli dla tabeli `ps_page`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_page` (
@@ -8388,7 +7985,7 @@ CREATE TABLE IF NOT EXISTS `ps_page` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_page`
+-- Zrzut danych tabeli `ps_page`
 --
 
 UPDATE `ps_page` SET `id_page` = 1,`id_page_type` = 1,`id_object` = NULL WHERE `ps_page`.`id_page` = 1;
@@ -8397,7 +7994,7 @@ UPDATE `ps_page` SET `id_page` = 2,`id_page_type` = 2,`id_object` = NULL WHERE `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_pagenotfound`
+-- Struktura tabeli dla tabeli `ps_pagenotfound`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_pagenotfound` (
@@ -8412,7 +8009,7 @@ CREATE TABLE IF NOT EXISTS `ps_pagenotfound` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_pagenotfound`
+-- Zrzut danych tabeli `ps_pagenotfound`
 --
 
 UPDATE `ps_pagenotfound` SET `id_pagenotfound` = 1,`id_shop` = 1,`id_shop_group` = 1,`request_uri` = '/myshop/admin',`http_referer` = 'http://127.0.0.1:83/myshop/install/index.php',`date_add` = '2016-10-27 01:40:04' WHERE `ps_pagenotfound`.`id_pagenotfound` = 1;
@@ -8420,7 +8017,7 @@ UPDATE `ps_pagenotfound` SET `id_pagenotfound` = 1,`id_shop` = 1,`id_shop_group`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_page_type`
+-- Struktura tabeli dla tabeli `ps_page_type`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_page_type` (
@@ -8431,7 +8028,7 @@ CREATE TABLE IF NOT EXISTS `ps_page_type` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_page_type`
+-- Zrzut danych tabeli `ps_page_type`
 --
 
 UPDATE `ps_page_type` SET `id_page_type` = 2,`name` = 'index' WHERE `ps_page_type`.`id_page_type` = 2;
@@ -8440,7 +8037,7 @@ UPDATE `ps_page_type` SET `id_page_type` = 1,`name` = 'pagenotfound' WHERE `ps_p
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_page_viewed`
+-- Struktura tabeli dla tabeli `ps_page_viewed`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_page_viewed` (
@@ -8455,7 +8052,7 @@ CREATE TABLE IF NOT EXISTS `ps_page_viewed` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_product`
+-- Struktura tabeli dla tabeli `ps_product`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product` (
@@ -8512,18 +8109,19 @@ CREATE TABLE IF NOT EXISTS `ps_product` (
   KEY `id_category_default` (`id_category_default`),
   KEY `indexed` (`indexed`),
   KEY `date_add` (`date_add`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_product`
+-- Zrzut danych tabeli `ps_product`
 --
 
-UPDATE `ps_product` SET `id_product` = 9,`id_supplier` = 0,`id_manufacturer` = 0,`id_category_default` = 21,`id_shop_default` = 1,`id_tax_rules_group` = 1,`on_sale` = 0,`online_only` = 0,`ean13` = '',`upc` = '',`ecotax` = '0.000000',`quantity` = 0,`minimal_quantity` = 1,`price` = '300.000000',`wholesale_price` = '0.000000',`unity` = '',`unit_price_ratio` = '0.000000',`additional_shipping_cost` = '0.00',`reference` = '',`supplier_reference` = '',`location` = '',`width` = '0.000000',`height` = '0.000000',`depth` = '0.000000',`weight` = '0.000000',`out_of_stock` = 2,`quantity_discount` = 0,`customizable` = 0,`uploadable_files` = 0,`text_fields` = 0,`active` = 1,`redirect_type` = '404',`id_product_redirected` = 0,`available_for_order` = 1,`available_date` = '0000-00-00',`condition` = 'new',`show_price` = 1,`indexed` = 1,`visibility` = 'both',`cache_is_pack` = 0,`cache_has_attachments` = 0,`is_virtual` = 0,`cache_default_attribute` = 0,`date_add` = '2016-10-27 15:43:42',`date_upd` = '2016-10-27 15:46:07',`advanced_stock_management` = 0,`pack_stock_type` = 3 WHERE `ps_product`.`id_product` = 9;
+UPDATE `ps_product` SET `id_product` = 10,`id_supplier` = 0,`id_manufacturer` = 0,`id_category_default` = 22,`id_shop_default` = 1,`id_tax_rules_group` = 1,`on_sale` = 0,`online_only` = 0,`ean13` = '',`upc` = '',`ecotax` = '0.000000',`quantity` = 0,`minimal_quantity` = 1,`price` = '352.000000',`wholesale_price` = '0.000000',`unity` = '',`unit_price_ratio` = '0.000000',`additional_shipping_cost` = '0.00',`reference` = '03002233',`supplier_reference` = '',`location` = '',`width` = '0.000000',`height` = '0.000000',`depth` = '0.000000',`weight` = '0.000000',`out_of_stock` = 2,`quantity_discount` = 0,`customizable` = 0,`uploadable_files` = 0,`text_fields` = 0,`active` = 1,`redirect_type` = '404',`id_product_redirected` = 0,`available_for_order` = 1,`available_date` = '0000-00-00',`condition` = 'new',`show_price` = 1,`indexed` = 1,`visibility` = 'both',`cache_is_pack` = 0,`cache_has_attachments` = 0,`is_virtual` = 0,`cache_default_attribute` = 0,`date_add` = '2016-11-03 16:49:00',`date_upd` = '2016-11-03 17:01:21',`advanced_stock_management` = 0,`pack_stock_type` = 3 WHERE `ps_product`.`id_product` = 10;
+UPDATE `ps_product` SET `id_product` = 11,`id_supplier` = 0,`id_manufacturer` = 0,`id_category_default` = 22,`id_shop_default` = 1,`id_tax_rules_group` = 1,`on_sale` = 0,`online_only` = 0,`ean13` = '',`upc` = '',`ecotax` = '0.000000',`quantity` = 0,`minimal_quantity` = 1,`price` = '420.000000',`wholesale_price` = '0.000000',`unity` = '',`unit_price_ratio` = '0.000000',`additional_shipping_cost` = '0.00',`reference` = '480051N',`supplier_reference` = '',`location` = '',`width` = '0.000000',`height` = '0.000000',`depth` = '0.000000',`weight` = '0.000000',`out_of_stock` = 2,`quantity_discount` = 0,`customizable` = 0,`uploadable_files` = 0,`text_fields` = 0,`active` = 1,`redirect_type` = '404',`id_product_redirected` = 0,`available_for_order` = 1,`available_date` = '0000-00-00',`condition` = 'new',`show_price` = 1,`indexed` = 1,`visibility` = 'both',`cache_is_pack` = 0,`cache_has_attachments` = 0,`is_virtual` = 0,`cache_default_attribute` = 0,`date_add` = '2016-11-03 17:08:33',`date_upd` = '2016-11-03 17:09:13',`advanced_stock_management` = 0,`pack_stock_type` = 3 WHERE `ps_product`.`id_product` = 11;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_product_attachment`
+-- Struktura tabeli dla tabeli `ps_product_attachment`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_attachment` (
@@ -8535,7 +8133,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_attachment` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_product_attribute`
+-- Struktura tabeli dla tabeli `ps_product_attribute`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_attribute` (
@@ -8566,7 +8164,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_attribute` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_product_attribute_combination`
+-- Struktura tabeli dla tabeli `ps_product_attribute_combination`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_attribute_combination` (
@@ -8579,7 +8177,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_attribute_combination` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_product_attribute_image`
+-- Struktura tabeli dla tabeli `ps_product_attribute_image`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_attribute_image` (
@@ -8590,7 +8188,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_attribute_image` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_product_attribute_image`
+-- Zrzut danych tabeli `ps_product_attribute_image`
 --
 
 UPDATE `ps_product_attribute_image` SET `id_product_attribute` = 17,`id_image` = 10 WHERE `ps_product_attribute_image`.`id_product_attribute` = 17 AND `ps_product_attribute_image`.`id_image` = 10;
@@ -8598,7 +8196,7 @@ UPDATE `ps_product_attribute_image` SET `id_product_attribute` = 17,`id_image` =
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_product_attribute_shop`
+-- Struktura tabeli dla tabeli `ps_product_attribute_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_attribute_shop` (
@@ -8620,7 +8218,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_attribute_shop` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_product_carrier`
+-- Struktura tabeli dla tabeli `ps_product_carrier`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_carrier` (
@@ -8633,7 +8231,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_carrier` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_product_country_tax`
+-- Struktura tabeli dla tabeli `ps_product_country_tax`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_country_tax` (
@@ -8646,7 +8244,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_country_tax` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_product_download`
+-- Struktura tabeli dla tabeli `ps_product_download`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_download` (
@@ -8668,7 +8266,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_download` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_product_group_reduction_cache`
+-- Struktura tabeli dla tabeli `ps_product_group_reduction_cache`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_group_reduction_cache` (
@@ -8681,7 +8279,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_group_reduction_cache` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_product_lang`
+-- Struktura tabeli dla tabeli `ps_product_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_lang` (
@@ -8703,16 +8301,18 @@ CREATE TABLE IF NOT EXISTS `ps_product_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_product_lang`
+-- Zrzut danych tabeli `ps_product_lang`
 --
 
-UPDATE `ps_product_lang` SET `id_product` = 9,`id_shop` = 1,`id_lang` = 1,`description` = '',`description_short` = '<p>Audi A4 cooler</p>',`link_rewrite` = 'cooler-audi-a4',`meta_description` = '',`meta_keywords` = '',`meta_title` = '',`name` = 'Cooler Audi A4',`available_now` = '',`available_later` = '' WHERE `ps_product_lang`.`id_product` = 9 AND `ps_product_lang`.`id_shop` = 1 AND `ps_product_lang`.`id_lang` = 1;
-UPDATE `ps_product_lang` SET `id_product` = 9,`id_shop` = 1,`id_lang` = 2,`description` = '',`description_short` = '',`link_rewrite` = 'cooler-audi-a4',`meta_description` = '',`meta_keywords` = '',`meta_title` = '',`name` = 'Cooler Audi A4',`available_now` = '',`available_later` = '' WHERE `ps_product_lang`.`id_product` = 9 AND `ps_product_lang`.`id_shop` = 1 AND `ps_product_lang`.`id_lang` = 2;
+UPDATE `ps_product_lang` SET `id_product` = 10,`id_shop` = 1,`id_lang` = 1,`description` = '<p><strong>Radiator, engine cooling Manual Transmission for vehicles with/without air conditioning from VAN WEZEL, Article № 03002233</strong></p>\r\n<p><span class="lc">Core Dimensions :</span> <span class="rc">675 - 445 - 32</span></p>\r\n<p><b>Transmission Type : </b><span></span><span>Manual Transmission</span><br /><b>Vehicle Equipment : </b><span></span><span>for vehicles with/without air conditioning</span></p>',`description_short` = '',`link_rewrite` = 'van-wezel-radiator',`meta_description` = '',`meta_keywords` = '',`meta_title` = '',`name` = 'VAN WEZEL Radiator',`available_now` = '',`available_later` = '' WHERE `ps_product_lang`.`id_product` = 10 AND `ps_product_lang`.`id_shop` = 1 AND `ps_product_lang`.`id_lang` = 1;
+UPDATE `ps_product_lang` SET `id_product` = 10,`id_shop` = 1,`id_lang` = 2,`description` = '',`description_short` = '',`link_rewrite` = 'van-wezel-radiator',`meta_description` = '',`meta_keywords` = '',`meta_title` = '',`name` = 'VAN WEZEL Radiator',`available_now` = '',`available_later` = '' WHERE `ps_product_lang`.`id_product` = 10 AND `ps_product_lang`.`id_shop` = 1 AND `ps_product_lang`.`id_lang` = 2;
+UPDATE `ps_product_lang` SET `id_product` = 11,`id_shop` = 1,`id_lang` = 1,`description` = '<p><strong>Radiator, engine cooling from AKS DASIS, Article № 480051N</strong><br /><br /></p>\r\n<ul class="desc_text"><li><span class="lc">Packaging height [cm] :</span> <span class="rc">18</span></li>\r\n<li><span class="lc">Packaging width [cm] :</span> <span class="rc">52</span></li>\r\n<li><span class="lc">Packaging length [cm] :</span> <span class="rc">84</span></li>\r\n<li><span class="lc">New Part :</span></li>\r\n<li><span class="lc">Depth [mm] :</span> <span class="rc">32</span></li>\r\n<li><span class="lc">Weight [g] :</span> <span class="rc">6500</span></li>\r\n<li><span class="lc">Core Dimensions :</span> <span class="rc">675x445x32</span></li>\r\n<li><span class="lc">Weight [kg] :</span> <span class="rc">6,5</span></li>\r\n<li><span class="lc">Width [mm] :</span> <span class="rc">445</span></li>\r\n<li><span class="lc">Length [mm] :</span> <span class="rc">675</span></li>\r\n</ul>',`description_short` = '',`link_rewrite` = 'aks-dasis-radiator',`meta_description` = '',`meta_keywords` = '',`meta_title` = '',`name` = 'AKS DASIS Radiator',`available_now` = '',`available_later` = '' WHERE `ps_product_lang`.`id_product` = 11 AND `ps_product_lang`.`id_shop` = 1 AND `ps_product_lang`.`id_lang` = 1;
+UPDATE `ps_product_lang` SET `id_product` = 11,`id_shop` = 1,`id_lang` = 2,`description` = '',`description_short` = '',`link_rewrite` = 'aks-dasis-radiator',`meta_description` = '',`meta_keywords` = '',`meta_title` = '',`name` = 'AKS DASIS Radiator',`available_now` = '',`available_later` = '' WHERE `ps_product_lang`.`id_product` = 11 AND `ps_product_lang`.`id_shop` = 1 AND `ps_product_lang`.`id_lang` = 2;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_product_sale`
+-- Struktura tabeli dla tabeli `ps_product_sale`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_sale` (
@@ -8725,7 +8325,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_sale` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_product_sale`
+-- Zrzut danych tabeli `ps_product_sale`
 --
 
 UPDATE `ps_product_sale` SET `id_product` = 6,`quantity` = 2,`sale_nbr` = 2,`date_upd` = '2016-10-27' WHERE `ps_product_sale`.`id_product` = 6;
@@ -8733,7 +8333,7 @@ UPDATE `ps_product_sale` SET `id_product` = 6,`quantity` = 2,`sale_nbr` = 2,`dat
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_product_shop`
+-- Struktura tabeli dla tabeli `ps_product_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_shop` (
@@ -8774,15 +8374,16 @@ CREATE TABLE IF NOT EXISTS `ps_product_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_product_shop`
+-- Zrzut danych tabeli `ps_product_shop`
 --
 
-UPDATE `ps_product_shop` SET `id_product` = 9,`id_shop` = 1,`id_category_default` = 21,`id_tax_rules_group` = 1,`on_sale` = 0,`online_only` = 0,`ecotax` = '0.000000',`minimal_quantity` = 1,`price` = '300.000000',`wholesale_price` = '0.000000',`unity` = '',`unit_price_ratio` = '0.000000',`additional_shipping_cost` = '0.00',`customizable` = 0,`uploadable_files` = 0,`text_fields` = 0,`active` = 1,`redirect_type` = '404',`id_product_redirected` = 0,`available_for_order` = 1,`available_date` = '0000-00-00',`condition` = 'new',`show_price` = 1,`indexed` = 1,`visibility` = 'both',`cache_default_attribute` = 0,`advanced_stock_management` = 0,`date_add` = '2016-10-27 15:43:42',`date_upd` = '2016-10-27 15:46:07',`pack_stock_type` = 3 WHERE `ps_product_shop`.`id_product` = 9 AND `ps_product_shop`.`id_shop` = 1;
+UPDATE `ps_product_shop` SET `id_product` = 10,`id_shop` = 1,`id_category_default` = 22,`id_tax_rules_group` = 1,`on_sale` = 0,`online_only` = 0,`ecotax` = '0.000000',`minimal_quantity` = 1,`price` = '352.000000',`wholesale_price` = '0.000000',`unity` = '',`unit_price_ratio` = '0.000000',`additional_shipping_cost` = '0.00',`customizable` = 0,`uploadable_files` = 0,`text_fields` = 0,`active` = 1,`redirect_type` = '404',`id_product_redirected` = 0,`available_for_order` = 1,`available_date` = '0000-00-00',`condition` = 'new',`show_price` = 1,`indexed` = 1,`visibility` = 'both',`cache_default_attribute` = 0,`advanced_stock_management` = 0,`date_add` = '2016-11-03 16:49:00',`date_upd` = '2016-11-03 17:01:21',`pack_stock_type` = 3 WHERE `ps_product_shop`.`id_product` = 10 AND `ps_product_shop`.`id_shop` = 1;
+UPDATE `ps_product_shop` SET `id_product` = 11,`id_shop` = 1,`id_category_default` = 22,`id_tax_rules_group` = 1,`on_sale` = 0,`online_only` = 0,`ecotax` = '0.000000',`minimal_quantity` = 1,`price` = '420.000000',`wholesale_price` = '0.000000',`unity` = '',`unit_price_ratio` = '0.000000',`additional_shipping_cost` = '0.00',`customizable` = 0,`uploadable_files` = 0,`text_fields` = 0,`active` = 1,`redirect_type` = '404',`id_product_redirected` = 0,`available_for_order` = 1,`available_date` = '0000-00-00',`condition` = 'new',`show_price` = 1,`indexed` = 1,`visibility` = 'both',`cache_default_attribute` = 0,`advanced_stock_management` = 0,`date_add` = '2016-11-03 17:08:33',`date_upd` = '2016-11-03 17:09:13',`pack_stock_type` = 3 WHERE `ps_product_shop`.`id_product` = 11 AND `ps_product_shop`.`id_shop` = 1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_product_supplier`
+-- Struktura tabeli dla tabeli `ps_product_supplier`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_supplier` (
@@ -8801,7 +8402,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_supplier` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_product_tag`
+-- Struktura tabeli dla tabeli `ps_product_tag`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_product_tag` (
@@ -8816,7 +8417,7 @@ CREATE TABLE IF NOT EXISTS `ps_product_tag` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_profile`
+-- Struktura tabeli dla tabeli `ps_profile`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_profile` (
@@ -8825,7 +8426,7 @@ CREATE TABLE IF NOT EXISTS `ps_profile` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_profile`
+-- Zrzut danych tabeli `ps_profile`
 --
 
 UPDATE `ps_profile` SET `id_profile` = 1 WHERE `ps_profile`.`id_profile` = 1;
@@ -8836,7 +8437,7 @@ UPDATE `ps_profile` SET `id_profile` = 4 WHERE `ps_profile`.`id_profile` = 4;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_profile_lang`
+-- Struktura tabeli dla tabeli `ps_profile_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_profile_lang` (
@@ -8847,7 +8448,7 @@ CREATE TABLE IF NOT EXISTS `ps_profile_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_profile_lang`
+-- Zrzut danych tabeli `ps_profile_lang`
 --
 
 UPDATE `ps_profile_lang` SET `id_lang` = 1,`id_profile` = 1,`name` = 'SuperAdmin' WHERE `ps_profile_lang`.`id_lang` = 1 AND `ps_profile_lang`.`id_profile` = 1;
@@ -8862,7 +8463,7 @@ UPDATE `ps_profile_lang` SET `id_lang` = 2,`id_profile` = 4,`name` = 'Salesman' 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_quick_access`
+-- Struktura tabeli dla tabeli `ps_quick_access`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_quick_access` (
@@ -8873,7 +8474,7 @@ CREATE TABLE IF NOT EXISTS `ps_quick_access` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_quick_access`
+-- Zrzut danych tabeli `ps_quick_access`
 --
 
 UPDATE `ps_quick_access` SET `id_quick_access` = 1,`new_window` = 0,`link` = 'index.php?controller=AdminCategories&addcategory' WHERE `ps_quick_access`.`id_quick_access` = 1;
@@ -8883,7 +8484,7 @@ UPDATE `ps_quick_access` SET `id_quick_access` = 3,`new_window` = 0,`link` = 'in
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_quick_access_lang`
+-- Struktura tabeli dla tabeli `ps_quick_access_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_quick_access_lang` (
@@ -8894,7 +8495,7 @@ CREATE TABLE IF NOT EXISTS `ps_quick_access_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_quick_access_lang`
+-- Zrzut danych tabeli `ps_quick_access_lang`
 --
 
 UPDATE `ps_quick_access_lang` SET `id_quick_access` = 1,`id_lang` = 1,`name` = 'New category' WHERE `ps_quick_access_lang`.`id_quick_access` = 1 AND `ps_quick_access_lang`.`id_lang` = 1;
@@ -8907,7 +8508,7 @@ UPDATE `ps_quick_access_lang` SET `id_quick_access` = 3,`id_lang` = 2,`name` = '
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_range_price`
+-- Struktura tabeli dla tabeli `ps_range_price`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_range_price` (
@@ -8920,7 +8521,7 @@ CREATE TABLE IF NOT EXISTS `ps_range_price` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_range_price`
+-- Zrzut danych tabeli `ps_range_price`
 --
 
 UPDATE `ps_range_price` SET `id_range_price` = 1,`id_carrier` = 2,`delimiter1` = '0.000000',`delimiter2` = '10000.000000' WHERE `ps_range_price`.`id_range_price` = 1;
@@ -8928,7 +8529,7 @@ UPDATE `ps_range_price` SET `id_range_price` = 1,`id_carrier` = 2,`delimiter1` =
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_range_weight`
+-- Struktura tabeli dla tabeli `ps_range_weight`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_range_weight` (
@@ -8941,7 +8542,7 @@ CREATE TABLE IF NOT EXISTS `ps_range_weight` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_range_weight`
+-- Zrzut danych tabeli `ps_range_weight`
 --
 
 UPDATE `ps_range_weight` SET `id_range_weight` = 1,`id_carrier` = 2,`delimiter1` = '0.000000',`delimiter2` = '10000.000000' WHERE `ps_range_weight`.`id_range_weight` = 1;
@@ -8949,7 +8550,7 @@ UPDATE `ps_range_weight` SET `id_range_weight` = 1,`id_carrier` = 2,`delimiter1`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_referrer`
+-- Struktura tabeli dla tabeli `ps_referrer`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_referrer` (
@@ -8974,7 +8575,7 @@ CREATE TABLE IF NOT EXISTS `ps_referrer` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_referrer_cache`
+-- Struktura tabeli dla tabeli `ps_referrer_cache`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_referrer_cache` (
@@ -8986,7 +8587,7 @@ CREATE TABLE IF NOT EXISTS `ps_referrer_cache` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_referrer_shop`
+-- Struktura tabeli dla tabeli `ps_referrer_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_referrer_shop` (
@@ -9006,7 +8607,7 @@ CREATE TABLE IF NOT EXISTS `ps_referrer_shop` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_request_sql`
+-- Struktura tabeli dla tabeli `ps_request_sql`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_request_sql` (
@@ -9014,12 +8615,18 @@ CREATE TABLE IF NOT EXISTS `ps_request_sql` (
   `name` varchar(200) NOT NULL,
   `sql` text NOT NULL,
   PRIMARY KEY (`id_request_sql`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Zrzut danych tabeli `ps_request_sql`
+--
+
+UPDATE `ps_request_sql` SET `id_request_sql` = 1,`name` = '111',`sql` = 'SELECT * FROM ps_employee' WHERE `ps_request_sql`.`id_request_sql` = 1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_required_field`
+-- Struktura tabeli dla tabeli `ps_required_field`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_required_field` (
@@ -9033,7 +8640,7 @@ CREATE TABLE IF NOT EXISTS `ps_required_field` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_risk`
+-- Struktura tabeli dla tabeli `ps_risk`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_risk` (
@@ -9044,7 +8651,7 @@ CREATE TABLE IF NOT EXISTS `ps_risk` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_risk`
+-- Zrzut danych tabeli `ps_risk`
 --
 
 UPDATE `ps_risk` SET `id_risk` = 1,`percent` = 0,`color` = '#32CD32' WHERE `ps_risk`.`id_risk` = 1;
@@ -9055,7 +8662,7 @@ UPDATE `ps_risk` SET `id_risk` = 4,`percent` = 100,`color` = '#ec2e15' WHERE `ps
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_risk_lang`
+-- Struktura tabeli dla tabeli `ps_risk_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_risk_lang` (
@@ -9067,7 +8674,7 @@ CREATE TABLE IF NOT EXISTS `ps_risk_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_risk_lang`
+-- Zrzut danych tabeli `ps_risk_lang`
 --
 
 UPDATE `ps_risk_lang` SET `id_risk` = 1,`id_lang` = 1,`name` = 'None' WHERE `ps_risk_lang`.`id_risk` = 1 AND `ps_risk_lang`.`id_lang` = 1;
@@ -9082,7 +8689,7 @@ UPDATE `ps_risk_lang` SET `id_risk` = 4,`id_lang` = 2,`name` = 'Wysoki' WHERE `p
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_scene`
+-- Struktura tabeli dla tabeli `ps_scene`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_scene` (
@@ -9094,7 +8701,7 @@ CREATE TABLE IF NOT EXISTS `ps_scene` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_scene_category`
+-- Struktura tabeli dla tabeli `ps_scene_category`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_scene_category` (
@@ -9106,7 +8713,7 @@ CREATE TABLE IF NOT EXISTS `ps_scene_category` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_scene_lang`
+-- Struktura tabeli dla tabeli `ps_scene_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_scene_lang` (
@@ -9119,7 +8726,7 @@ CREATE TABLE IF NOT EXISTS `ps_scene_lang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_scene_products`
+-- Struktura tabeli dla tabeli `ps_scene_products`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_scene_products` (
@@ -9135,7 +8742,7 @@ CREATE TABLE IF NOT EXISTS `ps_scene_products` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_scene_shop`
+-- Struktura tabeli dla tabeli `ps_scene_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_scene_shop` (
@@ -9148,7 +8755,7 @@ CREATE TABLE IF NOT EXISTS `ps_scene_shop` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_search_engine`
+-- Struktura tabeli dla tabeli `ps_search_engine`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_search_engine` (
@@ -9159,7 +8766,7 @@ CREATE TABLE IF NOT EXISTS `ps_search_engine` (
 ) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_search_engine`
+-- Zrzut danych tabeli `ps_search_engine`
 --
 
 UPDATE `ps_search_engine` SET `id_search_engine` = 1,`server` = 'google',`getvar` = 'q' WHERE `ps_search_engine`.`id_search_engine` = 1;
@@ -9204,7 +8811,7 @@ UPDATE `ps_search_engine` SET `id_search_engine` = 38,`server` = 'rambler',`getv
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_search_index`
+-- Struktura tabeli dla tabeli `ps_search_index`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_search_index` (
@@ -9216,7 +8823,7 @@ CREATE TABLE IF NOT EXISTS `ps_search_index` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_search_index`
+-- Zrzut danych tabeli `ps_search_index`
 --
 
 UPDATE `ps_search_index` SET `id_product` = 2,`id_word` = 2,`weight` = 3 WHERE `ps_search_index`.`id_product` = 2 AND `ps_search_index`.`id_word` = 2;
@@ -10044,15 +9651,60 @@ UPDATE `ps_search_index` SET `id_product` = 6,`id_word` = 836,`weight` = 1 WHERE
 UPDATE `ps_search_index` SET `id_product` = 6,`id_word` = 837,`weight` = 1 WHERE `ps_search_index`.`id_product` = 6 AND `ps_search_index`.`id_word` = 837;
 UPDATE `ps_search_index` SET `id_product` = 6,`id_word` = 838,`weight` = 1 WHERE `ps_search_index`.`id_product` = 6 AND `ps_search_index`.`id_word` = 838;
 UPDATE `ps_search_index` SET `id_product` = 6,`id_word` = 839,`weight` = 2 WHERE `ps_search_index`.`id_product` = 6 AND `ps_search_index`.`id_word` = 839;
-UPDATE `ps_search_index` SET `id_product` = 9,`id_word` = 1078,`weight` = 10 WHERE `ps_search_index`.`id_product` = 9 AND `ps_search_index`.`id_word` = 1078;
-UPDATE `ps_search_index` SET `id_product` = 9,`id_word` = 1079,`weight` = 7 WHERE `ps_search_index`.`id_product` = 9 AND `ps_search_index`.`id_word` = 1079;
-UPDATE `ps_search_index` SET `id_product` = 9,`id_word` = 1081,`weight` = 9 WHERE `ps_search_index`.`id_product` = 9 AND `ps_search_index`.`id_word` = 1081;
-UPDATE `ps_search_index` SET `id_product` = 9,`id_word` = 1082,`weight` = 6 WHERE `ps_search_index`.`id_product` = 9 AND `ps_search_index`.`id_word` = 1082;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1084,`weight` = 7 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1084;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1085,`weight` = 7 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1085;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1086,`weight` = 10 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1086;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1086,`weight` = 10 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1086;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1087,`weight` = 11 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1087;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1090,`weight` = 6 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1090;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1091,`weight` = 6 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1091;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1092,`weight` = 9 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1092;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1092,`weight` = 9 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1092;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1093,`weight` = 10 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1093;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1094,`weight` = 1 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1094;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1094,`weight` = 1 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1094;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1095,`weight` = 1 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1095;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1095,`weight` = 1 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1095;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1096,`weight` = 2 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1096;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1097,`weight` = 2 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1097;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1098,`weight` = 2 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1098;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1099,`weight` = 2 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1099;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1100,`weight` = 2 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1100;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1101,`weight` = 2 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1101;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1102,`weight` = 1 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1102;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1102,`weight` = 1 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1102;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1103,`weight` = 1 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1103;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1103,`weight` = 1 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1103;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1104,`weight` = 1 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1104;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1104,`weight` = 1 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1104;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1105,`weight` = 1 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1105;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1105,`weight` = 1 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1105;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1106,`weight` = 1 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1106;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1106,`weight` = 1 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1106;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1107,`weight` = 1 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1107;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1108,`weight` = 1 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1108;
+UPDATE `ps_search_index` SET `id_product` = 10,`id_word` = 1109,`weight` = 1 WHERE `ps_search_index`.`id_product` = 10 AND `ps_search_index`.`id_word` = 1109;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1238,`weight` = 7 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1238;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1239,`weight` = 7 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1239;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1240,`weight` = 11 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1240;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1241,`weight` = 3 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1241;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1242,`weight` = 1 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1242;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1243,`weight` = 2 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1243;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1244,`weight` = 2 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1244;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1245,`weight` = 1 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1245;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1246,`weight` = 1 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1246;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1247,`weight` = 1 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1247;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1248,`weight` = 2 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1248;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1249,`weight` = 1 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1249;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1250,`weight` = 1 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1250;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1259,`weight` = 6 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1259;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1260,`weight` = 6 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1260;
+UPDATE `ps_search_index` SET `id_product` = 11,`id_word` = 1261,`weight` = 10 WHERE `ps_search_index`.`id_product` = 11 AND `ps_search_index`.`id_word` = 1261;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_search_word`
+-- Struktura tabeli dla tabeli `ps_search_word`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_search_word` (
@@ -10062,31 +9714,66 @@ CREATE TABLE IF NOT EXISTS `ps_search_word` (
   `word` varchar(15) NOT NULL,
   PRIMARY KEY (`id_word`),
   UNIQUE KEY `id_lang` (`id_lang`,`id_shop`,`word`)
-) ENGINE=InnoDB AUTO_INCREMENT=1084 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1262 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_search_word`
+-- Zrzut danych tabeli `ps_search_word`
 --
 
-UPDATE `ps_search_word` SET `id_word` = 1079,`id_shop` = 1,`id_lang` = 1,`word` = 'audi' WHERE `ps_search_word`.`id_word` = 1079;
+UPDATE `ps_search_word` SET `id_word` = 1087,`id_shop` = 1,`id_lang` = 1,`word` = '03002233' WHERE `ps_search_word`.`id_word` = 1087;
+UPDATE `ps_search_word` SET `id_word` = 1106,`id_shop` = 1,`id_lang` = 1,`word` = '445' WHERE `ps_search_word`.`id_word` = 1106;
+UPDATE `ps_search_word` SET `id_word` = 1240,`id_shop` = 1,`id_lang` = 1,`word` = '480051n' WHERE `ps_search_word`.`id_word` = 1240;
+UPDATE `ps_search_word` SET `id_word` = 1249,`id_shop` = 1,`id_lang` = 1,`word` = '6500' WHERE `ps_search_word`.`id_word` = 1249;
+UPDATE `ps_search_word` SET `id_word` = 1105,`id_shop` = 1,`id_lang` = 1,`word` = '675' WHERE `ps_search_word`.`id_word` = 1105;
+UPDATE `ps_search_word` SET `id_word` = 1250,`id_shop` = 1,`id_lang` = 1,`word` = '675x445x32' WHERE `ps_search_word`.`id_word` = 1250;
+UPDATE `ps_search_word` SET `id_word` = 1100,`id_shop` = 1,`id_lang` = 1,`word` = 'air' WHERE `ps_search_word`.`id_word` = 1100;
+UPDATE `ps_search_word` SET `id_word` = 1238,`id_shop` = 1,`id_lang` = 1,`word` = 'aks' WHERE `ps_search_word`.`id_word` = 1238;
+UPDATE `ps_search_word` SET `id_word` = 1102,`id_shop` = 1,`id_lang` = 1,`word` = 'article' WHERE `ps_search_word`.`id_word` = 1102;
+UPDATE `ps_search_word` SET `id_word` = 1088,`id_shop` = 1,`id_lang` = 1,`word` = 'asda' WHERE `ps_search_word`.`id_word` = 1088;
+UPDATE `ps_search_word` SET `id_word` = 1089,`id_shop` = 1,`id_lang` = 1,`word` = 'asdad' WHERE `ps_search_word`.`id_word` = 1089;
 UPDATE `ps_search_word` SET `id_word` = 463,`id_shop` = 1,`id_lang` = 1,`word` = 'beige' WHERE `ps_search_word`.`id_word` = 463;
 UPDATE `ps_search_word` SET `id_word` = 460,`id_shop` = 1,`id_lang` = 1,`word` = 'belt' WHERE `ps_search_word`.`id_word` = 460;
-UPDATE `ps_search_word` SET `id_word` = 1078,`id_shop` = 1,`id_lang` = 1,`word` = 'cooler' WHERE `ps_search_word`.`id_word` = 1078;
+UPDATE `ps_search_word` SET `id_word` = 1101,`id_shop` = 1,`id_lang` = 1,`word` = 'conditioning' WHERE `ps_search_word`.`id_word` = 1101;
+UPDATE `ps_search_word` SET `id_word` = 1095,`id_shop` = 1,`id_lang` = 1,`word` = 'cooling' WHERE `ps_search_word`.`id_word` = 1095;
+UPDATE `ps_search_word` SET `id_word` = 1103,`id_shop` = 1,`id_lang` = 1,`word` = 'core' WHERE `ps_search_word`.`id_word` = 1103;
+UPDATE `ps_search_word` SET `id_word` = 1239,`id_shop` = 1,`id_lang` = 1,`word` = 'dasis' WHERE `ps_search_word`.`id_word` = 1239;
+UPDATE `ps_search_word` SET `id_word` = 1247,`id_shop` = 1,`id_lang` = 1,`word` = 'depth' WHERE `ps_search_word`.`id_word` = 1247;
+UPDATE `ps_search_word` SET `id_word` = 1104,`id_shop` = 1,`id_lang` = 1,`word` = 'dimensions' WHERE `ps_search_word`.`id_word` = 1104;
 UPDATE `ps_search_word` SET `id_word` = 466,`id_shop` = 1,`id_lang` = 1,`word` = 'dressy' WHERE `ps_search_word`.`id_word` = 466;
 UPDATE `ps_search_word` SET `id_word` = 767,`id_shop` = 1,`id_lang` = 1,`word` = 'elastic' WHERE `ps_search_word`.`id_word` = 767;
+UPDATE `ps_search_word` SET `id_word` = 1094,`id_shop` = 1,`id_lang` = 1,`word` = 'engine' WHERE `ps_search_word`.`id_word` = 1094;
+UPDATE `ps_search_word` SET `id_word` = 1109,`id_shop` = 1,`id_lang` = 1,`word` = 'equipment' WHERE `ps_search_word`.`id_word` = 1109;
 UPDATE `ps_search_word` SET `id_word` = 456,`id_shop` = 1,`id_lang` = 1,`word` = 'evening' WHERE `ps_search_word`.`id_word` = 456;
+UPDATE `ps_search_word` SET `id_word` = 1242,`id_shop` = 1,`id_lang` = 1,`word` = 'height' WHERE `ps_search_word`.`id_word` = 1242;
 UPDATE `ps_search_word` SET `id_word` = 1080,`id_shop` = 1,`id_lang` = 1,`word` = 'home' WHERE `ps_search_word`.`id_word` = 1080;
+UPDATE `ps_search_word` SET `id_word` = 1244,`id_shop` = 1,`id_lang` = 1,`word` = 'length' WHERE `ps_search_word`.`id_word` = 1244;
 UPDATE `ps_search_word` SET `id_word` = 768,`id_shop` = 1,`id_lang` = 1,`word` = 'lining' WHERE `ps_search_word`.`id_word` = 768;
 UPDATE `ps_search_word` SET `id_word` = 462,`id_shop` = 1,`id_lang` = 1,`word` = 'linings' WHERE `ps_search_word`.`id_word` = 462;
+UPDATE `ps_search_word` SET `id_word` = 1096,`id_shop` = 1,`id_lang` = 1,`word` = 'manual' WHERE `ps_search_word`.`id_word` = 1096;
+UPDATE `ps_search_word` SET `id_word` = 1245,`id_shop` = 1,`id_lang` = 1,`word` = 'new' WHERE `ps_search_word`.`id_word` = 1245;
+UPDATE `ps_search_word` SET `id_word` = 1241,`id_shop` = 1,`id_lang` = 1,`word` = 'packaging' WHERE `ps_search_word`.`id_word` = 1241;
+UPDATE `ps_search_word` SET `id_word` = 1246,`id_shop` = 1,`id_lang` = 1,`word` = 'part' WHERE `ps_search_word`.`id_word` = 1246;
 UPDATE `ps_search_word` SET `id_word` = 464,`id_shop` = 1,`id_lang` = 1,`word` = 'pink' WHERE `ps_search_word`.`id_word` = 464;
+UPDATE `ps_search_word` SET `id_word` = 1086,`id_shop` = 1,`id_lang` = 1,`word` = 'radiator' WHERE `ps_search_word`.`id_word` = 1086;
 UPDATE `ps_search_word` SET `id_word` = 461,`id_shop` = 1,`id_lang` = 1,`word` = 'ruffled' WHERE `ps_search_word`.`id_word` = 461;
 UPDATE `ps_search_word` SET `id_word` = 763,`id_shop` = 1,`id_lang` = 1,`word` = 'sleeveless' WHERE `ps_search_word`.`id_word` = 763;
 UPDATE `ps_search_word` SET `id_word` = 457,`id_shop` = 1,`id_lang` = 1,`word` = 'straight' WHERE `ps_search_word`.`id_word` = 457;
+UPDATE `ps_search_word` SET `id_word` = 1097,`id_shop` = 1,`id_lang` = 1,`word` = 'transmission' WHERE `ps_search_word`.`id_word` = 1097;
+UPDATE `ps_search_word` SET `id_word` = 1108,`id_shop` = 1,`id_lang` = 1,`word` = 'transmissionveh' WHERE `ps_search_word`.`id_word` = 1108;
+UPDATE `ps_search_word` SET `id_word` = 1107,`id_shop` = 1,`id_lang` = 1,`word` = 'type' WHERE `ps_search_word`.`id_word` = 1107;
+UPDATE `ps_search_word` SET `id_word` = 1084,`id_shop` = 1,`id_lang` = 1,`word` = 'van' WHERE `ps_search_word`.`id_word` = 1084;
+UPDATE `ps_search_word` SET `id_word` = 1098,`id_shop` = 1,`id_lang` = 1,`word` = 'vehicles' WHERE `ps_search_word`.`id_word` = 1098;
 UPDATE `ps_search_word` SET `id_word` = 459,`id_shop` = 1,`id_lang` = 1,`word` = 'waist' WHERE `ps_search_word`.`id_word` = 459;
-UPDATE `ps_search_word` SET `id_word` = 1082,`id_shop` = 1,`id_lang` = 2,`word` = 'audi' WHERE `ps_search_word`.`id_word` = 1082;
+UPDATE `ps_search_word` SET `id_word` = 1248,`id_shop` = 1,`id_lang` = 1,`word` = 'weight' WHERE `ps_search_word`.`id_word` = 1248;
+UPDATE `ps_search_word` SET `id_word` = 1085,`id_shop` = 1,`id_lang` = 1,`word` = 'wezel' WHERE `ps_search_word`.`id_word` = 1085;
+UPDATE `ps_search_word` SET `id_word` = 1243,`id_shop` = 1,`id_lang` = 1,`word` = 'width' WHERE `ps_search_word`.`id_word` = 1243;
+UPDATE `ps_search_word` SET `id_word` = 1099,`id_shop` = 1,`id_lang` = 1,`word` = 'without' WHERE `ps_search_word`.`id_word` = 1099;
+UPDATE `ps_search_word` SET `id_word` = 1093,`id_shop` = 1,`id_lang` = 2,`word` = '03002233' WHERE `ps_search_word`.`id_word` = 1093;
+UPDATE `ps_search_word` SET `id_word` = 1261,`id_shop` = 1,`id_lang` = 2,`word` = '480051n' WHERE `ps_search_word`.`id_word` = 1261;
+UPDATE `ps_search_word` SET `id_word` = 1259,`id_shop` = 1,`id_lang` = 2,`word` = 'aks' WHERE `ps_search_word`.`id_word` = 1259;
 UPDATE `ps_search_word` SET `id_word` = 534,`id_shop` = 1,`id_lang` = 2,`word` = 'beige' WHERE `ps_search_word`.`id_word` = 534;
 UPDATE `ps_search_word` SET `id_word` = 531,`id_shop` = 1,`id_lang` = 2,`word` = 'belt' WHERE `ps_search_word`.`id_word` = 531;
-UPDATE `ps_search_word` SET `id_word` = 1081,`id_shop` = 1,`id_lang` = 2,`word` = 'cooler' WHERE `ps_search_word`.`id_word` = 1081;
+UPDATE `ps_search_word` SET `id_word` = 1260,`id_shop` = 1,`id_lang` = 2,`word` = 'dasis' WHERE `ps_search_word`.`id_word` = 1260;
 UPDATE `ps_search_word` SET `id_word` = 537,`id_shop` = 1,`id_lang` = 2,`word` = 'dressy' WHERE `ps_search_word`.`id_word` = 537;
 UPDATE `ps_search_word` SET `id_word` = 837,`id_shop` = 1,`id_lang` = 2,`word` = 'elastic' WHERE `ps_search_word`.`id_word` = 837;
 UPDATE `ps_search_word` SET `id_word` = 526,`id_shop` = 1,`id_lang` = 2,`word` = 'evening' WHERE `ps_search_word`.`id_word` = 526;
@@ -10094,16 +9781,19 @@ UPDATE `ps_search_word` SET `id_word` = 1083,`id_shop` = 1,`id_lang` = 2,`word` 
 UPDATE `ps_search_word` SET `id_word` = 838,`id_shop` = 1,`id_lang` = 2,`word` = 'lining' WHERE `ps_search_word`.`id_word` = 838;
 UPDATE `ps_search_word` SET `id_word` = 533,`id_shop` = 1,`id_lang` = 2,`word` = 'linings' WHERE `ps_search_word`.`id_word` = 533;
 UPDATE `ps_search_word` SET `id_word` = 535,`id_shop` = 1,`id_lang` = 2,`word` = 'pink' WHERE `ps_search_word`.`id_word` = 535;
+UPDATE `ps_search_word` SET `id_word` = 1092,`id_shop` = 1,`id_lang` = 2,`word` = 'radiator' WHERE `ps_search_word`.`id_word` = 1092;
 UPDATE `ps_search_word` SET `id_word` = 532,`id_shop` = 1,`id_lang` = 2,`word` = 'ruffled' WHERE `ps_search_word`.`id_word` = 532;
 UPDATE `ps_search_word` SET `id_word` = 833,`id_shop` = 1,`id_lang` = 2,`word` = 'sleeveless' WHERE `ps_search_word`.`id_word` = 833;
 UPDATE `ps_search_word` SET `id_word` = 528,`id_shop` = 1,`id_lang` = 2,`word` = 'sleeves' WHERE `ps_search_word`.`id_word` = 528;
 UPDATE `ps_search_word` SET `id_word` = 527,`id_shop` = 1,`id_lang` = 2,`word` = 'straight' WHERE `ps_search_word`.`id_word` = 527;
+UPDATE `ps_search_word` SET `id_word` = 1090,`id_shop` = 1,`id_lang` = 2,`word` = 'van' WHERE `ps_search_word`.`id_word` = 1090;
 UPDATE `ps_search_word` SET `id_word` = 530,`id_shop` = 1,`id_lang` = 2,`word` = 'waist' WHERE `ps_search_word`.`id_word` = 530;
+UPDATE `ps_search_word` SET `id_word` = 1091,`id_shop` = 1,`id_lang` = 2,`word` = 'wezel' WHERE `ps_search_word`.`id_word` = 1091;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_sekeyword`
+-- Struktura tabeli dla tabeli `ps_sekeyword`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_sekeyword` (
@@ -10118,7 +9808,7 @@ CREATE TABLE IF NOT EXISTS `ps_sekeyword` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_shop`
+-- Struktura tabeli dla tabeli `ps_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_shop` (
@@ -10136,7 +9826,7 @@ CREATE TABLE IF NOT EXISTS `ps_shop` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_shop`
+-- Zrzut danych tabeli `ps_shop`
 --
 
 UPDATE `ps_shop` SET `id_shop` = 1,`id_shop_group` = 1,`name` = 'MyCarParts',`id_category` = 2,`id_theme` = 4,`active` = 1,`deleted` = 0 WHERE `ps_shop`.`id_shop` = 1;
@@ -10144,7 +9834,7 @@ UPDATE `ps_shop` SET `id_shop` = 1,`id_shop_group` = 1,`name` = 'MyCarParts',`id
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_shop_group`
+-- Struktura tabeli dla tabeli `ps_shop_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_shop_group` (
@@ -10160,7 +9850,7 @@ CREATE TABLE IF NOT EXISTS `ps_shop_group` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_shop_group`
+-- Zrzut danych tabeli `ps_shop_group`
 --
 
 UPDATE `ps_shop_group` SET `id_shop_group` = 1,`name` = 'Default',`share_customer` = 0,`share_order` = 0,`share_stock` = 0,`active` = 1,`deleted` = 0 WHERE `ps_shop_group`.`id_shop_group` = 1;
@@ -10168,7 +9858,7 @@ UPDATE `ps_shop_group` SET `id_shop_group` = 1,`name` = 'Default',`share_custome
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_shop_url`
+-- Struktura tabeli dla tabeli `ps_shop_url`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_shop_url` (
@@ -10187,7 +9877,7 @@ CREATE TABLE IF NOT EXISTS `ps_shop_url` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_shop_url`
+-- Zrzut danych tabeli `ps_shop_url`
 --
 
 UPDATE `ps_shop_url` SET `id_shop_url` = 1,`id_shop` = 1,`domain` = '127.0.0.1:83',`domain_ssl` = '127.0.0.1:83',`physical_uri` = '/myshop/',`virtual_uri` = '',`main` = 1,`active` = 1 WHERE `ps_shop_url`.`id_shop_url` = 1;
@@ -10195,7 +9885,7 @@ UPDATE `ps_shop_url` SET `id_shop_url` = 1,`id_shop` = 1,`domain` = '127.0.0.1:8
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_smarty_cache`
+-- Struktura tabeli dla tabeli `ps_smarty_cache`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_smarty_cache` (
@@ -10213,7 +9903,7 @@ CREATE TABLE IF NOT EXISTS `ps_smarty_cache` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_smarty_last_flush`
+-- Struktura tabeli dla tabeli `ps_smarty_last_flush`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_smarty_last_flush` (
@@ -10223,7 +9913,7 @@ CREATE TABLE IF NOT EXISTS `ps_smarty_last_flush` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_smarty_last_flush`
+-- Zrzut danych tabeli `ps_smarty_last_flush`
 --
 
 UPDATE `ps_smarty_last_flush` SET `type` = 'template',`last_flush` = '2016-10-27 15:10:29' WHERE `ps_smarty_last_flush`.`type` = 'template';
@@ -10231,7 +9921,7 @@ UPDATE `ps_smarty_last_flush` SET `type` = 'template',`last_flush` = '2016-10-27
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_smarty_lazy_cache`
+-- Struktura tabeli dla tabeli `ps_smarty_lazy_cache`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_smarty_lazy_cache` (
@@ -10244,105 +9934,64 @@ CREATE TABLE IF NOT EXISTS `ps_smarty_lazy_cache` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_smarty_lazy_cache`
+-- Zrzut danych tabeli `ps_smarty_lazy_cache`
 --
 
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '010330b2deb8d98186495e456f2ae820',`cache_id` = 'homefeatured-tab|1|1|1|14',`compile_id` = '',`filepath` = 'homefeatured_tab\\1\\1\\1\\14\\3f\\00\\19\\3f001941d3976aa0ad52587abfed6cdd00561481.tab.tpl.php',`last_update` = '2016-11-02 22:02:43' WHERE `ps_smarty_lazy_cache`.`template_hash` = '010330b2deb8d98186495e456f2ae820' AND `ps_smarty_lazy_cache`.`cache_id` = 'homefeatured-tab|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '0748f88fe9596604b97bcfcd13d535c6',`cache_id` = 'blockcmsinfo|1|1|1|14',`compile_id` = '',`filepath` = 'blockcmsinfo\\1\\1\\1\\14\\cc\\00\\b5\\cc00b574bf86892a3f85c7dd068c336ae17d7890.blockcmsinfo.tpl.php',`last_update` = '2016-11-02 22:02:42' WHERE `ps_smarty_lazy_cache`.`template_hash` = '0748f88fe9596604b97bcfcd13d535c6' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcmsinfo|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '0cfd996a1e36f1bdaf7230bd0c2046e5',`cache_id` = 'blockbestsellers-home|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-02 20:45:22' WHERE `ps_smarty_lazy_cache`.`template_hash` = '0cfd996a1e36f1bdaf7230bd0c2046e5' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockbestsellers-home|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
 UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '0f5b338be72f2f0e91ac1568f6e5cf64',`cache_id` = 'blocksearch-top|1|1|1|14',`compile_id` = '',`filepath` = 'blocksearch_top\\1\\1\\1\\14\\1c\\bf\\e2\\1cbfe2c27bacef34af2eb0494382dd01b1afff54.blocksearch-top.tpl.php',`last_update` = '2016-10-27 15:15:54' WHERE `ps_smarty_lazy_cache`.`template_hash` = '0f5b338be72f2f0e91ac1568f6e5cf64' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocksearch-top|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '0f5b338be72f2f0e91ac1568f6e5cf64',`cache_id` = 'blocksearch-top|1|1|2|14',`compile_id` = '',`filepath` = 'blocksearch_top\\1\\1\\2\\14\\1c\\bf\\e2\\1cbfe2c27bacef34af2eb0494382dd01b1afff54.blocksearch-top.tpl.php',`last_update` = '2016-11-03 16:02:14' WHERE `ps_smarty_lazy_cache`.`template_hash` = '0f5b338be72f2f0e91ac1568f6e5cf64' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocksearch-top|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
 UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '10b64d2db2ea1c13cf640de714453614',`cache_id` = 'blockcontactinfos|1|1|1|14',`compile_id` = '',`filepath` = 'blockcontactinfos\\1\\1\\1\\14\\53\\0a\\64\\530a64a491644e027bd6452f151fb870fa57a963.blockcontactinfos.tpl.php',`last_update` = '2016-10-27 15:10:39' WHERE `ps_smarty_lazy_cache`.`template_hash` = '10b64d2db2ea1c13cf640de714453614' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcontactinfos|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '10b64d2db2ea1c13cf640de714453614',`cache_id` = 'blockcontactinfos|1|1|2|14',`compile_id` = '',`filepath` = 'blockcontactinfos\\1\\1\\2\\14\\53\\0a\\64\\530a64a491644e027bd6452f151fb870fa57a963.blockcontactinfos.tpl.php',`last_update` = '2016-11-03 16:02:26' WHERE `ps_smarty_lazy_cache`.`template_hash` = '10b64d2db2ea1c13cf640de714453614' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcontactinfos|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
 UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '10ca1899ac1ada49225c5c0f00198851',`cache_id` = 'blockcmsinfo|1|1|1|14',`compile_id` = '',`filepath` = 'blockcmsinfo\\1\\1\\1\\14\\db\\5f\\c1\\db5fc1b4d35bb6d6514c7c16960871ab7014f203.blockcmsinfo.tpl.php',`last_update` = '2016-10-27 15:10:38' WHERE `ps_smarty_lazy_cache`.`template_hash` = '10ca1899ac1ada49225c5c0f00198851' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcmsinfo|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '1b729c0486220982b7a77892eb20310e',`cache_id` = 'blockmyaccountfooter|1|1|1|14',`compile_id` = '',`filepath` = 'blockmyaccountfooter\\1\\1\\1\\14\\ca\\7b\\6f\\ca7b6fcae6308f9768dea4804159cad088129457.blockmyaccountfooter.tpl.php',`last_update` = '2016-11-02 22:02:44' WHERE `ps_smarty_lazy_cache`.`template_hash` = '1b729c0486220982b7a77892eb20310e' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockmyaccountfooter|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '10ca1899ac1ada49225c5c0f00198851',`cache_id` = 'blockcmsinfo|1|1|2|14',`compile_id` = '',`filepath` = 'blockcmsinfo\\1\\1\\2\\14\\db\\5f\\c1\\db5fc1b4d35bb6d6514c7c16960871ab7014f203.blockcmsinfo.tpl.php',`last_update` = '2016-11-03 16:02:23' WHERE `ps_smarty_lazy_cache`.`template_hash` = '10ca1899ac1ada49225c5c0f00198851' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcmsinfo|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
 UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '1c8a78d5322f348f108b16f7e6ba930d',`cache_id` = 'blockstore|1|1|1|14',`compile_id` = '',`filepath` = 'blockstore\\1\\1\\1\\14\\e6\\46\\89\\e6468910ffdf92bd83971b68e80881669733077a.blockstore.tpl.php',`last_update` = '2016-10-27 15:10:38' WHERE `ps_smarty_lazy_cache`.`template_hash` = '1c8a78d5322f348f108b16f7e6ba930d' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockstore|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '1c8a78d5322f348f108b16f7e6ba930d',`cache_id` = 'blockstore|1|1|2|14',`compile_id` = '',`filepath` = 'blockstore\\1\\1\\2\\14\\e6\\46\\89\\e6468910ffdf92bd83971b68e80881669733077a.blockstore.tpl.php',`last_update` = '2016-11-03 16:02:21' WHERE `ps_smarty_lazy_cache`.`template_hash` = '1c8a78d5322f348f108b16f7e6ba930d' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockstore|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
 UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '2497f49f374f0b9ee5519c4690059c12',`cache_id` = 'blockmyaccountfooter|1|1|1|14',`compile_id` = '',`filepath` = 'blockmyaccountfooter\\1\\1\\1\\14\\10\\fd\\02\\10fd02e840757b7aca7a4831f3d313b1ea50c372.blockmyaccountfooter.tpl.php',`last_update` = '2016-10-27 15:10:39' WHERE `ps_smarty_lazy_cache`.`template_hash` = '2497f49f374f0b9ee5519c4690059c12' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockmyaccountfooter|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '2497f49f374f0b9ee5519c4690059c12',`cache_id` = 'blockmyaccountfooter|1|1|2|14',`compile_id` = '',`filepath` = 'blockmyaccountfooter\\1\\1\\2\\14\\10\\fd\\02\\10fd02e840757b7aca7a4831f3d313b1ea50c372.blockmyaccountfooter.tpl.php',`last_update` = '2016-11-03 16:02:26' WHERE `ps_smarty_lazy_cache`.`template_hash` = '2497f49f374f0b9ee5519c4690059c12' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockmyaccountfooter|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
 UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '2c5d102f942939c0ce23e745100715d9',`cache_id` = 'homeslider|1|1|1|14',`compile_id` = '',`filepath` = 'homeslider\\1\\1\\1\\14\\6c\\9f\\1a\\6c9f1a7bd9b709650ddab975242361494de5ebf6.homeslider.tpl.php',`last_update` = '2016-10-27 15:10:40' WHERE `ps_smarty_lazy_cache`.`template_hash` = '2c5d102f942939c0ce23e745100715d9' AND `ps_smarty_lazy_cache`.`cache_id` = 'homeslider|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '2d2e45a0e922093815d8996c6c8829f6',`cache_id` = 'blockcategories|1|1|1|14|2|1',`compile_id` = '',`filepath` = 'blockcategories\\1\\1\\1\\14\\2\\1\\f0\\3b\\20\\f03b2083323e6de9699c2d556fa3feaf69110e0b.blockcategories.tpl.php',`last_update` = '2016-11-02 20:30:13' WHERE `ps_smarty_lazy_cache`.`template_hash` = '2d2e45a0e922093815d8996c6c8829f6' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcategories|1|1|1|14|2|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '2c5d102f942939c0ce23e745100715d9',`cache_id` = 'homeslider|1|1|2|14',`compile_id` = '',`filepath` = 'homeslider\\1\\1\\2\\14\\6c\\9f\\1a\\6c9f1a7bd9b709650ddab975242361494de5ebf6.homeslider.tpl.php',`last_update` = '2016-11-03 16:02:28' WHERE `ps_smarty_lazy_cache`.`template_hash` = '2c5d102f942939c0ce23e745100715d9' AND `ps_smarty_lazy_cache`.`cache_id` = 'homeslider|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '2e21eb94192f5b233768aab45a808b7f',`cache_id` = 'homefeatured|1|1|2|14',`compile_id` = '',`filepath` = 'homefeatured\\1\\1\\2\\14\\23\\6f\\16\\236f1647c1c40090b7a50962178d20decf9eda46.homefeatured.tpl.php',`last_update` = '2016-11-03 17:33:18' WHERE `ps_smarty_lazy_cache`.`template_hash` = '2e21eb94192f5b233768aab45a808b7f' AND `ps_smarty_lazy_cache`.`cache_id` = 'homefeatured|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
 UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '2fee13aff31f56192916db8dd8db7be4',`cache_id` = 'blockcms|0|1|1|1|14',`compile_id` = '',`filepath` = 'blockcms\\0\\1\\1\\1\\14\\d4\\5d\\fe\\d45dfe72b76a5abb352da86ca3ffb30b889c7c69.blockcms.tpl.php',`last_update` = '2016-10-27 15:10:37' WHERE `ps_smarty_lazy_cache`.`template_hash` = '2fee13aff31f56192916db8dd8db7be4' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcms|0|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '2fee13aff31f56192916db8dd8db7be4',`cache_id` = 'blockcms|0|1|1|2|14',`compile_id` = '',`filepath` = 'blockcms\\0\\1\\1\\2\\14\\d4\\5d\\fe\\d45dfe72b76a5abb352da86ca3ffb30b889c7c69.blockcms.tpl.php',`last_update` = '2016-11-03 16:02:20' WHERE `ps_smarty_lazy_cache`.`template_hash` = '2fee13aff31f56192916db8dd8db7be4' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcms|0|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
 UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '2fee13aff31f56192916db8dd8db7be4',`cache_id` = 'blockcms|2|1|1|1|14',`compile_id` = '',`filepath` = 'blockcms\\2\\1\\1\\1\\14\\d4\\5d\\fe\\d45dfe72b76a5abb352da86ca3ffb30b889c7c69.blockcms.tpl.php',`last_update` = '2016-10-27 15:10:39' WHERE `ps_smarty_lazy_cache`.`template_hash` = '2fee13aff31f56192916db8dd8db7be4' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcms|2|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '331585dbfd7ba51187067a11275c5c49',`cache_id` = 'blocksupplier|1|1|1|14',`compile_id` = '',`filepath` = 'blocksupplier\\1\\1\\1\\14\\0c\\ae\\66\\0cae66547637f0f379065ce96cc3afef2315dba2.blocksupplier.tpl.php',`last_update` = '2016-11-02 22:02:42' WHERE `ps_smarty_lazy_cache`.`template_hash` = '331585dbfd7ba51187067a11275c5c49' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocksupplier|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '34916164e75b58e10335fb065b47ff38',`cache_id` = 'homefeatured|1|1|1|14',`compile_id` = '',`filepath` = 'homefeatured\\1\\1\\1\\14\\c2\\40\\47\\c24047ed326f8a3302e256992564765cdc5929ce.homefeatured.tpl.php',`last_update` = '2016-11-02 22:02:44' WHERE `ps_smarty_lazy_cache`.`template_hash` = '34916164e75b58e10335fb065b47ff38' AND `ps_smarty_lazy_cache`.`cache_id` = 'homefeatured|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '453c32290d9c24e754d8b4bbeb471a34',`cache_id` = 'blockcontact|1|1|1|14',`compile_id` = '',`filepath` = 'blockcontact\\1\\1\\1\\14\\70\\1e\\47\\701e476678f957f511b461b0089cd1447832b55c.nav.tpl.php',`last_update` = '2016-11-02 22:02:45' WHERE `ps_smarty_lazy_cache`.`template_hash` = '453c32290d9c24e754d8b4bbeb471a34' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcontact|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '46a5e6a922c70406ba240c05dde0871e',`cache_id` = 'blocktags|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-03 16:19:35' WHERE `ps_smarty_lazy_cache`.`template_hash` = '46a5e6a922c70406ba240c05dde0871e' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocktags|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '47fbe1ebfeabd387289fd5ab7e92d0f0',`cache_id` = 'blocksocial|1|1|1|14',`compile_id` = '',`filepath` = 'blocksocial\\1\\1\\1\\14\\18\\f9\\61\\18f961826b3e8827e90efa828494bd8d0b5cd9b2.blocksocial.tpl.php',`last_update` = '2016-11-02 20:30:17' WHERE `ps_smarty_lazy_cache`.`template_hash` = '47fbe1ebfeabd387289fd5ab7e92d0f0' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocksocial|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '2fee13aff31f56192916db8dd8db7be4',`cache_id` = 'blockcms|2|1|1|2|14',`compile_id` = '',`filepath` = 'blockcms\\2\\1\\1\\2\\14\\d4\\5d\\fe\\d45dfe72b76a5abb352da86ca3ffb30b889c7c69.blockcms.tpl.php',`last_update` = '2016-11-03 16:02:26' WHERE `ps_smarty_lazy_cache`.`template_hash` = '2fee13aff31f56192916db8dd8db7be4' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcms|2|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
 UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '4ec82c481e6cc79efda097d2d5c93118',`cache_id` = 'blocksocial|1|1|1|14',`compile_id` = '',`filepath` = 'blocksocial\\1\\1\\1\\14\\9c\\f2\\2d\\9cf22dd85128153e58ee6c9ef2147d9854737bbd.blocksocial.tpl.php',`last_update` = '2016-10-27 15:10:39' WHERE `ps_smarty_lazy_cache`.`template_hash` = '4ec82c481e6cc79efda097d2d5c93118' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocksocial|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '5148d6798f805982157f82a50e65faaf',`cache_id` = 'blocktopmenu|1|1|1|14|category|14',`compile_id` = '',`filepath` = 'blocktopmenu\\1\\1\\1\\14\\category\\14\\74\\c6\\5e\\74c65e2e0e9c5aa5a5665523c4dbf363672ef83e.blocktopmenu.tpl.php',`last_update` = '2016-10-27 15:47:00' WHERE `ps_smarty_lazy_cache`.`template_hash` = '5148d6798f805982157f82a50e65faaf' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocktopmenu|1|1|1|14|category|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '5148d6798f805982157f82a50e65faaf',`cache_id` = 'blocktopmenu|1|1|1|14|category|16',`compile_id` = '',`filepath` = 'blocktopmenu\\1\\1\\1\\14\\category\\16\\74\\c6\\5e\\74c65e2e0e9c5aa5a5665523c4dbf363672ef83e.blocktopmenu.tpl.php',`last_update` = '2016-10-27 15:47:03' WHERE `ps_smarty_lazy_cache`.`template_hash` = '5148d6798f805982157f82a50e65faaf' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocktopmenu|1|1|1|14|category|16' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '5148d6798f805982157f82a50e65faaf',`cache_id` = 'blocktopmenu|1|1|1|14|category|21',`compile_id` = '',`filepath` = 'blocktopmenu\\1\\1\\1\\14\\category\\21\\74\\c6\\5e\\74c65e2e0e9c5aa5a5665523c4dbf363672ef83e.blocktopmenu.tpl.php',`last_update` = '2016-10-27 15:47:05' WHERE `ps_smarty_lazy_cache`.`template_hash` = '5148d6798f805982157f82a50e65faaf' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocktopmenu|1|1|1|14|category|21' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '5148d6798f805982157f82a50e65faaf',`cache_id` = 'blocktopmenu|1|1|1|14|product|9',`compile_id` = '',`filepath` = 'blocktopmenu\\1\\1\\1\\14\\product\\9\\74\\c6\\5e\\74c65e2e0e9c5aa5a5665523c4dbf363672ef83e.blocktopmenu.tpl.php',`last_update` = '2016-10-27 15:46:42' WHERE `ps_smarty_lazy_cache`.`template_hash` = '5148d6798f805982157f82a50e65faaf' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocktopmenu|1|1|1|14|product|9' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '53860d91f0aaf6ebdeb3f48403baca57',`cache_id` = 'blockcms|0|1|1|1|14',`compile_id` = '',`filepath` = 'blockcms\\0\\1\\1\\1\\14\\e4\\a0\\a7\\e4a0a7ac1fca62dae3f29e77b5419c7bac904c88.blockcms.tpl.php',`last_update` = '2016-11-02 20:30:14' WHERE `ps_smarty_lazy_cache`.`template_hash` = '53860d91f0aaf6ebdeb3f48403baca57' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcms|0|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '53860d91f0aaf6ebdeb3f48403baca57',`cache_id` = 'blockcms|2|1|1|1|14',`compile_id` = '',`filepath` = 'blockcms\\2\\1\\1\\1\\14\\e4\\a0\\a7\\e4a0a7ac1fca62dae3f29e77b5419c7bac904c88.blockcms.tpl.php',`last_update` = '2016-11-02 20:30:17' WHERE `ps_smarty_lazy_cache`.`template_hash` = '53860d91f0aaf6ebdeb3f48403baca57' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcms|2|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '4ec82c481e6cc79efda097d2d5c93118',`cache_id` = 'blocksocial|1|1|2|14',`compile_id` = '',`filepath` = 'blocksocial\\1\\1\\2\\14\\9c\\f2\\2d\\9cf22dd85128153e58ee6c9ef2147d9854737bbd.blocksocial.tpl.php',`last_update` = '2016-11-03 16:02:25' WHERE `ps_smarty_lazy_cache`.`template_hash` = '4ec82c481e6cc79efda097d2d5c93118' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocksocial|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '5148d6798f805982157f82a50e65faaf',`cache_id` = 'blocktopmenu|1|1|2|14|category|14',`compile_id` = '',`filepath` = 'blocktopmenu\\1\\1\\2\\14\\category\\14\\74\\c6\\5e\\74c65e2e0e9c5aa5a5665523c4dbf363672ef83e.blocktopmenu.tpl.php',`last_update` = '2016-11-03 17:33:15' WHERE `ps_smarty_lazy_cache`.`template_hash` = '5148d6798f805982157f82a50e65faaf' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocktopmenu|1|1|2|14|category|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '5148d6798f805982157f82a50e65faaf',`cache_id` = 'blocktopmenu|1|1|2|14|category|22',`compile_id` = '',`filepath` = 'blocktopmenu\\1\\1\\2\\14\\category\\22\\74\\c6\\5e\\74c65e2e0e9c5aa5a5665523c4dbf363672ef83e.blocktopmenu.tpl.php',`last_update` = '2016-11-03 17:09:22' WHERE `ps_smarty_lazy_cache`.`template_hash` = '5148d6798f805982157f82a50e65faaf' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocktopmenu|1|1|2|14|category|22' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '5148d6798f805982157f82a50e65faaf',`cache_id` = 'blocktopmenu|1|1|2|14|index',`compile_id` = '',`filepath` = 'blocktopmenu\\1\\1\\2\\14\\index\\74\\c6\\5e\\74c65e2e0e9c5aa5a5665523c4dbf363672ef83e.blocktopmenu.tpl.php',`last_update` = '2016-11-03 17:33:17' WHERE `ps_smarty_lazy_cache`.`template_hash` = '5148d6798f805982157f82a50e65faaf' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocktopmenu|1|1|2|14|index' AND `ps_smarty_lazy_cache`.`compile_id` = '';
 UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '53aadee84a20a5a2142d2fd45fb5b5d0',`cache_id` = 'blockcontact|1|1|1|14',`compile_id` = '',`filepath` = 'blockcontact\\1\\1\\1\\14\\84\\26\\35\\842635fcc0f5a9cf461255a17a00d4d155ec35fd.nav.tpl.php',`last_update` = '2016-10-27 15:10:40' WHERE `ps_smarty_lazy_cache`.`template_hash` = '53aadee84a20a5a2142d2fd45fb5b5d0' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcontact|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '597172f4f45de5f16ea0e04a78303d7c',`cache_id` = 'blockcategories|1|1|1|14|1',`compile_id` = '',`filepath` = 'blockcategories\\1\\1\\1\\14\\1\\6a\\f5\\f3\\6af5f335cd77d6ec971c7f9e88f405fd98294201.blockcategories_footer.tpl.php',`last_update` = '2016-11-02 20:30:18' WHERE `ps_smarty_lazy_cache`.`template_hash` = '597172f4f45de5f16ea0e04a78303d7c' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcategories|1|1|1|14|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '597172f4f45de5f16ea0e04a78303d7c',`cache_id` = 'blockcategories|1|1|1|14|16|1',`compile_id` = '',`filepath` = 'blockcategories\\1\\1\\1\\14\\16\\1\\6a\\f5\\f3\\6af5f335cd77d6ec971c7f9e88f405fd98294201.blockcategories_footer.tpl.php',`last_update` = '2016-11-02 20:33:52' WHERE `ps_smarty_lazy_cache`.`template_hash` = '597172f4f45de5f16ea0e04a78303d7c' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcategories|1|1|1|14|16|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '598dbf382192edb8c5dcc919ec0fa2a5',`cache_id` = 'blockcmsinfo|1|1|1|14',`compile_id` = '',`filepath` = 'blockcmsinfo\\1\\1\\1\\14\\f0\\16\\da\\f016dadd73c832692e11fc4330d4038474b4f385.blockcmsinfo.tpl.php',`last_update` = '2016-11-02 20:30:16' WHERE `ps_smarty_lazy_cache`.`template_hash` = '598dbf382192edb8c5dcc919ec0fa2a5' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcmsinfo|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '59bcb519b88d607cd9566e3f9f46e4b4',`cache_id` = 'homefeatured-tab|1|1|1|14',`compile_id` = '',`filepath` = 'homefeatured_tab\\1\\1\\1\\14\\e5\\38\\1c\\e5381c84c1632b5f3c40c9a3936542cb696ddb31.tab.tpl.php',`last_update` = '2016-11-02 20:30:16' WHERE `ps_smarty_lazy_cache`.`template_hash` = '59bcb519b88d607cd9566e3f9f46e4b4' AND `ps_smarty_lazy_cache`.`cache_id` = 'homefeatured-tab|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '5a310d70d119f507101e9db86e7a8bf9',`cache_id` = 'blockcontactinfos|1|1|1|14',`compile_id` = '',`filepath` = 'blockcontactinfos\\1\\1\\1\\14\\f5\\50\\ee\\f550ee0edcb36e7701d52f363df7be1ce3e1a494.blockcontactinfos.tpl.php',`last_update` = '2016-11-02 22:02:44' WHERE `ps_smarty_lazy_cache`.`template_hash` = '5a310d70d119f507101e9db86e7a8bf9' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcontactinfos|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '5c6834c439efd1095657bec058ad2b40',`cache_id` = 'blocknewproducts-home|20161102|1|1|1|14',`compile_id` = '',`filepath` = 'blocknewproducts_home\\20161102\\1\\1\\1\\14\\fb\\58\\06\\fb5806b8424b8b42f8630efcf18b41aa278e7d8f.blocknewproducts_home.tpl.php',`last_update` = '2016-11-02 20:30:16' WHERE `ps_smarty_lazy_cache`.`template_hash` = '5c6834c439efd1095657bec058ad2b40' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocknewproducts-home|20161102|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '53aadee84a20a5a2142d2fd45fb5b5d0',`cache_id` = 'blockcontact|1|1|2|14',`compile_id` = '',`filepath` = 'blockcontact\\1\\1\\2\\14\\84\\26\\35\\842635fcc0f5a9cf461255a17a00d4d155ec35fd.nav.tpl.php',`last_update` = '2016-11-03 16:02:28' WHERE `ps_smarty_lazy_cache`.`template_hash` = '53aadee84a20a5a2142d2fd45fb5b5d0' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcontact|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
 UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '62ec0bee9f9bc9ca9c924d72dbdc8830',`cache_id` = 'blocksupplier|1|1|1|14',`compile_id` = '',`filepath` = 'blocksupplier\\1\\1\\1\\14\\70\\76\\1a\\70761aae3818044c3f9afa87db9ed81e2f71bd82.blocksupplier.tpl.php',`last_update` = '2016-10-27 15:10:38' WHERE `ps_smarty_lazy_cache`.`template_hash` = '62ec0bee9f9bc9ca9c924d72dbdc8830' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocksupplier|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '632d2f62a92bea5f04ebc92d0c31da1e',`cache_id` = 'blockspecials|20161027|20|20161027|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-10-27 15:47:32' WHERE `ps_smarty_lazy_cache`.`template_hash` = '632d2f62a92bea5f04ebc92d0c31da1e' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161027|20|20161027|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '6ef3e4cdf7b9cfb65f75faca1c6dd3b4',`cache_id` = 'blocknewproducts|20161027|1|1|1|14',`compile_id` = '',`filepath` = 'blocknewproducts\\20161027\\1\\1\\1\\14\\12\\a2\\4f\\12a24fd49f5c2f645e312ef603ba4258255b2aad.blocknewproducts.tpl.php',`last_update` = '2016-10-27 15:47:32' WHERE `ps_smarty_lazy_cache`.`template_hash` = '6ef3e4cdf7b9cfb65f75faca1c6dd3b4' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocknewproducts|20161027|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '75fbbe7f8444298625be1e28d6473b99',`cache_id` = 'homefeatured|1|1|1|14',`compile_id` = '',`filepath` = 'homefeatured\\1\\1\\1\\14\\d9\\77\\f2\\d977f26bff3445b1f4f0cd543601b14bb98fa59f.homefeatured.tpl.php',`last_update` = '2016-11-02 20:30:17' WHERE `ps_smarty_lazy_cache`.`template_hash` = '75fbbe7f8444298625be1e28d6473b99' AND `ps_smarty_lazy_cache`.`cache_id` = 'homefeatured|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '782f83685680a5c386fdbf111bbd35f1',`cache_id` = 'blocktags|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-10-27 15:47:00' WHERE `ps_smarty_lazy_cache`.`template_hash` = '782f83685680a5c386fdbf111bbd35f1' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocktags|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '78ddfb737e80ba205bc1fb1e98532642',`cache_id` = 'blocknewproducts|20161102|1|1|1|14',`compile_id` = '',`filepath` = 'blocknewproducts\\20161102\\1\\1\\1\\14\\23\\4b\\3d\\234b3d4821924d4c345121db1b60acfd13a8a56c.blocknewproducts.tpl.php',`last_update` = '2016-11-02 20:30:13' WHERE `ps_smarty_lazy_cache`.`template_hash` = '78ddfb737e80ba205bc1fb1e98532642' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocknewproducts|20161102|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '7b41242df3f611669755b8b8e57d56c8',`cache_id` = 'homeslider|1|1|1|14',`compile_id` = '',`filepath` = 'homeslider\\1\\1\\1\\14\\22\\a5\\b8\\22a5b89f3341e05f4675afd9af5d76014ef8daf3.homeslider.tpl.php',`last_update` = '2016-11-02 22:02:45' WHERE `ps_smarty_lazy_cache`.`template_hash` = '7b41242df3f611669755b8b8e57d56c8' AND `ps_smarty_lazy_cache`.`cache_id` = 'homeslider|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '8540c8df241ef9d6d606471410e4cba1',`cache_id` = 'blocknewproducts|20161102|1|1|1|14',`compile_id` = '',`filepath` = 'blocknewproducts\\20161102\\1\\1\\1\\14\\ca\\7c\\91\\ca7c91c15b503402acdfdc5893ac9a63b955ebed.blocknewproducts.tpl.php',`last_update` = '2016-11-02 22:02:40' WHERE `ps_smarty_lazy_cache`.`template_hash` = '8540c8df241ef9d6d606471410e4cba1' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocknewproducts|20161102|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '8540c8df241ef9d6d606471410e4cba1',`cache_id` = 'blocknewproducts|20161103|1|1|1|14',`compile_id` = '',`filepath` = 'blocknewproducts\\20161103\\1\\1\\1\\14\\ca\\7c\\91\\ca7c91c15b503402acdfdc5893ac9a63b955ebed.blocknewproducts.tpl.php',`last_update` = '2016-11-03 16:17:53' WHERE `ps_smarty_lazy_cache`.`template_hash` = '8540c8df241ef9d6d606471410e4cba1' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocknewproducts|20161103|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '8571d07da0850a3ab8094a6469e96db1',`cache_id` = 'blockbestsellers-col|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-02 20:45:22' WHERE `ps_smarty_lazy_cache`.`template_hash` = '8571d07da0850a3ab8094a6469e96db1' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockbestsellers-col|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '86a07a5ef3cc74f0127d212391815a77',`cache_id` = 'blocknewproducts-tab|20161102|1|1|1|14',`compile_id` = '',`filepath` = 'blocknewproducts_tab\\20161102\\1\\1\\1\\14\\88\\52\\bd\\8852bdc611373cea76768e3625689730e0e78c12.tab.tpl.php',`last_update` = '2016-11-02 22:02:43' WHERE `ps_smarty_lazy_cache`.`template_hash` = '86a07a5ef3cc74f0127d212391815a77' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocknewproducts-tab|20161102|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '86a07a5ef3cc74f0127d212391815a77',`cache_id` = 'blocknewproducts-tab|20161103|1|1|1|14',`compile_id` = '',`filepath` = 'blocknewproducts_tab\\20161103\\1\\1\\1\\14\\88\\52\\bd\\8852bdc611373cea76768e3625689730e0e78c12.tab.tpl.php',`last_update` = '2016-11-03 16:17:55' WHERE `ps_smarty_lazy_cache`.`template_hash` = '86a07a5ef3cc74f0127d212391815a77' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocknewproducts-tab|20161103|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '8ca78a214fe997ec4cb4b43939275623',`cache_id` = 'blocksearch-top|1|1|1|14',`compile_id` = '',`filepath` = 'blocksearch_top\\1\\1\\1\\14\\27\\28\\59\\2728597bae564e8fa424e75bad27ed5426f75ae1.blocksearch-top.tpl.php',`last_update` = '2016-11-02 22:02:38' WHERE `ps_smarty_lazy_cache`.`template_hash` = '8ca78a214fe997ec4cb4b43939275623' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocksearch-top|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '96e772892a4a80273500868f422219fb',`cache_id` = 'productlist_colors|9|1|1',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-02 20:33:52' WHERE `ps_smarty_lazy_cache`.`template_hash` = '96e772892a4a80273500868f422219fb' AND `ps_smarty_lazy_cache`.`cache_id` = 'productlist_colors|9|1|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'a38de24e8be25271a4004416a18330fe',`cache_id` = 'blockpaymentlogo|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-02 20:45:22' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'a38de24e8be25271a4004416a18330fe' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockpaymentlogo|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'a72ec94b120f5749cc8524c9a7b86a2f',`cache_id` = 'blocknewproducts-home|20161102|1|1|1|14',`compile_id` = '',`filepath` = 'blocknewproducts_home\\20161102\\1\\1\\1\\14\\1b\\50\\97\\1b5097f8d96b560f5925bdf216101fffc2afd0cd.blocknewproducts_home.tpl.php',`last_update` = '2016-11-02 22:02:43' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'a72ec94b120f5749cc8524c9a7b86a2f' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocknewproducts-home|20161102|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'a72ec94b120f5749cc8524c9a7b86a2f',`cache_id` = 'blocknewproducts-home|20161103|1|1|1|14',`compile_id` = '',`filepath` = 'blocknewproducts_home\\20161103\\1\\1\\1\\14\\1b\\50\\97\\1b5097f8d96b560f5925bdf216101fffc2afd0cd.blocknewproducts_home.tpl.php',`last_update` = '2016-11-03 16:17:55' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'a72ec94b120f5749cc8524c9a7b86a2f' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocknewproducts-home|20161103|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'a85c17559f09d5727f043c923648e5cc',`cache_id` = 'blockcontact|1|1|1|14',`compile_id` = '',`filepath` = 'blockcontact\\1\\1\\1\\14\\3f\\39\\12\\3f3912abf9dad2bac82a528df31e3be8cf1bee41.nav.tpl.php',`last_update` = '2016-11-02 20:30:18' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'a85c17559f09d5727f043c923648e5cc' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcontact|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'b78e42ea939ca350c245b4573d37caac',`cache_id` = 'blockcategories|1|1|1|14|2|21|1',`compile_id` = '',`filepath` = 'blockcategories\\1\\1\\1\\14\\2\\21\\1\\da\\ff\\95\\daff95aaa946c76ba7e99a5d809e7fad0eaa7bcc.blockcategories.tpl.php',`last_update` = '2016-10-27 15:46:42' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'b78e42ea939ca350c245b4573d37caac' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcategories|1|1|1|14|2|21|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'b78e42ea939ca350c245b4573d37caac',`cache_id` = 'blockcategories|1|1|1|14|2|2|1',`compile_id` = '',`filepath` = 'blockcategories\\1\\1\\1\\14\\2\\2\\1\\da\\ff\\95\\daff95aaa946c76ba7e99a5d809e7fad0eaa7bcc.blockcategories.tpl.php',`last_update` = '2016-10-27 15:45:13' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'b78e42ea939ca350c245b4573d37caac' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcategories|1|1|1|14|2|2|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'b998c51b5ca532b45c86f6c0cdfc63d5',`cache_id` = 'productlist_colors|9|1|1',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-03 16:19:10' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'b998c51b5ca532b45c86f6c0cdfc63d5' AND `ps_smarty_lazy_cache`.`cache_id` = 'productlist_colors|9|1|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'bbeb4f3b6a56f6d51b91f269a4883466',`cache_id` = 'blocknewproducts-tab|20161102|1|1|1|14',`compile_id` = '',`filepath` = 'blocknewproducts_tab\\20161102\\1\\1\\1\\14\\6f\\e7\\3f\\6fe73fd82c1a224d8bca24720591ceb0a30318af.tab.tpl.php',`last_update` = '2016-11-02 20:30:16' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'bbeb4f3b6a56f6d51b91f269a4883466' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocknewproducts-tab|20161102|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'bc75e37317edcb3a5710a683ed76d18e',`cache_id` = 'blockmyaccountfooter|1|1|1|14',`compile_id` = '',`filepath` = 'blockmyaccountfooter\\1\\1\\1\\14\\c0\\35\\27\\c0352708f5e4220de90eb122c64b0842b972aec6.blockmyaccountfooter.tpl.php',`last_update` = '2016-11-02 20:30:17' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'bc75e37317edcb3a5710a683ed76d18e' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockmyaccountfooter|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'bec3815e62615bbc023d7870a7469cf4',`cache_id` = 'blockcms|0|1|1|1|14',`compile_id` = '',`filepath` = 'blockcms\\0\\1\\1\\1\\14\\da\\fa\\7b\\dafa7bd29469060fdb6fd9c605151ecc8abe76d7.blockcms.tpl.php',`last_update` = '2016-11-02 22:02:41' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'bec3815e62615bbc023d7870a7469cf4' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcms|0|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'bec3815e62615bbc023d7870a7469cf4',`cache_id` = 'blockcms|2|1|1|1|14',`compile_id` = '',`filepath` = 'blockcms\\2\\1\\1\\1\\14\\da\\fa\\7b\\dafa7bd29469060fdb6fd9c605151ecc8abe76d7.blockcms.tpl.php',`last_update` = '2016-11-02 22:02:44' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'bec3815e62615bbc023d7870a7469cf4' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcms|2|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'cc82f74da6ab9d49fe831a3080322f59',`cache_id` = 'blockcontactinfos|1|1|1|14',`compile_id` = '',`filepath` = 'blockcontactinfos\\1\\1\\1\\14\\d6\\e4\\38\\d6e4380ef7bae9b128a973d619458c99927a0e8f.blockcontactinfos.tpl.php',`last_update` = '2016-11-02 20:30:17' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'cc82f74da6ab9d49fe831a3080322f59' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcontactinfos|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'd423b7435d2de4281748bc0f7b3f66fe',`cache_id` = 'blocksocial|1|1|1|14',`compile_id` = '',`filepath` = 'blocksocial\\1\\1\\1\\14\\64\\f5\\8b\\64f58b7fcc4cfd1135d86730982c71ee2b36ae3f.blocksocial.tpl.php',`last_update` = '2016-11-02 22:02:44' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'd423b7435d2de4281748bc0f7b3f66fe' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocksocial|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'd4af35c7d649a44f3f702c8d918f7fee',`cache_id` = 'blocksearch-top|1|1|1|14',`compile_id` = '',`filepath` = 'blocksearch_top\\1\\1\\1\\14\\cb\\9b\\10\\cb9b10a4828af335bbeda25a5e3c49cc56125312.blocksearch-top.tpl.php',`last_update` = '2016-11-02 20:30:11' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'd4af35c7d649a44f3f702c8d918f7fee' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocksearch-top|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'd4f9658dbaa902c52373f6697cba6e59',`cache_id` = 'blockspecials|20161102|10|20161102|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-02 20:33:32' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'd4f9658dbaa902c52373f6697cba6e59' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161102|10|20161102|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'd4f9658dbaa902c52373f6697cba6e59',`cache_id` = 'blockspecials|20161102|11|20161102|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-02 20:33:52' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'd4f9658dbaa902c52373f6697cba6e59' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161102|11|20161102|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'd4f9658dbaa902c52373f6697cba6e59',`cache_id` = 'blockspecials|20161102|16|20161102|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-02 20:30:15' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'd4f9658dbaa902c52373f6697cba6e59' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161102|16|20161102|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'd4f9658dbaa902c52373f6697cba6e59',`cache_id` = 'blockspecials|20161102|19|20161102|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-02 20:30:47' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'd4f9658dbaa902c52373f6697cba6e59' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161102|19|20161102|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'd4f9658dbaa902c52373f6697cba6e59',`cache_id` = 'blockspecials|20161102|3|20161102|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-02 20:31:04' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'd4f9658dbaa902c52373f6697cba6e59' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161102|3|20161102|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'd4f9658dbaa902c52373f6697cba6e59',`cache_id` = 'blockspecials|20161102|5|20161102|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-02 20:45:22' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'd4f9658dbaa902c52373f6697cba6e59' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161102|5|20161102|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'd4f9658dbaa902c52373f6697cba6e59',`cache_id` = 'blockspecials|20161102|8|20161102|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-02 20:31:00' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'd4f9658dbaa902c52373f6697cba6e59' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161102|8|20161102|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'd59c730f388686dba72320249b6e904d',`cache_id` = 'blocksupplier|1|1|1|14',`compile_id` = '',`filepath` = 'blocksupplier\\1\\1\\1\\14\\34\\a4\\77\\34a47708a53dd20a8efa6bbf5e7116b717f04ac5.blocksupplier.tpl.php',`last_update` = '2016-11-02 20:30:15' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'd59c730f388686dba72320249b6e904d' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocksupplier|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'd5df871be61cfd6a160907adbbc250a6',`cache_id` = 'blockmanufacturer|1|1|1|14',`compile_id` = '',`filepath` = 'blockmanufacturer\\1\\1\\1\\14\\ec\\43\\47\\ec4347b662217da8110d3853ef50d7de1a0dfd27.blockmanufacturer.tpl.php',`last_update` = '2016-11-02 22:02:41' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'd5df871be61cfd6a160907adbbc250a6' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockmanufacturer|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'db28392ff01f75e6cb8f9f18b831defa',`cache_id` = 'blockbestsellers-tab|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-02 20:45:22' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'db28392ff01f75e6cb8f9f18b831defa' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockbestsellers-tab|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'dc8462154404c7eddd7d8de21ec7bac8',`cache_id` = 'blockstore|1|1|1|14',`compile_id` = '',`filepath` = 'blockstore\\1\\1\\1\\14\\ee\\c7\\9f\\eec79fd7619c54d03281b9351b5c8774f0e6c083.blockstore.tpl.php',`last_update` = '2016-11-02 20:30:15' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'dc8462154404c7eddd7d8de21ec7bac8' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockstore|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'dd75a5f0346cefd957a4e0cdbc488040',`cache_id` = 'blockmanufacturer|1|1|1|14',`compile_id` = '',`filepath` = 'blockmanufacturer\\1\\1\\1\\14\\da\\33\\f3\\da33f3d3f7e7f95228b467d5543944bbc88c782d.blockmanufacturer.tpl.php',`last_update` = '2016-11-02 20:30:15' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'dd75a5f0346cefd957a4e0cdbc488040' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockmanufacturer|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'e67fb0233ed06424f26f345aa866bfb1',`cache_id` = 'blockspecials|20161102|10|20161102|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-02 22:02:42' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'e67fb0233ed06424f26f345aa866bfb1' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161102|10|20161102|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'e67fb0233ed06424f26f345aa866bfb1',`cache_id` = 'blockspecials|20161102|1|20161102|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-02 22:50:42' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'e67fb0233ed06424f26f345aa866bfb1' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161102|1|20161102|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'e67fb0233ed06424f26f345aa866bfb1',`cache_id` = 'blockspecials|20161103|16|20161103|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-03 16:19:10' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'e67fb0233ed06424f26f345aa866bfb1' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161103|16|20161103|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'e67fb0233ed06424f26f345aa866bfb1',`cache_id` = 'blockspecials|20161103|3|20161103|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-03 16:17:55' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'e67fb0233ed06424f26f345aa866bfb1' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161103|3|20161103|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'e67fb0233ed06424f26f345aa866bfb1',`cache_id` = 'blockspecials|20161103|4|20161103|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-03 16:19:35' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'e67fb0233ed06424f26f345aa866bfb1' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161103|4|20161103|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'e67fb0233ed06424f26f345aa866bfb1',`cache_id` = 'blockspecials|20161103|7|20161103|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-03 16:20:03' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'e67fb0233ed06424f26f345aa866bfb1' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161103|7|20161103|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'e9913a98b1e983cedf4e959048bce287',`cache_id` = 'blockstore|1|1|1|14',`compile_id` = '',`filepath` = 'blockstore\\1\\1\\1\\14\\e6\\09\\e9\\e609e98e196cefe6851b229b07265355040ca45c.blockstore.tpl.php',`last_update` = '2016-11-02 22:02:42' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'e9913a98b1e983cedf4e959048bce287' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockstore|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '62ec0bee9f9bc9ca9c924d72dbdc8830',`cache_id` = 'blocksupplier|1|1|2|14',`compile_id` = '',`filepath` = 'blocksupplier\\1\\1\\2\\14\\70\\76\\1a\\70761aae3818044c3f9afa87db9ed81e2f71bd82.blocksupplier.tpl.php',`last_update` = '2016-11-03 16:02:22' WHERE `ps_smarty_lazy_cache`.`template_hash` = '62ec0bee9f9bc9ca9c924d72dbdc8830' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocksupplier|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '632d2f62a92bea5f04ebc92d0c31da1e',`cache_id` = 'blockspecials|20161103|11|20161103|1|1|2|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-03 17:34:29' WHERE `ps_smarty_lazy_cache`.`template_hash` = '632d2f62a92bea5f04ebc92d0c31da1e' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161103|11|20161103|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '632d2f62a92bea5f04ebc92d0c31da1e',`cache_id` = 'blockspecials|20161103|13|20161103|1|1|2|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-03 17:33:18' WHERE `ps_smarty_lazy_cache`.`template_hash` = '632d2f62a92bea5f04ebc92d0c31da1e' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161103|13|20161103|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '632d2f62a92bea5f04ebc92d0c31da1e',`cache_id` = 'blockspecials|20161103|1|20161103|1|1|2|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-03 17:35:31' WHERE `ps_smarty_lazy_cache`.`template_hash` = '632d2f62a92bea5f04ebc92d0c31da1e' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161103|1|20161103|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '632d2f62a92bea5f04ebc92d0c31da1e',`cache_id` = 'blockspecials|20161103|20|20161103|1|1|2|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-03 18:51:06' WHERE `ps_smarty_lazy_cache`.`template_hash` = '632d2f62a92bea5f04ebc92d0c31da1e' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161103|20|20161103|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '632d2f62a92bea5f04ebc92d0c31da1e',`cache_id` = 'blockspecials|20161103|2|20161103|1|1|2|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-03 17:10:15' WHERE `ps_smarty_lazy_cache`.`template_hash` = '632d2f62a92bea5f04ebc92d0c31da1e' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161103|2|20161103|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '632d2f62a92bea5f04ebc92d0c31da1e',`cache_id` = 'blockspecials|20161103|3|20161103|1|1|2|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-03 17:33:15' WHERE `ps_smarty_lazy_cache`.`template_hash` = '632d2f62a92bea5f04ebc92d0c31da1e' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161103|3|20161103|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '632d2f62a92bea5f04ebc92d0c31da1e',`cache_id` = 'blockspecials|20161103|7|20161103|1|1|2|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-03 17:35:34' WHERE `ps_smarty_lazy_cache`.`template_hash` = '632d2f62a92bea5f04ebc92d0c31da1e' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockspecials|20161103|7|20161103|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = '6ef3e4cdf7b9cfb65f75faca1c6dd3b4',`cache_id` = 'blocknewproducts|20161103|1|1|2|14',`compile_id` = '',`filepath` = 'blocknewproducts\\20161103\\1\\1\\2\\14\\12\\a2\\4f\\12a24fd49f5c2f645e312ef603ba4258255b2aad.blocknewproducts.tpl.php',`last_update` = '2016-11-03 17:10:15' WHERE `ps_smarty_lazy_cache`.`template_hash` = '6ef3e4cdf7b9cfb65f75faca1c6dd3b4' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocknewproducts|20161103|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'b78e42ea939ca350c245b4573d37caac',`cache_id` = 'blockcategories|1|1|2|14|2|1',`compile_id` = '',`filepath` = 'blockcategories\\1\\1\\2\\14\\2\\1\\da\\ff\\95\\daff95aaa946c76ba7e99a5d809e7fad0eaa7bcc.blockcategories.tpl.php',`last_update` = '2016-11-03 17:33:17' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'b78e42ea939ca350c245b4573d37caac' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcategories|1|1|2|14|2|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'db9503000e6f76a05a75776a2e46a175',`cache_id` = 'blocknewproducts-home|20161103|1|1|2|14',`compile_id` = '',`filepath` = 'blocknewproducts_home\\20161103\\1\\1\\2\\14\\d8\\20\\af\\d820af1652af8ac9667058322d761a1027c551e2.blocknewproducts_home.tpl.php',`last_update` = '2016-11-03 17:33:18' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'db9503000e6f76a05a75776a2e46a175' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocknewproducts-home|20161103|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'e8a6e8255ee2e0f3724a065612e29074',`cache_id` = 'homefeatured-tab|1|1|2|14',`compile_id` = '',`filepath` = 'homefeatured_tab\\1\\1\\2\\14\\ab\\33\\1f\\ab331f3de2c7c55f4f70b2b18985087f7f72dc40.tab.tpl.php',`last_update` = '2016-11-03 17:33:18' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'e8a6e8255ee2e0f3724a065612e29074' AND `ps_smarty_lazy_cache`.`cache_id` = 'homefeatured-tab|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'eb9a3c4f9099a4c47b4ee54ddef884dc',`cache_id` = 'blockpaymentlogo|1|1|1|14',`compile_id` = '',`filepath` = '',`last_update` = '2016-10-27 16:22:28' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'eb9a3c4f9099a4c47b4ee54ddef884dc' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockpaymentlogo|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
 UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'ec1c44817ae81af07a42812406947d4b',`cache_id` = 'productpaymentlogos|1|1|1|14',`compile_id` = '',`filepath` = 'productpaymentlogos\\1\\1\\1\\14\\6b\\17\\3a\\6b173af1e8d0e0c0f6647feb80165a3f5aa35ecd.productpaymentlogos.tpl.php',`last_update` = '2016-10-27 15:45:14' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'ec1c44817ae81af07a42812406947d4b' AND `ps_smarty_lazy_cache`.`cache_id` = 'productpaymentlogos|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
 UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'eff2d1f207fcf878ca47782179a84990',`cache_id` = 'socialsharing|9|1|1|1|14',`compile_id` = '',`filepath` = 'socialsharing\\9\\1\\1\\1\\14\\01\\b4\\40\\01b440d078ce075dd49c0df8b194da37392aa4ea.socialsharing.tpl.php',`last_update` = '2016-10-27 15:45:14' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'eff2d1f207fcf878ca47782179a84990' AND `ps_smarty_lazy_cache`.`cache_id` = 'socialsharing|9|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'f02b78c69196e8a1decb782783283fdc',`cache_id` = 'blocknewproducts-tab|20161103|1|1|2|14',`compile_id` = '',`filepath` = 'blocknewproducts_tab\\20161103\\1\\1\\2\\14\\77\\e2\\20\\77e220c267eb04c3a33db203945bf27eedc8d767.tab.tpl.php',`last_update` = '2016-11-03 17:33:18' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'f02b78c69196e8a1decb782783283fdc' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocknewproducts-tab|20161103|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
 UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'f06ac8ec0a56dcf600144679757ac3de',`cache_id` = 'blockmanufacturer|1|1|1|14',`compile_id` = '',`filepath` = 'blockmanufacturer\\1\\1\\1\\14\\3e\\f3\\52\\3ef352e45c9b712c00c0d39617c81919651fed22.blockmanufacturer.tpl.php',`last_update` = '2016-10-27 15:10:37' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'f06ac8ec0a56dcf600144679757ac3de' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockmanufacturer|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'f1187bbfa29fcf87fa63e4f0be96f1a9',`cache_id` = 'productlist_colors|9|1|1',`compile_id` = '',`filepath` = '',`last_update` = '2016-10-27 15:47:00' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'f1187bbfa29fcf87fa63e4f0be96f1a9' AND `ps_smarty_lazy_cache`.`cache_id` = 'productlist_colors|9|1|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'f1c3a294ff3b271b20fedf2062801aa6',`cache_id` = 'socialsharing_header|9|1|1|1|14',`compile_id` = '',`filepath` = 'socialsharing_header\\9\\1\\1\\1\\14\\47\\2d\\25\\472d2516a25740b6a97ed4ed3fd83bd8d9595c02.socialsharing_header.tpl.php',`last_update` = '2016-10-27 15:46:41' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'f1c3a294ff3b271b20fedf2062801aa6' AND `ps_smarty_lazy_cache`.`cache_id` = 'socialsharing_header|9|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'f1e3a7676e6ad9dc3d30f5f954d92512',`cache_id` = 'homeslider|1|1|1|14',`compile_id` = '',`filepath` = 'homeslider\\1\\1\\1\\14\\d6\\65\\25\\d66525bef2f5e27a4d4ca520c152b01438e5351f.homeslider.tpl.php',`last_update` = '2016-11-02 20:30:18' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'f1e3a7676e6ad9dc3d30f5f954d92512' AND `ps_smarty_lazy_cache`.`cache_id` = 'homeslider|1|1|1|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34',`cache_id` = 'blockcategories|1|1|1|14|14|1',`compile_id` = '',`filepath` = 'blockcategories\\1\\1\\1\\14\\14\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php',`last_update` = '2016-10-27 15:37:09' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcategories|1|1|1|14|14|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34',`cache_id` = 'blockcategories|1|1|1|14|16|1',`compile_id` = '',`filepath` = 'blockcategories\\1\\1\\1\\14\\16\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php',`last_update` = '2016-10-27 15:41:25' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcategories|1|1|1|14|16|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34',`cache_id` = 'blockcategories|1|1|1|14|21|1',`compile_id` = '',`filepath` = 'blockcategories\\1\\1\\1\\14\\21\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php',`last_update` = '2016-10-27 15:41:29' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcategories|1|1|1|14|21|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34',`cache_id` = 'blockcategories|1|1|1|14|2|1',`compile_id` = '',`filepath` = 'blockcategories\\1\\1\\1\\14\\2\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php',`last_update` = '2016-10-27 15:45:14' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcategories|1|1|1|14|2|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'fea111e12365f448d4e70511be90d63a',`cache_id` = 'blocktopmenu|1|1|1|14|category|16',`compile_id` = '',`filepath` = 'blocktopmenu\\1\\1\\1\\14\\category\\16\\8a\\38\\3e\\8a383e306f240c5ca0a0b318affa735674ee1d54.blocktopmenu.tpl.php',`last_update` = '2016-11-02 20:33:51' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'fea111e12365f448d4e70511be90d63a' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocktopmenu|1|1|1|14|category|16' AND `ps_smarty_lazy_cache`.`compile_id` = '';
-UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'fea111e12365f448d4e70511be90d63a',`cache_id` = 'blocktopmenu|1|1|1|14|index',`compile_id` = '',`filepath` = 'blocktopmenu\\1\\1\\1\\14\\index\\8a\\38\\3e\\8a383e306f240c5ca0a0b318affa735674ee1d54.blocktopmenu.tpl.php',`last_update` = '2016-11-02 20:30:12' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'fea111e12365f448d4e70511be90d63a' AND `ps_smarty_lazy_cache`.`cache_id` = 'blocktopmenu|1|1|1|14|index' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'f06ac8ec0a56dcf600144679757ac3de',`cache_id` = 'blockmanufacturer|1|1|2|14',`compile_id` = '',`filepath` = 'blockmanufacturer\\1\\1\\2\\14\\3e\\f3\\52\\3ef352e45c9b712c00c0d39617c81919651fed22.blockmanufacturer.tpl.php',`last_update` = '2016-11-03 16:02:21' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'f06ac8ec0a56dcf600144679757ac3de' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockmanufacturer|1|1|2|14' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'f1187bbfa29fcf87fa63e4f0be96f1a9',`cache_id` = 'productlist_colors|10|1|2',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-03 17:33:15' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'f1187bbfa29fcf87fa63e4f0be96f1a9' AND `ps_smarty_lazy_cache`.`cache_id` = 'productlist_colors|10|1|2' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'f1187bbfa29fcf87fa63e4f0be96f1a9',`cache_id` = 'productlist_colors|11|1|2',`compile_id` = '',`filepath` = '',`last_update` = '2016-11-03 17:33:15' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'f1187bbfa29fcf87fa63e4f0be96f1a9' AND `ps_smarty_lazy_cache`.`cache_id` = 'productlist_colors|11|1|2' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34',`cache_id` = 'blockcategories|1|1|2|14|1',`compile_id` = '',`filepath` = 'blockcategories\\1\\1\\2\\14\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php',`last_update` = '2016-11-03 17:33:18' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcategories|1|1|2|14|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34',`cache_id` = 'blockcategories|1|1|2|14|14|1',`compile_id` = '',`filepath` = 'blockcategories\\1\\1\\2\\14\\14\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php',`last_update` = '2016-11-03 16:50:04' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcategories|1|1|2|14|14|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34',`cache_id` = 'blockcategories|1|1|2|14|16|1',`compile_id` = '',`filepath` = 'blockcategories\\1\\1\\2\\14\\16\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php',`last_update` = '2016-11-03 16:38:14' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcategories|1|1|2|14|16|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34',`cache_id` = 'blockcategories|1|1|2|14|17|1',`compile_id` = '',`filepath` = 'blockcategories\\1\\1\\2\\14\\17\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php',`last_update` = '2016-11-03 16:50:06' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcategories|1|1|2|14|17|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
+UPDATE `ps_smarty_lazy_cache` SET `template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34',`cache_id` = 'blockcategories|1|1|2|14|22|1',`compile_id` = '',`filepath` = 'blockcategories\\1\\1\\2\\14\\22\\1\\59\\8d\\99\\598d992a77e7c604d516411bdb96b1aabed34d90.blockcategories_footer.tpl.php',`last_update` = '2016-11-03 16:40:55' WHERE `ps_smarty_lazy_cache`.`template_hash` = 'f8ffab5fa34448791ee9de73fd2fdc34' AND `ps_smarty_lazy_cache`.`cache_id` = 'blockcategories|1|1|2|14|22|1' AND `ps_smarty_lazy_cache`.`compile_id` = '';
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_specific_price`
+-- Struktura tabeli dla tabeli `ps_specific_price`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_specific_price` (
@@ -10380,7 +10029,7 @@ CREATE TABLE IF NOT EXISTS `ps_specific_price` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_specific_price_priority`
+-- Struktura tabeli dla tabeli `ps_specific_price_priority`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_specific_price_priority` (
@@ -10389,19 +10038,21 @@ CREATE TABLE IF NOT EXISTS `ps_specific_price_priority` (
   `priority` varchar(80) NOT NULL,
   PRIMARY KEY (`id_specific_price_priority`,`id_product`),
   UNIQUE KEY `id_product` (`id_product`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_specific_price_priority`
+-- Zrzut danych tabeli `ps_specific_price_priority`
 --
 
 UPDATE `ps_specific_price_priority` SET `id_specific_price_priority` = 1,`id_product` = 8,`priority` = 'id_shop;id_currency;id_country;id_group' WHERE `ps_specific_price_priority`.`id_specific_price_priority` = 1 AND `ps_specific_price_priority`.`id_product` = 8;
 UPDATE `ps_specific_price_priority` SET `id_specific_price_priority` = 2,`id_product` = 9,`priority` = 'id_shop;id_currency;id_country;id_group' WHERE `ps_specific_price_priority`.`id_specific_price_priority` = 2 AND `ps_specific_price_priority`.`id_product` = 9;
+UPDATE `ps_specific_price_priority` SET `id_specific_price_priority` = 3,`id_product` = 10,`priority` = 'id_shop;id_currency;id_country;id_group' WHERE `ps_specific_price_priority`.`id_specific_price_priority` = 3 AND `ps_specific_price_priority`.`id_product` = 10;
+UPDATE `ps_specific_price_priority` SET `id_specific_price_priority` = 9,`id_product` = 11,`priority` = 'id_shop;id_currency;id_country;id_group' WHERE `ps_specific_price_priority`.`id_specific_price_priority` = 9 AND `ps_specific_price_priority`.`id_product` = 11;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_specific_price_rule`
+-- Struktura tabeli dla tabeli `ps_specific_price_rule`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_specific_price_rule` (
@@ -10425,7 +10076,7 @@ CREATE TABLE IF NOT EXISTS `ps_specific_price_rule` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_specific_price_rule_condition`
+-- Struktura tabeli dla tabeli `ps_specific_price_rule_condition`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_specific_price_rule_condition` (
@@ -10440,7 +10091,7 @@ CREATE TABLE IF NOT EXISTS `ps_specific_price_rule_condition` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_specific_price_rule_condition_group`
+-- Struktura tabeli dla tabeli `ps_specific_price_rule_condition_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_specific_price_rule_condition_group` (
@@ -10452,7 +10103,7 @@ CREATE TABLE IF NOT EXISTS `ps_specific_price_rule_condition_group` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_state`
+-- Struktura tabeli dla tabeli `ps_state`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_state` (
@@ -10470,7 +10121,7 @@ CREATE TABLE IF NOT EXISTS `ps_state` (
 ) ENGINE=InnoDB AUTO_INCREMENT=313 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_state`
+-- Zrzut danych tabeli `ps_state`
 --
 
 UPDATE `ps_state` SET `id_state` = 1,`id_country` = 21,`id_zone` = 2,`name` = 'Alabama',`iso_code` = 'AL',`tax_behavior` = 0,`active` = 1 WHERE `ps_state`.`id_state` = 1;
@@ -10789,7 +10440,7 @@ UPDATE `ps_state` SET `id_state` = 312,`id_country` = 11,`id_zone` = 3,`name` = 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_statssearch`
+-- Struktura tabeli dla tabeli `ps_statssearch`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_statssearch` (
@@ -10805,7 +10456,7 @@ CREATE TABLE IF NOT EXISTS `ps_statssearch` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_stock`
+-- Struktura tabeli dla tabeli `ps_stock`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_stock` (
@@ -10828,7 +10479,7 @@ CREATE TABLE IF NOT EXISTS `ps_stock` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_stock_available`
+-- Struktura tabeli dla tabeli `ps_stock_available`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_stock_available` (
@@ -10846,10 +10497,10 @@ CREATE TABLE IF NOT EXISTS `ps_stock_available` (
   KEY `id_shop_group` (`id_shop_group`),
   KEY `id_product` (`id_product`),
   KEY `id_product_attribute` (`id_product_attribute`)
-) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_stock_available`
+-- Zrzut danych tabeli `ps_stock_available`
 --
 
 UPDATE `ps_stock_available` SET `id_stock_available` = 53,`id_product` = 1,`id_product_attribute` = 0,`id_shop` = 1,`id_shop_group` = 0,`quantity` = 0,`depends_on_stock` = 0,`out_of_stock` = 0 WHERE `ps_stock_available`.`id_stock_available` = 53;
@@ -10859,12 +10510,13 @@ UPDATE `ps_stock_available` SET `id_stock_available` = 56,`id_product` = 4,`id_p
 UPDATE `ps_stock_available` SET `id_stock_available` = 57,`id_product` = 5,`id_product_attribute` = 0,`id_shop` = 1,`id_shop_group` = 0,`quantity` = 0,`depends_on_stock` = 0,`out_of_stock` = 0 WHERE `ps_stock_available`.`id_stock_available` = 57;
 UPDATE `ps_stock_available` SET `id_stock_available` = 58,`id_product` = 6,`id_product_attribute` = 0,`id_shop` = 1,`id_shop_group` = 0,`quantity` = 0,`depends_on_stock` = 0,`out_of_stock` = 0 WHERE `ps_stock_available`.`id_stock_available` = 58;
 UPDATE `ps_stock_available` SET `id_stock_available` = 59,`id_product` = 7,`id_product_attribute` = 0,`id_shop` = 1,`id_shop_group` = 0,`quantity` = 0,`depends_on_stock` = 0,`out_of_stock` = 0 WHERE `ps_stock_available`.`id_stock_available` = 59;
-UPDATE `ps_stock_available` SET `id_stock_available` = 61,`id_product` = 9,`id_product_attribute` = 0,`id_shop` = 1,`id_shop_group` = 0,`quantity` = 20,`depends_on_stock` = 0,`out_of_stock` = 2 WHERE `ps_stock_available`.`id_stock_available` = 61;
+UPDATE `ps_stock_available` SET `id_stock_available` = 62,`id_product` = 10,`id_product_attribute` = 0,`id_shop` = 1,`id_shop_group` = 0,`quantity` = 15,`depends_on_stock` = 0,`out_of_stock` = 2 WHERE `ps_stock_available`.`id_stock_available` = 62;
+UPDATE `ps_stock_available` SET `id_stock_available` = 63,`id_product` = 11,`id_product_attribute` = 0,`id_shop` = 1,`id_shop_group` = 0,`quantity` = 22,`depends_on_stock` = 0,`out_of_stock` = 2 WHERE `ps_stock_available`.`id_stock_available` = 63;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_stock_mvt`
+-- Struktura tabeli dla tabeli `ps_stock_mvt`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_stock_mvt` (
@@ -10891,7 +10543,7 @@ CREATE TABLE IF NOT EXISTS `ps_stock_mvt` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_stock_mvt_reason`
+-- Struktura tabeli dla tabeli `ps_stock_mvt_reason`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_stock_mvt_reason` (
@@ -10904,7 +10556,7 @@ CREATE TABLE IF NOT EXISTS `ps_stock_mvt_reason` (
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_stock_mvt_reason`
+-- Zrzut danych tabeli `ps_stock_mvt_reason`
 --
 
 UPDATE `ps_stock_mvt_reason` SET `id_stock_mvt_reason` = 1,`sign` = 1,`date_add` = '2016-10-27 01:36:16',`date_upd` = '2016-10-27 01:36:16',`deleted` = 0 WHERE `ps_stock_mvt_reason`.`id_stock_mvt_reason` = 1;
@@ -10919,7 +10571,7 @@ UPDATE `ps_stock_mvt_reason` SET `id_stock_mvt_reason` = 8,`sign` = 1,`date_add`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_stock_mvt_reason_lang`
+-- Struktura tabeli dla tabeli `ps_stock_mvt_reason_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_stock_mvt_reason_lang` (
@@ -10930,7 +10582,7 @@ CREATE TABLE IF NOT EXISTS `ps_stock_mvt_reason_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_stock_mvt_reason_lang`
+-- Zrzut danych tabeli `ps_stock_mvt_reason_lang`
 --
 
 UPDATE `ps_stock_mvt_reason_lang` SET `id_stock_mvt_reason` = 1,`id_lang` = 1,`name` = 'Increase' WHERE `ps_stock_mvt_reason_lang`.`id_stock_mvt_reason` = 1 AND `ps_stock_mvt_reason_lang`.`id_lang` = 1;
@@ -10953,7 +10605,7 @@ UPDATE `ps_stock_mvt_reason_lang` SET `id_stock_mvt_reason` = 8,`id_lang` = 2,`n
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_store`
+-- Struktura tabeli dla tabeli `ps_store`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_store` (
@@ -10979,7 +10631,7 @@ CREATE TABLE IF NOT EXISTS `ps_store` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_store`
+-- Zrzut danych tabeli `ps_store`
 --
 
 UPDATE `ps_store` SET `id_store` = 1,`id_country` = 21,`id_state` = 9,`name` = 'Dade County',`address1` = '3030 SW 8th St Miami',`address2` = '',`city` = 'Miami',`postcode` = ' 33135',`latitude` = '25.76500500',`longitude` = '-80.24379700',`hours` = 'a:7:{i:0;s:13:"09:00 - 19:00";i:1;s:13:"09:00 - 19:00";i:2;s:13:"09:00 - 19:00";i:3;s:13:"09:00 - 19:00";i:4;s:13:"09:00 - 19:00";i:5;s:13:"10:00 - 16:00";i:6;s:13:"10:00 - 16:00";}',`phone` = '',`fax` = '',`email` = '',`note` = '',`active` = 1,`date_add` = '2016-10-27 01:37:48',`date_upd` = '2016-10-27 01:37:48' WHERE `ps_store`.`id_store` = 1;
@@ -10991,7 +10643,7 @@ UPDATE `ps_store` SET `id_store` = 5,`id_country` = 21,`id_state` = 9,`name` = '
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_store_shop`
+-- Struktura tabeli dla tabeli `ps_store_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_store_shop` (
@@ -11002,7 +10654,7 @@ CREATE TABLE IF NOT EXISTS `ps_store_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_store_shop`
+-- Zrzut danych tabeli `ps_store_shop`
 --
 
 UPDATE `ps_store_shop` SET `id_store` = 1,`id_shop` = 1 WHERE `ps_store_shop`.`id_store` = 1 AND `ps_store_shop`.`id_shop` = 1;
@@ -11014,7 +10666,7 @@ UPDATE `ps_store_shop` SET `id_store` = 5,`id_shop` = 1 WHERE `ps_store_shop`.`i
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_supplier`
+-- Struktura tabeli dla tabeli `ps_supplier`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supplier` (
@@ -11029,7 +10681,7 @@ CREATE TABLE IF NOT EXISTS `ps_supplier` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_supplier_lang`
+-- Struktura tabeli dla tabeli `ps_supplier_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supplier_lang` (
@@ -11045,7 +10697,7 @@ CREATE TABLE IF NOT EXISTS `ps_supplier_lang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_supplier_shop`
+-- Struktura tabeli dla tabeli `ps_supplier_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supplier_shop` (
@@ -11058,7 +10710,7 @@ CREATE TABLE IF NOT EXISTS `ps_supplier_shop` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_supply_order`
+-- Struktura tabeli dla tabeli `ps_supply_order`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supply_order` (
@@ -11090,7 +10742,7 @@ CREATE TABLE IF NOT EXISTS `ps_supply_order` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_supply_order_detail`
+-- Struktura tabeli dla tabeli `ps_supply_order_detail`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supply_order_detail` (
@@ -11126,7 +10778,7 @@ CREATE TABLE IF NOT EXISTS `ps_supply_order_detail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_supply_order_history`
+-- Struktura tabeli dla tabeli `ps_supply_order_history`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supply_order_history` (
@@ -11146,7 +10798,7 @@ CREATE TABLE IF NOT EXISTS `ps_supply_order_history` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_supply_order_receipt_history`
+-- Struktura tabeli dla tabeli `ps_supply_order_receipt_history`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supply_order_receipt_history` (
@@ -11166,7 +10818,7 @@ CREATE TABLE IF NOT EXISTS `ps_supply_order_receipt_history` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_supply_order_state`
+-- Struktura tabeli dla tabeli `ps_supply_order_state`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supply_order_state` (
@@ -11181,7 +10833,7 @@ CREATE TABLE IF NOT EXISTS `ps_supply_order_state` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_supply_order_state`
+-- Zrzut danych tabeli `ps_supply_order_state`
 --
 
 UPDATE `ps_supply_order_state` SET `id_supply_order_state` = 1,`delivery_note` = 0,`editable` = 1,`receipt_state` = 0,`pending_receipt` = 0,`enclosed` = 0,`color` = '#faab00' WHERE `ps_supply_order_state`.`id_supply_order_state` = 1;
@@ -11194,7 +10846,7 @@ UPDATE `ps_supply_order_state` SET `id_supply_order_state` = 6,`delivery_note` =
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_supply_order_state_lang`
+-- Struktura tabeli dla tabeli `ps_supply_order_state_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_supply_order_state_lang` (
@@ -11205,7 +10857,7 @@ CREATE TABLE IF NOT EXISTS `ps_supply_order_state_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_supply_order_state_lang`
+-- Zrzut danych tabeli `ps_supply_order_state_lang`
 --
 
 UPDATE `ps_supply_order_state_lang` SET `id_supply_order_state` = 1,`id_lang` = 1,`name` = '1 - Creation in progress' WHERE `ps_supply_order_state_lang`.`id_supply_order_state` = 1 AND `ps_supply_order_state_lang`.`id_lang` = 1;
@@ -11224,7 +10876,7 @@ UPDATE `ps_supply_order_state_lang` SET `id_supply_order_state` = 6,`id_lang` = 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_tab`
+-- Struktura tabeli dla tabeli `ps_tab`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tab` (
@@ -11241,7 +10893,7 @@ CREATE TABLE IF NOT EXISTS `ps_tab` (
 ) ENGINE=InnoDB AUTO_INCREMENT=108 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_tab`
+-- Zrzut danych tabeli `ps_tab`
 --
 
 UPDATE `ps_tab` SET `id_tab` = 1,`id_parent` = 0,`class_name` = 'AdminDashboard',`module` = NULL,`position` = 0,`active` = 1,`hide_host_mode` = 0 WHERE `ps_tab`.`id_tab` = 1;
@@ -11353,7 +11005,7 @@ UPDATE `ps_tab` SET `id_tab` = 107,`id_parent` = -1,`class_name` = 'AdminBlockCa
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_tab_advice`
+-- Struktura tabeli dla tabeli `ps_tab_advice`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tab_advice` (
@@ -11365,7 +11017,7 @@ CREATE TABLE IF NOT EXISTS `ps_tab_advice` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_tab_lang`
+-- Struktura tabeli dla tabeli `ps_tab_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tab_lang` (
@@ -11376,7 +11028,7 @@ CREATE TABLE IF NOT EXISTS `ps_tab_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_tab_lang`
+-- Zrzut danych tabeli `ps_tab_lang`
 --
 
 UPDATE `ps_tab_lang` SET `id_tab` = 1,`id_lang` = 1,`name` = 'Dashboard' WHERE `ps_tab_lang`.`id_tab` = 1 AND `ps_tab_lang`.`id_lang` = 1;
@@ -11593,7 +11245,7 @@ UPDATE `ps_tab_lang` SET `id_tab` = 107,`id_lang` = 2,`name` = 'BlockCategories'
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_tab_module_preference`
+-- Struktura tabeli dla tabeli `ps_tab_module_preference`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tab_module_preference` (
@@ -11608,7 +11260,7 @@ CREATE TABLE IF NOT EXISTS `ps_tab_module_preference` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_tag`
+-- Struktura tabeli dla tabeli `ps_tag`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tag` (
@@ -11623,7 +11275,7 @@ CREATE TABLE IF NOT EXISTS `ps_tag` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_tag_count`
+-- Struktura tabeli dla tabeli `ps_tag_count`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tag_count` (
@@ -11639,7 +11291,7 @@ CREATE TABLE IF NOT EXISTS `ps_tag_count` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_tax`
+-- Struktura tabeli dla tabeli `ps_tax`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tax` (
@@ -11651,7 +11303,7 @@ CREATE TABLE IF NOT EXISTS `ps_tax` (
 ) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_tax`
+-- Zrzut danych tabeli `ps_tax`
 --
 
 UPDATE `ps_tax` SET `id_tax` = 1,`rate` = '23.000',`active` = 1,`deleted` = 0 WHERE `ps_tax`.`id_tax` = 1;
@@ -11689,7 +11341,7 @@ UPDATE `ps_tax` SET `id_tax` = 31,`rate` = '20.000',`active` = 1,`deleted` = 0 W
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_tax_lang`
+-- Struktura tabeli dla tabeli `ps_tax_lang`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tax_lang` (
@@ -11700,7 +11352,7 @@ CREATE TABLE IF NOT EXISTS `ps_tax_lang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_tax_lang`
+-- Zrzut danych tabeli `ps_tax_lang`
 --
 
 UPDATE `ps_tax_lang` SET `id_tax` = 1,`id_lang` = 1,`name` = 'PTU PL 23%' WHERE `ps_tax_lang`.`id_tax` = 1 AND `ps_tax_lang`.`id_lang` = 1;
@@ -11769,7 +11421,7 @@ UPDATE `ps_tax_lang` SET `id_tax` = 31,`id_lang` = 2,`name` = 'DPH SK 20%' WHERE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_tax_rule`
+-- Struktura tabeli dla tabeli `ps_tax_rule`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tax_rule` (
@@ -11789,7 +11441,7 @@ CREATE TABLE IF NOT EXISTS `ps_tax_rule` (
 ) ENGINE=InnoDB AUTO_INCREMENT=131 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_tax_rule`
+-- Zrzut danych tabeli `ps_tax_rule`
 --
 
 UPDATE `ps_tax_rule` SET `id_tax_rule` = 1,`id_tax_rules_group` = 1,`id_country` = 3,`id_state` = 0,`zipcode_from` = '0',`zipcode_to` = '0',`id_tax` = 1,`behavior` = 0,`description` = '' WHERE `ps_tax_rule`.`id_tax_rule` = 1;
@@ -11926,7 +11578,7 @@ UPDATE `ps_tax_rule` SET `id_tax_rule` = 130,`id_tax_rules_group` = 5,`id_countr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_tax_rules_group`
+-- Struktura tabeli dla tabeli `ps_tax_rules_group`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tax_rules_group` (
@@ -11940,7 +11592,7 @@ CREATE TABLE IF NOT EXISTS `ps_tax_rules_group` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_tax_rules_group`
+-- Zrzut danych tabeli `ps_tax_rules_group`
 --
 
 UPDATE `ps_tax_rules_group` SET `id_tax_rules_group` = 1,`name` = 'PL Standard Rate (23%)',`active` = 1,`deleted` = 0,`date_add` = '2016-10-27 01:36:30',`date_upd` = '2016-10-27 01:36:30' WHERE `ps_tax_rules_group`.`id_tax_rules_group` = 1;
@@ -11952,7 +11604,7 @@ UPDATE `ps_tax_rules_group` SET `id_tax_rules_group` = 5,`name` = 'EU VAT For Vi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_tax_rules_group_shop`
+-- Struktura tabeli dla tabeli `ps_tax_rules_group_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_tax_rules_group_shop` (
@@ -11963,7 +11615,7 @@ CREATE TABLE IF NOT EXISTS `ps_tax_rules_group_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_tax_rules_group_shop`
+-- Zrzut danych tabeli `ps_tax_rules_group_shop`
 --
 
 UPDATE `ps_tax_rules_group_shop` SET `id_tax_rules_group` = 1,`id_shop` = 1 WHERE `ps_tax_rules_group_shop`.`id_tax_rules_group` = 1 AND `ps_tax_rules_group_shop`.`id_shop` = 1;
@@ -11975,7 +11627,7 @@ UPDATE `ps_tax_rules_group_shop` SET `id_tax_rules_group` = 5,`id_shop` = 1 WHER
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_theme`
+-- Struktura tabeli dla tabeli `ps_theme`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_theme` (
@@ -11990,7 +11642,7 @@ CREATE TABLE IF NOT EXISTS `ps_theme` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_theme`
+-- Zrzut danych tabeli `ps_theme`
 --
 
 UPDATE `ps_theme` SET `id_theme` = 1,`name` = 'default-bootstrap-default22',`directory` = 'oldtheme',`responsive` = 1,`default_left_column` = 1,`default_right_column` = 0,`product_per_page` = 12 WHERE `ps_theme`.`id_theme` = 1;
@@ -11999,7 +11651,7 @@ UPDATE `ps_theme` SET `id_theme` = 4,`name` = 'default-bootstrap',`directory` = 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_themeconfigurator`
+-- Struktura tabeli dla tabeli `ps_themeconfigurator`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_themeconfigurator` (
@@ -12023,7 +11675,7 @@ CREATE TABLE IF NOT EXISTS `ps_themeconfigurator` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_theme_meta`
+-- Struktura tabeli dla tabeli `ps_theme_meta`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_theme_meta` (
@@ -12039,7 +11691,7 @@ CREATE TABLE IF NOT EXISTS `ps_theme_meta` (
 ) ENGINE=InnoDB AUTO_INCREMENT=148 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_theme_meta`
+-- Zrzut danych tabeli `ps_theme_meta`
 --
 
 UPDATE `ps_theme_meta` SET `id_theme_meta` = 1,`id_theme` = 1,`id_meta` = 1,`left_column` = 0,`right_column` = 0 WHERE `ps_theme_meta`.`id_theme_meta` = 1;
@@ -12119,7 +11771,7 @@ UPDATE `ps_theme_meta` SET `id_theme_meta` = 147,`id_theme` = 4,`id_meta` = 37,`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_theme_specific`
+-- Struktura tabeli dla tabeli `ps_theme_specific`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_theme_specific` (
@@ -12133,7 +11785,7 @@ CREATE TABLE IF NOT EXISTS `ps_theme_specific` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_timezone`
+-- Struktura tabeli dla tabeli `ps_timezone`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_timezone` (
@@ -12143,7 +11795,7 @@ CREATE TABLE IF NOT EXISTS `ps_timezone` (
 ) ENGINE=InnoDB AUTO_INCREMENT=561 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_timezone`
+-- Zrzut danych tabeli `ps_timezone`
 --
 
 UPDATE `ps_timezone` SET `id_timezone` = 1,`name` = 'Africa/Abidjan' WHERE `ps_timezone`.`id_timezone` = 1;
@@ -12710,7 +12362,7 @@ UPDATE `ps_timezone` SET `id_timezone` = 560,`name` = 'Zulu' WHERE `ps_timezone`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_warehouse`
+-- Struktura tabeli dla tabeli `ps_warehouse`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_warehouse` (
@@ -12728,7 +12380,7 @@ CREATE TABLE IF NOT EXISTS `ps_warehouse` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_warehouse_carrier`
+-- Struktura tabeli dla tabeli `ps_warehouse_carrier`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_warehouse_carrier` (
@@ -12742,7 +12394,7 @@ CREATE TABLE IF NOT EXISTS `ps_warehouse_carrier` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_warehouse_product_location`
+-- Struktura tabeli dla tabeli `ps_warehouse_product_location`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_warehouse_product_location` (
@@ -12758,7 +12410,7 @@ CREATE TABLE IF NOT EXISTS `ps_warehouse_product_location` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_warehouse_shop`
+-- Struktura tabeli dla tabeli `ps_warehouse_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_warehouse_shop` (
@@ -12772,7 +12424,7 @@ CREATE TABLE IF NOT EXISTS `ps_warehouse_shop` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_webservice_account`
+-- Struktura tabeli dla tabeli `ps_webservice_account`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_webservice_account` (
@@ -12790,7 +12442,7 @@ CREATE TABLE IF NOT EXISTS `ps_webservice_account` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_webservice_account_shop`
+-- Struktura tabeli dla tabeli `ps_webservice_account_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_webservice_account_shop` (
@@ -12803,7 +12455,7 @@ CREATE TABLE IF NOT EXISTS `ps_webservice_account_shop` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_webservice_permission`
+-- Struktura tabeli dla tabeli `ps_webservice_permission`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_webservice_permission` (
@@ -12821,7 +12473,7 @@ CREATE TABLE IF NOT EXISTS `ps_webservice_permission` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_web_browser`
+-- Struktura tabeli dla tabeli `ps_web_browser`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_web_browser` (
@@ -12831,7 +12483,7 @@ CREATE TABLE IF NOT EXISTS `ps_web_browser` (
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_web_browser`
+-- Zrzut danych tabeli `ps_web_browser`
 --
 
 UPDATE `ps_web_browser` SET `id_web_browser` = 1,`name` = 'Safari' WHERE `ps_web_browser`.`id_web_browser` = 1;
@@ -12849,7 +12501,7 @@ UPDATE `ps_web_browser` SET `id_web_browser` = 11,`name` = 'Chrome' WHERE `ps_we
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_zone`
+-- Struktura tabeli dla tabeli `ps_zone`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_zone` (
@@ -12860,7 +12512,7 @@ CREATE TABLE IF NOT EXISTS `ps_zone` (
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_zone`
+-- Zrzut danych tabeli `ps_zone`
 --
 
 UPDATE `ps_zone` SET `id_zone` = 1,`name` = 'Europe',`active` = 1 WHERE `ps_zone`.`id_zone` = 1;
@@ -12875,7 +12527,7 @@ UPDATE `ps_zone` SET `id_zone` = 8,`name` = 'Central America/Antilla',`active` =
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ps_zone_shop`
+-- Struktura tabeli dla tabeli `ps_zone_shop`
 --
 
 CREATE TABLE IF NOT EXISTS `ps_zone_shop` (
@@ -12886,7 +12538,7 @@ CREATE TABLE IF NOT EXISTS `ps_zone_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ps_zone_shop`
+-- Zrzut danych tabeli `ps_zone_shop`
 --
 
 UPDATE `ps_zone_shop` SET `id_zone` = 1,`id_shop` = 1 WHERE `ps_zone_shop`.`id_zone` = 1 AND `ps_zone_shop`.`id_shop` = 1;
