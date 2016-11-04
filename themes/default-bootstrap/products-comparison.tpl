@@ -80,23 +80,7 @@
 						<div class="prices-container">
 							{if isset($product->show_price) && $product->show_price && !isset($restricted_country_mode) && !$PS_CATALOG_MODE}
 								<span class="price product-price">{convertPrice price=$product->getPrice($taxes_behavior)}</span>
-								{if isset($product->specificPrice) && $product->specificPrice}
-									{if {$product->specificPrice.reduction_type == 'percentage'}}
-										<span class="old-price product-price">
-											{displayWtPrice p=$product->getPrice($taxes_behavior)+($product->getPrice($taxes_behavior)* $product->specificPrice.reduction)}
-										</span>
-										<span class="price-percent-reduction">
-											-{$product->specificPrice.reduction*100|floatval}%
-										</span>
-									{else}
-										<span class="old-price product-price">
-											{convertPrice price=($product->getPrice($taxes_behavior) + $product->specificPrice.reduction)}
-										</span>
-										<span class="price-percent-reduction">
-											-{convertPrice price=$product->specificPrice.reduction}
-										</span>
-									{/if}
-								{/if}
+								
 								{if $product->on_sale}
 									{elseif $product->specificPrice AND $product->specificPrice.reduction}
 										<div class="product_discount">

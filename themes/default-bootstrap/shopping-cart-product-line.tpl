@@ -49,7 +49,7 @@
                     	{assign var='priceReductonPercent' value=(($product.price_without_specific_price - $product.price_wt)/$product.price_without_specific_price) * 100 * -1}
 						{$priceReductonPercent|round|string_format:"%d"}%
                     </span>
-					<span class="old-price">{convertPrice price=$product.price_without_specific_price}</span>
+					
 				{/if}
 			{/if}
 		</span>

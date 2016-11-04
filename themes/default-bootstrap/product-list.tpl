@@ -65,14 +65,7 @@
 										{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}
 									</span>
 									<meta itemprop="priceCurrency" content="{$priceDisplay}" />
-									{if isset($product.specific_prices) && $product.specific_prices && isset($product.specific_prices.reduction) && $product.specific_prices.reduction}
-										<span class="old-price product-price">
-											{displayWtPrice p=$product.price_without_reduction}
-										</span>
-										{if $product.specific_prices.reduction_type == 'percentage'}
-											<span class="price-percent-reduction">-{$product.specific_prices.reduction * 100}%</span>
-										{/if}
-									{/if}
+									
 								{/if}
 							</div>
 						{/if}
@@ -106,14 +99,7 @@
 								{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}
 							</span>
 							<meta itemprop="priceCurrency" content="{$priceDisplay}" />
-							{if isset($product.specific_prices) && $product.specific_prices && isset($product.specific_prices.reduction) && $product.specific_prices.reduction}
-								<span class="old-price product-price">
-									{displayWtPrice p=$product.price_without_reduction}
-								</span>
-								{if $product.specific_prices.reduction_type == 'percentage'}
-									<span class="price-percent-reduction">-{$product.specific_prices.reduction * 100}%</span>
-								{/if}
-							{/if}
+							
 						{/if}
 					</div>
 					{/if}
